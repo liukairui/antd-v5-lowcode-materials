@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SkeletonMeta: IPublicTypeComponentMetadata = {
   componentName: 'Skeleton',
-  title: 'Skeleton',
+  title: '骨架屏',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -22,6 +24,11 @@ const SkeletonMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'active',
             'zh-CN': 'active'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
           }
         },
         name: 'active',
@@ -34,19 +41,10 @@ const SkeletonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
-          }
-        },
-        name: 'loading',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'avatar',
+            'zh-CN': 'avatar'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'avatar',
             'zh-CN': 'avatar'
@@ -81,114 +79,29 @@ const SkeletonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
+            'en-US': 'loading',
+            'zh-CN': 'loading'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'loading',
+            'zh-CN': 'loading'
           }
         },
-        name: 'title',
+        name: 'loading',
         setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    items: [
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'prefixCls',
-                            'zh-CN': 'prefixCls'
-                          }
-                        },
-                        name: 'prefixCls',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'className',
-                            'zh-CN': 'className'
-                          }
-                        },
-                        name: 'className',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'style',
-                            'zh-CN': 'style'
-                          }
-                        },
-                        name: 'style',
-                        setter: {
-                          componentName: 'ObjectSetter',
-                          props: {
-                            config: {
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
-                            }
-                          },
-                          initialValue: undefined
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'width',
-                            'zh-CN': 'width'
-                          }
-                        },
-                        name: 'width',
-                        setter: {
-                          componentName: 'MixedSetter',
-                          props: {
-                            setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              }
-            ]
-          }
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'paragraph',
+            'zh-CN': 'paragraph'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'paragraph',
             'zh-CN': 'paragraph'
@@ -336,12 +249,131 @@ const SkeletonMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'round',
             'zh-CN': 'round'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'round',
+            'zh-CN': 'round'
           }
         },
         name: 'round',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
+          }
+        },
+        name: 'title',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'BoolSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'prefixCls',
+                            'zh-CN': 'prefixCls'
+                          }
+                        },
+                        name: 'prefixCls',
+                        setter: {
+                          componentName: 'StringSetter',
+                          initialValue: undefined
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'className',
+                            'zh-CN': 'className'
+                          }
+                        },
+                        name: 'className',
+                        setter: {
+                          componentName: 'StringSetter',
+                          initialValue: undefined
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'style',
+                            'zh-CN': 'style'
+                          }
+                        },
+                        name: 'style',
+                        setter: {
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
+                              }
+                            }
+                          },
+                          initialValue: undefined
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'width',
+                            'zh-CN': 'width'
+                          }
+                        },
+                        name: 'width',
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: [
+                              {
+                                componentName: 'StringSetter',
+                                initialValue: undefined
+                              },
+                              {
+                                componentName: 'NumberSetter',
+                                initialValue: undefined
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ],
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       }
     ],
@@ -356,7 +388,7 @@ const SkeletonMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Skeleton',
+    title: '骨架屏',
     screenshot: '',
     schema: {
       componentName: 'Skeleton',

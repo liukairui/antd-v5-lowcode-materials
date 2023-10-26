@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const FormErrorListMeta: IPublicTypeComponentMetadata = {
   componentName: 'FormErrorList',
-  title: 'FormErrorList',
+  title: '错误列表',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,6 +22,42 @@ const FormErrorListMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'errors',
+            'zh-CN': 'errors'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'errors',
+            'zh-CN': 'errors'
+          }
+        },
+        name: 'errors',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'SlotSetter',
+              props: {
+                mode: 'node'
+              },
+              initialValue: {
+                type: 'JSSlot',
+                value: []
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'fieldId',
+            'zh-CN': 'fieldId'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'fieldId',
             'zh-CN': 'fieldId'
           }
@@ -33,6 +71,11 @@ const FormErrorListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'help',
+            'zh-CN': 'help'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'help',
             'zh-CN': 'help'
@@ -53,6 +96,11 @@ const FormErrorListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'helpStatus',
+            'zh-CN': 'helpStatus'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'helpStatus',
             'zh-CN': 'helpStatus'
@@ -114,31 +162,28 @@ const FormErrorListMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'errors',
-            'zh-CN': 'errors'
+            'en-US': 'onVisibleChanged',
+            'zh-CN': 'onVisibleChanged'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onVisibleChanged',
+            'zh-CN': 'onVisibleChanged'
           }
         },
-        name: 'errors',
+        name: 'onVisibleChanged',
         setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'SlotSetter',
-              props: {
-                mode: 'node'
-              },
-              initialValue: {
-                type: 'JSSlot',
-                value: []
-              }
-            }
-          },
-          initialValue: undefined
+          componentName: 'FunctionSetter'
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'warnings',
+            'zh-CN': 'warnings'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'warnings',
             'zh-CN': 'warnings'
@@ -161,19 +206,6 @@ const FormErrorListMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onVisibleChanged',
-            'zh-CN': 'onVisibleChanged'
-          }
-        },
-        name: 'onVisibleChanged',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
       }
     ],
     supports: {
@@ -187,7 +219,7 @@ const FormErrorListMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'FormErrorList',
+    title: '错误列表',
     screenshot: '',
     schema: {
       componentName: 'FormErrorList',

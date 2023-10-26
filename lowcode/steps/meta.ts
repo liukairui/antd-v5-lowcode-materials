@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const StepsMeta: IPublicTypeComponentMetadata = {
   componentName: 'Steps',
-  title: 'Steps',
+  title: '步骤条',
+  group: '原子组件',
+  category: '导航 Navigation',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,49 +22,10 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          }
-        },
-        name: 'type',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'inline',
-                value: 'inline'
-              },
-              {
-                label: 'navigation',
-                value: 'navigation'
-              }
-            ],
-            options: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'inline',
-                value: 'inline'
-              },
-              {
-                label: 'navigation',
-                value: 'navigation'
-              }
-            ]
+            'en-US': 'current',
+            'zh-CN': 'current'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'current',
             'zh-CN': 'current'
@@ -77,6 +40,11 @@ const StepsMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'direction',
             'zh-CN': 'direction'
@@ -116,6 +84,11 @@ const StepsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'iconPrefix',
             'zh-CN': 'iconPrefix'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'iconPrefix',
+            'zh-CN': 'iconPrefix'
           }
         },
         name: 'iconPrefix',
@@ -127,6 +100,11 @@ const StepsMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'initial',
+            'zh-CN': 'initial'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'initial',
             'zh-CN': 'initial'
@@ -142,194 +120,10 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'labelPlacement',
-            'zh-CN': 'labelPlacement'
-          }
-        },
-        name: 'labelPlacement',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ],
-            options: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ]
+            'en-US': 'items',
+            'zh-CN': 'items'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'progressDot',
-            'zh-CN': 'progressDot'
-          }
-        },
-        name: 'progressDot',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'responsive',
-            'zh-CN': 'responsive'
-          }
-        },
-        name: 'responsive',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          }
-        },
-        name: 'size',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'small',
-                value: 'small'
-              }
-            ],
-            options: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'small',
-                value: 'small'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          }
-        },
-        name: 'status',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'error',
-                value: 'error'
-              },
-              {
-                label: 'wait',
-                value: 'wait'
-              },
-              {
-                label: 'process',
-                value: 'process'
-              },
-              {
-                label: 'finish',
-                value: 'finish'
-              }
-            ],
-            options: [
-              {
-                label: 'error',
-                value: 'error'
-              },
-              {
-                label: 'wait',
-                value: 'wait'
-              },
-              {
-                label: 'process',
-                value: 'process'
-              },
-              {
-                label: 'finish',
-                value: 'finish'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'percent',
-            'zh-CN': 'percent'
-          }
-        },
-        name: 'percent',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          }
-        },
-        name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -550,6 +344,279 @@ const StepsMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'labelPlacement',
+            'zh-CN': 'labelPlacement'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'labelPlacement',
+            'zh-CN': 'labelPlacement'
+          }
+        },
+        name: 'labelPlacement',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ],
+            options: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          }
+        },
+        name: 'onChange',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'percent',
+            'zh-CN': 'percent'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'percent',
+            'zh-CN': 'percent'
+          }
+        },
+        name: 'percent',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'progressDot',
+            'zh-CN': 'progressDot'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'progressDot',
+            'zh-CN': 'progressDot'
+          }
+        },
+        name: 'progressDot',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'BoolSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'FunctionSetter'
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'responsive',
+            'zh-CN': 'responsive'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'responsive',
+            'zh-CN': 'responsive'
+          }
+        },
+        name: 'responsive',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          }
+        },
+        name: 'size',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'small',
+                value: 'small'
+              }
+            ],
+            options: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'small',
+                value: 'small'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          }
+        },
+        name: 'status',
+        setter: {
+          componentName: 'SelectSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'error',
+                value: 'error'
+              },
+              {
+                label: 'wait',
+                value: 'wait'
+              },
+              {
+                label: 'process',
+                value: 'process'
+              },
+              {
+                label: 'finish',
+                value: 'finish'
+              }
+            ],
+            options: [
+              {
+                label: 'error',
+                value: 'error'
+              },
+              {
+                label: 'wait',
+                value: 'wait'
+              },
+              {
+                label: 'process',
+                value: 'process'
+              },
+              {
+                label: 'finish',
+                value: 'finish'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
+          }
+        },
+        name: 'type',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'inline',
+                value: 'inline'
+              },
+              {
+                label: 'navigation',
+                value: 'navigation'
+              }
+            ],
+            options: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'inline',
+                value: 'inline'
+              },
+              {
+                label: 'navigation',
+                value: 'navigation'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
       }
     ],
     supports: {
@@ -563,7 +630,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Steps',
+    title: '步骤条',
     screenshot: '',
     schema: {
       componentName: 'Steps',

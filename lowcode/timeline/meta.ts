@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const TimelineMeta: IPublicTypeComponentMetadata = {
   componentName: 'Timeline',
-  title: 'Timeline',
+  title: '时间轴',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,103 +22,10 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'pending',
-            'zh-CN': '指定最后一个幽灵节点'
-          }
-        },
-        name: 'pending',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+            'en-US': 'items',
+            'zh-CN': 'items'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'pendingDot',
-            'zh-CN': 'pendingDot'
-          }
-        },
-        name: 'pendingDot',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'reverse',
-            'zh-CN': 'reverse'
-          }
-        },
-        name: 'reverse',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'mode',
-            'zh-CN': 'mode'
-          }
-        },
-        name: 'mode',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'left',
-                value: 'left'
-              },
-              {
-                label: 'right',
-                value: 'right'
-              },
-              {
-                label: 'alternate',
-                value: 'alternate'
-              }
-            ],
-            options: [
-              {
-                label: 'left',
-                value: 'left'
-              },
-              {
-                label: 'right',
-                value: 'right'
-              },
-              {
-                label: 'alternate',
-                value: 'alternate'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -376,6 +285,124 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'mode',
+            'zh-CN': 'mode'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'mode',
+            'zh-CN': 'mode'
+          }
+        },
+        name: 'mode',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'left',
+                value: 'left'
+              },
+              {
+                label: 'right',
+                value: 'right'
+              },
+              {
+                label: 'alternate',
+                value: 'alternate'
+              }
+            ],
+            options: [
+              {
+                label: 'left',
+                value: 'left'
+              },
+              {
+                label: 'right',
+                value: 'right'
+              },
+              {
+                label: 'alternate',
+                value: 'alternate'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'pending',
+            'zh-CN': 'pending'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'pending',
+            'zh-CN': 'pending'
+          }
+        },
+        name: 'pending',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'pendingDot',
+            'zh-CN': 'pendingDot'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'pendingDot',
+            'zh-CN': 'pendingDot'
+          }
+        },
+        name: 'pendingDot',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'reverse',
+            'zh-CN': 'reverse'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'reverse',
+            'zh-CN': 'reverse'
+          }
+        },
+        name: 'reverse',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
       }
     ],
     supports: {
@@ -389,7 +416,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Timeline',
+    title: '时间轴',
     screenshot: '',
     schema: {
       componentName: 'Timeline',

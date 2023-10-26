@@ -1,4 +1,10 @@
-import { ComponentProps as CP, FC, createElement } from 'react';
+import { ComponentProps as CP, FC, createElement, useEffect, useState } from 'react';
+
+/**
+ * PlainText 纯文本
+ */
+const PlainText: FC<{ content?: string }> = (props) => createElement('span', { children: props.content });
+export { PlainText };
 
 /**
  * Button 按钮
@@ -275,7 +281,18 @@ export { Calendar };
  * Card 卡片
  */
 import _Card from 'antd/es/card';
-const Card: FC<CP<typeof _Card>> = (props) => <_Card {...props} />;
+const Card: FC<CP<typeof _Card>> = (props) => {
+  const [className, setClassName] = useState(null);
+  /**
+   * 处理网格型内嵌卡片
+   * @see https://github.com/ant-design/ant-design/blob/91f77ee6b7c329259e8282fe3b6e78a9715f6da2/components/card/Card.tsx#L90
+   */
+  useEffect(() => {
+    const isGridMode = (props.children as any[]).find((c) => c.props._componentName === 'CardGrid');
+    setClassName(isGridMode ? (props.className ? `${props.className} ant-card-contain-grid` : 'ant-card-contain-grid') : props.className);
+  }, [props.children]);
+  return <_Card {...props} className={className} />;
+};
 const CardGrid: FC<CP<typeof _Card.Grid>> = (props) => <_Card.Grid {...props} />;
 const CardMeta: FC<CP<typeof _Card.Meta>> = (props) => <_Card.Meta {...props} />;
 export { Card, CardGrid, CardMeta };
@@ -292,8 +309,7 @@ export { Carousel };
  */
 import _Collapse from 'antd/es/collapse';
 const Collapse: FC<CP<typeof _Collapse>> = (props) => <_Collapse {...props} />;
-const CollapsePanel: FC<CP<typeof _Collapse.Panel>> = (props) => <_Collapse.Panel {...props} />;
-export { Collapse, CollapsePanel };
+export { Collapse };
 
 /**
  * Descriptions 描述列表
@@ -503,9 +519,3 @@ export { App };
 import _ConfigProvider from 'antd/es/config-provider';
 const ConfigProvider: FC<CP<typeof _ConfigProvider>> = (props) => <_ConfigProvider {...props} />;
 export { ConfigProvider };
-
-/**
- * PlainText 纯文本
- */
-const PlainText: FC<{ content?: string }> = (props) => <span children={props.content} />;
-export { PlainText };

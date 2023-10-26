@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const BreadcrumbMeta: IPublicTypeComponentMetadata = {
   componentName: 'Breadcrumb',
-  title: 'Breadcrumb',
+  title: '面包屑',
+  group: '原子组件',
+  category: '导航 Navigation',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,47 +22,28 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'params',
-            'zh-CN': 'params'
+            'en-US': 'itemRender',
+            'zh-CN': 'itemRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'itemRender',
+            'zh-CN': 'itemRender'
           }
         },
-        name: 'params',
+        name: 'itemRender',
         setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
+          componentName: 'FunctionSetter'
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'separator',
-            'zh-CN': 'separator'
-          }
-        },
-        name: 'separator',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+            'en-US': 'items',
+            'zh-CN': 'items'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -90,13 +73,52 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'itemRender',
-            'zh-CN': 'itemRender'
+            'en-US': 'params',
+            'zh-CN': 'params'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'params',
+            'zh-CN': 'params'
           }
         },
-        name: 'itemRender',
+        name: 'params',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'separator',
+            'zh-CN': 'separator'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'separator',
+            'zh-CN': 'separator'
+          }
+        },
+        name: 'separator',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
         }
       }
     ],
@@ -111,7 +133,7 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Breadcrumb',
+    title: '面包屑',
     screenshot: '',
     schema: {
       componentName: 'Breadcrumb',

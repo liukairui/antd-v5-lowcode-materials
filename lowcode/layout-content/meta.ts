@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const LayoutContentMeta: IPublicTypeComponentMetadata = {
   componentName: 'LayoutContent',
-  title: 'LayoutContent',
+  title: '布局-内容',
+  group: '原子组件',
+  category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,19 +22,10 @@ const LayoutContentMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'suffixCls',
-            'zh-CN': 'suffixCls'
-          }
-        },
-        name: 'suffixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'hasSider',
+            'zh-CN': 'hasSider'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'hasSider',
             'zh-CN': 'hasSider'
@@ -41,6 +34,25 @@ const LayoutContentMeta: IPublicTypeComponentMetadata = {
         name: 'hasSider',
         setter: {
           componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'suffixCls',
+            'zh-CN': 'suffixCls'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'suffixCls',
+            'zh-CN': 'suffixCls'
+          }
+        },
+        name: 'suffixCls',
+        setter: {
+          componentName: 'StringSetter',
           initialValue: undefined
         }
       }
@@ -56,7 +68,7 @@ const LayoutContentMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'LayoutContent',
+    title: '内容布局',
     screenshot: '',
     schema: {
       componentName: 'LayoutContent',

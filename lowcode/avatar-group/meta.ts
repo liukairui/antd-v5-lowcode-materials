@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const AvatarGroupMeta: IPublicTypeComponentMetadata = {
   componentName: 'AvatarGroup',
-  title: 'AvatarGroup',
+  title: '头像组',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -22,6 +24,11 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'maxCount',
             'zh-CN': 'maxCount'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'maxCount',
+            'zh-CN': 'maxCount'
           }
         },
         name: 'maxCount',
@@ -34,27 +41,10 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'maxStyle',
-            'zh-CN': 'maxStyle'
-          }
-        },
-        name: 'maxStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
+            'en-US': 'maxPopoverPlacement',
+            'zh-CN': 'maxPopoverPlacement'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'maxPopoverPlacement',
             'zh-CN': 'maxPopoverPlacement'
@@ -91,6 +81,11 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'maxPopoverTrigger',
+            'zh-CN': 'maxPopoverTrigger'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'maxPopoverTrigger',
             'zh-CN': 'maxPopoverTrigger'
@@ -135,6 +130,79 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'maxStyle',
+            'zh-CN': 'maxStyle'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'maxStyle',
+            'zh-CN': 'maxStyle'
+          }
+        },
+        name: 'maxStyle',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'shape',
+            'zh-CN': 'shape'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'shape',
+            'zh-CN': 'shape'
+          }
+        },
+        name: 'shape',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'circle',
+                value: 'circle'
+              },
+              {
+                label: 'square',
+                value: 'square'
+              }
+            ],
+            options: [
+              {
+                label: 'circle',
+                value: 'circle'
+              },
+              {
+                label: 'square',
+                value: 'square'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -198,42 +266,6 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
             ]
           }
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'shape',
-            'zh-CN': 'shape'
-          }
-        },
-        name: 'shape',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'circle',
-                value: 'circle'
-              },
-              {
-                label: 'square',
-                value: 'square'
-              }
-            ],
-            options: [
-              {
-                label: 'circle',
-                value: 'circle'
-              },
-              {
-                label: 'square',
-                value: 'square'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
       }
     ],
     supports: {
@@ -247,7 +279,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'AvatarGroup',
+    title: '头像组',
     screenshot: '',
     schema: {
       componentName: 'AvatarGroup',

@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SpinMeta: IPublicTypeComponentMetadata = {
   componentName: 'Spin',
-  title: 'Spin',
+  title: '加载中',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,19 +22,56 @@ const SpinMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'spinning',
-            'zh-CN': 'spinning'
+            'en-US': 'delay',
+            'zh-CN': 'delay'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'delay',
+            'zh-CN': 'delay'
           }
         },
-        name: 'spinning',
+        name: 'delay',
         setter: {
-          componentName: 'BoolSetter',
+          componentName: 'NumberSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'indicator',
+            'zh-CN': 'indicator'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'indicator',
+            'zh-CN': 'indicator'
+          }
+        },
+        name: 'indicator',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -78,6 +117,30 @@ const SpinMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'spinning',
+            'zh-CN': 'spinning'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'spinning',
+            'zh-CN': 'spinning'
+          }
+        },
+        name: 'spinning',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tip',
+            'zh-CN': 'tip'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'tip',
             'zh-CN': 'tip'
           }
@@ -98,19 +161,10 @@ const SpinMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'delay',
-            'zh-CN': 'delay'
-          }
-        },
-        name: 'delay',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'wrapperClassName',
+            'zh-CN': 'wrapperClassName'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'wrapperClassName',
             'zh-CN': 'wrapperClassName'
@@ -119,28 +173,6 @@ const SpinMeta: IPublicTypeComponentMetadata = {
         name: 'wrapperClassName',
         setter: {
           componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'indicator',
-            'zh-CN': 'indicator'
-          }
-        },
-        name: 'indicator',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
           initialValue: undefined
         }
       }
@@ -156,7 +188,7 @@ const SpinMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Spin',
+    title: '加载中',
     screenshot: '',
     schema: {
       componentName: 'Spin',

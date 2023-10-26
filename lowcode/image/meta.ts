@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ImageMeta: IPublicTypeComponentMetadata = {
   componentName: 'Image',
-  title: 'Image',
+  title: '图片',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'src',
-            'zh-CN': 'src'
+            'en-US': 'alt',
+            'zh-CN': 'alt'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'alt',
+            'zh-CN': 'alt'
           }
         },
-        name: 'src',
+        name: 'alt',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -34,34 +41,47 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'wrapperClassName',
-            'zh-CN': 'wrapperClassName'
-          }
-        },
-        name: 'wrapperClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'crossOrigin',
+            'zh-CN': 'crossOrigin'
+          },
+          tip: {
             type: 'i18n',
-            'en-US': 'wrapperStyle',
-            'zh-CN': 'wrapperStyle'
+            'en-US': 'crossOrigin',
+            'zh-CN': 'crossOrigin'
           }
         },
-        name: 'wrapperStyle',
+        name: 'crossOrigin',
         setter: {
-          componentName: 'ObjectSetter',
+          componentName: 'RadioGroupSetter',
           props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
+            dataSource: [
+              {
+                label: '',
+                value: ''
+              },
+              {
+                label: 'anonymous',
+                value: 'anonymous'
+              },
+              {
+                label: 'use-credentials',
+                value: 'use-credentials'
               }
-            }
+            ],
+            options: [
+              {
+                label: '',
+                value: ''
+              },
+              {
+                label: 'anonymous',
+                value: 'anonymous'
+              },
+              {
+                label: 'use-credentials',
+                value: 'use-credentials'
+              }
+            ]
           },
           initialValue: undefined
         }
@@ -70,11 +90,65 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'previewPrefixCls',
-            'zh-CN': 'previewPrefixCls'
+            'en-US': 'decoding',
+            'zh-CN': 'decoding'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'decoding',
+            'zh-CN': 'decoding'
           }
         },
-        name: 'previewPrefixCls',
+        name: 'decoding',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'auto',
+                value: 'auto'
+              },
+              {
+                label: 'async',
+                value: 'async'
+              },
+              {
+                label: 'sync',
+                value: 'sync'
+              }
+            ],
+            options: [
+              {
+                label: 'auto',
+                value: 'auto'
+              },
+              {
+                label: 'async',
+                value: 'async'
+              },
+              {
+                label: 'sync',
+                value: 'sync'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'fallback',
+            'zh-CN': 'fallback'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'fallback',
+            'zh-CN': 'fallback'
+          }
+        },
+        name: 'fallback',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -83,6 +157,118 @@ const ImageMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'height',
+            'zh-CN': 'height'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'height',
+            'zh-CN': 'height'
+          }
+        },
+        name: 'height',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'StringSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'NumberSetter',
+                initialValue: undefined
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'loading',
+            'zh-CN': 'loading'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'loading',
+            'zh-CN': 'loading'
+          }
+        },
+        name: 'loading',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'eager',
+                value: 'eager'
+              },
+              {
+                label: 'lazy',
+                value: 'lazy'
+              }
+            ],
+            options: [
+              {
+                label: 'eager',
+                value: 'eager'
+              },
+              {
+                label: 'lazy',
+                value: 'lazy'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          }
+        },
+        name: 'onClick',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onError',
+            'zh-CN': 'onError'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onError',
+            'zh-CN': 'onError'
+          }
+        },
+        name: 'onError',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'placeholder',
+            'zh-CN': 'placeholder'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'placeholder',
             'zh-CN': 'placeholder'
@@ -104,19 +290,10 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'fallback',
-            'zh-CN': 'fallback'
-          }
-        },
-        name: 'fallback',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'preview',
+            'zh-CN': 'preview'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'preview',
             'zh-CN': 'preview'
@@ -579,31 +756,29 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
+            'en-US': 'previewPrefixCls',
+            'zh-CN': 'previewPrefixCls'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'previewPrefixCls',
+            'zh-CN': 'previewPrefixCls'
           }
         },
-        name: 'onClick',
+        name: 'previewPrefixCls',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onError',
-            'zh-CN': 'onError'
-          }
-        },
-        name: 'onError',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'referrerPolicy',
+            'zh-CN': 'referrerPolicy'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'referrerPolicy',
             'zh-CN': 'referrerPolicy'
@@ -697,41 +872,86 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
+            'en-US': 'sizes',
+            'zh-CN': 'sizes'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'sizes',
+            'zh-CN': 'sizes'
           }
         },
-        name: 'loading',
+        name: 'sizes',
         setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'eager',
-                value: 'eager'
-              },
-              {
-                label: 'lazy',
-                value: 'lazy'
-              }
-            ],
-            options: [
-              {
-                label: 'eager',
-                value: 'eager'
-              },
-              {
-                label: 'lazy',
-                value: 'lazy'
-              }
-            ]
-          },
+          componentName: 'StringSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'src',
+            'zh-CN': 'src'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'src',
+            'zh-CN': 'src'
+          }
+        },
+        name: 'src',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'srcSet',
+            'zh-CN': 'srcSet'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'srcSet',
+            'zh-CN': 'srcSet'
+          }
+        },
+        name: 'srcSet',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'useMap',
+            'zh-CN': 'useMap'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'useMap',
+            'zh-CN': 'useMap'
+          }
+        },
+        name: 'useMap',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'width',
+            'zh-CN': 'width'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'width',
             'zh-CN': 'width'
@@ -758,94 +978,16 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'alt',
-            'zh-CN': 'alt'
-          }
-        },
-        name: 'alt',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'height',
-            'zh-CN': 'height'
-          }
-        },
-        name: 'height',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'crossOrigin',
-            'zh-CN': 'crossOrigin'
-          }
-        },
-        name: 'crossOrigin',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: '',
-                value: ''
-              },
-              {
-                label: 'anonymous',
-                value: 'anonymous'
-              },
-              {
-                label: 'use-credentials',
-                value: 'use-credentials'
-              }
-            ],
-            options: [
-              {
-                label: '',
-                value: ''
-              },
-              {
-                label: 'anonymous',
-                value: 'anonymous'
-              },
-              {
-                label: 'use-credentials',
-                value: 'use-credentials'
-              }
-            ]
+            'en-US': 'wrapperClassName',
+            'zh-CN': 'wrapperClassName'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
-            'en-US': 'srcSet',
-            'zh-CN': 'srcSet'
+            'en-US': 'wrapperClassName',
+            'zh-CN': 'wrapperClassName'
           }
         },
-        name: 'srcSet',
+        name: 'wrapperClassName',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -855,71 +997,26 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'decoding',
-            'zh-CN': 'decoding'
-          }
-        },
-        name: 'decoding',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'auto',
-                value: 'auto'
-              },
-              {
-                label: 'async',
-                value: 'async'
-              },
-              {
-                label: 'sync',
-                value: 'sync'
-              }
-            ],
-            options: [
-              {
-                label: 'auto',
-                value: 'auto'
-              },
-              {
-                label: 'async',
-                value: 'async'
-              },
-              {
-                label: 'sync',
-                value: 'sync'
-              }
-            ]
+            'en-US': 'wrapperStyle',
+            'zh-CN': 'wrapperStyle'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
-            'en-US': 'sizes',
-            'zh-CN': 'sizes'
+            'en-US': 'wrapperStyle',
+            'zh-CN': 'wrapperStyle'
           }
         },
-        name: 'sizes',
+        name: 'wrapperStyle',
         setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'useMap',
-            'zh-CN': 'useMap'
-          }
-        },
-        name: 'useMap',
-        setter: {
-          componentName: 'StringSetter',
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
           initialValue: undefined
         }
       }
@@ -935,7 +1032,7 @@ const ImageMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Image',
+    title: '图片',
     screenshot: '',
     schema: {
       componentName: 'Image',

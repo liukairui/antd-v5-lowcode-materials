@@ -18,7 +18,7 @@ module.exports = {
         type: 'component',
         inject: true,
         library,
-        openUrl: 'http://localhost:5556/?debug'
+        openUrl: 'http://localhost:5556?debug&device=default'
       }
     ]
   ]

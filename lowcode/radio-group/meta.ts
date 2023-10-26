@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const RadioGroupMeta: IPublicTypeComponentMetadata = {
   componentName: 'RadioGroup',
-  title: 'RadioGroup',
+  title: '单选框组',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,194 +22,10 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          }
-        },
-        name: 'defaultValue',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          }
-        },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          }
-        },
-        name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          }
-        },
-        name: 'size',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ],
-            options: [
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ]
+            'en-US': 'buttonStyle',
+            'zh-CN': 'buttonStyle'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          }
-        },
-        name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          }
-        },
-        name: 'onMouseEnter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          }
-        },
-        name: 'onMouseLeave',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          }
-        },
-        name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'optionType',
-            'zh-CN': 'optionType'
-          }
-        },
-        name: 'optionType',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'button',
-                value: 'button'
-              },
-              {
-                label: 'default',
-                value: 'default'
-              }
-            ],
-            options: [
-              {
-                label: 'button',
-                value: 'button'
-              },
-              {
-                label: 'default',
-                value: 'default'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'buttonStyle',
             'zh-CN': 'buttonStyle'
@@ -245,18 +63,86 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onFocus',
-            'zh-CN': 'onFocus'
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
           }
         },
-        name: 'onFocus',
+        name: 'defaultValue',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'MixedSetter',
+          props: {}
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          }
+        },
+        name: 'id',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          }
+        },
+        name: 'name',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onBlur',
+            'zh-CN': 'onBlur'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'onBlur',
             'zh-CN': 'onBlur'
@@ -270,6 +156,124 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          }
+        },
+        name: 'onChange',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onFocus',
+            'zh-CN': 'onFocus'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onFocus',
+            'zh-CN': 'onFocus'
+          }
+        },
+        name: 'onFocus',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          }
+        },
+        name: 'onMouseEnter',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          }
+        },
+        name: 'onMouseLeave',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'optionType',
+            'zh-CN': 'optionType'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'optionType',
+            'zh-CN': 'optionType'
+          }
+        },
+        name: 'optionType',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'button',
+                value: 'button'
+              },
+              {
+                label: 'default',
+                value: 'default'
+              }
+            ],
+            options: [
+              {
+                label: 'button',
+                value: 'button'
+              },
+              {
+                label: 'default',
+                value: 'default'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'options',
+            'zh-CN': 'options'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'options',
             'zh-CN': 'options'
@@ -436,6 +440,74 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          }
+        },
+        name: 'size',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ],
+            options: [
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          }
+        },
+        name: 'value',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {}
+        }
       }
     ],
     supports: {
@@ -449,7 +521,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'RadioGroup',
+    title: '单选框组',
     screenshot: '',
     schema: {
       componentName: 'RadioGroup',

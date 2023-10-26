@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
   componentName: 'CheckboxGroup',
-  title: 'CheckboxGroup',
+  title: '多选框组',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,19 +22,10 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          }
-        },
-        name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'defaultValue',
             'zh-CN': 'defaultValue'
@@ -69,40 +62,48 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
           }
         },
-        name: 'value',
+        name: 'disabled',
         setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
-                ]
-              }
-            }
-          },
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          }
+        },
+        name: 'name',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
@@ -116,6 +117,11 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'options',
+            'zh-CN': 'options'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'options',
             'zh-CN': 'options'
@@ -287,13 +293,39 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
+            'en-US': 'value',
+            'zh-CN': 'value'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
           }
         },
-        name: 'disabled',
+        name: 'value',
         setter: {
-          componentName: 'BoolSetter',
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'MixedSetter',
+              props: {
+                setters: [
+                  {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  },
+                  {
+                    componentName: 'NumberSetter',
+                    initialValue: undefined
+                  },
+                  {
+                    componentName: 'BoolSetter',
+                    initialValue: undefined
+                  }
+                ]
+              }
+            }
+          },
           initialValue: undefined
         }
       }
@@ -309,7 +341,7 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'CheckboxGroup',
+    title: '多选框组',
     screenshot: '',
     schema: {
       componentName: 'CheckboxGroup',

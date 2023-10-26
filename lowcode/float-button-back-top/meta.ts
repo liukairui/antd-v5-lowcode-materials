@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
   componentName: 'FloatButtonBackTop',
-  title: 'FloatButtonBackTop',
+  title: '回到顶部',
+  group: '原子组件',
+  category: '通用 General',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,13 +22,26 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'visibilityHeight',
-            'zh-CN': 'visibilityHeight'
+            'en-US': 'badge',
+            'zh-CN': 'badge'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'badge',
+            'zh-CN': 'badge'
           }
         },
-        name: 'visibilityHeight',
+        name: 'badge',
         setter: {
-          componentName: 'NumberSetter',
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
           initialValue: undefined
         }
       },
@@ -34,31 +49,35 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
+            'en-US': 'description',
+            'zh-CN': 'description'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'description'
           }
         },
-        name: 'onClick',
+        name: 'description',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'target',
-            'zh-CN': 'target'
-          }
-        },
-        name: 'target',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'duration',
+            'zh-CN': 'duration'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'duration',
             'zh-CN': 'duration'
@@ -74,41 +93,10 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          }
-        },
-        name: 'type',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'primary',
-                value: 'primary'
-              }
-            ],
-            options: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'primary',
-                value: 'primary'
-              }
-            ]
+            'en-US': 'href',
+            'zh-CN': 'href'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'href',
             'zh-CN': 'href'
@@ -123,6 +111,11 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'icon',
+            'zh-CN': 'icon'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
@@ -143,6 +136,29 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          }
+        },
+        name: 'onClick',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'shape',
+            'zh-CN': 'shape'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -180,25 +196,28 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
+            'en-US': 'target',
+            'zh-CN': 'target'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'target',
+            'zh-CN': 'target'
           }
         },
-        name: 'description',
+        name: 'target',
         setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
+          componentName: 'FunctionSetter'
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'tooltip',
+            'zh-CN': 'tooltip'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'tooltip',
             'zh-CN': 'tooltip'
@@ -244,21 +263,59 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'badge',
-            'zh-CN': 'badge'
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
           }
         },
-        name: 'badge',
+        name: 'type',
         setter: {
-          componentName: 'ObjectSetter',
+          componentName: 'RadioGroupSetter',
           props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
+            dataSource: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'primary',
+                value: 'primary'
               }
-            }
+            ],
+            options: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'primary',
+                value: 'primary'
+              }
+            ]
           },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'visibilityHeight',
+            'zh-CN': 'visibilityHeight'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'visibilityHeight',
+            'zh-CN': 'visibilityHeight'
+          }
+        },
+        name: 'visibilityHeight',
+        setter: {
+          componentName: 'NumberSetter',
           initialValue: undefined
         }
       }
@@ -274,7 +331,7 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'FloatButtonBackTop',
+    title: '回到顶部',
     screenshot: '',
     schema: {
       componentName: 'FloatButtonBackTop',

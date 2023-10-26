@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ConfigProviderMeta: IPublicTypeComponentMetadata = {
   componentName: 'ConfigProvider',
-  title: 'ConfigProvider',
+  title: '配置提供器',
+  group: '原子组件',
+  category: '其他 Other',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,39 +22,146 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'getTargetContainer',
-            'zh-CN': 'getTargetContainer'
+            'en-US': 'alert',
+            'zh-CN': 'alert'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'alert',
+            'zh-CN': 'alert'
           }
         },
-        name: 'getTargetContainer',
+        name: 'alert',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
+            'en-US': 'anchor',
+            'zh-CN': 'anchor'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'anchor',
+            'zh-CN': 'anchor'
           }
         },
-        name: 'getPopupContainer',
+        name: 'anchor',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'iconPrefixCls',
-            'zh-CN': 'iconPrefixCls'
+            'en-US': 'autoInsertSpaceInButton',
+            'zh-CN': 'autoInsertSpaceInButton'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'autoInsertSpaceInButton',
+            'zh-CN': 'autoInsertSpaceInButton'
           }
         },
-        name: 'iconPrefixCls',
+        name: 'autoInsertSpaceInButton',
         setter: {
-          componentName: 'StringSetter',
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
@@ -60,18 +169,856 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'renderEmpty',
-            'zh-CN': 'renderEmpty'
+            'en-US': 'avatar',
+            'zh-CN': 'avatar'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'avatar',
+            'zh-CN': 'avatar'
           }
         },
-        name: 'renderEmpty',
+        name: 'avatar',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'badge',
+            'zh-CN': 'badge'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'badge',
+            'zh-CN': 'badge'
+          }
+        },
+        name: 'badge',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'classNames',
+                      'zh-CN': 'classNames'
+                    }
+                  },
+                  name: 'classNames',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'root',
+                                'zh-CN': 'root'
+                              }
+                            },
+                            name: 'root',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'indicator',
+                                'zh-CN': 'indicator'
+                              }
+                            },
+                            name: 'indicator',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          }
+                        ],
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'styles',
+                      'zh-CN': 'styles'
+                    }
+                  },
+                  name: 'styles',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'root',
+                                'zh-CN': 'root'
+                              }
+                            },
+                            name: 'root',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'indicator',
+                                'zh-CN': 'indicator'
+                              }
+                            },
+                            name: 'indicator',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          }
+                        ],
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'breadcrumb',
+            'zh-CN': 'breadcrumb'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'breadcrumb',
+            'zh-CN': 'breadcrumb'
+          }
+        },
+        name: 'breadcrumb',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'button',
+            'zh-CN': 'button'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'button',
+            'zh-CN': 'button'
+          }
+        },
+        name: 'button',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'classNames',
+                      'zh-CN': 'classNames'
+                    }
+                  },
+                  name: 'classNames',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {}
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'styles',
+                      'zh-CN': 'styles'
+                    }
+                  },
+                  name: 'styles',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {}
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'calendar',
+            'zh-CN': 'calendar'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'calendar',
+            'zh-CN': 'calendar'
+          }
+        },
+        name: 'calendar',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'card',
+            'zh-CN': 'card'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'card',
+            'zh-CN': 'card'
+          }
+        },
+        name: 'card',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'carousel',
+            'zh-CN': 'carousel'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'carousel',
+            'zh-CN': 'carousel'
+          }
+        },
+        name: 'carousel',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'cascader',
+            'zh-CN': 'cascader'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'cascader',
+            'zh-CN': 'cascader'
+          }
+        },
+        name: 'cascader',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'checkbox',
+            'zh-CN': 'checkbox'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'checkbox',
+            'zh-CN': 'checkbox'
+          }
+        },
+        name: 'checkbox',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'collapse',
+            'zh-CN': 'collapse'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'collapse',
+            'zh-CN': 'collapse'
+          }
+        },
+        name: 'collapse',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'colorPicker',
+            'zh-CN': 'colorPicker'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'colorPicker',
+            'zh-CN': 'colorPicker'
+          }
+        },
+        name: 'colorPicker',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'componentDisabled',
+            'zh-CN': 'componentDisabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'componentDisabled',
+            'zh-CN': 'componentDisabled'
+          }
+        },
+        name: 'componentDisabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'componentSize',
+            'zh-CN': 'componentSize'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'componentSize',
+            'zh-CN': 'componentSize'
+          }
+        },
+        name: 'componentSize',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ],
+            options: [
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'csp',
+            'zh-CN': 'csp'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'csp',
             'zh-CN': 'csp'
@@ -110,19 +1057,603 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'autoInsertSpaceInButton',
-            'zh-CN': 'autoInsertSpaceInButton'
+            'en-US': 'datePicker',
+            'zh-CN': 'datePicker'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'datePicker',
+            'zh-CN': 'datePicker'
           }
         },
-        name: 'autoInsertSpaceInButton',
+        name: 'datePicker',
         setter: {
-          componentName: 'BoolSetter',
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'descriptions',
+            'zh-CN': 'descriptions'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'descriptions',
+            'zh-CN': 'descriptions'
+          }
+        },
+        name: 'descriptions',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ],
+            options: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ]
+          },
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'divider',
+            'zh-CN': 'divider'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'divider',
+            'zh-CN': 'divider'
+          }
+        },
+        name: 'divider',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'drawer',
+            'zh-CN': 'drawer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'drawer',
+            'zh-CN': 'drawer'
+          }
+        },
+        name: 'drawer',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'classNames',
+                      'zh-CN': 'classNames'
+                    }
+                  },
+                  name: 'classNames',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'header',
+                                'zh-CN': 'header'
+                              }
+                            },
+                            name: 'header',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'body',
+                                'zh-CN': 'body'
+                              }
+                            },
+                            name: 'body',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'footer',
+                                'zh-CN': 'footer'
+                              }
+                            },
+                            name: 'footer',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'mask',
+                                'zh-CN': 'mask'
+                              }
+                            },
+                            name: 'mask',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'content',
+                                'zh-CN': 'content'
+                              }
+                            },
+                            name: 'content',
+                            setter: {
+                              componentName: 'StringSetter',
+                              initialValue: undefined
+                            }
+                          }
+                        ],
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'styles',
+                      'zh-CN': 'styles'
+                    }
+                  },
+                  name: 'styles',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'header',
+                                'zh-CN': 'header'
+                              }
+                            },
+                            name: 'header',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'body',
+                                'zh-CN': 'body'
+                              }
+                            },
+                            name: 'body',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'footer',
+                                'zh-CN': 'footer'
+                              }
+                            },
+                            name: 'footer',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'mask',
+                                'zh-CN': 'mask'
+                              }
+                            },
+                            name: 'mask',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          },
+                          {
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'content',
+                                'zh-CN': 'content'
+                              }
+                            },
+                            name: 'content',
+                            setter: {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
+                                  }
+                                }
+                              },
+                              initialValue: undefined
+                            }
+                          }
+                        ],
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    }
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'empty',
+            'zh-CN': 'empty'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'empty',
+            'zh-CN': 'empty'
+          }
+        },
+        name: 'empty',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'flex',
+            'zh-CN': 'flex'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'flex',
+            'zh-CN': 'flex'
+          }
+        },
+        name: 'flex',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'vertical',
+                      'zh-CN': 'vertical'
+                    }
+                  },
+                  name: 'vertical',
+                  setter: {
+                    componentName: 'BoolSetter',
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'form',
+            'zh-CN': 'form'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'form',
             'zh-CN': 'form'
@@ -146,6 +1677,130 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'getPopupContainer',
+            'zh-CN': 'getPopupContainer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'getPopupContainer',
+            'zh-CN': 'getPopupContainer'
+          }
+        },
+        name: 'getPopupContainer',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'getTargetContainer',
+            'zh-CN': 'getTargetContainer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'getTargetContainer',
+            'zh-CN': 'getTargetContainer'
+          }
+        },
+        name: 'getTargetContainer',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'iconPrefixCls',
+            'zh-CN': 'iconPrefixCls'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'iconPrefixCls',
+            'zh-CN': 'iconPrefixCls'
+          }
+        },
+        name: 'iconPrefixCls',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'image',
+            'zh-CN': 'image'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'image',
+            'zh-CN': 'image'
+          }
+        },
+        name: 'image',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'input',
+            'zh-CN': 'input'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'input',
             'zh-CN': 'input'
           }
@@ -168,49 +1823,138 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'select',
-            'zh-CN': 'select'
+            'en-US': 'layout',
+            'zh-CN': 'layout'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'layout',
+            'zh-CN': 'layout'
           }
         },
-        name: 'select',
+        name: 'layout',
         setter: {
           componentName: 'ObjectSetter',
           props: {
             config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
               extraSetter: {
                 componentName: 'MixedSetter',
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'pagination',
-            'zh-CN': 'pagination'
+            'en-US': 'list',
+            'zh-CN': 'list'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'list',
+            'zh-CN': 'list'
           }
         },
-        name: 'pagination',
+        name: 'list',
         setter: {
           componentName: 'ObjectSetter',
           props: {
             config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
               extraSetter: {
                 componentName: 'MixedSetter',
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
@@ -2657,6 +4401,339 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'mentions',
+            'zh-CN': 'mentions'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'mentions',
+            'zh-CN': 'mentions'
+          }
+        },
+        name: 'mentions',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'menu',
+            'zh-CN': 'menu'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'menu',
+            'zh-CN': 'menu'
+          }
+        },
+        name: 'menu',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'message',
+            'zh-CN': 'message'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'message',
+            'zh-CN': 'message'
+          }
+        },
+        name: 'message',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'modal',
+            'zh-CN': 'modal'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'modal',
+            'zh-CN': 'modal'
+          }
+        },
+        name: 'modal',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'classNames',
+                      'zh-CN': 'classNames'
+                    }
+                  },
+                  name: 'classNames',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'styles',
+                      'zh-CN': 'styles'
+                    }
+                  },
+                  name: 'styles',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'notification',
+            'zh-CN': 'notification'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'notification',
+            'zh-CN': 'notification'
+          }
+        },
+        name: 'notification',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'pageHeader',
+            'zh-CN': 'pageHeader'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'pageHeader',
             'zh-CN': 'pageHeader'
           }
@@ -2694,42 +4771,25 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'componentSize',
-            'zh-CN': 'componentSize'
+            'en-US': 'pagination',
+            'zh-CN': 'pagination'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'pagination',
+            'zh-CN': 'pagination'
           }
         },
-        name: 'componentSize',
+        name: 'pagination',
         setter: {
-          componentName: 'RadioGroupSetter',
+          componentName: 'ObjectSetter',
           props: {
-            dataSource: [
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
-            ],
-            options: [
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ]
+            }
           },
           initialValue: undefined
         }
@@ -2738,11 +4798,16 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'componentDisabled',
-            'zh-CN': 'componentDisabled'
+            'en-US': 'popupMatchSelectWidth',
+            'zh-CN': 'popupMatchSelectWidth'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'popupMatchSelectWidth',
+            'zh-CN': 'popupMatchSelectWidth'
           }
         },
-        name: 'componentDisabled',
+        name: 'popupMatchSelectWidth',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -2752,32 +4817,37 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
+            'en-US': 'popupOverflow',
+            'zh-CN': 'popupOverflow'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'popupOverflow',
+            'zh-CN': 'popupOverflow'
           }
         },
-        name: 'direction',
+        name: 'popupOverflow',
         setter: {
           componentName: 'RadioGroupSetter',
           props: {
             dataSource: [
               {
-                label: 'ltr',
-                value: 'ltr'
+                label: 'scroll',
+                value: 'scroll'
               },
               {
-                label: 'rtl',
-                value: 'rtl'
+                label: 'viewport',
+                value: 'viewport'
               }
             ],
             options: [
               {
-                label: 'ltr',
-                value: 'ltr'
+                label: 'scroll',
+                value: 'scroll'
               },
               {
-                label: 'rtl',
-                value: 'rtl'
+                label: 'viewport',
+                value: 'viewport'
               }
             ]
           },
@@ -2787,6 +4857,504 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'progress',
+            'zh-CN': 'progress'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'progress',
+            'zh-CN': 'progress'
+          }
+        },
+        name: 'progress',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'radio',
+            'zh-CN': 'radio'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'radio',
+            'zh-CN': 'radio'
+          }
+        },
+        name: 'radio',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'rate',
+            'zh-CN': 'rate'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'rate',
+            'zh-CN': 'rate'
+          }
+        },
+        name: 'rate',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'renderEmpty',
+            'zh-CN': 'renderEmpty'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'renderEmpty',
+            'zh-CN': 'renderEmpty'
+          }
+        },
+        name: 'renderEmpty',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'result',
+            'zh-CN': 'result'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'result',
+            'zh-CN': 'result'
+          }
+        },
+        name: 'result',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'segmented',
+            'zh-CN': 'segmented'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'segmented',
+            'zh-CN': 'segmented'
+          }
+        },
+        name: 'segmented',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'select',
+            'zh-CN': 'select'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'select',
+            'zh-CN': 'select'
+          }
+        },
+        name: 'select',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'skeleton',
+            'zh-CN': 'skeleton'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'skeleton',
+            'zh-CN': 'skeleton'
+          }
+        },
+        name: 'skeleton',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'slider',
+            'zh-CN': 'slider'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'slider',
+            'zh-CN': 'slider'
+          }
+        },
+        name: 'slider',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'space',
+            'zh-CN': 'space'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'space',
             'zh-CN': 'space'
@@ -2984,62 +5552,345 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'virtual',
-            'zh-CN': 'virtual'
-          }
-        },
-        name: 'virtual',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'spin',
+            'zh-CN': 'spin'
+          },
+          tip: {
             type: 'i18n',
-            'en-US': 'popupMatchSelectWidth',
-            'zh-CN': 'popupMatchSelectWidth'
+            'en-US': 'spin',
+            'zh-CN': 'spin'
           }
         },
-        name: 'popupMatchSelectWidth',
+        name: 'spin',
         setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'popupOverflow',
-            'zh-CN': 'popupOverflow'
-          }
-        },
-        name: 'popupOverflow',
-        setter: {
-          componentName: 'RadioGroupSetter',
+          componentName: 'ObjectSetter',
           props: {
-            dataSource: [
-              {
-                label: 'scroll',
-                value: 'scroll'
-              },
-              {
-                label: 'viewport',
-                value: 'viewport'
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
-            ],
-            options: [
-              {
-                label: 'scroll',
-                value: 'scroll'
-              },
-              {
-                label: 'viewport',
-                value: 'viewport'
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'statistic',
+            'zh-CN': 'statistic'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'statistic',
+            'zh-CN': 'statistic'
+          }
+        },
+        name: 'statistic',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
-            ]
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'steps',
+            'zh-CN': 'steps'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'steps',
+            'zh-CN': 'steps'
+          }
+        },
+        name: 'steps',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'switch',
+            'zh-CN': 'switch'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'switch',
+            'zh-CN': 'switch'
+          }
+        },
+        name: 'switch',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'table',
+            'zh-CN': 'table'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'table',
+            'zh-CN': 'table'
+          }
+        },
+        name: 'table',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tabs',
+            'zh-CN': 'tabs'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'tabs',
+            'zh-CN': 'tabs'
+          }
+        },
+        name: 'tabs',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
           },
           initialValue: undefined
         }
@@ -3047,6 +5898,75 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'tag',
+            'zh-CN': 'tag'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'tag',
+            'zh-CN': 'tag'
+          }
+        },
+        name: 'tag',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'className',
+                      'zh-CN': 'className'
+                    }
+                  },
+                  name: 'className',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'style',
+                      'zh-CN': 'style'
+                    }
+                  },
+                  name: 'style',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
+                        }
+                      }
+                    },
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'theme',
+            'zh-CN': 'theme'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'theme',
             'zh-CN': 'theme'
@@ -3172,2637 +6092,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'warning',
-            'zh-CN': 'warning'
-          }
-        },
-        name: 'warning',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'strict',
-                      'zh-CN': 'strict'
-                    }
-                  },
-                  name: 'strict',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'alert',
-            'zh-CN': 'alert'
-          }
-        },
-        name: 'alert',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'anchor',
-            'zh-CN': 'anchor'
-          }
-        },
-        name: 'anchor',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'button',
-            'zh-CN': 'button'
-          }
-        },
-        name: 'button',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'classNames',
-                      'zh-CN': 'classNames'
-                    }
-                  },
-                  name: 'classNames',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'styles',
-                      'zh-CN': 'styles'
-                    }
-                  },
-                  name: 'styles',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'calendar',
-            'zh-CN': 'calendar'
-          }
-        },
-        name: 'calendar',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'carousel',
-            'zh-CN': 'carousel'
-          }
-        },
-        name: 'carousel',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'cascader',
-            'zh-CN': 'cascader'
-          }
-        },
-        name: 'cascader',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'collapse',
-            'zh-CN': 'collapse'
-          }
-        },
-        name: 'collapse',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'divider',
-            'zh-CN': 'divider'
-          }
-        },
-        name: 'divider',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'drawer',
-            'zh-CN': 'drawer'
-          }
-        },
-        name: 'drawer',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'classNames',
-                      'zh-CN': 'classNames'
-                    }
-                  },
-                  name: 'classNames',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'header',
-                                'zh-CN': 'header'
-                              }
-                            },
-                            name: 'header',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'body',
-                                'zh-CN': 'body'
-                              }
-                            },
-                            name: 'body',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'footer',
-                                'zh-CN': 'footer'
-                              }
-                            },
-                            name: 'footer',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'mask',
-                                'zh-CN': 'mask'
-                              }
-                            },
-                            name: 'mask',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'content',
-                                'zh-CN': 'content'
-                              }
-                            },
-                            name: 'content',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'styles',
-                      'zh-CN': 'styles'
-                    }
-                  },
-                  name: 'styles',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'header',
-                                'zh-CN': 'header'
-                              }
-                            },
-                            name: 'header',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'body',
-                                'zh-CN': 'body'
-                              }
-                            },
-                            name: 'body',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'footer',
-                                'zh-CN': 'footer'
-                              }
-                            },
-                            name: 'footer',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'mask',
-                                'zh-CN': 'mask'
-                              }
-                            },
-                            name: 'mask',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'content',
-                                'zh-CN': 'content'
-                              }
-                            },
-                            name: 'content',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'typography',
-            'zh-CN': 'typography'
-          }
-        },
-        name: 'typography',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'skeleton',
-            'zh-CN': 'skeleton'
-          }
-        },
-        name: 'skeleton',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'spin',
-            'zh-CN': 'spin'
-          }
-        },
-        name: 'spin',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'segmented',
-            'zh-CN': 'segmented'
-          }
-        },
-        name: 'segmented',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'statistic',
-            'zh-CN': 'statistic'
-          }
-        },
-        name: 'statistic',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'steps',
-            'zh-CN': 'steps'
-          }
-        },
-        name: 'steps',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'image',
-            'zh-CN': 'image'
-          }
-        },
-        name: 'image',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'layout',
-            'zh-CN': 'layout'
-          }
-        },
-        name: 'layout',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'list',
-            'zh-CN': 'list'
-          }
-        },
-        name: 'list',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'mentions',
-            'zh-CN': 'mentions'
-          }
-        },
-        name: 'mentions',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'modal',
-            'zh-CN': 'modal'
-          }
-        },
-        name: 'modal',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'classNames',
-                      'zh-CN': 'classNames'
-                    }
-                  },
-                  name: 'classNames',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'styles',
-                      'zh-CN': 'styles'
-                    }
-                  },
-                  name: 'styles',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'progress',
-            'zh-CN': 'progress'
-          }
-        },
-        name: 'progress',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'result',
-            'zh-CN': 'result'
-          }
-        },
-        name: 'result',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'slider',
-            'zh-CN': 'slider'
-          }
-        },
-        name: 'slider',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'breadcrumb',
-            'zh-CN': 'breadcrumb'
-          }
-        },
-        name: 'breadcrumb',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'menu',
-            'zh-CN': 'menu'
-          }
-        },
-        name: 'menu',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'checkbox',
-            'zh-CN': 'checkbox'
-          }
-        },
-        name: 'checkbox',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'descriptions',
-            'zh-CN': 'descriptions'
-          }
-        },
-        name: 'descriptions',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'empty',
-            'zh-CN': 'empty'
-          }
-        },
-        name: 'empty',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'badge',
-            'zh-CN': 'badge'
-          }
-        },
-        name: 'badge',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'classNames',
-                      'zh-CN': 'classNames'
-                    }
-                  },
-                  name: 'classNames',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'root',
-                                'zh-CN': 'root'
-                              }
-                            },
-                            name: 'root',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'indicator',
-                                'zh-CN': 'indicator'
-                              }
-                            },
-                            name: 'indicator',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
-                          }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'styles',
-                      'zh-CN': 'styles'
-                    }
-                  },
-                  name: 'styles',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'root',
-                                'zh-CN': 'root'
-                              }
-                            },
-                            name: 'root',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'indicator',
-                                'zh-CN': 'indicator'
-                              }
-                            },
-                            name: 'indicator',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'radio',
-            'zh-CN': 'radio'
-          }
-        },
-        name: 'radio',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'rate',
-            'zh-CN': 'rate'
-          }
-        },
-        name: 'rate',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'switch',
-            'zh-CN': 'switch'
-          }
-        },
-        name: 'switch',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'transfer',
-            'zh-CN': 'transfer'
-          }
-        },
-        name: 'transfer',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'avatar',
-            'zh-CN': 'avatar'
-          }
-        },
-        name: 'avatar',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'message',
-            'zh-CN': 'message'
-          }
-        },
-        name: 'message',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'tag',
-            'zh-CN': 'tag'
-          }
-        },
-        name: 'tag',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'table',
-            'zh-CN': 'table'
-          }
-        },
-        name: 'table',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'card',
-            'zh-CN': 'card'
-          }
-        },
-        name: 'card',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'tabs',
-            'zh-CN': 'tabs'
-          }
-        },
-        name: 'tabs',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
+            'en-US': 'timePicker',
+            'zh-CN': 'timePicker'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'timeline',
-            'zh-CN': 'timeline'
-          }
-        },
-        name: 'timeline',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'className',
-                      'zh-CN': 'className'
-                    }
-                  },
-                  name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'style',
-                      'zh-CN': 'style'
-                    }
-                  },
-                  name: 'style',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'timePicker',
             'zh-CN': 'timePicker'
@@ -5863,11 +6156,16 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'upload',
-            'zh-CN': 'upload'
+            'en-US': 'timeline',
+            'zh-CN': 'timeline'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'timeline',
+            'zh-CN': 'timeline'
           }
         },
-        name: 'upload',
+        name: 'timeline',
         setter: {
           componentName: 'ObjectSetter',
           props: {
@@ -5922,11 +6220,16 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'notification',
-            'zh-CN': 'notification'
+            'en-US': 'transfer',
+            'zh-CN': 'transfer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'transfer',
+            'zh-CN': 'transfer'
           }
         },
-        name: 'notification',
+        name: 'transfer',
         setter: {
           componentName: 'ObjectSetter',
           props: {
@@ -5980,6 +6283,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'tree',
+            'zh-CN': 'tree'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'tree',
             'zh-CN': 'tree'
@@ -6040,11 +6348,16 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'colorPicker',
-            'zh-CN': 'colorPicker'
+            'en-US': 'typography',
+            'zh-CN': 'typography'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'typography',
+            'zh-CN': 'typography'
           }
         },
-        name: 'colorPicker',
+        name: 'typography',
         setter: {
           componentName: 'ObjectSetter',
           props: {
@@ -6099,11 +6412,16 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'datePicker',
-            'zh-CN': 'datePicker'
+            'en-US': 'upload',
+            'zh-CN': 'upload'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'upload',
+            'zh-CN': 'upload'
           }
         },
-        name: 'datePicker',
+        name: 'upload',
         setter: {
           componentName: 'ObjectSetter',
           props: {
@@ -6158,11 +6476,35 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'flex',
-            'zh-CN': 'flex'
+            'en-US': 'virtual',
+            'zh-CN': 'virtual'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'virtual',
+            'zh-CN': 'virtual'
           }
         },
-        name: 'flex',
+        name: 'virtual',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'warning',
+            'zh-CN': 'warning'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'warning',
+            'zh-CN': 'warning'
+          }
+        },
+        name: 'warning',
         setter: {
           componentName: 'ObjectSetter',
           props: {
@@ -6172,11 +6514,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'vertical',
-                      'zh-CN': 'vertical'
+                      'en-US': 'strict',
+                      'zh-CN': 'strict'
                     }
                   },
-                  name: 'vertical',
+                  name: 'strict',
                   setter: {
                     componentName: 'BoolSetter',
                     initialValue: undefined
@@ -6196,7 +6538,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
           label: {
             type: 'i18n',
             'en-US': 'wave',
-            'zh-CN': 'Wave is sp'
+            'zh-CN': 'wave'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'wave',
+            'zh-CN': 'wave'
           }
         },
         name: 'wave',
@@ -6253,7 +6600,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'ConfigProvider',
+    title: '配置提供器',
     screenshot: '',
     schema: {
       componentName: 'ConfigProvider',

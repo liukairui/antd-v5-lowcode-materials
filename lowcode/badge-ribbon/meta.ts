@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
   componentName: 'BadgeRibbon',
-  title: 'BadgeRibbon',
+  title: '多彩徽标',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,25 +22,10 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'text',
-            'zh-CN': 'text'
-          }
-        },
-        name: 'text',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+            'en-US': 'color',
+            'zh-CN': 'color'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'color',
             'zh-CN': 'color'
@@ -53,6 +40,11 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'placement',
+            'zh-CN': 'placement'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'placement',
             'zh-CN': 'placement'
@@ -85,6 +77,31 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'text',
+            'zh-CN': 'text'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'text',
+            'zh-CN': 'text'
+          }
+        },
+        name: 'text',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
       }
     ],
     supports: {
@@ -98,7 +115,7 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'BadgeRibbon',
+    title: '多彩徽标',
     screenshot: '',
     schema: {
       componentName: 'BadgeRibbon',

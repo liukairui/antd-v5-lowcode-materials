@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const RadioButtonMeta: IPublicTypeComponentMetadata = {
   componentName: 'RadioButton',
-  title: 'RadioButton',
+  title: '单选框按钮',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'defaultChecked',
-            'zh-CN': 'defaultChecked'
+            'en-US': 'autoFocus',
+            'zh-CN': 'autoFocus'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'autoFocus',
+            'zh-CN': 'autoFocus'
           }
         },
-        name: 'defaultChecked',
+        name: 'autoFocus',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -33,6 +40,11 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'checked',
+            'zh-CN': 'checked'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'checked',
             'zh-CN': 'checked'
@@ -48,6 +60,30 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'defaultChecked',
+            'zh-CN': 'defaultChecked'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultChecked',
+            'zh-CN': 'defaultChecked'
+          }
+        },
+        name: 'defaultChecked',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
@@ -62,11 +98,16 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
           }
         },
-        name: 'title',
+        name: 'id',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -75,6 +116,30 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          }
+        },
+        name: 'name',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
@@ -88,6 +153,47 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'onKeyDown',
+            'zh-CN': 'onKeyDown'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onKeyDown',
+            'zh-CN': 'onKeyDown'
+          }
+        },
+        name: 'onKeyDown',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onKeyPress',
+            'zh-CN': 'onKeyPress'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onKeyPress',
+            'zh-CN': 'onKeyPress'
+          }
+        },
+        name: 'onKeyPress',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'onMouseEnter',
             'zh-CN': 'onMouseEnter'
@@ -104,6 +210,11 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onMouseLeave',
             'zh-CN': 'onMouseLeave'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
           }
         },
         name: 'onMouseLeave',
@@ -115,45 +226,29 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onKeyPress',
-            'zh-CN': 'onKeyPress'
+            'en-US': 'skipGroup',
+            'zh-CN': 'skipGroup'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'skipGroup',
+            'zh-CN': 'skipGroup'
           }
         },
-        name: 'onKeyPress',
+        name: 'skipGroup',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
-          }
-        },
-        name: 'onKeyDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          }
-        },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'tabIndex',
+            'zh-CN': 'tabIndex'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'tabIndex',
             'zh-CN': 'tabIndex'
@@ -169,11 +264,16 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
+            'en-US': 'title',
+            'zh-CN': 'title'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
           }
         },
-        name: 'name',
+        name: 'title',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -183,33 +283,10 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'autoFocus',
-            'zh-CN': 'autoFocus'
-          }
-        },
-        name: 'autoFocus',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -225,14 +302,19 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'skipGroup',
-            'zh-CN': 'skipGroup'
+            'en-US': 'value',
+            'zh-CN': 'value'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
           }
         },
-        name: 'skipGroup',
+        name: 'value',
         setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
+          componentName: 'MixedSetter',
+          props: {}
         }
       }
     ],
@@ -252,7 +334,7 @@ const RadioButtonMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'RadioButton',
+    title: '单选框按钮',
     screenshot: '',
     schema: {
       componentName: 'RadioButton',

@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SkeletonButtonMeta: IPublicTypeComponentMetadata = {
   componentName: 'SkeletonButton',
-  title: 'SkeletonButton',
+  title: '骨架屏按钮',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,49 +22,29 @@ const SkeletonButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
+            'en-US': 'active',
+            'zh-CN': 'active'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
           }
         },
-        name: 'size',
+        name: 'active',
         setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ],
-            options: [
-              {
-                label: 'default',
-                value: 'default'
-              },
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ]
-          },
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'block',
+            'zh-CN': 'block'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'block',
             'zh-CN': 'block'
@@ -77,6 +59,11 @@ const SkeletonButtonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'shape',
+            'zh-CN': 'shape'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -130,13 +117,48 @@ const SkeletonButtonMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
           }
         },
-        name: 'active',
+        name: 'size',
         setter: {
-          componentName: 'BoolSetter',
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ],
+            options: [
+              {
+                label: 'default',
+                value: 'default'
+              },
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ]
+          },
           initialValue: undefined
         }
       }
@@ -152,7 +174,7 @@ const SkeletonButtonMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'SkeletonButton',
+    title: '骨架屏按钮',
     screenshot: '',
     schema: {
       componentName: 'SkeletonButton',

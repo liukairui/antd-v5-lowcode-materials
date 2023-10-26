@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const TypographyTextMeta: IPublicTypeComponentMetadata = {
   componentName: 'TypographyText',
-  title: 'TypographyText',
+  title: '文本',
+  group: '原子组件',
+  category: '通用 General',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,35 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'ellipsis',
-            'zh-CN': 'ellipsis'
+            'en-US': 'code',
+            'zh-CN': 'code'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'code',
+            'zh-CN': 'code'
           }
         },
-        name: 'ellipsis',
+        name: 'code',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'copyable',
+            'zh-CN': 'copyable'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'copyable',
+            'zh-CN': 'copyable'
+          }
+        },
+        name: 'copyable',
         setter: {
           componentName: 'MixedSetter',
           props: {
@@ -37,13 +63,117 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
                 componentName: 'ObjectSetter',
                 props: {
                   config: {
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'text',
+                            'zh-CN': 'text'
+                          }
+                        },
+                        name: 'text',
+                        setter: {
+                          componentName: 'StringSetter',
+                          initialValue: undefined
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'onCopy',
+                            'zh-CN': 'onCopy'
+                          }
+                        },
+                        name: 'onCopy',
+                        setter: {
+                          componentName: 'FunctionSetter'
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'icon',
+                            'zh-CN': 'icon'
+                          }
+                        },
+                        name: 'icon',
+                        setter: {
+                          componentName: 'SlotSetter',
+                          props: {
+                            mode: 'node'
+                          },
+                          initialValue: {
+                            type: 'JSSlot',
+                            value: []
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'tooltips',
+                            'zh-CN': 'tooltips'
+                          }
+                        },
+                        name: 'tooltips',
+                        setter: {
+                          componentName: 'SlotSetter',
+                          props: {
+                            mode: 'node'
+                          },
+                          initialValue: {
+                            type: 'JSSlot',
+                            value: []
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'format',
+                            'zh-CN': 'format'
+                          }
+                        },
+                        name: 'format',
+                        setter: {
+                          componentName: 'RadioGroupSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'text/plain',
+                                value: 'text/plain'
+                              },
+                              {
+                                label: 'text/html',
+                                value: 'text/html'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'text/plain',
+                                value: 'text/plain'
+                              },
+                              {
+                                label: 'text/html',
+                                value: 'text/html'
+                              }
+                            ]
+                          },
+                          initialValue: undefined
+                        }
+                      }
+                    ],
                     extraSetter: {
                       componentName: 'MixedSetter',
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -53,19 +183,89 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
+            'en-US': 'delete',
+            'zh-CN': 'delete'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'delete',
+            'zh-CN': 'delete'
           }
         },
-        name: 'title',
+        name: 'delete',
         setter: {
-          componentName: 'StringSetter',
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ],
+            options: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'editable',
+            'zh-CN': 'editable'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'editable',
             'zh-CN': 'editable'
@@ -359,11 +559,16 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'copyable',
-            'zh-CN': 'copyable'
+            'en-US': 'ellipsis',
+            'zh-CN': 'ellipsis'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'ellipsis',
+            'zh-CN': 'ellipsis'
           }
         },
-        name: 'copyable',
+        name: 'ellipsis',
         setter: {
           componentName: 'MixedSetter',
           props: {
@@ -376,117 +581,13 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
                 componentName: 'ObjectSetter',
                 props: {
                   config: {
-                    items: [
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'text',
-                            'zh-CN': 'text'
-                          }
-                        },
-                        name: 'text',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'onCopy',
-                            'zh-CN': 'onCopy'
-                          }
-                        },
-                        name: 'onCopy',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'icon',
-                            'zh-CN': 'icon'
-                          }
-                        },
-                        name: 'icon',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'tooltips',
-                            'zh-CN': 'tooltips'
-                          }
-                        },
-                        name: 'tooltips',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'format',
-                            'zh-CN': 'format'
-                          }
-                        },
-                        name: 'format',
-                        setter: {
-                          componentName: 'RadioGroupSetter',
-                          props: {
-                            dataSource: [
-                              {
-                                label: 'text/plain',
-                                value: 'text/plain'
-                              },
-                              {
-                                label: 'text/html',
-                                value: 'text/html'
-                              }
-                            ],
-                            options: [
-                              {
-                                label: 'text/plain',
-                                value: 'text/plain'
-                              },
-                              {
-                                label: 'text/html',
-                                value: 'text/html'
-                              }
-                            ]
-                          },
-                          initialValue: undefined
-                        }
-                      }
-                    ],
                     extraSetter: {
                       componentName: 'MixedSetter',
                       props: {}
                     }
                   }
-                }
+                },
+                initialValue: undefined
               }
             ]
           }
@@ -495,6 +596,125 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          }
+        },
+        name: 'id',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'italic',
+            'zh-CN': 'italic'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'italic',
+            'zh-CN': 'italic'
+          }
+        },
+        name: 'italic',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'keyboard',
+            'zh-CN': 'keyboard'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'keyboard',
+            'zh-CN': 'keyboard'
+          }
+        },
+        name: 'keyboard',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'mark',
+            'zh-CN': 'mark'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'mark',
+            'zh-CN': 'mark'
+          }
+        },
+        name: 'mark',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'strong',
+            'zh-CN': 'strong'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'strong',
+            'zh-CN': 'strong'
+          }
+        },
+        name: 'strong',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
+          }
+        },
+        name: 'title',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -548,47 +768,10 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          }
-        },
-        name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'code',
-            'zh-CN': 'code'
-          }
-        },
-        name: 'code',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'mark',
-            'zh-CN': 'mark'
-          }
-        },
-        name: 'mark',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'underline',
+            'zh-CN': 'underline'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'underline',
             'zh-CN': 'underline'
@@ -597,112 +780,6 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
         name: 'underline',
         setter: {
           componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'delete',
-            'zh-CN': 'delete'
-          }
-        },
-        name: 'delete',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'strong',
-            'zh-CN': 'strong'
-          }
-        },
-        name: 'strong',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'keyboard',
-            'zh-CN': 'keyboard'
-          }
-        },
-        name: 'keyboard',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'italic',
-            'zh-CN': 'italic'
-          }
-        },
-        name: 'italic',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
           initialValue: undefined
         }
       }
@@ -718,7 +795,7 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'TypographyText',
+    title: '文本',
     screenshot: '',
     schema: {
       componentName: 'TypographyText',

@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const UploadMeta: IPublicTypeComponentMetadata = {
   componentName: 'Upload',
-  title: 'Upload',
+  title: '上传',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,47 +22,16 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          }
-        },
-        name: 'type',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'drag',
-                value: 'drag'
-              },
-              {
-                label: 'select',
-                value: 'select'
-              }
-            ],
-            options: [
-              {
-                label: 'drag',
-                value: 'drag'
-              },
-              {
-                label: 'select',
-                value: 'select'
-              }
-            ]
+            'en-US': 'accept',
+            'zh-CN': 'accept'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
+            'en-US': 'accept',
+            'zh-CN': 'accept'
           }
         },
-        name: 'name',
+        name: 'accept',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -69,6 +40,154 @@ const UploadMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'action',
+            'zh-CN': 'action'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'action',
+            'zh-CN': 'action'
+          }
+        },
+        name: 'action',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'StringSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'FunctionSetter'
+              },
+              {
+                componentName: 'FunctionSetter'
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'beforeUpload',
+            'zh-CN': 'beforeUpload'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'beforeUpload',
+            'zh-CN': 'beforeUpload'
+          }
+        },
+        name: 'beforeUpload',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'capture',
+            'zh-CN': 'capture'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'capture',
+            'zh-CN': 'capture'
+          }
+        },
+        name: 'capture',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'StringSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'BoolSetter',
+                initialValue: undefined
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'customRequest',
+            'zh-CN': 'customRequest'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'customRequest',
+            'zh-CN': 'customRequest'
+          }
+        },
+        name: 'customRequest',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'data',
+            'zh-CN': 'data'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'data',
+            'zh-CN': 'data'
+          }
+        },
+        name: 'data',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'ObjectSetter',
+                      props: {
+                        config: {
+                          extraSetter: {
+                            componentName: 'MixedSetter',
+                            props: {}
+                          }
+                        }
+                      },
+                      initialValue: undefined
+                    }
+                  }
+                },
+                initialValue: undefined
+              },
+              {
+                componentName: 'FunctionSetter'
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultFileList',
+            'zh-CN': 'defaultFileList'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'defaultFileList',
             'zh-CN': 'defaultFileList'
@@ -488,6 +607,49 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'directory',
+            'zh-CN': 'directory'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'directory',
+            'zh-CN': 'directory'
+          }
+        },
+        name: 'directory',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'fileList',
+            'zh-CN': 'fileList'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'fileList',
             'zh-CN': 'fileList'
           }
@@ -906,40 +1068,26 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'action',
-            'zh-CN': 'action'
+            'en-US': 'headers',
+            'zh-CN': 'headers'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'headers',
+            'zh-CN': 'headers'
           }
         },
-        name: 'action',
+        name: 'headers',
         setter: {
-          componentName: 'MixedSetter',
+          componentName: 'ObjectSetter',
           props: {
-            setters: [
-              {
+            config: {
+              extraSetter: {
                 componentName: 'StringSetter',
                 initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              },
-              {
-                componentName: 'FunctionSetter'
               }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'directory',
-            'zh-CN': 'directory'
-          }
-        },
-        name: 'directory',
-        setter: {
-          componentName: 'BoolSetter',
+            }
+          },
           initialValue: undefined
         }
       },
@@ -947,45 +1095,257 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'data',
-            'zh-CN': 'data'
+            'en-US': 'iconRender',
+            'zh-CN': 'iconRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'iconRender',
+            'zh-CN': 'iconRender'
           }
         },
-        name: 'data',
+        name: 'iconRender',
         setter: {
-          componentName: 'MixedSetter',
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          }
+        },
+        name: 'id',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'isImageUrl',
+            'zh-CN': 'isImageUrl'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'isImageUrl',
+            'zh-CN': 'isImageUrl'
+          }
+        },
+        name: 'isImageUrl',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'itemRender',
+            'zh-CN': 'itemRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'itemRender',
+            'zh-CN': 'itemRender'
+          }
+        },
+        name: 'itemRender',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'listType',
+            'zh-CN': 'listType'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'listType',
+            'zh-CN': 'listType'
+          }
+        },
+        name: 'listType',
+        setter: {
+          componentName: 'SelectSetter',
           props: {
-            setters: [
+            dataSource: [
               {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'ObjectSetter',
-                      props: {
-                        config: {
-                          extraSetter: {
-                            componentName: 'MixedSetter',
-                            props: {}
-                          }
-                        }
-                      },
-                      initialValue: undefined
-                    }
-                  }
-                },
-                initialValue: undefined
+                label: 'text',
+                value: 'text'
               },
               {
-                componentName: 'FunctionSetter'
+                label: 'picture',
+                value: 'picture'
+              },
+              {
+                label: 'picture-card',
+                value: 'picture-card'
+              },
+              {
+                label: 'picture-circle',
+                value: 'picture-circle'
+              }
+            ],
+            options: [
+              {
+                label: 'text',
+                value: 'text'
+              },
+              {
+                label: 'picture',
+                value: 'picture'
+              },
+              {
+                label: 'picture-card',
+                value: 'picture-card'
+              },
+              {
+                label: 'picture-circle',
+                value: 'picture-circle'
               }
             ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
+          }
+        },
+        name: 'locale',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'uploading',
+                      'zh-CN': 'uploading'
+                    }
+                  },
+                  name: 'uploading',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'removeFile',
+                      'zh-CN': 'removeFile'
+                    }
+                  },
+                  name: 'removeFile',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'downloadFile',
+                      'zh-CN': 'downloadFile'
+                    }
+                  },
+                  name: 'downloadFile',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'uploadError',
+                      'zh-CN': 'uploadError'
+                    }
+                  },
+                  name: 'uploadError',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'previewFile',
+                      'zh-CN': 'previewFile'
+                    }
+                  },
+                  name: 'previewFile',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
           }
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'maxCount',
+            'zh-CN': 'maxCount'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'maxCount',
+            'zh-CN': 'maxCount'
+          }
+        },
+        name: 'maxCount',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'method',
+            'zh-CN': 'method'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'method',
             'zh-CN': 'method'
@@ -1055,18 +1415,116 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'headers',
-            'zh-CN': 'headers'
+            'en-US': 'multiple',
+            'zh-CN': 'multiple'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'multiple',
+            'zh-CN': 'multiple'
           }
         },
-        name: 'headers',
+        name: 'multiple',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          }
+        },
+        name: 'name',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onDrop',
+            'zh-CN': 'onDrop'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onDrop',
+            'zh-CN': 'onDrop'
+          }
+        },
+        name: 'onDrop',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'openFileDialogOnClick',
+            'zh-CN': 'openFileDialogOnClick'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'openFileDialogOnClick',
+            'zh-CN': 'openFileDialogOnClick'
+          }
+        },
+        name: 'openFileDialogOnClick',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'previewFile',
+            'zh-CN': 'previewFile'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'previewFile',
+            'zh-CN': 'previewFile'
+          }
+        },
+        name: 'previewFile',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'progress',
+            'zh-CN': 'progress'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'progress',
+            'zh-CN': 'progress'
+          }
+        },
+        name: 'progress',
         setter: {
           componentName: 'ObjectSetter',
           props: {
             config: {
               extraSetter: {
-                componentName: 'StringSetter',
-                initialValue: undefined
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           },
@@ -1076,6 +1534,11 @@ const UploadMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'showUploadList',
+            'zh-CN': 'showUploadList'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'showUploadList',
             'zh-CN': 'showUploadList'
@@ -1299,111 +1762,10 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'multiple',
-            'zh-CN': 'multiple'
-          }
-        },
-        name: 'multiple',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'accept',
-            'zh-CN': 'accept'
-          }
-        },
-        name: 'accept',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'beforeUpload',
-            'zh-CN': 'beforeUpload'
-          }
-        },
-        name: 'beforeUpload',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onDrop',
-            'zh-CN': 'onDrop'
-          }
-        },
-        name: 'onDrop',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'listType',
-            'zh-CN': 'listType'
-          }
-        },
-        name: 'listType',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'text',
-                value: 'text'
-              },
-              {
-                label: 'picture',
-                value: 'picture'
-              },
-              {
-                label: 'picture-card',
-                value: 'picture-card'
-              },
-              {
-                label: 'picture-circle',
-                value: 'picture-circle'
-              }
-            ],
-            options: [
-              {
-                label: 'text',
-                value: 'text'
-              },
-              {
-                label: 'picture',
-                value: 'picture'
-              },
-              {
-                label: 'picture-card',
-                value: 'picture-card'
-              },
-              {
-                label: 'picture-circle',
-                value: 'picture-circle'
-              }
-            ]
+            'en-US': 'supportServerRender',
+            'zh-CN': 'supportServerRender'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'supportServerRender',
             'zh-CN': 'supportServerRender'
@@ -1419,13 +1781,40 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
           }
         },
-        name: 'disabled',
+        name: 'type',
         setter: {
-          componentName: 'BoolSetter',
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'drag',
+                value: 'drag'
+              },
+              {
+                label: 'select',
+                value: 'select'
+              }
+            ],
+            options: [
+              {
+                label: 'drag',
+                value: 'drag'
+              },
+              {
+                label: 'select',
+                value: 'select'
+              }
+            ]
+          },
           initialValue: undefined
         }
       },
@@ -1433,18 +1822,10 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'customRequest',
-            'zh-CN': 'customRequest'
-          }
-        },
-        name: 'customRequest',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'withCredentials',
+            'zh-CN': 'withCredentials'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'withCredentials',
             'zh-CN': 'withCredentials'
@@ -1454,240 +1835,6 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'openFileDialogOnClick',
-            'zh-CN': 'openFileDialogOnClick'
-          }
-        },
-        name: 'openFileDialogOnClick',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
-          }
-        },
-        name: 'locale',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'uploading',
-                      'zh-CN': 'uploading'
-                    }
-                  },
-                  name: 'uploading',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'removeFile',
-                      'zh-CN': 'removeFile'
-                    }
-                  },
-                  name: 'removeFile',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'downloadFile',
-                      'zh-CN': 'downloadFile'
-                    }
-                  },
-                  name: 'downloadFile',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'uploadError',
-                      'zh-CN': 'uploadError'
-                    }
-                  },
-                  name: 'uploadError',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'previewFile',
-                      'zh-CN': 'previewFile'
-                    }
-                  },
-                  name: 'previewFile',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'previewFile',
-            'zh-CN': 'previewFile'
-          }
-        },
-        name: 'previewFile',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'iconRender',
-            'zh-CN': 'iconRender'
-          }
-        },
-        name: 'iconRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'isImageUrl',
-            'zh-CN': 'isImageUrl'
-          }
-        },
-        name: 'isImageUrl',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'progress',
-            'zh-CN': 'progress'
-          }
-        },
-        name: 'progress',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'itemRender',
-            'zh-CN': 'itemRender'
-          }
-        },
-        name: 'itemRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'maxCount',
-            'zh-CN': 'Config max'
-          }
-        },
-        name: 'maxCount',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'capture',
-            'zh-CN': 'capture'
-          }
-        },
-        name: 'capture',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              }
-            ]
-          }
         }
       }
     ],
@@ -1716,7 +1863,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Upload',
+    title: '上传',
     screenshot: '',
     schema: {
       componentName: 'Upload',

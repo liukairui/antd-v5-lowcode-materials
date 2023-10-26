@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const EmptyMeta: IPublicTypeComponentMetadata = {
   componentName: 'Empty',
-  title: 'Empty',
+  title: '空状态',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,27 +22,35 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'imageStyle',
-            'zh-CN': '@since 3.1'
+            'en-US': 'description',
+            'zh-CN': 'description'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'description'
           }
         },
-        name: 'imageStyle',
+        name: 'description',
         setter: {
-          componentName: 'ObjectSetter',
+          componentName: 'SlotSetter',
           props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
+            mode: 'node'
           },
-          initialValue: undefined
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'image',
+            'zh-CN': 'image'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'image',
             'zh-CN': 'image'
@@ -62,20 +72,27 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
+            'en-US': 'imageStyle',
+            'zh-CN': 'imageStyle'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'imageStyle',
+            'zh-CN': 'imageStyle'
           }
         },
-        name: 'description',
+        name: 'imageStyle',
         setter: {
-          componentName: 'SlotSetter',
+          componentName: 'ObjectSetter',
           props: {
-            mode: 'node'
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
+          initialValue: undefined
         }
       }
     ],
@@ -90,7 +107,7 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Empty',
+    title: '空状态',
     screenshot: '',
     schema: {
       componentName: 'Empty',

@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SkeletonImageMeta: IPublicTypeComponentMetadata = {
   componentName: 'SkeletonImage',
-  title: 'SkeletonImage',
+  title: '骨架屏图片',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,11 @@ const SkeletonImageMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'active',
             'zh-CN': 'active'
@@ -42,7 +49,7 @@ const SkeletonImageMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'SkeletonImage',
+    title: '骨架屏图片',
     screenshot: '',
     schema: {
       componentName: 'SkeletonImage',

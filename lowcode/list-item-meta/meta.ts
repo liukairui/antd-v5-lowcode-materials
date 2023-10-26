@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ListItemMetaMeta: IPublicTypeComponentMetadata = {
   componentName: 'ListItemMeta',
-  title: 'ListItemMeta',
+  title: '列表项元数据',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,11 @@ const ListItemMetaMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'avatar',
+            'zh-CN': 'avatar'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'avatar',
             'zh-CN': 'avatar'
@@ -42,6 +49,11 @@ const ListItemMetaMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'description',
             'zh-CN': 'description'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'description'
           }
         },
         name: 'description',
@@ -59,6 +71,11 @@ const ListItemMetaMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
@@ -88,7 +105,7 @@ const ListItemMetaMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'ListItemMeta',
+    title: '列表项元数据',
     screenshot: '',
     schema: {
       componentName: 'ListItemMeta',

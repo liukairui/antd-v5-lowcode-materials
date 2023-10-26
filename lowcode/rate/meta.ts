@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const RateMeta: IPublicTypeComponentMetadata = {
   componentName: 'Rate',
-  title: 'Rate',
+  title: '评分',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,53 +22,10 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'tooltips',
-            'zh-CN': 'tooltips'
-          }
-        },
-        name: 'tooltips',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
+            'en-US': 'allowClear',
+            'zh-CN': 'allowClear'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          }
-        },
-        name: 'value',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          }
-        },
-        name: 'defaultValue',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'allowClear',
             'zh-CN': 'allowClear'
@@ -82,39 +41,18 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          }
-        },
-        name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'allowHalf',
+            'zh-CN': 'allowHalf'
+          },
+          tip: {
             type: 'i18n',
-            'en-US': 'onHoverChange',
-            'zh-CN': 'onHoverChange'
+            'en-US': 'allowHalf',
+            'zh-CN': 'allowHalf'
           }
         },
-        name: 'onHoverChange',
+        name: 'allowHalf',
         setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'tabIndex',
-            'zh-CN': 'tabIndex'
-          }
-        },
-        name: 'tabIndex',
-        setter: {
-          componentName: 'NumberSetter',
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
@@ -122,58 +60,10 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
-          }
-        },
-        name: 'onKeyDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          }
-        },
-        name: 'onMouseEnter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          }
-        },
-        name: 'onMouseLeave',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'autoFocus',
+            'zh-CN': 'autoFocus'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'autoFocus',
             'zh-CN': 'autoFocus'
@@ -189,47 +79,10 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          }
-        },
-        name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'count',
-            'zh-CN': 'count'
-          }
-        },
-        name: 'count',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'character',
+            'zh-CN': 'character'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'character',
             'zh-CN': 'character'
@@ -277,6 +130,11 @@ const RateMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'characterRender',
             'zh-CN': 'characterRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'characterRender',
+            'zh-CN': 'characterRender'
           }
         },
         name: 'characterRender',
@@ -288,13 +146,247 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'allowHalf',
-            'zh-CN': 'allowHalf'
+            'en-US': 'count',
+            'zh-CN': 'count'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'count',
+            'zh-CN': 'count'
           }
         },
-        name: 'allowHalf',
+        name: 'count',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
+          }
+        },
+        name: 'defaultValue',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
         setter: {
           componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          }
+        },
+        name: 'id',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          }
+        },
+        name: 'onChange',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onHoverChange',
+            'zh-CN': 'onHoverChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onHoverChange',
+            'zh-CN': 'onHoverChange'
+          }
+        },
+        name: 'onHoverChange',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onKeyDown',
+            'zh-CN': 'onKeyDown'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onKeyDown',
+            'zh-CN': 'onKeyDown'
+          }
+        },
+        name: 'onKeyDown',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          }
+        },
+        name: 'onMouseEnter',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          }
+        },
+        name: 'onMouseLeave',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tabIndex',
+            'zh-CN': 'tabIndex'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'tabIndex',
+            'zh-CN': 'tabIndex'
+          }
+        },
+        name: 'tabIndex',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tooltips',
+            'zh-CN': 'tooltips'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'tooltips',
+            'zh-CN': 'tooltips'
+          }
+        },
+        name: 'tooltips',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'StringSetter',
+              initialValue: undefined
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          }
+        },
+        name: 'value',
+        setter: {
+          componentName: 'NumberSetter',
           initialValue: undefined
         }
       }
@@ -318,7 +410,7 @@ const RateMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Rate',
+    title: '评分',
     screenshot: '',
     schema: {
       componentName: 'Rate',

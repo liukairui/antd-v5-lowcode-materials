@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const GridRowMeta: IPublicTypeComponentMetadata = {
   componentName: 'GridRow',
-  title: 'GridRow',
+  title: '栅格-行',
+  group: '原子组件',
+  category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,42 +22,10 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'gutter',
-            'zh-CN': 'gutter'
-          }
-        },
-        name: 'gutter',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              },
-              {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'align',
+            'zh-CN': 'align'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'align',
             'zh-CN': 'align'
@@ -127,6 +97,53 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'gutter',
+            'zh-CN': 'gutter'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'gutter',
+            'zh-CN': 'gutter'
+          }
+        },
+        name: 'gutter',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'NumberSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
+                    }
+                  }
+                },
+                initialValue: undefined
+              },
+              {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'justify',
+            'zh-CN': 'justify'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'justify',
             'zh-CN': 'justify'
@@ -217,6 +234,11 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'wrap',
             'zh-CN': 'wrap'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'wrap',
+            'zh-CN': 'wrap'
           }
         },
         name: 'wrap',
@@ -237,7 +259,7 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'GridRow',
+    title: '栅格行',
     screenshot: '',
     schema: {
       componentName: 'GridRow',

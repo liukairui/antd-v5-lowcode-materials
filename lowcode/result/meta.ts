@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ResultMeta: IPublicTypeComponentMetadata = {
   componentName: 'Result',
-  title: 'Result',
+  title: '结果',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,36 @@ const ResultMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'extra',
+            'zh-CN': 'extra'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'extra',
+            'zh-CN': 'extra'
+          }
+        },
+        name: 'extra',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'icon',
+            'zh-CN': 'icon'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
@@ -39,6 +71,30 @@ const ResultMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'prefixCls',
+            'zh-CN': 'prefixCls'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'prefixCls',
+            'zh-CN': 'prefixCls'
+          }
+        },
+        name: 'prefixCls',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -140,25 +196,10 @@ const ResultMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          }
-        },
-        name: 'title',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+            'en-US': 'subTitle',
+            'zh-CN': 'subTitle'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'subTitle',
             'zh-CN': 'subTitle'
@@ -180,11 +221,16 @@ const ResultMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
+            'en-US': 'title',
+            'zh-CN': 'title'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
           }
         },
-        name: 'extra',
+        name: 'title',
         setter: {
           componentName: 'SlotSetter',
           props: {
@@ -194,20 +240,6 @@ const ResultMeta: IPublicTypeComponentMetadata = {
             type: 'JSSlot',
             value: []
           }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'prefixCls',
-            'zh-CN': 'prefixCls'
-          }
-        },
-        name: 'prefixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
         }
       }
     ],
@@ -222,7 +254,7 @@ const ResultMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Result',
+    title: '结果',
     screenshot: '',
     schema: {
       componentName: 'Result',

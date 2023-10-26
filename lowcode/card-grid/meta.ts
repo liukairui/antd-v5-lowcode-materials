@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const CardGridMeta: IPublicTypeComponentMetadata = {
   componentName: 'CardGrid',
-  title: 'CardGrid',
+  title: '栅格卡片',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,11 @@ const CardGridMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'hoverable',
+            'zh-CN': 'hoverable'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'hoverable',
             'zh-CN': 'hoverable'
@@ -42,7 +49,7 @@ const CardGridMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'CardGrid',
+    title: '栅格卡片',
     screenshot: '',
     schema: {
       componentName: 'CardGrid',

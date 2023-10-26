@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const CardMetaMeta: IPublicTypeComponentMetadata = {
   componentName: 'CardMeta',
-  title: 'CardMeta',
+  title: '卡片元数据',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,11 @@ const CardMetaMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'avatar',
+            'zh-CN': 'avatar'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'avatar',
             'zh-CN': 'avatar'
@@ -40,11 +47,16 @@ const CardMetaMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
+            'en-US': 'description',
+            'zh-CN': 'description'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'description'
           }
         },
-        name: 'title',
+        name: 'description',
         setter: {
           componentName: 'SlotSetter',
           props: {
@@ -60,11 +72,16 @@ const CardMetaMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
+            'en-US': 'title',
+            'zh-CN': 'title'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
           }
         },
-        name: 'description',
+        name: 'title',
         setter: {
           componentName: 'SlotSetter',
           props: {
@@ -88,7 +105,7 @@ const CardMetaMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'CardMeta',
+    title: '卡片元数据',
     screenshot: '',
     schema: {
       componentName: 'CardMeta',

@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SpaceMeta: IPublicTypeComponentMetadata = {
   componentName: 'Space',
-  title: 'Space',
+  title: '间距',
+  group: '原子组件',
+  category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,151 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'align',
+            'zh-CN': 'align'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'align',
+            'zh-CN': 'align'
+          }
+        },
+        name: 'align',
+        setter: {
+          componentName: 'SelectSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'center',
+                value: 'center'
+              },
+              {
+                label: 'end',
+                value: 'end'
+              },
+              {
+                label: 'start',
+                value: 'start'
+              },
+              {
+                label: 'baseline',
+                value: 'baseline'
+              }
+            ],
+            options: [
+              {
+                label: 'center',
+                value: 'center'
+              },
+              {
+                label: 'end',
+                value: 'end'
+              },
+              {
+                label: 'start',
+                value: 'start'
+              },
+              {
+                label: 'baseline',
+                value: 'baseline'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'classNames',
+            'zh-CN': 'classNames'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'classNames',
+            'zh-CN': 'classNames'
+          }
+        },
+        name: 'classNames',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'item',
+                      'zh-CN': 'item'
+                    }
+                  },
+                  name: 'item',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ],
+            options: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -79,93 +226,10 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ],
-            options: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ]
+            'en-US': 'split',
+            'zh-CN': 'split'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'align',
-            'zh-CN': 'align'
-          }
-        },
-        name: 'align',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'center',
-                value: 'center'
-              },
-              {
-                label: 'end',
-                value: 'end'
-              },
-              {
-                label: 'start',
-                value: 'start'
-              },
-              {
-                label: 'baseline',
-                value: 'baseline'
-              }
-            ],
-            options: [
-              {
-                label: 'center',
-                value: 'center'
-              },
-              {
-                label: 'end',
-                value: 'end'
-              },
-              {
-                label: 'start',
-                value: 'start'
-              },
-              {
-                label: 'baseline',
-                value: 'baseline'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'split',
             'zh-CN': 'split'
@@ -187,56 +251,10 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'wrap',
-            'zh-CN': 'wrap'
-          }
-        },
-        name: 'wrap',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          }
-        },
-        name: 'classNames',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'item',
-                      'zh-CN': 'item'
-                    }
-                  },
-                  name: 'item',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'styles',
+            'zh-CN': 'styles'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'styles',
             'zh-CN': 'styles'
@@ -278,6 +296,25 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             }
           }
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'wrap',
+            'zh-CN': 'wrap'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'wrap',
+            'zh-CN': 'wrap'
+          }
+        },
+        name: 'wrap',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
       }
     ],
     supports: {
@@ -291,7 +328,7 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Space',
+    title: '间距',
     screenshot: '',
     schema: {
       componentName: 'Space',

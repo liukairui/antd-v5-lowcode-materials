@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
   componentName: 'SkeletonAvatar',
-  title: 'SkeletonAvatar',
+  title: '骨架屏头像',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,30 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
+          }
+        },
+        name: 'active',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'shape',
+            'zh-CN': 'shape'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -55,6 +81,11 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -106,20 +137,6 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
             ]
           }
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
-          }
-        },
-        name: 'active',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
       }
     ],
     supports: {
@@ -133,7 +150,7 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'SkeletonAvatar',
+    title: '骨架屏头像',
     screenshot: '',
     schema: {
       componentName: 'SkeletonAvatar',

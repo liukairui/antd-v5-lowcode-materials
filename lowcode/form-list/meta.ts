@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const FormListMeta: IPublicTypeComponentMetadata = {
   componentName: 'FormList',
-  title: 'FormList',
+  title: '表单列表',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,36 @@ const FormListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'initialValue',
+            'zh-CN': 'initialValue'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'initialValue',
+            'zh-CN': 'initialValue'
+          }
+        },
+        name: 'initialValue',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'MixedSetter',
+              props: {}
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'name',
             'zh-CN': 'name'
@@ -65,6 +97,11 @@ const FormListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'rules',
+            'zh-CN': 'rules'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'rules',
             'zh-CN': 'rules'
@@ -150,26 +187,6 @@ const FormListMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'initialValue',
-            'zh-CN': 'initialValue'
-          }
-        },
-        name: 'initialValue',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {}
-            }
-          },
-          initialValue: undefined
-        }
       }
     ],
     supports: {
@@ -183,7 +200,7 @@ const FormListMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'FormList',
+    title: '表单列表',
     screenshot: '',
     schema: {
       componentName: 'FormList',

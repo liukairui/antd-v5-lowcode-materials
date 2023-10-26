@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const PlainTextMeta: IPublicTypeComponentMetadata = {
   componentName: 'PlainText',
-  title: 'PlainText',
+  title: '纯文本',
+  group: '原子组件',
+  category: '通用 General',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -22,6 +24,11 @@ const PlainTextMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'content',
             'zh-CN': 'content'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'content',
+            'zh-CN': 'content'
           }
         },
         name: 'content',
@@ -36,13 +43,13 @@ const PlainTextMeta: IPublicTypeComponentMetadata = {
       style: true
     },
     component: {
-      isContainer: false
+      isContainer: true
     }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'PlainText',
+    title: '纯文本',
     screenshot: '',
     schema: {
       componentName: 'PlainText',

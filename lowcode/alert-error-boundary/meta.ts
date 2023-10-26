@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
   componentName: 'AlertErrorBoundary',
-  title: 'AlertErrorBoundary',
+  title: '错误边界',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'message',
-            'zh-CN': 'message'
+            'en-US': 'description',
+            'zh-CN': 'description'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'description'
           }
         },
-        name: 'message',
+        name: 'description',
         setter: {
           componentName: 'SlotSetter',
           props: {
@@ -40,11 +47,16 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
+            'en-US': 'message',
+            'zh-CN': 'message'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'message',
+            'zh-CN': 'message'
           }
         },
-        name: 'description',
+        name: 'message',
         setter: {
           componentName: 'SlotSetter',
           props: {
@@ -68,7 +80,7 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'AlertErrorBoundary',
+    title: '错误边界',
     screenshot: '',
     schema: {
       componentName: 'AlertErrorBoundary',

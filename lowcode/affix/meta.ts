@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const AffixMeta: IPublicTypeComponentMetadata = {
   componentName: 'Affix',
-  title: 'Affix',
+  title: '固钉',
+  group: '原子组件',
+  category: '其他 Other',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,19 +22,10 @@ const AffixMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'offsetTop',
-            'zh-CN': 'offsetTop'
-          }
-        },
-        name: 'offsetTop',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'offsetBottom',
+            'zh-CN': 'offsetBottom'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'offsetBottom',
             'zh-CN': 'offsetBottom'
@@ -48,6 +41,30 @@ const AffixMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'offsetTop',
+            'zh-CN': 'offsetTop'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'offsetTop',
+            'zh-CN': 'offsetTop'
+          }
+        },
+        name: 'offsetTop',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
@@ -60,6 +77,11 @@ const AffixMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'target',
+            'zh-CN': 'target'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'target',
             'zh-CN': 'target'
@@ -82,7 +104,7 @@ const AffixMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Affix',
+    title: '固钉',
     screenshot: '',
     schema: {
       componentName: 'Affix',

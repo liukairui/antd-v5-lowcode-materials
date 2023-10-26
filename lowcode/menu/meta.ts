@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const MenuMeta: IPublicTypeComponentMetadata = {
   componentName: 'Menu',
-  title: 'Menu',
+  title: '导航菜单',
+  group: '原子组件',
+  category: '导航 Navigation',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
+            'en-US': '_internalDisableMenuItemTitleTooltip',
+            'zh-CN': '_internalDisableMenuItemTitleTooltip'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': '_internalDisableMenuItemTitleTooltip',
+            'zh-CN': '_internalDisableMenuItemTitleTooltip'
           }
         },
-        name: 'disabled',
+        name: '_internalDisableMenuItemTitleTooltip',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -34,11 +41,16 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
+            'en-US': '_internalRenderMenuItem',
+            'zh-CN': '_internalRenderMenuItem'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': '_internalRenderMenuItem',
+            'zh-CN': '_internalRenderMenuItem'
           }
         },
-        name: 'onClick',
+        name: '_internalRenderMenuItem',
         setter: {
           componentName: 'FunctionSetter'
         }
@@ -46,6 +58,48 @@ const MenuMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': '_internalRenderSubMenuItem',
+            'zh-CN': '_internalRenderSubMenuItem'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': '_internalRenderSubMenuItem',
+            'zh-CN': '_internalRenderSubMenuItem'
+          }
+        },
+        name: '_internalRenderSubMenuItem',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'activeKey',
+            'zh-CN': 'activeKey'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'activeKey',
+            'zh-CN': 'activeKey'
+          }
+        },
+        name: 'activeKey',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'builtinPlacements',
+            'zh-CN': 'builtinPlacements'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'builtinPlacements',
             'zh-CN': 'builtinPlacements'
@@ -69,8 +123,435 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'defaultActiveFirst',
+            'zh-CN': 'defaultActiveFirst'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultActiveFirst',
+            'zh-CN': 'defaultActiveFirst'
+          }
+        },
+        name: 'defaultActiveFirst',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultMotions',
+            'zh-CN': 'defaultMotions'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultMotions',
+            'zh-CN': 'defaultMotions'
+          }
+        },
+        name: 'defaultMotions',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultOpenKeys',
+            'zh-CN': 'defaultOpenKeys'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultOpenKeys',
+            'zh-CN': 'defaultOpenKeys'
+          }
+        },
+        name: 'defaultOpenKeys',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'StringSetter',
+              initialValue: undefined
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultSelectedKeys',
+            'zh-CN': 'defaultSelectedKeys'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultSelectedKeys',
+            'zh-CN': 'defaultSelectedKeys'
+          }
+        },
+        name: 'defaultSelectedKeys',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'StringSetter',
+              initialValue: undefined
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ],
+            options: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabledOverflow',
+            'zh-CN': 'disabledOverflow'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabledOverflow',
+            'zh-CN': 'disabledOverflow'
+          }
+        },
+        name: 'disabledOverflow',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'expandIcon',
+            'zh-CN': 'expandIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'expandIcon',
+            'zh-CN': 'expandIcon'
+          }
+        },
+        name: 'expandIcon',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'StringSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'NumberSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'BoolSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
+                    }
+                  }
+                },
+                initialValue: undefined
+              },
+              {
+                componentName: 'FunctionSetter'
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'forceSubMenuRender',
+            'zh-CN': 'forceSubMenuRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'forceSubMenuRender',
+            'zh-CN': 'forceSubMenuRender'
+          }
+        },
+        name: 'forceSubMenuRender',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'getPopupContainer',
+            'zh-CN': 'getPopupContainer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'getPopupContainer',
+            'zh-CN': 'getPopupContainer'
+          }
+        },
+        name: 'getPopupContainer',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'inlineCollapsed',
+            'zh-CN': 'inlineCollapsed'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'inlineCollapsed',
+            'zh-CN': 'inlineCollapsed'
+          }
+        },
+        name: 'inlineCollapsed',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'inlineIndent',
+            'zh-CN': 'inlineIndent'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'inlineIndent',
+            'zh-CN': 'inlineIndent'
+          }
+        },
+        name: 'inlineIndent',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'itemIcon',
+            'zh-CN': 'itemIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'itemIcon',
+            'zh-CN': 'itemIcon'
+          }
+        },
+        name: 'itemIcon',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'StringSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'NumberSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'BoolSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
+                    }
+                  }
+                },
+                initialValue: undefined
+              },
+              {
+                componentName: 'FunctionSetter'
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'items',
+            'zh-CN': 'items'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'items',
+            'zh-CN': 'items'
+          }
+        },
+        name: 'items',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'MixedSetter',
+              props: {}
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'mode',
+            'zh-CN': 'mode'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'mode',
+            'zh-CN': 'mode'
+          }
+        },
+        name: 'mode',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              },
+              {
+                label: 'inline',
+                value: 'inline'
+              }
+            ],
+            options: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              },
+              {
+                label: 'inline',
+                value: 'inline'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
             'en-US': 'motion',
-            'zh-CN': 'Menu motio'
+            'zh-CN': 'motion'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'motion',
+            'zh-CN': 'motion'
           }
         },
         name: 'motion',
@@ -572,6 +1053,66 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'multiple',
+            'zh-CN': 'multiple'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'multiple',
+            'zh-CN': 'multiple'
+          }
+        },
+        name: 'multiple',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          }
+        },
+        name: 'onClick',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onDeselect',
+            'zh-CN': 'onDeselect'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onDeselect',
+            'zh-CN': 'onDeselect'
+          }
+        },
+        name: 'onDeselect',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onOpenChange',
+            'zh-CN': 'onOpenChange'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'onOpenChange',
             'zh-CN': 'onOpenChange'
           }
@@ -585,34 +1126,41 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction '
+            'en-US': 'onSelect',
+            'zh-CN': 'onSelect'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onSelect',
+            'zh-CN': 'onSelect'
           }
         },
-        name: 'direction',
+        name: 'onSelect',
         setter: {
-          componentName: 'RadioGroupSetter',
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'openKeys',
+            'zh-CN': 'openKeys'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'openKeys',
+            'zh-CN': 'openKeys'
+          }
+        },
+        name: 'openKeys',
+        setter: {
+          componentName: 'ArraySetter',
           props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
+            itemSetter: {
+              componentName: 'StringSetter',
+              initialValue: undefined
+            }
           },
           initialValue: undefined
         }
@@ -620,6 +1168,137 @@ const MenuMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'overflowedIndicator',
+            'zh-CN': 'overflowedIndicator'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'overflowedIndicator',
+            'zh-CN': 'overflowedIndicator'
+          }
+        },
+        name: 'overflowedIndicator',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'overflowedIndicatorPopupClassName',
+            'zh-CN': 'overflowedIndicatorPopupClassName'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'overflowedIndicatorPopupClassName',
+            'zh-CN': 'overflowedIndicatorPopupClassName'
+          }
+        },
+        name: 'overflowedIndicatorPopupClassName',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'selectable',
+            'zh-CN': 'selectable'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'selectable',
+            'zh-CN': 'selectable'
+          }
+        },
+        name: 'selectable',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'selectedKeys',
+            'zh-CN': 'selectedKeys'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'selectedKeys',
+            'zh-CN': 'selectedKeys'
+          }
+        },
+        name: 'selectedKeys',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'StringSetter',
+              initialValue: undefined
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'subMenuCloseDelay',
+            'zh-CN': 'subMenuCloseDelay'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'subMenuCloseDelay',
+            'zh-CN': 'subMenuCloseDelay'
+          }
+        },
+        name: 'subMenuCloseDelay',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'subMenuOpenDelay',
+            'zh-CN': 'subMenuOpenDelay'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'subMenuOpenDelay',
+            'zh-CN': 'subMenuOpenDelay'
+          }
+        },
+        name: 'subMenuOpenDelay',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'theme',
+            'zh-CN': 'theme'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'theme',
             'zh-CN': 'theme'
@@ -657,330 +1336,10 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
-          }
-        },
-        name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onSelect',
-            'zh-CN': 'onSelect'
-          }
-        },
-        name: 'onSelect',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'disabledOverflow',
-            'zh-CN': '@private D'
-          }
-        },
-        name: 'disabledOverflow',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'mode',
-            'zh-CN': 'mode'
-          }
-        },
-        name: 'mode',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              },
-              {
-                label: 'inline',
-                value: 'inline'
-              }
-            ],
-            options: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              },
-              {
-                label: 'inline',
-                value: 'inline'
-              }
-            ]
+            'en-US': 'triggerSubMenuAction',
+            'zh-CN': 'triggerSubMenuAction'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'inlineCollapsed',
-            'zh-CN': 'inlineCollapsed'
-          }
-        },
-        name: 'inlineCollapsed',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultOpenKeys',
-            'zh-CN': 'defaultOpenKeys'
-          }
-        },
-        name: 'defaultOpenKeys',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'openKeys',
-            'zh-CN': 'openKeys'
-          }
-        },
-        name: 'openKeys',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'activeKey',
-            'zh-CN': 'activeKey'
-          }
-        },
-        name: 'activeKey',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultActiveFirst',
-            'zh-CN': 'defaultActiveFirst'
-          }
-        },
-        name: 'defaultActiveFirst',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'selectable',
-            'zh-CN': 'selectable'
-          }
-        },
-        name: 'selectable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'multiple',
-            'zh-CN': 'multiple'
-          }
-        },
-        name: 'multiple',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultSelectedKeys',
-            'zh-CN': 'defaultSelectedKeys'
-          }
-        },
-        name: 'defaultSelectedKeys',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'selectedKeys',
-            'zh-CN': 'selectedKeys'
-          }
-        },
-        name: 'selectedKeys',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onDeselect',
-            'zh-CN': 'onDeselect'
-          }
-        },
-        name: 'onDeselect',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'inlineIndent',
-            'zh-CN': 'inlineIndent'
-          }
-        },
-        name: 'inlineIndent',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultMotions',
-            'zh-CN': 'Default me'
-          }
-        },
-        name: 'defaultMotions',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'subMenuOpenDelay',
-            'zh-CN': 'subMenuOpenDelay'
-          }
-        },
-        name: 'subMenuOpenDelay',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'subMenuCloseDelay',
-            'zh-CN': 'subMenuCloseDelay'
-          }
-        },
-        name: 'subMenuCloseDelay',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'forceSubMenuRender',
-            'zh-CN': 'forceSubMenuRender'
-          }
-        },
-        name: 'forceSubMenuRender',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'triggerSubMenuAction',
             'zh-CN': 'triggerSubMenuAction'
@@ -1013,188 +1372,6 @@ const MenuMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'itemIcon',
-            'zh-CN': 'itemIcon'
-          }
-        },
-        name: 'itemIcon',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'expandIcon',
-            'zh-CN': 'expandIcon'
-          }
-        },
-        name: 'expandIcon',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'overflowedIndicator',
-            'zh-CN': 'overflowedIndicator'
-          }
-        },
-        name: 'overflowedIndicator',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'overflowedIndicatorPopupClassName',
-            'zh-CN': '@private I'
-          }
-        },
-        name: 'overflowedIndicatorPopupClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': '_internalRenderMenuItem',
-            'zh-CN': '*'
-          }
-        },
-        name: '_internalRenderMenuItem',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': '_internalRenderSubMenuItem',
-            'zh-CN': '*'
-          }
-        },
-        name: '_internalRenderSubMenuItem',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': '_internalDisableMenuItemTitleTooltip',
-            'zh-CN': '@private I'
-          }
-        },
-        name: '_internalDisableMenuItemTitleTooltip',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          }
-        },
-        name: 'items',
-        setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {}
-            }
-          },
-          initialValue: undefined
-        }
       }
     ],
     supports: {
@@ -1208,7 +1385,7 @@ const MenuMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Menu',
+    title: '导航菜单',
     screenshot: '',
     schema: {
       componentName: 'Menu',

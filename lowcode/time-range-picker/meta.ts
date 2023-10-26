@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
   componentName: 'TimeRangePicker',
-  title: 'TimeRangePicker',
+  title: '时间范围选择框',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,107 +22,37 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'popupClassName',
-            'zh-CN': 'popupClassName'
-          }
-        },
-        name: 'popupClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'activePickerIndex',
+            'zh-CN': 'activePickerIndex'
+          },
+          tip: {
             type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
+            'en-US': 'activePickerIndex',
+            'zh-CN': 'activePickerIndex'
           }
         },
-        name: 'disabled',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          }
-        },
-        name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          }
-        },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          }
-        },
-        name: 'size',
+        name: 'activePickerIndex',
         setter: {
           componentName: 'RadioGroupSetter',
           props: {
             dataSource: [
               {
-                label: 'small',
-                value: 'small'
+                label: '0',
+                value: 0
               },
               {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
+                label: '1',
+                value: 1
               }
             ],
             options: [
               {
-                label: 'small',
-                value: 'small'
+                label: '0',
+                value: 0
               },
               {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
+                label: '1',
+                value: 1
               }
             ]
           },
@@ -131,446 +63,10 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
-          }
-        },
-        name: 'onClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'placement',
-            'zh-CN': 'placement'
-          }
-        },
-        name: 'placement',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'topLeft',
-                value: 'topLeft'
-              },
-              {
-                label: 'topRight',
-                value: 'topRight'
-              },
-              {
-                label: 'bottomLeft',
-                value: 'bottomLeft'
-              },
-              {
-                label: 'bottomRight',
-                value: 'bottomRight'
-              }
-            ],
-            options: [
-              {
-                label: 'topLeft',
-                value: 'topLeft'
-              },
-              {
-                label: 'topRight',
-                value: 'topRight'
-              },
-              {
-                label: 'bottomLeft',
-                value: 'bottomLeft'
-              },
-              {
-                label: 'bottomRight',
-                value: 'bottomRight'
-              }
-            ]
+            'en-US': 'allowClear',
+            'zh-CN': 'allowClear'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'transitionName',
-            'zh-CN': 'transitionName'
-          }
-        },
-        name: 'transitionName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          }
-        },
-        name: 'status',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: '',
-                value: ''
-              },
-              {
-                label: 'warning',
-                value: 'warning'
-              },
-              {
-                label: 'error',
-                value: 'error'
-              }
-            ],
-            options: [
-              {
-                label: '',
-                value: ''
-              },
-              {
-                label: 'warning',
-                value: 'warning'
-              },
-              {
-                label: 'error',
-                value: 'error'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'open',
-            'zh-CN': 'open'
-          }
-        },
-        name: 'open',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onOpenChange',
-            'zh-CN': 'onOpenChange'
-          }
-        },
-        name: 'onOpenChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'order',
-            'zh-CN': 'order'
-          }
-        },
-        name: 'order',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'separator',
-            'zh-CN': 'separator'
-          }
-        },
-        name: 'separator',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'autoFocus',
-            'zh-CN': 'autoFocus'
-          }
-        },
-        name: 'autoFocus',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
-          }
-        },
-        name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'mode',
-            'zh-CN': 'mode'
-          }
-        },
-        name: 'mode',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          }
-        },
-        name: 'onMouseEnter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          }
-        },
-        name: 'onMouseLeave',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'popupStyle',
-            'zh-CN': 'popupStyle'
-          }
-        },
-        name: 'popupStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
-          }
-        },
-        name: 'locale',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'prevIcon',
-            'zh-CN': 'prevIcon'
-          }
-        },
-        name: 'prevIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'nextIcon',
-            'zh-CN': 'nextIcon'
-          }
-        },
-        name: 'nextIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'role',
-            'zh-CN': 'role'
-          }
-        },
-        name: 'role',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'tabIndex',
-            'zh-CN': 'tabIndex'
-          }
-        },
-        name: 'tabIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'placeholder',
-            'zh-CN': 'placeholder'
-          }
-        },
-        name: 'placeholder',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultOpen',
-            'zh-CN': 'defaultOpen'
-          }
-        },
-        name: 'defaultOpen',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'allowClear',
             'zh-CN': 'allowClear'
@@ -626,20 +122,113 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'suffixIcon',
-            'zh-CN': 'suffixIcon'
+            'en-US': 'allowEmpty',
+            'zh-CN': 'allowEmpty'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'allowEmpty',
+            'zh-CN': 'allowEmpty'
           }
         },
-        name: 'suffixIcon',
+        name: 'allowEmpty',
         setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+          componentName: 'MixedSetter',
+          props: {}
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'autoComplete',
+            'zh-CN': 'autoComplete'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
+          tip: {
+            type: 'i18n',
+            'en-US': 'autoComplete',
+            'zh-CN': 'autoComplete'
           }
+        },
+        name: 'autoComplete',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'autoFocus',
+            'zh-CN': 'autoFocus'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'autoFocus',
+            'zh-CN': 'autoFocus'
+          }
+        },
+        name: 'autoFocus',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
+          }
+        },
+        name: 'bordered',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'cellRender',
+            'zh-CN': 'cellRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'cellRender',
+            'zh-CN': 'cellRender'
+          }
+        },
+        name: 'cellRender',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'changeOnBlur',
+            'zh-CN': 'changeOnBlur'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'changeOnBlur',
+            'zh-CN': 'changeOnBlur'
+          }
+        },
+        name: 'changeOnBlur',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
@@ -647,7 +236,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           label: {
             type: 'i18n',
             'en-US': 'clearIcon',
-            'zh-CN': 'Clear all '
+            'zh-CN': 'clearIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'clearIcon',
+            'zh-CN': 'clearIcon'
           }
         },
         name: 'clearIcon',
@@ -666,19 +260,155 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'dropdownClassName',
-            'zh-CN': 'dropdownClassName'
+            'en-US': 'defaultOpen',
+            'zh-CN': 'defaultOpen'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultOpen',
+            'zh-CN': 'defaultOpen'
           }
         },
-        name: 'dropdownClassName',
+        name: 'defaultOpen',
         setter: {
-          componentName: 'StringSetter',
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'defaultValue',
+            'zh-CN': 'defaultValue'
+          }
+        },
+        name: 'defaultValue',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {}
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ],
+            options: [
+              {
+                label: 'ltr',
+                value: 'ltr'
+              },
+              {
+                label: 'rtl',
+                value: 'rtl'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'BoolSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabledDate',
+            'zh-CN': 'disabledDate'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabledDate',
+            'zh-CN': 'disabledDate'
+          }
+        },
+        name: 'disabledDate',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabledTime',
+            'zh-CN': 'disabledTime'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabledTime',
+            'zh-CN': 'disabledTime'
+          }
+        },
+        name: 'disabledTime',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'dropdownAlign',
+            'zh-CN': 'dropdownAlign'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'dropdownAlign',
             'zh-CN': 'dropdownAlign'
@@ -1036,79 +766,18 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onBlur',
-            'zh-CN': 'onBlur'
-          }
-        },
-        name: 'onBlur',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'dropdownClassName',
+            'zh-CN': 'dropdownClassName'
+          },
+          tip: {
             type: 'i18n',
-            'en-US': 'onFocus',
-            'zh-CN': 'onFocus'
+            'en-US': 'dropdownClassName',
+            'zh-CN': 'dropdownClassName'
           }
         },
-        name: 'onFocus',
+        name: 'dropdownClassName',
         setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
-          }
-        },
-        name: 'onKeyDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseDown',
-            'zh-CN': 'onMouseDown'
-          }
-        },
-        name: 'onMouseDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          }
-        },
-        name: 'defaultValue',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
-          }
-        },
-        name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
+          componentName: 'StringSetter',
           initialValue: undefined
         }
       },
@@ -1116,18 +785,10 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'panelRender',
-            'zh-CN': 'panelRender'
-          }
-        },
-        name: 'panelRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'format',
+            'zh-CN': 'format'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'format',
             'zh-CN': 'format'
@@ -1172,6 +833,633 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'getPopupContainer',
+            'zh-CN': 'getPopupContainer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'getPopupContainer',
+            'zh-CN': 'getPopupContainer'
+          }
+        },
+        name: 'getPopupContainer',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'hideDisabledOptions',
+            'zh-CN': 'hideDisabledOptions'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'hideDisabledOptions',
+            'zh-CN': 'hideDisabledOptions'
+          }
+        },
+        name: 'hideDisabledOptions',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'hourStep',
+            'zh-CN': 'hourStep'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'hourStep',
+            'zh-CN': 'hourStep'
+          }
+        },
+        name: 'hourStep',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          }
+        },
+        name: 'id',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'inputReadOnly',
+            'zh-CN': 'inputReadOnly'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'inputReadOnly',
+            'zh-CN': 'inputReadOnly'
+          }
+        },
+        name: 'inputReadOnly',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'inputRender',
+            'zh-CN': 'inputRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'inputRender',
+            'zh-CN': 'inputRender'
+          }
+        },
+        name: 'inputRender',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
+          }
+        },
+        name: 'locale',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'minuteStep',
+            'zh-CN': 'minuteStep'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'minuteStep',
+            'zh-CN': 'minuteStep'
+          }
+        },
+        name: 'minuteStep',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'mode',
+            'zh-CN': 'mode'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'mode',
+            'zh-CN': 'mode'
+          }
+        },
+        name: 'mode',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {}
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
+          }
+        },
+        name: 'name',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'nextIcon',
+            'zh-CN': 'nextIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'nextIcon',
+            'zh-CN': 'nextIcon'
+          }
+        },
+        name: 'nextIcon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onBlur',
+            'zh-CN': 'onBlur'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onBlur',
+            'zh-CN': 'onBlur'
+          }
+        },
+        name: 'onBlur',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          }
+        },
+        name: 'onClick',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onContextMenu',
+            'zh-CN': 'onContextMenu'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onContextMenu',
+            'zh-CN': 'onContextMenu'
+          }
+        },
+        name: 'onContextMenu',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onFocus',
+            'zh-CN': 'onFocus'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onFocus',
+            'zh-CN': 'onFocus'
+          }
+        },
+        name: 'onFocus',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onKeyDown',
+            'zh-CN': 'onKeyDown'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onKeyDown',
+            'zh-CN': 'onKeyDown'
+          }
+        },
+        name: 'onKeyDown',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseDown',
+            'zh-CN': 'onMouseDown'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseDown',
+            'zh-CN': 'onMouseDown'
+          }
+        },
+        name: 'onMouseDown',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          }
+        },
+        name: 'onMouseEnter',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          }
+        },
+        name: 'onMouseLeave',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseUp',
+            'zh-CN': 'onMouseUp'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onMouseUp',
+            'zh-CN': 'onMouseUp'
+          }
+        },
+        name: 'onMouseUp',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onOpenChange',
+            'zh-CN': 'onOpenChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onOpenChange',
+            'zh-CN': 'onOpenChange'
+          }
+        },
+        name: 'onOpenChange',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'open',
+            'zh-CN': 'open'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'open',
+            'zh-CN': 'open'
+          }
+        },
+        name: 'open',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'order',
+            'zh-CN': 'order'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'order',
+            'zh-CN': 'order'
+          }
+        },
+        name: 'order',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'panelRender',
+            'zh-CN': 'panelRender'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'panelRender',
+            'zh-CN': 'panelRender'
+          }
+        },
+        name: 'panelRender',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'pickerRef',
+            'zh-CN': 'pickerRef'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'pickerRef',
+            'zh-CN': 'pickerRef'
+          }
+        },
+        name: 'pickerRef',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'placeholder',
+            'zh-CN': 'placeholder'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'placeholder',
+            'zh-CN': 'placeholder'
+          }
+        },
+        name: 'placeholder',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {}
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'placement',
+            'zh-CN': 'placement'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'placement',
+            'zh-CN': 'placement'
+          }
+        },
+        name: 'placement',
+        setter: {
+          componentName: 'SelectSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'topLeft',
+                value: 'topLeft'
+              },
+              {
+                label: 'topRight',
+                value: 'topRight'
+              },
+              {
+                label: 'bottomLeft',
+                value: 'bottomLeft'
+              },
+              {
+                label: 'bottomRight',
+                value: 'bottomRight'
+              }
+            ],
+            options: [
+              {
+                label: 'topLeft',
+                value: 'topLeft'
+              },
+              {
+                label: 'topRight',
+                value: 'topRight'
+              },
+              {
+                label: 'bottomLeft',
+                value: 'bottomLeft'
+              },
+              {
+                label: 'bottomRight',
+                value: 'bottomRight'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'popupClassName',
+            'zh-CN': 'popupClassName'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'popupClassName',
+            'zh-CN': 'popupClassName'
+          }
+        },
+        name: 'popupClassName',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'popupStyle',
+            'zh-CN': 'popupStyle'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'popupStyle',
+            'zh-CN': 'popupStyle'
+          }
+        },
+        name: 'popupStyle',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'presets',
+            'zh-CN': 'presets'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'presets',
             'zh-CN': 'presets'
@@ -1268,31 +1556,35 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'cellRender',
-            'zh-CN': 'cellRender'
+            'en-US': 'prevIcon',
+            'zh-CN': 'prevIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'prevIcon',
+            'zh-CN': 'prevIcon'
           }
         },
-        name: 'cellRender',
+        name: 'prevIcon',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'disabledDate',
-            'zh-CN': 'disabledDate'
-          }
-        },
-        name: 'disabledDate',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'renderExtraFooter',
+            'zh-CN': 'renderExtraFooter'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'renderExtraFooter',
             'zh-CN': 'renderExtraFooter'
@@ -1307,140 +1599,16 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'inputReadOnly',
-            'zh-CN': 'Make input'
-          }
-        },
-        name: 'inputReadOnly',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'superPrevIcon',
-            'zh-CN': 'superPrevIcon'
-          }
-        },
-        name: 'superPrevIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+            'en-US': 'role',
+            'zh-CN': 'role'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
-            'en-US': 'superNextIcon',
-            'zh-CN': 'superNextIcon'
+            'en-US': 'role',
+            'zh-CN': 'role'
           }
         },
-        name: 'superNextIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'inputRender',
-            'zh-CN': 'inputRender'
-          }
-        },
-        name: 'inputRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseUp',
-            'zh-CN': 'onMouseUp'
-          }
-        },
-        name: 'onMouseUp',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onContextMenu',
-            'zh-CN': 'onContextMenu'
-          }
-        },
-        name: 'onContextMenu',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'changeOnBlur',
-            'zh-CN': 'Trigger `o'
-          }
-        },
-        name: 'changeOnBlur',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'pickerRef',
-            'zh-CN': '@private I'
-          }
-        },
-        name: 'pickerRef',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'autoComplete',
-            'zh-CN': 'autoComplete'
-          }
-        },
-        name: 'autoComplete',
+        name: 'role',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -1450,132 +1618,10 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'showNow',
-            'zh-CN': 'showNow'
-          }
-        },
-        name: 'showNow',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'disabledTime',
-            'zh-CN': 'disabledTime'
-          }
-        },
-        name: 'disabledTime',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'showHour',
-            'zh-CN': 'showHour'
-          }
-        },
-        name: 'showHour',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'showMinute',
-            'zh-CN': 'showMinute'
-          }
-        },
-        name: 'showMinute',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'showSecond',
-            'zh-CN': 'showSecond'
-          }
-        },
-        name: 'showSecond',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'use12Hours',
-            'zh-CN': 'use12Hours'
-          }
-        },
-        name: 'use12Hours',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'hourStep',
-            'zh-CN': 'hourStep'
-          }
-        },
-        name: 'hourStep',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
+            'en-US': 'secondStep',
+            'zh-CN': 'secondStep'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'minuteStep',
-            'zh-CN': 'minuteStep'
-          }
-        },
-        name: 'minuteStep',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'secondStep',
             'zh-CN': 'secondStep'
@@ -1599,11 +1645,41 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'hideDisabledOptions',
-            'zh-CN': 'hideDisabledOptions'
+            'en-US': 'separator',
+            'zh-CN': 'separator'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'separator',
+            'zh-CN': 'separator'
           }
         },
-        name: 'hideDisabledOptions',
+        name: 'separator',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showHour',
+            'zh-CN': 'showHour'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'showHour',
+            'zh-CN': 'showHour'
+          }
+        },
+        name: 'showHour',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -1613,50 +1689,306 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'allowEmpty',
-            'zh-CN': 'allowEmpty'
+            'en-US': 'showMinute',
+            'zh-CN': 'showMinute'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'showMinute',
+            'zh-CN': 'showMinute'
           }
         },
-        name: 'allowEmpty',
+        name: 'showMinute',
         setter: {
-          componentName: 'MixedSetter',
-          props: {}
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'activePickerIndex',
-            'zh-CN': '@private I'
+            'en-US': 'showNow',
+            'zh-CN': 'showNow'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'showNow',
+            'zh-CN': 'showNow'
           }
         },
-        name: 'activePickerIndex',
+        name: 'showNow',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showSecond',
+            'zh-CN': 'showSecond'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'showSecond',
+            'zh-CN': 'showSecond'
+          }
+        },
+        name: 'showSecond',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          }
+        },
+        name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
           props: {
             dataSource: [
               {
-                label: '0',
-                value: 0
+                label: 'small',
+                value: 'small'
               },
               {
-                label: '1',
-                value: 1
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
               }
             ],
             options: [
               {
-                label: '0',
-                value: 0
+                label: 'small',
+                value: 'small'
               },
               {
-                label: '1',
-                value: 1
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
               }
             ]
           },
           initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          }
+        },
+        name: 'status',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: '',
+                value: ''
+              },
+              {
+                label: 'warning',
+                value: 'warning'
+              },
+              {
+                label: 'error',
+                value: 'error'
+              }
+            ],
+            options: [
+              {
+                label: '',
+                value: ''
+              },
+              {
+                label: 'warning',
+                value: 'warning'
+              },
+              {
+                label: 'error',
+                value: 'error'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'suffixIcon',
+            'zh-CN': 'suffixIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'suffixIcon',
+            'zh-CN': 'suffixIcon'
+          }
+        },
+        name: 'suffixIcon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'superNextIcon',
+            'zh-CN': 'superNextIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'superNextIcon',
+            'zh-CN': 'superNextIcon'
+          }
+        },
+        name: 'superNextIcon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'superPrevIcon',
+            'zh-CN': 'superPrevIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'superPrevIcon',
+            'zh-CN': 'superPrevIcon'
+          }
+        },
+        name: 'superPrevIcon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tabIndex',
+            'zh-CN': 'tabIndex'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'tabIndex',
+            'zh-CN': 'tabIndex'
+          }
+        },
+        name: 'tabIndex',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'transitionName',
+            'zh-CN': 'transitionName'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'transitionName',
+            'zh-CN': 'transitionName'
+          }
+        },
+        name: 'transitionName',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'use12Hours',
+            'zh-CN': 'use12Hours'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'use12Hours',
+            'zh-CN': 'use12Hours'
+          }
+        },
+        name: 'use12Hours',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          }
+        },
+        name: 'value',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {}
         }
       }
     ],
@@ -1685,7 +2017,7 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'TimeRangePicker',
+    title: '时间范围选择框',
     screenshot: '',
     schema: {
       componentName: 'TimeRangePicker',

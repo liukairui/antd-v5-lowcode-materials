@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const AppMeta: IPublicTypeComponentMetadata = {
   componentName: 'App',
-  title: 'App',
+  title: '应用',
+  group: '原子组件',
+  category: '其他 Other',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,11 @@ const AppMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'message',
+            'zh-CN': 'message'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'message',
             'zh-CN': 'message'
@@ -139,6 +146,11 @@ const AppMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'notification',
+            'zh-CN': 'notification'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'notification',
             'zh-CN': 'notification'
@@ -370,7 +382,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'App',
+    title: '应用',
     screenshot: '',
     schema: {
       componentName: 'App',

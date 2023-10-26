@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const CollapseMeta: IPublicTypeComponentMetadata = {
   componentName: 'Collapse',
-  title: 'Collapse',
+  title: '折叠面板',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,30 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'accordion',
+            'zh-CN': 'accordion'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'accordion',
+            'zh-CN': 'accordion'
+          }
+        },
+        name: 'accordion',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'activeKey',
+            'zh-CN': 'activeKey'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'activeKey',
             'zh-CN': 'activeKey'
@@ -66,6 +92,79 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
+          }
+        },
+        name: 'bordered',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'collapsible',
+            'zh-CN': 'collapsible'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'collapsible',
+            'zh-CN': 'collapsible'
+          }
+        },
+        name: 'collapsible',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'disabled',
+                value: 'disabled'
+              },
+              {
+                label: 'icon',
+                value: 'icon'
+              },
+              {
+                label: 'header',
+                value: 'header'
+              }
+            ],
+            options: [
+              {
+                label: 'disabled',
+                value: 'disabled'
+              },
+              {
+                label: 'icon',
+                value: 'icon'
+              },
+              {
+                label: 'header',
+                value: 'header'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultActiveKey',
+            'zh-CN': 'defaultActiveKey'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'defaultActiveKey',
             'zh-CN': 'defaultActiveKey'
           }
@@ -112,19 +211,10 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'accordion',
-            'zh-CN': '手风琴效果'
-          }
-        },
-        name: 'accordion',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'destroyInactivePanel',
+            'zh-CN': 'destroyInactivePanel'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'destroyInactivePanel',
             'zh-CN': 'destroyInactivePanel'
@@ -140,32 +230,10 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          }
-        },
-        name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
-          }
-        },
-        name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'expandIcon',
+            'zh-CN': 'expandIcon'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'expandIcon',
             'zh-CN': 'expandIcon'
@@ -179,6 +247,11 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'expandIconPosition',
+            'zh-CN': 'expandIconPosition'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'expandIconPosition',
             'zh-CN': 'expandIconPosition'
@@ -234,6 +307,11 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'ghost',
             'zh-CN': 'ghost'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'ghost',
+            'zh-CN': 'ghost'
           }
         },
         name: 'ghost',
@@ -246,96 +324,13 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          }
-        },
-        name: 'size',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ],
-            options: [
-              {
-                label: 'small',
-                value: 'small'
-              },
-              {
-                label: 'middle',
-                value: 'middle'
-              },
-              {
-                label: 'large',
-                value: 'large'
-              }
-            ]
+            'en-US': 'items',
+            'zh-CN': 'items'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'collapsible',
-            'zh-CN': 'collapsible'
-          }
-        },
-        name: 'collapsible',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'disabled',
-                value: 'disabled'
-              },
-              {
-                label: 'icon',
-                value: 'icon'
-              },
-              {
-                label: 'header',
-                value: 'header'
-              }
-            ],
-            options: [
-              {
-                label: 'disabled',
-                value: 'disabled'
-              },
-              {
-                label: 'icon',
-                value: 'icon'
-              },
-              {
-                label: 'header',
-                value: 'header'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'items',
-            'zh-CN': 'Collapse i'
+            'zh-CN': 'items'
           }
         },
         name: 'items',
@@ -403,6 +398,73 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          }
+        },
+        name: 'onChange',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          }
+        },
+        name: 'size',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ],
+            options: [
+              {
+                label: 'small',
+                value: 'small'
+              },
+              {
+                label: 'middle',
+                value: 'middle'
+              },
+              {
+                label: 'large',
+                value: 'large'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
       }
     ],
     supports: {
@@ -416,7 +478,7 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Collapse',
+    title: '折叠面板',
     screenshot: '',
     schema: {
       componentName: 'Collapse',

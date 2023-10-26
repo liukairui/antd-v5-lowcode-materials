@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ListItemMeta: IPublicTypeComponentMetadata = {
   componentName: 'ListItem',
-  title: 'ListItem',
+  title: '列表项',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,25 +22,10 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
-          }
-        },
-        name: 'extra',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
+            'en-US': 'actions',
+            'zh-CN': 'actions'
           },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'actions',
             'zh-CN': 'actions'
@@ -68,6 +55,11 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'colStyle',
             'zh-CN': 'colStyle'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'colStyle',
+            'zh-CN': 'colStyle'
           }
         },
         name: 'colStyle',
@@ -83,6 +75,31 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'extra',
+            'zh-CN': 'extra'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'extra',
+            'zh-CN': 'extra'
+          }
+        },
+        name: 'extra',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
       }
     ],
     supports: {
@@ -96,7 +113,7 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'ListItem',
+    title: '列表项',
     screenshot: '',
     schema: {
       componentName: 'ListItem',

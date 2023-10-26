@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SpaceCompactMeta: IPublicTypeComponentMetadata = {
   componentName: 'SpaceCompact',
-  title: 'SpaceCompact',
+  title: '紧凑布局',
+  group: '原子组件',
+  category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,71 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'block',
+            'zh-CN': 'block'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'block',
+            'zh-CN': 'block'
+          }
+        },
+        name: 'block',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'direction',
+            'zh-CN': 'direction'
+          }
+        },
+        name: 'direction',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ],
+            options: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -59,56 +126,6 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ],
-            options: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'block',
-            'zh-CN': 'block'
-          }
-        },
-        name: 'block',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
       }
     ],
     supports: {
@@ -122,7 +139,7 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'SpaceCompact',
+    title: '紧凑布局',
     screenshot: '',
     schema: {
       componentName: 'SpaceCompact',

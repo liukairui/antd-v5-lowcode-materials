@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
   componentName: 'SkeletonNode',
-  title: 'SkeletonNode',
+  title: '节点骨架屏',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'fullSize',
-            'zh-CN': 'fullSize'
+            'en-US': 'active',
+            'zh-CN': 'active'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
           }
         },
-        name: 'fullSize',
+        name: 'active',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -34,11 +41,16 @@ const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
+            'en-US': 'fullSize',
+            'zh-CN': 'fullSize'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'fullSize',
+            'zh-CN': 'fullSize'
           }
         },
-        name: 'active',
+        name: 'fullSize',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -56,7 +68,7 @@ const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'SkeletonNode',
+    title: '节点骨架屏',
     screenshot: '',
     schema: {
       componentName: 'SkeletonNode',

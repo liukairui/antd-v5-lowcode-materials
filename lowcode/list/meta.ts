@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ListMeta: IPublicTypeComponentMetadata = {
   componentName: 'List',
-  title: 'List',
+  title: '列表',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -22,6 +24,11 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
@@ -33,6 +40,11 @@ const ListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'dataSource',
+            'zh-CN': 'dataSource'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'dataSource',
             'zh-CN': 'dataSource'
@@ -64,6 +76,11 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'extra',
             'zh-CN': 'extra'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'extra',
+            'zh-CN': 'extra'
           }
         },
         name: 'extra',
@@ -81,6 +98,36 @@ const ListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'footer',
+            'zh-CN': 'footer'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'footer',
+            'zh-CN': 'footer'
+          }
+        },
+        name: 'footer',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'grid',
+            'zh-CN': 'grid'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'grid',
             'zh-CN': 'grid'
@@ -217,6 +264,36 @@ const ListMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'header',
+            'zh-CN': 'header'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'header',
+            'zh-CN': 'header'
+          }
+        },
+        name: 'header',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'id',
             'zh-CN': 'id'
           }
@@ -230,6 +307,11 @@ const ListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'itemLayout',
+            'zh-CN': 'itemLayout'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'itemLayout',
             'zh-CN': 'itemLayout'
@@ -266,6 +348,36 @@ const ListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'loadMore',
+            'zh-CN': 'loadMore'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'loadMore',
+            'zh-CN': 'loadMore'
+          }
+        },
+        name: 'loadMore',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
+          },
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'loading',
+            'zh-CN': 'loading'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
@@ -499,25 +611,58 @@ const ListMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'loadMore',
-            'zh-CN': 'loadMore'
+            'en-US': 'locale',
+            'zh-CN': 'locale'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
           }
         },
-        name: 'loadMore',
+        name: 'locale',
         setter: {
-          componentName: 'SlotSetter',
+          componentName: 'ObjectSetter',
           props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
+            config: {
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'emptyText',
+                      'zh-CN': 'emptyText'
+                    }
+                  },
+                  name: 'emptyText',
+                  setter: {
+                    componentName: 'SlotSetter',
+                    props: {
+                      mode: 'node'
+                    },
+                    initialValue: {
+                      type: 'JSSlot',
+                      value: []
+                    }
+                  }
+                }
+              ],
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
+              }
+            }
           }
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'pagination',
+            'zh-CN': 'pagination'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'pagination',
             'zh-CN': 'pagination'
@@ -655,18 +800,10 @@ const ListMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'rowKey',
-            'zh-CN': 'rowKey'
-          }
-        },
-        name: 'rowKey',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'renderItem',
+            'zh-CN': 'renderItem'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'renderItem',
             'zh-CN': 'renderItem'
@@ -680,6 +817,29 @@ const ListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'rowKey',
+            'zh-CN': 'rowKey'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'rowKey',
+            'zh-CN': 'rowKey'
+          }
+        },
+        name: 'rowKey',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -727,95 +887,17 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'split',
             'zh-CN': 'split'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'split',
+            'zh-CN': 'split'
           }
         },
         name: 'split',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'header',
-            'zh-CN': 'header'
-          }
-        },
-        name: 'header',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'footer',
-            'zh-CN': 'footer'
-          }
-        },
-        name: 'footer',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
-          }
-        },
-        name: 'locale',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'emptyText',
-                      'zh-CN': 'emptyText'
-                    }
-                  },
-                  name: 'emptyText',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
         }
       }
     ],
@@ -830,7 +912,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'List',
+    title: '列表',
     screenshot: '',
     schema: {
       componentName: 'List',

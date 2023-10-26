@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const DividerMeta: IPublicTypeComponentMetadata = {
   componentName: 'Divider',
-  title: 'Divider',
+  title: '分割线',
+  group: '原子组件',
+  category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,41 +22,29 @@ const DividerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
+            'en-US': 'dashed',
+            'zh-CN': 'dashed'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'dashed',
+            'zh-CN': 'dashed'
           }
         },
-        name: 'type',
+        name: 'dashed',
         setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ],
-            options: [
-              {
-                label: 'horizontal',
-                value: 'horizontal'
-              },
-              {
-                label: 'vertical',
-                value: 'vertical'
-              }
-            ]
-          },
+          componentName: 'BoolSetter',
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'orientation',
+            'zh-CN': 'orientation'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'orientation',
             'zh-CN': 'orientation'
@@ -102,6 +92,11 @@ const DividerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'orientationMargin',
             'zh-CN': 'orientationMargin'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'orientationMargin',
+            'zh-CN': 'orientationMargin'
           }
         },
         name: 'orientationMargin',
@@ -125,11 +120,16 @@ const DividerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'dashed',
-            'zh-CN': 'dashed'
+            'en-US': 'plain',
+            'zh-CN': 'plain'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'plain',
+            'zh-CN': 'plain'
           }
         },
-        name: 'dashed',
+        name: 'plain',
         setter: {
           componentName: 'BoolSetter',
           initialValue: undefined
@@ -139,13 +139,40 @@ const DividerMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'plain',
-            'zh-CN': 'plain'
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
           }
         },
-        name: 'plain',
+        name: 'type',
         setter: {
-          componentName: 'BoolSetter',
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ],
+            options: [
+              {
+                label: 'horizontal',
+                value: 'horizontal'
+              },
+              {
+                label: 'vertical',
+                value: 'vertical'
+              }
+            ]
+          },
           initialValue: undefined
         }
       }
@@ -161,7 +188,7 @@ const DividerMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Divider',
+    title: '分割线',
     screenshot: '',
     schema: {
       componentName: 'Divider',

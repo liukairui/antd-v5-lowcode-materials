@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SkeletonInputMeta: IPublicTypeComponentMetadata = {
   componentName: 'SkeletonInput',
-  title: 'SkeletonInput',
+  title: '输入框骨架屏',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -19,6 +21,49 @@ const SkeletonInputMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'active',
+            'zh-CN': 'active'
+          }
+        },
+        name: 'active',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'block',
+            'zh-CN': 'block'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'block',
+            'zh-CN': 'block'
+          }
+        },
+        name: 'block',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -59,34 +104,6 @@ const SkeletonInputMeta: IPublicTypeComponentMetadata = {
           },
           initialValue: undefined
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'block',
-            'zh-CN': 'block'
-          }
-        },
-        name: 'block',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
-          }
-        },
-        name: 'active',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
       }
     ],
     supports: {
@@ -100,7 +117,7 @@ const SkeletonInputMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'SkeletonInput',
+    title: '输入框骨架屏',
     screenshot: '',
     schema: {
       componentName: 'SkeletonInput',

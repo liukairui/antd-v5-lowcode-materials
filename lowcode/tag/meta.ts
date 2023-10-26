@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const TagMeta: IPublicTypeComponentMetadata = {
   componentName: 'Tag',
-  title: 'Tag',
+  title: '标签',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,19 +22,29 @@ const TagMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
           }
         },
-        name: 'color',
+        name: 'bordered',
         setter: {
-          componentName: 'MixedSetter',
-          props: {}
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'closable',
+            'zh-CN': 'closable'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'closable',
             'zh-CN': 'closable'
@@ -49,7 +61,12 @@ const TagMeta: IPublicTypeComponentMetadata = {
           label: {
             type: 'i18n',
             'en-US': 'closeIcon',
-            'zh-CN': 'Advised to'
+            'zh-CN': 'closeIcon'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'closeIcon',
+            'zh-CN': 'closeIcon'
           }
         },
         name: 'closeIcon',
@@ -68,18 +85,29 @@ const TagMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onClose',
-            'zh-CN': 'onClose'
+            'en-US': 'color',
+            'zh-CN': 'color'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'color',
+            'zh-CN': 'color'
           }
         },
-        name: 'onClose',
+        name: 'color',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'MixedSetter',
+          props: {}
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'icon',
+            'zh-CN': 'icon'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
@@ -101,14 +129,18 @@ const TagMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
+            'en-US': 'onClose',
+            'zh-CN': 'onClose'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onClose',
+            'zh-CN': 'onClose'
           }
         },
-        name: 'bordered',
+        name: 'onClose',
         setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
+          componentName: 'FunctionSetter'
         }
       }
     ],
@@ -123,7 +155,7 @@ const TagMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Tag',
+    title: '标签',
     screenshot: '',
     schema: {
       componentName: 'Tag',

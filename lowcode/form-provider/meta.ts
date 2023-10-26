@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const FormProviderMeta: IPublicTypeComponentMetadata = {
   componentName: 'FormProvider',
-  title: 'FormProvider',
+  title: '表单提供器',
+  group: '原子组件',
+  category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -22,6 +24,11 @@ const FormProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onFormChange',
             'zh-CN': 'onFormChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onFormChange',
+            'zh-CN': 'onFormChange'
           }
         },
         name: 'onFormChange',
@@ -32,6 +39,11 @@ const FormProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'onFormFinish',
+            'zh-CN': 'onFormFinish'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'onFormFinish',
             'zh-CN': 'onFormFinish'
@@ -54,7 +66,7 @@ const FormProviderMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'FormProvider',
+    title: '表单提供器',
     screenshot: '',
     schema: {
       componentName: 'FormProvider',

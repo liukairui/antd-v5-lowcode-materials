@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ProgressMeta: IPublicTypeComponentMetadata = {
   componentName: 'Progress',
-  title: 'Progress',
+  title: '进度条',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,40 +22,90 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
+            'en-US': 'format',
+            'zh-CN': 'format'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'format',
+            'zh-CN': 'format'
           }
         },
-        name: 'type',
+        name: 'format',
         setter: {
-          componentName: 'RadioGroupSetter',
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'gapDegree',
+            'zh-CN': 'gapDegree'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'gapDegree',
+            'zh-CN': 'gapDegree'
+          }
+        },
+        name: 'gapDegree',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'gapPosition',
+            'zh-CN': 'gapPosition'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'gapPosition',
+            'zh-CN': 'gapPosition'
+          }
+        },
+        name: 'gapPosition',
+        setter: {
+          componentName: 'SelectSetter',
           props: {
             dataSource: [
               {
-                label: 'circle',
-                value: 'circle'
+                label: 'left',
+                value: 'left'
               },
               {
-                label: 'line',
-                value: 'line'
+                label: 'right',
+                value: 'right'
               },
               {
-                label: 'dashboard',
-                value: 'dashboard'
+                label: 'top',
+                value: 'top'
+              },
+              {
+                label: 'bottom',
+                value: 'bottom'
               }
             ],
             options: [
               {
-                label: 'circle',
-                value: 'circle'
+                label: 'left',
+                value: 'left'
               },
               {
-                label: 'line',
-                value: 'line'
+                label: 'right',
+                value: 'right'
               },
               {
-                label: 'dashboard',
-                value: 'dashboard'
+                label: 'top',
+                value: 'top'
+              },
+              {
+                label: 'bottom',
+                value: 'bottom'
               }
             ]
           },
@@ -63,6 +115,11 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'percent',
+            'zh-CN': 'percent'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'percent',
             'zh-CN': 'percent'
@@ -78,18 +135,85 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'format',
-            'zh-CN': 'format'
+            'en-US': 'showInfo',
+            'zh-CN': 'showInfo'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'showInfo',
+            'zh-CN': 'showInfo'
           }
         },
-        name: 'format',
+        name: 'showInfo',
         setter: {
-          componentName: 'FunctionSetter'
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          }
+        },
+        name: 'size',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              {
+                componentName: 'NumberSetter',
+                initialValue: undefined
+              },
+              {
+                componentName: 'MixedSetter',
+                props: {}
+              },
+              {
+                componentName: 'RadioGroupSetter',
+                props: {
+                  dataSource: [
+                    {
+                      label: 'default',
+                      value: 'default'
+                    },
+                    {
+                      label: 'small',
+                      value: 'small'
+                    }
+                  ],
+                  options: [
+                    {
+                      label: 'default',
+                      value: 'default'
+                    },
+                    {
+                      label: 'small',
+                      value: 'small'
+                    }
+                  ]
+                },
+                initialValue: undefined
+              }
+            ]
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -143,25 +267,16 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'showInfo',
-            'zh-CN': 'showInfo'
-          }
-        },
-        name: 'showInfo',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'steps',
+            'zh-CN': 'steps'
+          },
+          tip: {
             type: 'i18n',
-            'en-US': 'strokeWidth',
-            'zh-CN': 'strokeWidth'
+            'en-US': 'steps',
+            'zh-CN': 'steps'
           }
         },
-        name: 'strokeWidth',
+        name: 'steps',
         setter: {
           componentName: 'NumberSetter',
           initialValue: undefined
@@ -171,49 +286,10 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'strokeLinecap',
-            'zh-CN': 'strokeLinecap'
-          }
-        },
-        name: 'strokeLinecap',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'round',
-                value: 'round'
-              },
-              {
-                label: 'square',
-                value: 'square'
-              },
-              {
-                label: 'butt',
-                value: 'butt'
-              }
-            ],
-            options: [
-              {
-                label: 'round',
-                value: 'round'
-              },
-              {
-                label: 'square',
-                value: 'square'
-              },
-              {
-                label: 'butt',
-                value: 'butt'
-              }
-            ]
+            'en-US': 'strokeColor',
+            'zh-CN': 'strokeColor'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
             'en-US': 'strokeColor',
             'zh-CN': 'strokeColor'
@@ -270,19 +346,78 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'trailColor',
-            'zh-CN': 'trailColor'
+            'en-US': 'strokeLinecap',
+            'zh-CN': 'strokeLinecap'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'strokeLinecap',
+            'zh-CN': 'strokeLinecap'
           }
         },
-        name: 'trailColor',
+        name: 'strokeLinecap',
         setter: {
-          componentName: 'StringSetter',
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'round',
+                value: 'round'
+              },
+              {
+                label: 'square',
+                value: 'square'
+              },
+              {
+                label: 'butt',
+                value: 'butt'
+              }
+            ],
+            options: [
+              {
+                label: 'round',
+                value: 'round'
+              },
+              {
+                label: 'square',
+                value: 'square'
+              },
+              {
+                label: 'butt',
+                value: 'butt'
+              }
+            ]
+          },
           initialValue: undefined
         }
       },
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'strokeWidth',
+            'zh-CN': 'strokeWidth'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'strokeWidth',
+            'zh-CN': 'strokeWidth'
+          }
+        },
+        name: 'strokeWidth',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'success',
+            'zh-CN': 'success'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'success',
             'zh-CN': 'success'
@@ -349,13 +484,18 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'gapDegree',
-            'zh-CN': 'gapDegree'
+            'en-US': 'trailColor',
+            'zh-CN': 'trailColor'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'trailColor',
+            'zh-CN': 'trailColor'
           }
         },
-        name: 'gapDegree',
+        name: 'trailColor',
         setter: {
-          componentName: 'NumberSetter',
+          componentName: 'StringSetter',
           initialValue: undefined
         }
       },
@@ -363,116 +503,48 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'gapPosition',
-            'zh-CN': 'gapPosition'
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
           }
         },
-        name: 'gapPosition',
+        name: 'type',
         setter: {
-          componentName: 'SelectSetter',
+          componentName: 'RadioGroupSetter',
           props: {
             dataSource: [
               {
-                label: 'left',
-                value: 'left'
+                label: 'circle',
+                value: 'circle'
               },
               {
-                label: 'right',
-                value: 'right'
+                label: 'line',
+                value: 'line'
               },
               {
-                label: 'top',
-                value: 'top'
-              },
-              {
-                label: 'bottom',
-                value: 'bottom'
+                label: 'dashboard',
+                value: 'dashboard'
               }
             ],
             options: [
               {
-                label: 'left',
-                value: 'left'
+                label: 'circle',
+                value: 'circle'
               },
               {
-                label: 'right',
-                value: 'right'
+                label: 'line',
+                value: 'line'
               },
               {
-                label: 'top',
-                value: 'top'
-              },
-              {
-                label: 'bottom',
-                value: 'bottom'
+                label: 'dashboard',
+                value: 'dashboard'
               }
             ]
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          }
-        },
-        name: 'size',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'MixedSetter',
-                props: {}
-              },
-              {
-                componentName: 'RadioGroupSetter',
-                props: {
-                  dataSource: [
-                    {
-                      label: 'default',
-                      value: 'default'
-                    },
-                    {
-                      label: 'small',
-                      value: 'small'
-                    }
-                  ],
-                  options: [
-                    {
-                      label: 'default',
-                      value: 'default'
-                    },
-                    {
-                      label: 'small',
-                      value: 'small'
-                    }
-                  ]
-                },
-                initialValue: undefined
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'steps',
-            'zh-CN': 'steps'
-          }
-        },
-        name: 'steps',
-        setter: {
-          componentName: 'NumberSetter',
           initialValue: undefined
         }
       }
@@ -488,7 +560,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Progress',
+    title: '进度条',
     screenshot: '',
     schema: {
       componentName: 'Progress',

@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
   componentName: 'ImagePreviewGroup',
-  title: 'ImagePreviewGroup',
+  title: '图片预览组',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'previewPrefixCls',
-            'zh-CN': 'previewPrefixCls'
+            'en-US': 'fallback',
+            'zh-CN': 'fallback'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'fallback',
+            'zh-CN': 'fallback'
           }
         },
-        name: 'previewPrefixCls',
+        name: 'fallback',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -33,6 +40,11 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'icons',
+            'zh-CN': 'icons'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'icons',
             'zh-CN': 'icons'
@@ -239,6 +251,11 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'items',
+            'zh-CN': 'items'
           }
         },
         name: 'items',
@@ -276,19 +293,10 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'fallback',
-            'zh-CN': 'fallback'
-          }
-        },
-        name: 'fallback',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'preview',
+            'zh-CN': 'preview'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'preview',
             'zh-CN': 'preview'
@@ -398,6 +406,25 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
             ]
           }
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'previewPrefixCls',
+            'zh-CN': 'previewPrefixCls'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'previewPrefixCls',
+            'zh-CN': 'previewPrefixCls'
+          }
+        },
+        name: 'previewPrefixCls',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
       }
     ],
     supports: {
@@ -411,7 +438,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'ImagePreviewGroup',
+    title: '图片预览组',
     screenshot: '',
     schema: {
       componentName: 'ImagePreviewGroup',

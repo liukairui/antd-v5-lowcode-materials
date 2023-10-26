@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const WatermarkMeta: IPublicTypeComponentMetadata = {
   componentName: 'Watermark',
-  title: 'Watermark',
+  title: '水印',
+  group: '原子组件',
+  category: '反馈 Feedback',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,75 +22,10 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'zIndex',
-            'zh-CN': 'zIndex'
-          }
-        },
-        name: 'zIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'rotate',
-            'zh-CN': 'rotate'
-          }
-        },
-        name: 'rotate',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': 'width'
-          }
-        },
-        name: 'width',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'height',
-            'zh-CN': 'height'
-          }
-        },
-        name: 'height',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'image',
-            'zh-CN': 'image'
-          }
-        },
-        name: 'image',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'content',
+            'zh-CN': 'content'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'content',
             'zh-CN': 'content'
@@ -120,6 +57,11 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'font',
+            'zh-CN': 'font'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'font',
             'zh-CN': 'font'
@@ -425,6 +367,11 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'gap',
             'zh-CN': 'gap'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'gap',
+            'zh-CN': 'gap'
           }
         },
         name: 'gap',
@@ -437,6 +384,49 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'height',
+            'zh-CN': 'height'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'height',
+            'zh-CN': 'height'
+          }
+        },
+        name: 'height',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'image',
+            'zh-CN': 'image'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'image',
+            'zh-CN': 'image'
+          }
+        },
+        name: 'image',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'offset',
+            'zh-CN': 'offset'
+          },
+          tip: {
+            type: 'i18n',
             'en-US': 'offset',
             'zh-CN': 'offset'
           }
@@ -445,6 +435,63 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {}
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'rotate',
+            'zh-CN': 'rotate'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'rotate',
+            'zh-CN': 'rotate'
+          }
+        },
+        name: 'rotate',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'width',
+            'zh-CN': 'width'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'width',
+            'zh-CN': 'width'
+          }
+        },
+        name: 'width',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'zIndex',
+            'zh-CN': 'zIndex'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'zIndex',
+            'zh-CN': 'zIndex'
+          }
+        },
+        name: 'zIndex',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       }
     ],
@@ -459,7 +506,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'Watermark',
+    title: '水印',
     screenshot: '',
     schema: {
       componentName: 'Watermark',

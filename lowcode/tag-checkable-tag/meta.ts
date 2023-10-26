@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
   componentName: 'TagCheckableTag',
-  title: 'TagCheckableTag',
+  title: '可选择标签',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -21,7 +23,12 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
           label: {
             type: 'i18n',
             'en-US': 'checked',
-            'zh-CN': 'It is an a'
+            'zh-CN': 'checked'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'checked',
+            'zh-CN': 'checked'
           }
         },
         name: 'checked',
@@ -36,6 +43,11 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
@@ -46,6 +58,11 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
@@ -68,7 +85,7 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'TagCheckableTag',
+    title: '可选择标签',
     screenshot: '',
     schema: {
       componentName: 'TagCheckableTag',

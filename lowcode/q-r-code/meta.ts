@@ -2,7 +2,9 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const QRCodeMeta: IPublicTypeComponentMetadata = {
   componentName: 'QRCode',
-  title: 'QRCode',
+  title: '二维码',
+  group: '原子组件',
+  category: '数据展示 Data Display',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
@@ -20,11 +22,16 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
+            'en-US': 'bgColor',
+            'zh-CN': 'bgColor'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'bgColor',
+            'zh-CN': 'bgColor'
           }
         },
-        name: 'icon',
+        name: 'bgColor',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -34,19 +41,10 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'iconSize',
-            'zh-CN': 'iconSize'
-          }
-        },
-        name: 'iconSize',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'bordered',
+            'zh-CN': 'bordered'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
@@ -61,6 +59,30 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
+            type: 'i18n',
+            'en-US': 'color',
+            'zh-CN': 'color'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'color',
+            'zh-CN': 'color'
+          }
+        },
+        name: 'color',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'errorLevel',
+            'zh-CN': 'errorLevel'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'errorLevel',
             'zh-CN': 'errorLevel'
@@ -114,55 +136,16 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          }
-        },
-        name: 'status',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'loading',
-                value: 'loading'
-              },
-              {
-                label: 'active',
-                value: 'active'
-              },
-              {
-                label: 'expired',
-                value: 'expired'
-              }
-            ],
-            options: [
-              {
-                label: 'loading',
-                value: 'loading'
-              },
-              {
-                label: 'active',
-                value: 'active'
-              },
-              {
-                label: 'expired',
-                value: 'expired'
-              }
-            ]
+            'en-US': 'icon',
+            'zh-CN': 'icon'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
+            'en-US': 'icon',
+            'zh-CN': 'icon'
           }
         },
-        name: 'value',
+        name: 'icon',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -172,47 +155,16 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          }
-        },
-        name: 'type',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'canvas',
-                value: 'canvas'
-              },
-              {
-                label: 'svg',
-                value: 'svg'
-              }
-            ],
-            options: [
-              {
-                label: 'canvas',
-                value: 'canvas'
-              },
-              {
-                label: 'svg',
-                value: 'svg'
-              }
-            ]
+            'en-US': 'iconSize',
+            'zh-CN': 'iconSize'
           },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+          tip: {
             type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
+            'en-US': 'iconSize',
+            'zh-CN': 'iconSize'
           }
         },
-        name: 'size',
+        name: 'iconSize',
         setter: {
           componentName: 'NumberSetter',
           initialValue: undefined
@@ -222,33 +174,10 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
-          }
-        },
-        name: 'color',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'includeMargin',
-            'zh-CN': 'includeMargin'
-          }
-        },
-        name: 'includeMargin',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
+            'en-US': 'imageSettings',
+            'zh-CN': 'imageSettings'
+          },
+          tip: {
             type: 'i18n',
             'en-US': 'imageSettings',
             'zh-CN': 'imageSettings'
@@ -357,11 +286,144 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'bgColor',
-            'zh-CN': 'bgColor'
+            'en-US': 'includeMargin',
+            'zh-CN': 'includeMargin'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'includeMargin',
+            'zh-CN': 'includeMargin'
           }
         },
-        name: 'bgColor',
+        name: 'includeMargin',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
+          }
+        },
+        name: 'size',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
+          }
+        },
+        name: 'status',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'loading',
+                value: 'loading'
+              },
+              {
+                label: 'active',
+                value: 'active'
+              },
+              {
+                label: 'expired',
+                value: 'expired'
+              }
+            ],
+            options: [
+              {
+                label: 'loading',
+                value: 'loading'
+              },
+              {
+                label: 'active',
+                value: 'active'
+              },
+              {
+                label: 'expired',
+                value: 'expired'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
+          }
+        },
+        name: 'type',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
+              {
+                label: 'canvas',
+                value: 'canvas'
+              },
+              {
+                label: 'svg',
+                value: 'svg'
+              }
+            ],
+            options: [
+              {
+                label: 'canvas',
+                value: 'canvas'
+              },
+              {
+                label: 'svg',
+                value: 'svg'
+              }
+            ]
+          },
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'value',
+            'zh-CN': 'value'
+          }
+        },
+        name: 'value',
         setter: {
           componentName: 'StringSetter',
           initialValue: undefined
@@ -384,7 +446,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: 'QRCode',
+    title: '二维码',
     screenshot: '',
     schema: {
       componentName: 'QRCode',
