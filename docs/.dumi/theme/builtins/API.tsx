@@ -1,20 +1,20 @@
-import React, { useContext } from 'react';
 import type { IApiComponentProps } from 'dumi/theme';
 import { context, useApiData } from 'dumi/theme';
+import React, { useContext } from 'react';
 
 import './index.scss';
 
 const LOCALE_TEXTS = {
   'zh-CN': {
     name: '参数',
-    description: '说明',
+
     type: '类型',
     default: '默认值',
     required: '(必选)'
   },
   'en-US': {
     name: 'Name',
-    description: 'Description',
+
     type: 'Type',
     default: 'Default',
     required: '(required)'

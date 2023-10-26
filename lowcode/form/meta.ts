@@ -1,603 +1,555 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const FormMeta: IPublicTypeComponentMetadata = {
-  "componentName": "Form",
-  "title": "Form",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "Form",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'Form',
+  title: 'Form',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'Form',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'colon',
+            'zh-CN': 'colon'
           }
         },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'colon',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "colon",
-            "zh-CN": "colon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
           }
         },
-        "name": "colon",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'name',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "name",
-            "zh-CN": "name"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'layout',
+            'zh-CN': 'layout'
           }
         },
-        "name": "name",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "layout",
-            "zh-CN": "layout"
-          }
-        },
-        "name": "layout",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'layout',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "horizontal",
-                "value": "horizontal"
+                label: 'horizontal',
+                value: 'horizontal'
               },
               {
-                "label": "vertical",
-                "value": "vertical"
+                label: 'vertical',
+                value: 'vertical'
               },
               {
-                "label": "inline",
-                "value": "inline"
+                label: 'inline',
+                value: 'inline'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "horizontal",
-                "value": "horizontal"
+                label: 'horizontal',
+                value: 'horizontal'
               },
               {
-                "label": "vertical",
-                "value": "vertical"
+                label: 'vertical',
+                value: 'vertical'
               },
               {
-                "label": "inline",
-                "value": "inline"
+                label: 'inline',
+                value: 'inline'
               }
             ]
           },
-          "initialValue": "horizontal"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "labelAlign",
-            "zh-CN": "labelAlign"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'labelAlign',
+            'zh-CN': 'labelAlign'
           }
         },
-        "name": "labelAlign",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'labelAlign',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "left",
-                "value": "left"
+                label: 'left',
+                value: 'left'
               },
               {
-                "label": "right",
-                "value": "right"
+                label: 'right',
+                value: 'right'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "left",
-                "value": "left"
+                label: 'left',
+                value: 'left'
               },
               {
-                "label": "right",
-                "value": "right"
+                label: 'right',
+                value: 'right'
               }
             ]
           },
-          "initialValue": "left"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "labelWrap",
-            "zh-CN": "labelWrap"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'labelWrap',
+            'zh-CN': 'labelWrap'
           }
         },
-        "name": "labelWrap",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'labelWrap',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "labelCol",
-            "zh-CN": "labelCol"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'labelCol',
+            'zh-CN': 'labelCol'
           }
         },
-        "name": "labelCol",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "items": [
+        name: 'labelCol',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "flex",
-                      "zh-CN": "flex"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'flex',
+                      'zh-CN': 'flex'
                     }
                   },
-                  "name": "flex",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'flex',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           },
-                          "isRequired": false,
-                          "initialValue": {}
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "RadioGroupSetter",
-                          "props": {
-                            "dataSource": [
+                          componentName: 'RadioGroupSetter',
+                          props: {
+                            dataSource: [
                               {
-                                "label": "auto",
-                                "value": "auto"
+                                label: 'auto',
+                                value: 'auto'
                               },
                               {
-                                "label": "none",
-                                "value": "none"
+                                label: 'none',
+                                value: 'none'
                               }
                             ],
-                            "options": [
+                            options: [
                               {
-                                "label": "auto",
-                                "value": "auto"
+                                label: 'auto',
+                                value: 'auto'
                               },
                               {
-                                "label": "none",
-                                "value": "none"
+                                label: 'none',
+                                value: 'none'
                               }
                             ]
                           },
-                          "initialValue": "auto"
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "span",
-                      "zh-CN": "span"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'span',
+                      'zh-CN': 'span'
                     }
                   },
-                  "name": "span",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'span',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "order",
-                      "zh-CN": "order"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'order',
+                      'zh-CN': 'order'
                     }
                   },
-                  "name": "order",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'order',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "offset",
-                      "zh-CN": "offset"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'offset',
+                      'zh-CN': 'offset'
                     }
                   },
-                  "name": "offset",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'offset',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "push",
-                      "zh-CN": "push"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'push',
+                      'zh-CN': 'push'
                     }
                   },
-                  "name": "push",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'push',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "pull",
-                      "zh-CN": "pull"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'pull',
+                      'zh-CN': 'pull'
                     }
                   },
-                  "name": "pull",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'pull',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "xs",
-                      "zh-CN": "xs"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'xs',
+                      'zh-CN': 'xs'
                     }
                   },
-                  "name": "xs",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'xs',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -607,235 +559,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "sm",
-                      "zh-CN": "sm"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'sm',
+                      'zh-CN': 'sm'
                     }
                   },
-                  "name": "sm",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'sm',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -845,235 +781,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "md",
-                      "zh-CN": "md"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'md',
+                      'zh-CN': 'md'
                     }
                   },
-                  "name": "md",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'md',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -1083,235 +1003,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "lg",
-                      "zh-CN": "lg"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'lg',
+                      'zh-CN': 'lg'
                     }
                   },
-                  "name": "lg",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'lg',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -1321,235 +1225,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "xl",
-                      "zh-CN": "xl"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'xl',
+                      'zh-CN': 'xl'
                     }
                   },
-                  "name": "xl",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'xl',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -1559,235 +1447,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "xxl",
-                      "zh-CN": "xxl"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'xxl',
+                      'zh-CN': 'xxl'
                     }
                   },
-                  "name": "xxl",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'xxl',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -1797,471 +1669,440 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "prefixCls",
-                      "zh-CN": "prefixCls"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'prefixCls',
+                      'zh-CN': 'prefixCls'
                     }
                   },
-                  "name": "prefixCls",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'prefixCls',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 }
               ],
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "wrapperCol",
-            "zh-CN": "wrapperCol"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'wrapperCol',
+            'zh-CN': 'wrapperCol'
           }
         },
-        "name": "wrapperCol",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "items": [
+        name: 'wrapperCol',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "flex",
-                      "zh-CN": "flex"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'flex',
+                      'zh-CN': 'flex'
                     }
                   },
-                  "name": "flex",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'flex',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           },
-                          "isRequired": false,
-                          "initialValue": {}
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "RadioGroupSetter",
-                          "props": {
-                            "dataSource": [
+                          componentName: 'RadioGroupSetter',
+                          props: {
+                            dataSource: [
                               {
-                                "label": "auto",
-                                "value": "auto"
+                                label: 'auto',
+                                value: 'auto'
                               },
                               {
-                                "label": "none",
-                                "value": "none"
+                                label: 'none',
+                                value: 'none'
                               }
                             ],
-                            "options": [
+                            options: [
                               {
-                                "label": "auto",
-                                "value": "auto"
+                                label: 'auto',
+                                value: 'auto'
                               },
                               {
-                                "label": "none",
-                                "value": "none"
+                                label: 'none',
+                                value: 'none'
                               }
                             ]
                           },
-                          "initialValue": "auto"
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "span",
-                      "zh-CN": "span"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'span',
+                      'zh-CN': 'span'
                     }
                   },
-                  "name": "span",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'span',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "order",
-                      "zh-CN": "order"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'order',
+                      'zh-CN': 'order'
                     }
                   },
-                  "name": "order",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'order',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "offset",
-                      "zh-CN": "offset"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'offset',
+                      'zh-CN': 'offset'
                     }
                   },
-                  "name": "offset",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'offset',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "push",
-                      "zh-CN": "push"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'push',
+                      'zh-CN': 'push'
                     }
                   },
-                  "name": "push",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'push',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "pull",
-                      "zh-CN": "pull"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'pull',
+                      'zh-CN': 'pull'
                     }
                   },
-                  "name": "pull",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'pull',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "xs",
-                      "zh-CN": "xs"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'xs',
+                      'zh-CN': 'xs'
                     }
                   },
-                  "name": "xs",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'xs',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -2271,235 +2112,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "sm",
-                      "zh-CN": "sm"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'sm',
+                      'zh-CN': 'sm'
                     }
                   },
-                  "name": "sm",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'sm',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -2509,235 +2334,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "md",
-                      "zh-CN": "md"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'md',
+                      'zh-CN': 'md'
                     }
                   },
-                  "name": "md",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'md',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -2747,235 +2556,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "lg",
-                      "zh-CN": "lg"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'lg',
+                      'zh-CN': 'lg'
                     }
                   },
-                  "name": "lg",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'lg',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -2985,235 +2778,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "xl",
-                      "zh-CN": "xl"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'xl',
+                      'zh-CN': 'xl'
                     }
                   },
-                  "name": "xl",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'xl',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -3223,235 +3000,219 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "xxl",
-                      "zh-CN": "xxl"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'xxl',
+                      'zh-CN': 'xxl'
                     }
                   },
-                  "name": "xxl",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'xxl',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "ObjectSetter",
-                          "props": {
-                            "config": {
-                              "items": [
+                          componentName: 'ObjectSetter',
+                          props: {
+                            config: {
+                              items: [
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "flex",
-                                      "zh-CN": "flex"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'flex',
+                                      'zh-CN': 'flex'
                                     }
                                   },
-                                  "name": "flex",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'flex',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "ObjectSetter",
-                                          "props": {
-                                            "config": {
-                                              "extraSetter": {
-                                                "componentName": "MixedSetter",
-                                                "isRequired": false,
-                                                "props": {}
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              extraSetter: {
+                                                componentName: 'MixedSetter',
+                                                props: {}
                                               }
                                             }
                                           },
-                                          "isRequired": false,
-                                          "initialValue": {}
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "RadioGroupSetter",
-                                          "props": {
-                                            "dataSource": [
+                                          componentName: 'RadioGroupSetter',
+                                          props: {
+                                            dataSource: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ],
-                                            "options": [
+                                            options: [
                                               {
-                                                "label": "auto",
-                                                "value": "auto"
+                                                label: 'auto',
+                                                value: 'auto'
                                               },
                                               {
-                                                "label": "none",
-                                                "value": "none"
+                                                label: 'none',
+                                                value: 'none'
                                               }
                                             ]
                                           },
-                                          "initialValue": "auto"
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "span",
-                                      "zh-CN": "span"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'span',
+                                      'zh-CN': 'span'
                                     }
                                   },
-                                  "name": "span",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'span',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "order",
-                                      "zh-CN": "order"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'order',
+                                      'zh-CN': 'order'
                                     }
                                   },
-                                  "name": "order",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'order',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "offset",
-                                      "zh-CN": "offset"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'offset',
+                                      'zh-CN': 'offset'
                                     }
                                   },
-                                  "name": "offset",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'offset',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "push",
-                                      "zh-CN": "push"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'push',
+                                      'zh-CN': 'push'
                                     }
                                   },
-                                  "name": "push",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'push',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 },
                                 {
-                                  "title": {
-                                    "label": {
-                                      "type": "i18n",
-                                      "en-US": "pull",
-                                      "zh-CN": "pull"
+                                  title: {
+                                    label: {
+                                      type: 'i18n',
+                                      'en-US': 'pull',
+                                      'zh-CN': 'pull'
                                     }
                                   },
-                                  "name": "pull",
-                                  "setter": {
-                                    "componentName": "MixedSetter",
-                                    "props": {
-                                      "setters": [
+                                  name: 'pull',
+                                  setter: {
+                                    componentName: 'MixedSetter',
+                                    props: {
+                                      setters: [
                                         {
-                                          "componentName": "StringSetter",
-                                          "isRequired": false,
-                                          "initialValue": ""
+                                          componentName: 'StringSetter',
+                                          initialValue: undefined
                                         },
                                         {
-                                          "componentName": "NumberSetter",
-                                          "isRequired": false,
-                                          "initialValue": 0
+                                          componentName: 'NumberSetter',
+                                          initialValue: undefined
                                         }
                                       ]
                                     }
                                   }
                                 }
                               ],
-                              "extraSetter": {
-                                "componentName": "MixedSetter",
-                                "isRequired": false,
-                                "props": {}
+                              extraSetter: {
+                                componentName: 'MixedSetter',
+                                props: {}
                               }
                             }
                           }
@@ -3461,276 +3222,264 @@ const FormMeta: IPublicTypeComponentMetadata = {
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "prefixCls",
-                      "zh-CN": "prefixCls"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'prefixCls',
+                      'zh-CN': 'prefixCls'
                     }
                   },
-                  "name": "prefixCls",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'prefixCls',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 }
               ],
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "form",
-            "zh-CN": "form"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'form',
+            'zh-CN': 'form'
           }
         },
-        "name": "form",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "items": [
+        name: 'form',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "Values",
-                      "zh-CN": "Values"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'Values',
+                      'zh-CN': 'Values'
                     }
                   },
-                  "name": "Values",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "isRequired": true,
-                    "props": {}
+                  name: 'Values',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {}
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "scrollToField",
-                      "zh-CN": "scrollToField"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'scrollToField',
+                      'zh-CN': 'scrollToField'
                     }
                   },
-                  "name": "scrollToField",
-                  "setter": {
-                    "componentName": "FunctionSetter",
-                    "isRequired": true
+                  name: 'scrollToField',
+                  setter: {
+                    componentName: 'FunctionSetter'
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "getFieldInstance",
-                      "zh-CN": "getFieldInstance"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'getFieldInstance',
+                      'zh-CN': 'getFieldInstance'
                     }
                   },
-                  "name": "getFieldInstance",
-                  "setter": {
-                    "componentName": "FunctionSetter",
-                    "isRequired": true
+                  name: 'getFieldInstance',
+                  setter: {
+                    componentName: 'FunctionSetter'
                   }
                 }
               ],
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "feedbackIcons",
-            "zh-CN": "feedbackIcons"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'feedbackIcons',
+            'zh-CN': 'feedbackIcons'
           }
         },
-        "name": "feedbackIcons",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'feedbackIcons',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "size",
-            "zh-CN": "size"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
           }
         },
-        "name": "size",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'size',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "small",
-                "value": "small"
+                label: 'small',
+                value: 'small'
               },
               {
-                "label": "middle",
-                "value": "middle"
+                label: 'middle',
+                value: 'middle'
               },
               {
-                "label": "large",
-                "value": "large"
+                label: 'large',
+                value: 'large'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "small",
-                "value": "small"
+                label: 'small',
+                value: 'small'
               },
               {
-                "label": "middle",
-                "value": "middle"
+                label: 'middle',
+                value: 'middle'
               },
               {
-                "label": "large",
-                "value": "large"
+                label: 'large',
+                value: 'large'
               }
             ]
           },
-          "initialValue": "small"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "disabled",
-            "zh-CN": "disabled"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
           }
         },
-        "name": "disabled",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'disabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "scrollToFirstError",
-            "zh-CN": "scrollToFirstError"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'scrollToFirstError',
+            'zh-CN': 'scrollToFirstError'
           }
         },
-        "name": "scrollToFirstError",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'scrollToFirstError',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "items": [
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    items: [
                       {
-                        "title": {
-                          "label": {
-                            "type": "i18n",
-                            "en-US": "behavior",
-                            "zh-CN": "behavior"
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'behavior',
+                            'zh-CN': 'behavior'
                           }
                         },
-                        "name": "behavior",
-                        "setter": {
-                          "componentName": "RadioGroupSetter",
-                          "props": {
-                            "dataSource": [
+                        name: 'behavior',
+                        setter: {
+                          componentName: 'RadioGroupSetter',
+                          props: {
+                            dataSource: [
                               {
-                                "label": "auto",
-                                "value": "auto"
+                                label: 'auto',
+                                value: 'auto'
                               },
                               {
-                                "label": "smooth",
-                                "value": "smooth"
+                                label: 'smooth',
+                                value: 'smooth'
                               }
                             ],
-                            "options": [
+                            options: [
                               {
-                                "label": "auto",
-                                "value": "auto"
+                                label: 'auto',
+                                value: 'auto'
                               },
                               {
-                                "label": "smooth",
-                                "value": "smooth"
+                                label: 'smooth',
+                                value: 'smooth'
                               }
                             ]
                           },
-                          "initialValue": "auto"
+                          initialValue: undefined
                         }
                       }
                     ],
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 }
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "items": [
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    items: [
                       {
-                        "title": {
-                          "label": {
-                            "type": "i18n",
-                            "en-US": "T",
-                            "zh-CN": "T"
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'T',
+                            'zh-CN': 'T'
                           }
                         },
-                        "name": "T",
-                        "setter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": true,
-                          "props": {}
+                        name: 'T',
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       },
                       {
-                        "title": {
-                          "label": {
-                            "type": "i18n",
-                            "en-US": "behavior",
-                            "zh-CN": "behavior"
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'behavior',
+                            'zh-CN': 'behavior'
                           }
                         },
-                        "name": "behavior",
-                        "setter": {
-                          "componentName": "FunctionSetter",
-                          "isRequired": true
+                        name: 'behavior',
+                        setter: {
+                          componentName: 'FunctionSetter'
                         }
                       }
                     ],
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 }
@@ -3740,1439 +3489,1318 @@ const FormMeta: IPublicTypeComponentMetadata = {
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "requiredMark",
-            "zh-CN": "requiredMark"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'requiredMark',
+            'zh-CN': 'requiredMark'
           }
         },
-        "name": "requiredMark",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'requiredMark',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "FunctionSetter"
+                componentName: 'FunctionSetter'
               },
               {
-                "componentName": "RadioGroupSetter",
-                "props": {
-                  "dataSource": [
+                componentName: 'RadioGroupSetter',
+                props: {
+                  dataSource: [
                     {
-                      "label": "optional",
-                      "value": "optional"
+                      label: 'optional',
+                      value: 'optional'
                     }
                   ],
-                  "options": [
+                  options: [
                     {
-                      "label": "optional",
-                      "value": "optional"
+                      label: 'optional',
+                      value: 'optional'
                     }
                   ]
                 },
-                "initialValue": "optional"
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "hideRequiredMark",
-            "zh-CN": "@deprecate"
-          },
-          "tip": "hideRequiredMark | @deprecated Will warning in future branch. Pls use `requiredMark` instead."
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'target',
+            'zh-CN': 'target'
+          }
         },
-        "name": "hideRequiredMark",
-        "description": "@deprecated Will warning in future branch. Pls use `requiredMark` instead.",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'target',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rootClassName",
-            "zh-CN": "rootClassName"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'component',
+            'zh-CN': 'component'
           }
         },
-        "name": "rootClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "target",
-            "zh-CN": "target"
-          }
-        },
-        "name": "target",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "component",
-            "zh-CN": "component"
-          }
-        },
-        "name": "component",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'component',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               },
               {
-                "componentName": "RadioGroupSetter",
-                "props": {
-                  "dataSource": [
+                componentName: 'RadioGroupSetter',
+                props: {
+                  dataSource: [
                     {
-                      "label": "false",
-                      "value": false
+                      label: 'false',
+                      value: false
                     }
                   ],
-                  "options": [
+                  options: [
                     {
-                      "label": "false",
-                      "value": false
+                      label: 'false',
+                      value: false
                     }
                   ]
                 },
-                "initialValue": false
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "autoComplete",
-            "zh-CN": "autoComplete"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'autoComplete',
+            'zh-CN': 'autoComplete'
           }
         },
-        "name": "autoComplete",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'autoComplete',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "acceptCharset",
-            "zh-CN": "acceptCharset"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'acceptCharset',
+            'zh-CN': 'acceptCharset'
           }
         },
-        "name": "acceptCharset",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'acceptCharset',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "action",
-            "zh-CN": "action"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'action',
+            'zh-CN': 'action'
           }
         },
-        "name": "action",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'action',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "encType",
-            "zh-CN": "encType"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'encType',
+            'zh-CN': 'encType'
           }
         },
-        "name": "encType",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'encType',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "method",
-            "zh-CN": "method"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'method',
+            'zh-CN': 'method'
           }
         },
-        "name": "method",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'method',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "noValidate",
-            "zh-CN": "noValidate"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'noValidate',
+            'zh-CN': 'noValidate'
           }
         },
-        "name": "noValidate",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'noValidate',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "initialValues",
-            "zh-CN": "initialValues"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'initialValues',
+            'zh-CN': 'initialValues'
           }
         },
-        "name": "initialValues",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+        name: 'initialValues',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           },
-          "isRequired": false,
-          "initialValue": {}
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "fields",
-            "zh-CN": "fields"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'fields',
+            'zh-CN': 'fields'
           }
         },
-        "name": "fields",
-        "setter": {
-          "componentName": "ArraySetter",
-          "props": {
-            "itemSetter": {
-              "componentName": "ObjectSetter",
-              "props": {
-                "config": {
-                  "items": [
+        name: 'fields',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'ObjectSetter',
+              props: {
+                config: {
+                  items: [
                     {
-                      "title": {
-                        "label": {
-                          "type": "i18n",
-                          "en-US": "name",
-                          "zh-CN": "name"
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'name',
+                          'zh-CN': 'name'
                         }
                       },
-                      "name": "name",
-                      "setter": {
-                        "componentName": "MixedSetter",
-                        "isRequired": true,
-                        "props": {}
+                      name: 'name',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {}
                       }
                     }
                   ],
-                  "extraSetter": {
-                    "componentName": "MixedSetter",
-                    "isRequired": false,
-                    "props": {}
+                  extraSetter: {
+                    componentName: 'MixedSetter',
+                    props: {}
                   }
                 }
               }
             }
           },
-          "initialValue": []
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "validateMessages",
-            "zh-CN": "validateMessages"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'validateMessages',
+            'zh-CN': 'validateMessages'
           }
         },
-        "name": "validateMessages",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "items": [
+        name: 'validateMessages',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "default",
-                      "zh-CN": "default"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'default',
+                      'zh-CN': 'default'
                     }
                   },
-                  "name": "default",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'default',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "FunctionSetter",
-                          "isRequired": false
+                          componentName: 'FunctionSetter'
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "required",
-                      "zh-CN": "required"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'required',
+                      'zh-CN': 'required'
                     }
                   },
-                  "name": "required",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'required',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "FunctionSetter",
-                          "isRequired": false
+                          componentName: 'FunctionSetter'
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "enum",
-                      "zh-CN": "enum"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'enum',
+                      'zh-CN': 'enum'
                     }
                   },
-                  "name": "enum",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'enum',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "FunctionSetter",
-                          "isRequired": false
+                          componentName: 'FunctionSetter'
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "whitespace",
-                      "zh-CN": "whitespace"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'whitespace',
+                      'zh-CN': 'whitespace'
                     }
                   },
-                  "name": "whitespace",
-                  "setter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                  name: 'whitespace',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "FunctionSetter",
-                          "isRequired": false
+                          componentName: 'FunctionSetter'
                         }
                       ]
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "date",
-                      "zh-CN": "date"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'date',
+                      'zh-CN': 'date'
                     }
                   },
-                  "name": "date",
-                  "setter": {
-                    "componentName": "ObjectSetter",
-                    "props": {
-                      "config": {
-                        "items": [
+                  name: 'date',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "format",
-                                "zh-CN": "format"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'format',
+                                'zh-CN': 'format'
                               }
                             },
-                            "name": "format",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'format',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "parse",
-                                "zh-CN": "parse"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'parse',
+                                'zh-CN': 'parse'
                               }
                             },
-                            "name": "parse",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'parse',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "invalid",
-                                "zh-CN": "invalid"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'invalid',
+                                'zh-CN': 'invalid'
                               }
                             },
-                            "name": "invalid",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'invalid',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           }
                         ],
-                        "extraSetter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": false,
-                          "props": {}
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       }
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "types",
-                      "zh-CN": "types"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'types',
+                      'zh-CN': 'types'
                     }
                   },
-                  "name": "types",
-                  "setter": {
-                    "componentName": "ObjectSetter",
-                    "props": {
-                      "config": {
-                        "items": [
+                  name: 'types',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "string",
-                                "zh-CN": "string"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'string',
+                                'zh-CN': 'string'
                               }
                             },
-                            "name": "string",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'string',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "method",
-                                "zh-CN": "method"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'method',
+                                'zh-CN': 'method'
                               }
                             },
-                            "name": "method",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'method',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "array",
-                                "zh-CN": "array"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'array',
+                                'zh-CN': 'array'
                               }
                             },
-                            "name": "array",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'array',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "object",
-                                "zh-CN": "object"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'object',
+                                'zh-CN': 'object'
                               }
                             },
-                            "name": "object",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'object',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "number",
-                                "zh-CN": "number"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'number',
+                                'zh-CN': 'number'
                               }
                             },
-                            "name": "number",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'number',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "date",
-                                "zh-CN": "date"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'date',
+                                'zh-CN': 'date'
                               }
                             },
-                            "name": "date",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'date',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "boolean",
-                                "zh-CN": "boolean"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'boolean',
+                                'zh-CN': 'boolean'
                               }
                             },
-                            "name": "boolean",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'boolean',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "integer",
-                                "zh-CN": "integer"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'integer',
+                                'zh-CN': 'integer'
                               }
                             },
-                            "name": "integer",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'integer',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "float",
-                                "zh-CN": "float"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'float',
+                                'zh-CN': 'float'
                               }
                             },
-                            "name": "float",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'float',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "regexp",
-                                "zh-CN": "regexp"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'regexp',
+                                'zh-CN': 'regexp'
                               }
                             },
-                            "name": "regexp",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'regexp',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "email",
-                                "zh-CN": "email"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'email',
+                                'zh-CN': 'email'
                               }
                             },
-                            "name": "email",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'email',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "url",
-                                "zh-CN": "url"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'url',
+                                'zh-CN': 'url'
                               }
                             },
-                            "name": "url",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'url',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "hex",
-                                "zh-CN": "hex"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'hex',
+                                'zh-CN': 'hex'
                               }
                             },
-                            "name": "hex",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'hex',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           }
                         ],
-                        "extraSetter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": false,
-                          "props": {}
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       }
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "string",
-                      "zh-CN": "string"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'string',
+                      'zh-CN': 'string'
                     }
                   },
-                  "name": "string",
-                  "setter": {
-                    "componentName": "ObjectSetter",
-                    "props": {
-                      "config": {
-                        "items": [
+                  name: 'string',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "len",
-                                "zh-CN": "len"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'len',
+                                'zh-CN': 'len'
                               }
                             },
-                            "name": "len",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'len',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "min",
-                                "zh-CN": "min"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'min',
+                                'zh-CN': 'min'
                               }
                             },
-                            "name": "min",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'min',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "max",
-                                "zh-CN": "max"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'max',
+                                'zh-CN': 'max'
                               }
                             },
-                            "name": "max",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'max',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "range",
-                                "zh-CN": "range"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'range',
+                                'zh-CN': 'range'
                               }
                             },
-                            "name": "range",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'range',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           }
                         ],
-                        "extraSetter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": false,
-                          "props": {}
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       }
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "number",
-                      "zh-CN": "number"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'number',
+                      'zh-CN': 'number'
                     }
                   },
-                  "name": "number",
-                  "setter": {
-                    "componentName": "ObjectSetter",
-                    "props": {
-                      "config": {
-                        "items": [
+                  name: 'number',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "len",
-                                "zh-CN": "len"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'len',
+                                'zh-CN': 'len'
                               }
                             },
-                            "name": "len",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'len',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "min",
-                                "zh-CN": "min"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'min',
+                                'zh-CN': 'min'
                               }
                             },
-                            "name": "min",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'min',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "max",
-                                "zh-CN": "max"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'max',
+                                'zh-CN': 'max'
                               }
                             },
-                            "name": "max",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'max',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "range",
-                                "zh-CN": "range"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'range',
+                                'zh-CN': 'range'
                               }
                             },
-                            "name": "range",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'range',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           }
                         ],
-                        "extraSetter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": false,
-                          "props": {}
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       }
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "array",
-                      "zh-CN": "array"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'array',
+                      'zh-CN': 'array'
                     }
                   },
-                  "name": "array",
-                  "setter": {
-                    "componentName": "ObjectSetter",
-                    "props": {
-                      "config": {
-                        "items": [
+                  name: 'array',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "len",
-                                "zh-CN": "len"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'len',
+                                'zh-CN': 'len'
                               }
                             },
-                            "name": "len",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'len',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "min",
-                                "zh-CN": "min"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'min',
+                                'zh-CN': 'min'
                               }
                             },
-                            "name": "min",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'min',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "max",
-                                "zh-CN": "max"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'max',
+                                'zh-CN': 'max'
                               }
                             },
-                            "name": "max",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'max',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           },
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "range",
-                                "zh-CN": "range"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'range',
+                                'zh-CN': 'range'
                               }
                             },
-                            "name": "range",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'range',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           }
                         ],
-                        "extraSetter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": false,
-                          "props": {}
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       }
                     }
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "pattern",
-                      "zh-CN": "pattern"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'pattern',
+                      'zh-CN': 'pattern'
                     }
                   },
-                  "name": "pattern",
-                  "setter": {
-                    "componentName": "ObjectSetter",
-                    "props": {
-                      "config": {
-                        "items": [
+                  name: 'pattern',
+                  setter: {
+                    componentName: 'ObjectSetter',
+                    props: {
+                      config: {
+                        items: [
                           {
-                            "title": {
-                              "label": {
-                                "type": "i18n",
-                                "en-US": "mismatch",
-                                "zh-CN": "mismatch"
+                            title: {
+                              label: {
+                                type: 'i18n',
+                                'en-US': 'mismatch',
+                                'zh-CN': 'mismatch'
                               }
                             },
-                            "name": "mismatch",
-                            "setter": {
-                              "componentName": "MixedSetter",
-                              "props": {
-                                "setters": [
+                            name: 'mismatch',
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: [
                                   {
-                                    "componentName": "StringSetter",
-                                    "isRequired": false,
-                                    "initialValue": ""
+                                    componentName: 'StringSetter',
+                                    initialValue: undefined
                                   },
                                   {
-                                    "componentName": "FunctionSetter",
-                                    "isRequired": false
+                                    componentName: 'FunctionSetter'
                                   }
                                 ]
                               }
                             }
                           }
                         ],
-                        "extraSetter": {
-                          "componentName": "MixedSetter",
-                          "isRequired": false,
-                          "props": {}
+                        extraSetter: {
+                          componentName: 'MixedSetter',
+                          props: {}
                         }
                       }
                     }
                   }
                 }
               ],
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onFieldsChange",
-            "zh-CN": "onFieldsChange"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onFieldsChange',
+            'zh-CN': 'onFieldsChange'
           }
         },
-        "name": "onFieldsChange",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'onFieldsChange',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "validateTrigger",
-            "zh-CN": "validateTrigger"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'validateTrigger',
+            'zh-CN': 'validateTrigger'
           }
         },
-        "name": "validateTrigger",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'validateTrigger',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ArraySetter",
-                "props": {
-                  "itemSetter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                componentName: 'ArraySetter',
+                props: {
+                  itemSetter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
-                "initialValue": []
+                initialValue: undefined
               },
               {
-                "componentName": "RadioGroupSetter",
-                "props": {
-                  "dataSource": [
+                componentName: 'RadioGroupSetter',
+                props: {
+                  dataSource: [
                     {
-                      "label": "false",
-                      "value": false
+                      label: 'false',
+                      value: false
                     }
                   ],
-                  "options": [
+                  options: [
                     {
-                      "label": "false",
-                      "value": false
+                      label: 'false',
+                      value: false
                     }
                   ]
                 },
-                "initialValue": false
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "preserve",
-            "zh-CN": "preserve"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'preserve',
+            'zh-CN': 'preserve'
           }
         },
-        "name": "preserve",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'preserve',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       }
     ],
-    "supports": {
-      "style": true,
-      "className": true,
-      "events": [
+    supports: {
+      className: true,
+      style: true,
+      events: [
         {
-          "name": "onValuesChange"
+          name: 'onValuesChange'
         },
         {
-          "name": "onFinish"
+          name: 'onFinish'
         },
         {
-          "name": "onFinishFailed"
+          name: 'onFinishFailed'
         }
       ]
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "Form",
-    "screenshot": "",
-    "schema": {
-      "componentName": "Form",
-      "props": {}
+    title: 'Form',
+    screenshot: '',
+    schema: {
+      componentName: 'Form',
+      props: {}
     }
   }
 ];

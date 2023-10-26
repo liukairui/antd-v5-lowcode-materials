@@ -1,201 +1,166 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const SpinMeta: IPublicTypeComponentMetadata = {
-  "componentName": "Spin",
-  "title": "Spin",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "Spin",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'Spin',
+  title: 'Spin',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'Spin',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'spinning',
+            'zh-CN': 'spinning'
           }
         },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'spinning',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rootClassName",
-            "zh-CN": "rootClassName"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
           }
         },
-        "name": "rootClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "spinning",
-            "zh-CN": "spinning"
-          }
-        },
-        "name": "spinning",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "size",
-            "zh-CN": "size"
-          }
-        },
-        "name": "size",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'size',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "default",
-                "value": "default"
+                label: 'default',
+                value: 'default'
               },
               {
-                "label": "small",
-                "value": "small"
+                label: 'small',
+                value: 'small'
               },
               {
-                "label": "large",
-                "value": "large"
+                label: 'large',
+                value: 'large'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "default",
-                "value": "default"
+                label: 'default',
+                value: 'default'
               },
               {
-                "label": "small",
-                "value": "small"
+                label: 'small',
+                value: 'small'
               },
               {
-                "label": "large",
-                "value": "large"
+                label: 'large',
+                value: 'large'
               }
             ]
           },
-          "initialValue": "default"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "tip",
-            "zh-CN": "tip"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tip',
+            'zh-CN': 'tip'
           }
         },
-        "name": "tip",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'tip',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "delay",
-            "zh-CN": "delay"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'delay',
+            'zh-CN': 'delay'
           }
         },
-        "name": "delay",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'delay',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "wrapperClassName",
-            "zh-CN": "wrapperClassName"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'wrapperClassName',
+            'zh-CN': 'wrapperClassName'
           }
         },
-        "name": "wrapperClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'wrapperClassName',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "indicator",
-            "zh-CN": "indicator"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'indicator',
+            'zh-CN': 'indicator'
           }
         },
-        "name": "indicator",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+        name: 'indicator',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           },
-          "isRequired": false,
-          "initialValue": {}
+          initialValue: undefined
         }
       }
     ],
-    "supports": {
-      "className": true,
-      "style": true
+    supports: {
+      className: true,
+      style: true
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "Spin",
-    "screenshot": "",
-    "schema": {
-      "componentName": "Spin",
-      "props": {}
+    title: 'Spin',
+    screenshot: '',
+    schema: {
+      componentName: 'Spin',
+      props: {}
     }
   }
 ];

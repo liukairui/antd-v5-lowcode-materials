@@ -1,218 +1,193 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const FormListMeta: IPublicTypeComponentMetadata = {
-  "componentName": "FormList",
-  "title": "FormList",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "FormList",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'FormList',
+  title: 'FormList',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'FormList',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'name',
+            'zh-CN': 'name'
           }
         },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "name",
-            "zh-CN": "name"
-          }
-        },
-        "name": "name",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'name',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
+                componentName: 'NumberSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ArraySetter",
-                "props": {
-                  "itemSetter": {
-                    "componentName": "MixedSetter",
-                    "props": {
-                      "setters": [
+                componentName: 'ArraySetter',
+                props: {
+                  itemSetter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
                         {
-                          "componentName": "StringSetter",
-                          "isRequired": false,
-                          "initialValue": ""
+                          componentName: 'StringSetter',
+                          initialValue: undefined
                         },
                         {
-                          "componentName": "NumberSetter",
-                          "isRequired": false,
-                          "initialValue": 0
+                          componentName: 'NumberSetter',
+                          initialValue: undefined
                         }
                       ]
                     }
                   }
                 },
-                "initialValue": []
+                initialValue: undefined
               }
             ]
-          },
-          "isRequired": true
+          }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rules",
-            "zh-CN": "rules"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'rules',
+            'zh-CN': 'rules'
           }
         },
-        "name": "rules",
-        "setter": {
-          "componentName": "ArraySetter",
-          "props": {
-            "itemSetter": {
-              "componentName": "ObjectSetter",
-              "props": {
-                "config": {
-                  "items": [
+        name: 'rules',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'ObjectSetter',
+              props: {
+                config: {
+                  items: [
                     {
-                      "title": {
-                        "label": {
-                          "type": "i18n",
-                          "en-US": "warningOnly",
-                          "zh-CN": "warningOnly"
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'warningOnly',
+                          'zh-CN': 'warningOnly'
                         }
                       },
-                      "name": "warningOnly",
-                      "setter": {
-                        "componentName": "BoolSetter",
-                        "isRequired": false,
-                        "initialValue": false
+                      name: 'warningOnly',
+                      setter: {
+                        componentName: 'BoolSetter',
+                        initialValue: undefined
                       }
                     },
                     {
-                      "title": {
-                        "label": {
-                          "type": "i18n",
-                          "en-US": "message",
-                          "zh-CN": "message"
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'message',
+                          'zh-CN': 'message'
                         }
                       },
-                      "name": "message",
-                      "setter": {
-                        "componentName": "MixedSetter",
-                        "props": {
-                          "setters": [
+                      name: 'message',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
                             {
-                              "componentName": "StringSetter",
-                              "isRequired": false,
-                              "initialValue": ""
+                              componentName: 'StringSetter',
+                              initialValue: undefined
                             },
                             {
-                              "componentName": "ObjectSetter",
-                              "props": {
-                                "config": {
-                                  "extraSetter": {
-                                    "componentName": "MixedSetter",
-                                    "isRequired": false,
-                                    "props": {}
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  extraSetter: {
+                                    componentName: 'MixedSetter',
+                                    props: {}
                                   }
                                 }
                               },
-                              "isRequired": false,
-                              "initialValue": {}
+                              initialValue: undefined
                             }
                           ]
                         }
                       }
                     },
                     {
-                      "title": {
-                        "label": {
-                          "type": "i18n",
-                          "en-US": "validator",
-                          "zh-CN": "validator"
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'validator',
+                          'zh-CN': 'validator'
                         }
                       },
-                      "name": "validator",
-                      "setter": {
-                        "componentName": "FunctionSetter",
-                        "isRequired": true
+                      name: 'validator',
+                      setter: {
+                        componentName: 'FunctionSetter'
                       }
                     }
                   ],
-                  "extraSetter": {
-                    "componentName": "MixedSetter",
-                    "isRequired": false,
-                    "props": {}
+                  extraSetter: {
+                    componentName: 'MixedSetter',
+                    props: {}
                   }
                 }
               }
             }
           },
-          "initialValue": []
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "initialValue",
-            "zh-CN": "initialValue"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'initialValue',
+            'zh-CN': 'initialValue'
           }
         },
-        "name": "initialValue",
-        "setter": {
-          "componentName": "ArraySetter",
-          "props": {
-            "itemSetter": {
-              "componentName": "MixedSetter",
-              "isRequired": false,
-              "props": {}
+        name: 'initialValue',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'MixedSetter',
+              props: {}
             }
           },
-          "initialValue": []
+          initialValue: undefined
         }
       }
     ],
-    "supports": {
-      "style": true
+    supports: {
+      className: true,
+      style: true
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "FormList",
-    "screenshot": "",
-    "schema": {
-      "componentName": "FormList",
-      "props": {}
+    title: 'FormList',
+    screenshot: '',
+    schema: {
+      componentName: 'FormList',
+      props: {}
     }
   }
 ];

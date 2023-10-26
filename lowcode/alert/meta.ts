@@ -1,381 +1,303 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const AlertMeta: IPublicTypeComponentMetadata = {
-  "componentName": "Alert",
-  "title": "Alert",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "Alert",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'Alert',
+  title: 'Alert',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'Alert',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "type",
-            "zh-CN": "Type of Al"
-          },
-          "tip": "type | Type of Alert styles, options:`success`, `info`, `warning`, `error`"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'Type of Al'
+          }
         },
-        "name": "type",
-        "description": "Type of Alert styles, options:`success`, `info`, `warning`, `error`",
-        "setter": {
-          "componentName": "SelectSetter",
-          "props": {
-            "dataSource": [
+        name: 'type',
+        setter: {
+          componentName: 'SelectSetter',
+          props: {
+            dataSource: [
               {
-                "label": "success",
-                "value": "success"
+                label: 'success',
+                value: 'success'
               },
               {
-                "label": "warning",
-                "value": "warning"
+                label: 'warning',
+                value: 'warning'
               },
               {
-                "label": "error",
-                "value": "error"
+                label: 'error',
+                value: 'error'
               },
               {
-                "label": "info",
-                "value": "info"
+                label: 'info',
+                value: 'info'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "success",
-                "value": "success"
+                label: 'success',
+                value: 'success'
               },
               {
-                "label": "warning",
-                "value": "warning"
+                label: 'warning',
+                value: 'warning'
               },
               {
-                "label": "error",
-                "value": "error"
+                label: 'error',
+                value: 'error'
               },
               {
-                "label": "info",
-                "value": "info"
+                label: 'info',
+                value: 'info'
               }
             ]
           },
-          "initialValue": "success"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "closable",
-            "zh-CN": "Whether Al"
-          },
-          "tip": "closable | Whether Alert can be closed"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'closable',
+            'zh-CN': 'Whether Al'
+          }
         },
-        "name": "closable",
-        "description": "Whether Alert can be closed",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'closable',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "closeText",
-            "zh-CN": "@deprecate"
-          },
-          "tip": "closeText | @deprecated please use `closeIcon` instead."
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'message',
+            'zh-CN': 'Content of'
+          }
         },
-        "name": "closeText",
-        "description": "@deprecated please use `closeIcon` instead.",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'message',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "message",
-            "zh-CN": "Content of"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'Additional'
+          }
+        },
+        name: 'description',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "tip": "message | Content of Alert"
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClose',
+            'zh-CN': 'Callback w'
+          }
         },
-        "name": "message",
-        "description": "Content of Alert",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'onClose',
+        setter: {
+          componentName: 'FunctionSetter'
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showIcon',
+            'zh-CN': 'Whether to'
+          }
+        },
+        name: 'showIcon',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'role',
+            'zh-CN': 'https://ww'
+          }
+        },
+        name: 'role',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'banner',
+            'zh-CN': 'banner'
+          }
+        },
+        name: 'banner',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'icon',
+            'zh-CN': 'icon'
+          }
+        },
+        name: 'icon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "description",
-            "zh-CN": "Additional"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'closeIcon',
+            'zh-CN': 'Custom clo'
+          }
+        },
+        name: 'closeIcon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "tip": "description | Additional content of Alert"
+          initialValue: {
+            type: 'JSSlot',
+            value: []
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'action',
+            'zh-CN': 'action'
+          }
         },
-        "name": "description",
-        "description": "Additional content of Alert",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'action',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onClose",
-            "zh-CN": "Callback w"
-          },
-          "tip": "onClose | Callback when close Alert"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseEnter',
+            'zh-CN': 'onMouseEnter'
+          }
         },
-        "name": "onClose",
-        "description": "Callback when close Alert",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'onMouseEnter',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showIcon",
-            "zh-CN": "Whether to"
-          },
-          "tip": "showIcon | Whether to show icon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onMouseLeave',
+            'zh-CN': 'onMouseLeave'
+          }
         },
-        "name": "showIcon",
-        "description": "Whether to show icon",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'onMouseLeave',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "role",
-            "zh-CN": "https://ww"
-          },
-          "tip": "role | https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#aria-role-attribute"
-        },
-        "name": "role",
-        "description": "https://www.w3.org/TR/2014/REC-html5-20141028/dom.html#aria-role-attribute",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
           }
         },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rootClassName",
-            "zh-CN": "rootClassName"
-          }
-        },
-        "name": "rootClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "banner",
-            "zh-CN": "banner"
-          }
-        },
-        "name": "banner",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "icon",
-            "zh-CN": "icon"
-          }
-        },
-        "name": "icon",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
-          },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
-          }
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "closeIcon",
-            "zh-CN": "Custom clo"
-          },
-          "tip": "closeIcon | Custom closeIcon"
-        },
-        "name": "closeIcon",
-        "description": "Custom closeIcon",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
-          },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
-          }
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "action",
-            "zh-CN": "action"
-          }
-        },
-        "name": "action",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
-          },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
-          }
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onMouseEnter",
-            "zh-CN": "onMouseEnter"
-          }
-        },
-        "name": "onMouseEnter",
-        "setter": {
-          "componentName": "FunctionSetter"
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onMouseLeave",
-            "zh-CN": "onMouseLeave"
-          }
-        },
-        "name": "onMouseLeave",
-        "setter": {
-          "componentName": "FunctionSetter"
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onClick",
-            "zh-CN": "onClick"
-          }
-        },
-        "name": "onClick",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'onClick',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       }
     ],
-    "supports": {
-      "events": [
+    supports: {
+      className: true,
+      style: true,
+      events: [
         {
-          "name": "afterClose",
-          "description": "Trigger when animation ending of Alert"
+          name: 'afterClose'
         }
-      ],
-      "style": true,
-      "className": true
+      ]
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "Alert",
-    "screenshot": "",
-    "schema": {
-      "componentName": "Alert",
-      "props": {}
+    title: 'Alert',
+    screenshot: '',
+    schema: {
+      componentName: 'Alert',
+      props: {}
     }
   }
 ];

@@ -1,417 +1,314 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const FloatButtonMeta: IPublicTypeComponentMetadata = {
-  "componentName": "FloatButton",
-  "title": "FloatButton",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "FloatButton",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'FloatButton',
+  title: 'FloatButton',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'FloatButton',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'icon',
+            'zh-CN': 'icon'
           }
         },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rootClassName",
-            "zh-CN": "rootClassName"
-          }
-        },
-        "name": "rootClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "icon",
-            "zh-CN": "icon"
-          }
-        },
-        "name": "icon",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'icon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "description",
-            "zh-CN": "description"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'description',
+            'zh-CN': 'description'
           }
         },
-        "name": "description",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'description',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "type",
-            "zh-CN": "type"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'type',
+            'zh-CN': 'type'
           }
         },
-        "name": "type",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'type',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "default",
-                "value": "default"
+                label: 'default',
+                value: 'default'
               },
               {
-                "label": "primary",
-                "value": "primary"
+                label: 'primary',
+                value: 'primary'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "default",
-                "value": "default"
+                label: 'default',
+                value: 'default'
               },
               {
-                "label": "primary",
-                "value": "primary"
+                label: 'primary',
+                value: 'primary'
               }
             ]
           },
-          "initialValue": "default"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "shape",
-            "zh-CN": "shape"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'shape',
+            'zh-CN': 'shape'
           }
         },
-        "name": "shape",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'shape',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "circle",
-                "value": "circle"
+                label: 'circle',
+                value: 'circle'
               },
               {
-                "label": "square",
-                "value": "square"
+                label: 'square',
+                value: 'square'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "circle",
-                "value": "circle"
+                label: 'circle',
+                value: 'circle'
               },
               {
-                "label": "square",
-                "value": "square"
+                label: 'square',
+                value: 'square'
               }
             ]
           },
-          "initialValue": "circle"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "tooltip",
-            "zh-CN": "tooltip"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tooltip',
+            'zh-CN': 'tooltip'
           }
         },
-        "name": "tooltip",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'tooltip',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
+                componentName: 'NumberSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               },
               {
-                "componentName": "FunctionSetter",
-                "isRequired": false
+                componentName: 'FunctionSetter'
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "href",
-            "zh-CN": "href"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'href',
+            'zh-CN': 'href'
           }
         },
-        "name": "href",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'href',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "target",
-            "zh-CN": "target"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'target',
+            'zh-CN': 'target'
           }
         },
-        "name": "target",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'target',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               },
               {
-                "componentName": "SelectSetter",
-                "props": {
-                  "dataSource": [
+                componentName: 'SelectSetter',
+                props: {
+                  dataSource: [
                     {
-                      "label": "_self",
-                      "value": "_self"
+                      label: '_self',
+                      value: '_self'
                     },
                     {
-                      "label": "_blank",
-                      "value": "_blank"
+                      label: '_blank',
+                      value: '_blank'
                     },
                     {
-                      "label": "_parent",
-                      "value": "_parent"
+                      label: '_parent',
+                      value: '_parent'
                     },
                     {
-                      "label": "_top",
-                      "value": "_top"
+                      label: '_top',
+                      value: '_top'
                     }
                   ],
-                  "options": [
+                  options: [
                     {
-                      "label": "_self",
-                      "value": "_self"
+                      label: '_self',
+                      value: '_self'
                     },
                     {
-                      "label": "_blank",
-                      "value": "_blank"
+                      label: '_blank',
+                      value: '_blank'
                     },
                     {
-                      "label": "_parent",
-                      "value": "_parent"
+                      label: '_parent',
+                      value: '_parent'
                     },
                     {
-                      "label": "_top",
-                      "value": "_top"
+                      label: '_top',
+                      value: '_top'
                     }
                   ]
                 },
-                "initialValue": "_self"
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "badge",
-            "zh-CN": "badge"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'badge',
+            'zh-CN': 'badge'
           }
         },
-        "name": "badge",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+        name: 'badge',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           },
-          "isRequired": false,
-          "initialValue": {}
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onClick",
-            "zh-CN": "onClick"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
           }
         },
-        "name": "onClick",
-        "setter": {
-          "componentName": "FunctionSetter"
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "ref",
-            "zh-CN": "ref"
-          }
-        },
-        "name": "ref",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
-              {
-                "componentName": "FunctionSetter"
-              },
-              {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
-                    }
-                  }
-                },
-                "isRequired": false,
-                "initialValue": {}
-              }
-            ]
-          }
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "key",
-            "zh-CN": "key"
-          }
-        },
-        "name": "key",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
-              {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
-              },
-              {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
-              }
-            ]
-          }
+        name: 'onClick',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       }
     ],
-    "supports": {
-      "className": true,
-      "style": true
+    supports: {
+      className: true,
+      style: true
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "FloatButton",
-    "screenshot": "",
-    "schema": {
-      "componentName": "FloatButton",
-      "props": {}
+    title: 'FloatButton',
+    screenshot: '',
+    schema: {
+      componentName: 'FloatButton',
+      props: {}
     }
   }
 ];

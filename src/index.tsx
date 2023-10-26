@@ -503,3 +503,9 @@ export { App };
 import _ConfigProvider from 'antd/es/config-provider';
 const ConfigProvider: FC<CP<typeof _ConfigProvider>> = (props) => <_ConfigProvider {...props} />;
 export { ConfigProvider };
+
+/**
+ * PlainText 纯文本
+ */
+const PlainText: FC<{ content?: string }> = (props) => <span children={props.content} />;
+export { PlainText };

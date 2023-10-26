@@ -1,251 +1,232 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const ResultMeta: IPublicTypeComponentMetadata = {
-  "componentName": "Result",
-  "title": "Result",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "Result",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'Result',
+  title: 'Result',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'Result',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "icon",
-            "zh-CN": "icon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'icon',
+            'zh-CN': 'icon'
           }
         },
-        "name": "icon",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'icon',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "status",
-            "zh-CN": "status"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'status',
+            'zh-CN': 'status'
           }
         },
-        "name": "status",
-        "setter": {
-          "componentName": "SelectSetter",
-          "props": {
-            "dataSource": [
+        name: 'status',
+        setter: {
+          componentName: 'SelectSetter',
+          props: {
+            dataSource: [
               {
-                "label": "success",
-                "value": "success"
+                label: 'success',
+                value: 'success'
               },
               {
-                "label": "warning",
-                "value": "warning"
+                label: 'warning',
+                value: 'warning'
               },
               {
-                "label": "error",
-                "value": "error"
+                label: 'error',
+                value: 'error'
               },
               {
-                "label": "info",
-                "value": "info"
+                label: 'info',
+                value: 'info'
               },
               {
-                "label": "403",
-                "value": 403
+                label: '403',
+                value: 403
               },
               {
-                "label": "404",
-                "value": 404
+                label: '404',
+                value: 404
               },
               {
-                "label": "500",
-                "value": 500
+                label: '500',
+                value: 500
               },
               {
-                "label": "403",
-                "value": "403"
+                label: '403',
+                value: '403'
               },
               {
-                "label": "404",
-                "value": "404"
+                label: '404',
+                value: '404'
               },
               {
-                "label": "500",
-                "value": "500"
+                label: '500',
+                value: '500'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "success",
-                "value": "success"
+                label: 'success',
+                value: 'success'
               },
               {
-                "label": "warning",
-                "value": "warning"
+                label: 'warning',
+                value: 'warning'
               },
               {
-                "label": "error",
-                "value": "error"
+                label: 'error',
+                value: 'error'
               },
               {
-                "label": "info",
-                "value": "info"
+                label: 'info',
+                value: 'info'
               },
               {
-                "label": "403",
-                "value": 403
+                label: '403',
+                value: 403
               },
               {
-                "label": "404",
-                "value": 404
+                label: '404',
+                value: 404
               },
               {
-                "label": "500",
-                "value": 500
+                label: '500',
+                value: 500
               },
               {
-                "label": "403",
-                "value": "403"
+                label: '403',
+                value: '403'
               },
               {
-                "label": "404",
-                "value": "404"
+                label: '404',
+                value: '404'
               },
               {
-                "label": "500",
-                "value": "500"
+                label: '500',
+                value: '500'
               }
             ]
           },
-          "initialValue": "success"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "title",
-            "zh-CN": "title"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'title',
+            'zh-CN': 'title'
           }
         },
-        "name": "title",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'title',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "subTitle",
-            "zh-CN": "subTitle"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'subTitle',
+            'zh-CN': 'subTitle'
           }
         },
-        "name": "subTitle",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'subTitle',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "extra",
-            "zh-CN": "extra"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'extra',
+            'zh-CN': 'extra'
           }
         },
-        "name": "extra",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'extra',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'prefixCls',
+            'zh-CN': 'prefixCls'
           }
         },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rootClassName",
-            "zh-CN": "rootClassName"
-          }
-        },
-        "name": "rootClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'prefixCls',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       }
     ],
-    "supports": {
-      "className": true,
-      "style": true
+    supports: {
+      className: true,
+      style: true
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "Result",
-    "screenshot": "",
-    "schema": {
-      "componentName": "Result",
-      "props": {}
+    title: 'Result',
+    screenshot: '',
+    schema: {
+      componentName: 'Result',
+      props: {}
     }
   }
 ];

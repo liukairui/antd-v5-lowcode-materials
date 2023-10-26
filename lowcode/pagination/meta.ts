@@ -1,71 +1,67 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const PaginationMeta: IPublicTypeComponentMetadata = {
-  "componentName": "Pagination",
-  "title": "Pagination",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "Pagination",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'Pagination',
+  title: 'Pagination',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'Pagination',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showQuickJumper",
-            "zh-CN": "showQuickJumper"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showQuickJumper',
+            'zh-CN': 'showQuickJumper'
           }
         },
-        "name": "showQuickJumper",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'showQuickJumper',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "items": [
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    items: [
                       {
-                        "title": {
-                          "label": {
-                            "type": "i18n",
-                            "en-US": "goButton",
-                            "zh-CN": "goButton"
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'goButton',
+                            'zh-CN': 'goButton'
                           }
                         },
-                        "name": "goButton",
-                        "setter": {
-                          "componentName": "SlotSetter",
-                          "props": {
-                            "mode": "node"
+                        name: 'goButton',
+                        setter: {
+                          componentName: 'SlotSetter',
+                          props: {
+                            mode: 'node'
                           },
-                          "isRequired": false,
-                          "initialValue": {
-                            "type": "JSSlot",
-                            "value": []
+                          initialValue: {
+                            type: 'JSSlot',
+                            value: []
                           }
                         }
                       }
                     ],
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 }
@@ -75,806 +71,727 @@ const PaginationMeta: IPublicTypeComponentMetadata = {
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "size",
-            "zh-CN": "size"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'size',
+            'zh-CN': 'size'
           }
         },
-        "name": "size",
-        "setter": {
-          "componentName": "RadioGroupSetter",
-          "props": {
-            "dataSource": [
+        name: 'size',
+        setter: {
+          componentName: 'RadioGroupSetter',
+          props: {
+            dataSource: [
               {
-                "label": "default",
-                "value": "default"
+                label: 'default',
+                value: 'default'
               },
               {
-                "label": "small",
-                "value": "small"
+                label: 'small',
+                value: 'small'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "default",
-                "value": "default"
+                label: 'default',
+                value: 'default'
               },
               {
-                "label": "small",
-                "value": "small"
+                label: 'small',
+                value: 'small'
               }
             ]
           },
-          "initialValue": "default"
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "responsive",
-            "zh-CN": "responsive"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'responsive',
+            'zh-CN': 'responsive'
           }
         },
-        "name": "responsive",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'responsive',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "role",
-            "zh-CN": "role"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'role',
+            'zh-CN': 'role'
           }
         },
-        "name": "role",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'role',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "totalBoundaryShowSizeChanger",
-            "zh-CN": "totalBoundaryShowSizeChanger"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'totalBoundaryShowSizeChanger',
+            'zh-CN': 'totalBoundaryShowSizeChanger'
           }
         },
-        "name": "totalBoundaryShowSizeChanger",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'totalBoundaryShowSizeChanger',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "rootClassName",
-            "zh-CN": "rootClassName"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
           }
         },
-        "name": "rootClassName",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'onChange',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onChange",
-            "zh-CN": "onChange"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onShowSizeChange',
+            'zh-CN': 'onShowSizeChange'
           }
         },
-        "name": "onChange",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'onShowSizeChange',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onShowSizeChange",
-            "zh-CN": "onShowSizeChange"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'itemRender',
+            'zh-CN': 'itemRender'
           }
         },
-        "name": "onShowSizeChange",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'itemRender',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "itemRender",
-            "zh-CN": "itemRender"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showTotal',
+            'zh-CN': 'showTotal'
           }
         },
-        "name": "itemRender",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'showTotal',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showTotal",
-            "zh-CN": "showTotal"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'selectPrefixCls',
+            'zh-CN': 'selectPrefixCls'
           }
         },
-        "name": "showTotal",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'selectPrefixCls',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "selectPrefixCls",
-            "zh-CN": "selectPrefixCls"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'pageSizeOptions',
+            'zh-CN': 'pageSizeOptions'
           }
         },
-        "name": "selectPrefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prefixCls",
-            "zh-CN": "prefixCls"
-          }
-        },
-        "name": "prefixCls",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
-        }
-      },
-      {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "pageSizeOptions",
-            "zh-CN": "pageSizeOptions"
-          }
-        },
-        "name": "pageSizeOptions",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'pageSizeOptions',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "ArraySetter",
-                "props": {
-                  "itemSetter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                componentName: 'ArraySetter',
+                props: {
+                  itemSetter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
-                "initialValue": []
+                initialValue: undefined
               },
               {
-                "componentName": "ArraySetter",
-                "props": {
-                  "itemSetter": {
-                    "componentName": "NumberSetter",
-                    "isRequired": false,
-                    "initialValue": 0
+                componentName: 'ArraySetter',
+                props: {
+                  itemSetter: {
+                    componentName: 'NumberSetter',
+                    initialValue: undefined
                   }
                 },
-                "initialValue": []
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "current",
-            "zh-CN": "current"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'current',
+            'zh-CN': 'current'
           }
         },
-        "name": "current",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'current',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "defaultCurrent",
-            "zh-CN": "defaultCurrent"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultCurrent',
+            'zh-CN': 'defaultCurrent'
           }
         },
-        "name": "defaultCurrent",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'defaultCurrent',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "total",
-            "zh-CN": "total"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'total',
+            'zh-CN': 'total'
           }
         },
-        "name": "total",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'total',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "pageSize",
-            "zh-CN": "pageSize"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'pageSize',
+            'zh-CN': 'pageSize'
           }
         },
-        "name": "pageSize",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'pageSize',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "defaultPageSize",
-            "zh-CN": "defaultPageSize"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'defaultPageSize',
+            'zh-CN': 'defaultPageSize'
           }
         },
-        "name": "defaultPageSize",
-        "setter": {
-          "componentName": "NumberSetter",
-          "isRequired": false,
-          "initialValue": 0
+        name: 'defaultPageSize',
+        setter: {
+          componentName: 'NumberSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "hideOnSinglePage",
-            "zh-CN": "hideOnSinglePage"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'hideOnSinglePage',
+            'zh-CN': 'hideOnSinglePage'
           }
         },
-        "name": "hideOnSinglePage",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'hideOnSinglePage',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showSizeChanger",
-            "zh-CN": "showSizeChanger"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showSizeChanger',
+            'zh-CN': 'showSizeChanger'
           }
         },
-        "name": "showSizeChanger",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'showSizeChanger',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showLessItems",
-            "zh-CN": "showLessItems"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showLessItems',
+            'zh-CN': 'showLessItems'
           }
         },
-        "name": "showLessItems",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'showLessItems',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showPrevNextJumpers",
-            "zh-CN": "showPrevNextJumpers"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showPrevNextJumpers',
+            'zh-CN': 'showPrevNextJumpers'
           }
         },
-        "name": "showPrevNextJumpers",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'showPrevNextJumpers',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "showTitle",
-            "zh-CN": "showTitle"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'showTitle',
+            'zh-CN': 'showTitle'
           }
         },
-        "name": "showTitle",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'showTitle',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "simple",
-            "zh-CN": "simple"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'simple',
+            'zh-CN': 'simple'
           }
         },
-        "name": "simple",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'simple',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "disabled",
-            "zh-CN": "disabled"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
           }
         },
-        "name": "disabled",
-        "setter": {
-          "componentName": "BoolSetter",
-          "isRequired": false,
-          "initialValue": false
+        name: 'disabled',
+        setter: {
+          componentName: 'BoolSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "locale",
-            "zh-CN": "locale"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'locale',
+            'zh-CN': 'locale'
           }
         },
-        "name": "locale",
-        "setter": {
-          "componentName": "ObjectSetter",
-          "props": {
-            "config": {
-              "items": [
+        name: 'locale',
+        setter: {
+          componentName: 'ObjectSetter',
+          props: {
+            config: {
+              items: [
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "items_per_page",
-                      "zh-CN": "items_per_page"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'items_per_page',
+                      'zh-CN': 'items_per_page'
                     }
                   },
-                  "name": "items_per_page",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'items_per_page',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "jump_to",
-                      "zh-CN": "jump_to"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'jump_to',
+                      'zh-CN': 'jump_to'
                     }
                   },
-                  "name": "jump_to",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'jump_to',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "jump_to_confirm",
-                      "zh-CN": "jump_to_confirm"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'jump_to_confirm',
+                      'zh-CN': 'jump_to_confirm'
                     }
                   },
-                  "name": "jump_to_confirm",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'jump_to_confirm',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "page",
-                      "zh-CN": "page"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'page',
+                      'zh-CN': 'page'
                     }
                   },
-                  "name": "page",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'page',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "prev_page",
-                      "zh-CN": "prev_page"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'prev_page',
+                      'zh-CN': 'prev_page'
                     }
                   },
-                  "name": "prev_page",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'prev_page',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "next_page",
-                      "zh-CN": "next_page"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'next_page',
+                      'zh-CN': 'next_page'
                     }
                   },
-                  "name": "next_page",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'next_page',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "prev_5",
-                      "zh-CN": "prev_5"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'prev_5',
+                      'zh-CN': 'prev_5'
                     }
                   },
-                  "name": "prev_5",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'prev_5',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "next_5",
-                      "zh-CN": "next_5"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'next_5',
+                      'zh-CN': 'next_5'
                     }
                   },
-                  "name": "next_5",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'next_5',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "prev_3",
-                      "zh-CN": "prev_3"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'prev_3',
+                      'zh-CN': 'prev_3'
                     }
                   },
-                  "name": "prev_3",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'prev_3',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 },
                 {
-                  "title": {
-                    "label": {
-                      "type": "i18n",
-                      "en-US": "next_3",
-                      "zh-CN": "next_3"
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'next_3',
+                      'zh-CN': 'next_3'
                     }
                   },
-                  "name": "next_3",
-                  "setter": {
-                    "componentName": "StringSetter",
-                    "isRequired": false,
-                    "initialValue": ""
+                  name: 'next_3',
+                  setter: {
+                    componentName: 'StringSetter',
+                    initialValue: undefined
                   }
                 }
               ],
-              "extraSetter": {
-                "componentName": "MixedSetter",
-                "isRequired": false,
-                "props": {}
+              extraSetter: {
+                componentName: 'MixedSetter',
+                props: {}
               }
             }
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "selectComponentClass",
-            "zh-CN": "selectComponentClass"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'selectComponentClass',
+            'zh-CN': 'selectComponentClass'
           }
         },
-        "name": "selectComponentClass",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'selectComponentClass',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "prevIcon",
-            "zh-CN": "prevIcon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'prevIcon',
+            'zh-CN': 'prevIcon'
           }
         },
-        "name": "prevIcon",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'prevIcon',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
+                componentName: 'NumberSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "nextIcon",
-            "zh-CN": "nextIcon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'nextIcon',
+            'zh-CN': 'nextIcon'
           }
         },
-        "name": "nextIcon",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'nextIcon',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
+                componentName: 'NumberSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "jumpPrevIcon",
-            "zh-CN": "jumpPrevIcon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'jumpPrevIcon',
+            'zh-CN': 'jumpPrevIcon'
           }
         },
-        "name": "jumpPrevIcon",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'jumpPrevIcon',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
+                componentName: 'NumberSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               }
             ]
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "jumpNextIcon",
-            "zh-CN": "jumpNextIcon"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'jumpNextIcon',
+            'zh-CN': 'jumpNextIcon'
           }
         },
-        "name": "jumpNextIcon",
-        "setter": {
-          "componentName": "MixedSetter",
-          "props": {
-            "setters": [
+        name: 'jumpNextIcon',
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
               {
-                "componentName": "StringSetter",
-                "isRequired": false,
-                "initialValue": ""
+                componentName: 'StringSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "NumberSetter",
-                "isRequired": false,
-                "initialValue": 0
+                componentName: 'NumberSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "BoolSetter",
-                "isRequired": false,
-                "initialValue": false
+                componentName: 'BoolSetter',
+                initialValue: undefined
               },
               {
-                "componentName": "ObjectSetter",
-                "props": {
-                  "config": {
-                    "extraSetter": {
-                      "componentName": "MixedSetter",
-                      "isRequired": false,
-                      "props": {}
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    extraSetter: {
+                      componentName: 'MixedSetter',
+                      props: {}
                     }
                   }
                 },
-                "isRequired": false,
-                "initialValue": {}
+                initialValue: undefined
               }
             ]
           }
         }
       }
     ],
-    "supports": {
-      "className": true,
-      "style": true
+    supports: {
+      className: true,
+      style: true
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "Pagination",
-    "screenshot": "",
-    "schema": {
-      "componentName": "Pagination",
-      "props": {}
+    title: 'Pagination',
+    screenshot: '',
+    schema: {
+      componentName: 'Pagination',
+      props: {}
     }
   }
 ];

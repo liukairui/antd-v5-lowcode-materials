@@ -1,200 +1,197 @@
-
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 
 const FormErrorListMeta: IPublicTypeComponentMetadata = {
-  "componentName": "FormErrorList",
-  "title": "FormErrorList",
-  "docUrl": "",
-  "screenshot": "",
-  "devMode": "proCode",
-  "npm": {
-    "package": "antd-5-lowcode-materials",
-    "version": "0.1.0",
-    "exportName": "FormErrorList",
-    "main": "src/index.tsx",
-    "destructuring": true,
-    "subName": ""
+  componentName: 'FormErrorList',
+  title: 'FormErrorList',
+  docUrl: '',
+  screenshot: '',
+  devMode: 'proCode',
+  npm: {
+    package: 'antd-5-lowcode-materials',
+    version: '0.0.1',
+    exportName: 'FormErrorList',
+    main: 'src/index.tsx',
+    destructuring: true,
+    subName: ''
   },
-  "configure": {
-    "props": [
+  configure: {
+    props: [
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "fieldId",
-            "zh-CN": "fieldId"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'fieldId',
+            'zh-CN': 'fieldId'
           }
         },
-        "name": "fieldId",
-        "setter": {
-          "componentName": "StringSetter",
-          "isRequired": false,
-          "initialValue": ""
+        name: 'fieldId',
+        setter: {
+          componentName: 'StringSetter',
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "help",
-            "zh-CN": "help"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'help',
+            'zh-CN': 'help'
           }
         },
-        "name": "help",
-        "setter": {
-          "componentName": "SlotSetter",
-          "props": {
-            "mode": "node"
+        name: 'help',
+        setter: {
+          componentName: 'SlotSetter',
+          props: {
+            mode: 'node'
           },
-          "isRequired": false,
-          "initialValue": {
-            "type": "JSSlot",
-            "value": []
+          initialValue: {
+            type: 'JSSlot',
+            value: []
           }
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "helpStatus",
-            "zh-CN": "helpStatus"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'helpStatus',
+            'zh-CN': 'helpStatus'
           }
         },
-        "name": "helpStatus",
-        "setter": {
-          "componentName": "SelectSetter",
-          "props": {
-            "dataSource": [
+        name: 'helpStatus',
+        setter: {
+          componentName: 'SelectSetter',
+          props: {
+            dataSource: [
               {
-                "label": "",
-                "value": ""
+                label: '',
+                value: ''
               },
               {
-                "label": "success",
-                "value": "success"
+                label: 'success',
+                value: 'success'
               },
               {
-                "label": "warning",
-                "value": "warning"
+                label: 'warning',
+                value: 'warning'
               },
               {
-                "label": "error",
-                "value": "error"
+                label: 'error',
+                value: 'error'
               },
               {
-                "label": "validating",
-                "value": "validating"
+                label: 'validating',
+                value: 'validating'
               }
             ],
-            "options": [
+            options: [
               {
-                "label": "",
-                "value": ""
+                label: '',
+                value: ''
               },
               {
-                "label": "success",
-                "value": "success"
+                label: 'success',
+                value: 'success'
               },
               {
-                "label": "warning",
-                "value": "warning"
+                label: 'warning',
+                value: 'warning'
               },
               {
-                "label": "error",
-                "value": "error"
+                label: 'error',
+                value: 'error'
               },
               {
-                "label": "validating",
-                "value": "validating"
+                label: 'validating',
+                value: 'validating'
               }
             ]
           },
-          "initialValue": ""
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "errors",
-            "zh-CN": "errors"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'errors',
+            'zh-CN': 'errors'
           }
         },
-        "name": "errors",
-        "setter": {
-          "componentName": "ArraySetter",
-          "props": {
-            "itemSetter": {
-              "componentName": "SlotSetter",
-              "props": {
-                "mode": "node"
+        name: 'errors',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'SlotSetter',
+              props: {
+                mode: 'node'
               },
-              "isRequired": false,
-              "initialValue": {
-                "type": "JSSlot",
-                "value": []
+              initialValue: {
+                type: 'JSSlot',
+                value: []
               }
             }
           },
-          "initialValue": []
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "warnings",
-            "zh-CN": "warnings"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'warnings',
+            'zh-CN': 'warnings'
           }
         },
-        "name": "warnings",
-        "setter": {
-          "componentName": "ArraySetter",
-          "props": {
-            "itemSetter": {
-              "componentName": "SlotSetter",
-              "props": {
-                "mode": "node"
+        name: 'warnings',
+        setter: {
+          componentName: 'ArraySetter',
+          props: {
+            itemSetter: {
+              componentName: 'SlotSetter',
+              props: {
+                mode: 'node'
               },
-              "isRequired": false,
-              "initialValue": {
-                "type": "JSSlot",
-                "value": []
+              initialValue: {
+                type: 'JSSlot',
+                value: []
               }
             }
           },
-          "initialValue": []
+          initialValue: undefined
         }
       },
       {
-        "title": {
-          "label": {
-            "type": "i18n",
-            "en-US": "onVisibleChanged",
-            "zh-CN": "onVisibleChanged"
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onVisibleChanged',
+            'zh-CN': 'onVisibleChanged'
           }
         },
-        "name": "onVisibleChanged",
-        "setter": {
-          "componentName": "FunctionSetter"
+        name: 'onVisibleChanged',
+        setter: {
+          componentName: 'FunctionSetter'
         }
       }
     ],
-    "supports": {
-      "className": true,
-      "style": true
+    supports: {
+      className: true,
+      style: true
     },
-    "component": {}
+    component: {
+      isContainer: true
+    }
   }
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    "title": "FormErrorList",
-    "screenshot": "",
-    "schema": {
-      "componentName": "FormErrorList",
-      "props": {}
+    title: 'FormErrorList',
+    screenshot: '',
+    schema: {
+      componentName: 'FormErrorList',
+      props: {}
     }
   }
 ];
