@@ -9,10 +9,9 @@ const ListMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'List',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'dataSource',
-            'zh-CN': 'dataSource'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'dataSource',
             'zh-CN': 'dataSource'
@@ -53,9 +39,11 @@ const ListMeta: IPublicTypeComponentMetadata = {
         name: 'dataSource',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   extraSetter: {
@@ -63,71 +51,36 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     props: {}
                   }
                 }
-              },
-              initialValue: undefined
+              }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'extra',
             'zh-CN': 'extra'
           }
         },
         name: 'extra',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'footer',
-            'zh-CN': 'footer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'footer',
             'zh-CN': 'footer'
           }
         },
         name: 'footer',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'grid',
-            'zh-CN': 'grid'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'grid',
             'zh-CN': 'grid'
@@ -136,6 +89,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
         name: 'grid',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -148,10 +102,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'gutter',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -162,10 +113,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'column',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -176,10 +124,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'xs',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -190,10 +135,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'sm',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -204,10 +146,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'md',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -218,10 +157,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'lg',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -232,10 +168,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'xl',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -246,16 +179,9 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'xxl',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -266,52 +192,14 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'header',
             'zh-CN': 'header'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'header',
-            'zh-CN': 'header'
           }
         },
         name: 'header',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'itemLayout',
-            'zh-CN': 'itemLayout'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'itemLayout',
             'zh-CN': 'itemLayout'
@@ -341,43 +229,23 @@ const ListMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loadMore',
-            'zh-CN': 'loadMore'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loadMore',
             'zh-CN': 'loadMore'
           }
         },
         name: 'loadMore',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
@@ -388,12 +256,10 @@ const ListMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -406,10 +272,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'prefixCls',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -420,10 +283,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'className',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -434,10 +294,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'spinning',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -450,6 +307,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                         name: 'style',
                         setter: {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -457,8 +315,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -501,8 +358,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                                 value: 'large'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -514,16 +370,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tip',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -534,10 +381,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'delay',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -548,10 +392,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'wrapperClassName',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -564,6 +405,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                         name: 'indicator',
                         setter: {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -571,8 +413,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -584,22 +425,9 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'children',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -613,16 +441,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
           }
         },
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -635,22 +459,9 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'emptyText',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -658,11 +469,6 @@ const ListMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pagination',
-            'zh-CN': 'pagination'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pagination',
             'zh-CN': 'pagination'
@@ -675,6 +481,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -718,8 +525,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                                 value: 'both'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -762,15 +568,10 @@ const ListMeta: IPublicTypeComponentMetadata = {
                                 value: 'start'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               },
@@ -789,8 +590,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                       value: false
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -802,44 +602,25 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'renderItem',
             'zh-CN': 'renderItem'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'renderItem',
-            'zh-CN': 'renderItem'
           }
         },
         name: 'renderItem',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'rowKey',
-            'zh-CN': 'rowKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'rowKey',
             'zh-CN': 'rowKey'
           }
         },
         name: 'rowKey',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -877,8 +658,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -887,18 +667,10 @@ const ListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'split',
             'zh-CN': 'split'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'split',
-            'zh-CN': 'split'
           }
         },
         name: 'split',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

@@ -9,76 +9,14 @@ const TypographyMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Typography',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
   configure: {
-    props: [
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      }
-    ],
+    props: [],
     supports: {
       className: true,
       style: true

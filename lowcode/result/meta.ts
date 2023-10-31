@@ -9,10 +9,9 @@ const ResultMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Result',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,77 +23,36 @@ const ResultMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'extra',
             'zh-CN': 'extra'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
           }
         },
         name: 'extra',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'prefixCls',
-            'zh-CN': 'prefixCls'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'prefixCls',
             'zh-CN': 'prefixCls'
           }
         },
         name: 'prefixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -188,34 +146,19 @@ const ResultMeta: IPublicTypeComponentMetadata = {
                 value: '500'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'subTitle',
-            'zh-CN': 'subTitle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'subTitle',
             'zh-CN': 'subTitle'
           }
         },
         name: 'subTitle',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -223,24 +166,10 @@ const ResultMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       }
     ],
     supports: {

@@ -9,10 +9,9 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'ImagePreviewGroup',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'fallback',
             'zh-CN': 'fallback'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'fallback',
-            'zh-CN': 'fallback'
           }
         },
         name: 'fallback',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icons',
-            'zh-CN': 'icons'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icons',
             'zh-CN': 'icons'
@@ -53,6 +39,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
         name: 'icons',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -65,16 +52,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rotateLeft',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -85,16 +63,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rotateRight',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -105,16 +74,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'zoomIn',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -125,16 +85,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'zoomOut',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -145,16 +96,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'close',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -165,16 +107,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'left',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -185,16 +118,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'right',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -205,16 +129,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'flipX',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -225,22 +140,9 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'flipY',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -248,11 +150,6 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -261,17 +158,16 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
                 setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
+                  'StringSetter',
                   {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -279,24 +175,17 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 ]
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'preview',
-            'zh-CN': 'preview'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'preview',
             'zh-CN': 'preview'
@@ -307,12 +196,10 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -325,10 +212,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'current',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -339,9 +223,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'countRender',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -352,9 +234,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'toolbarRender',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -365,9 +245,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'imageRender',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -378,9 +256,7 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onVisibleChange',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -391,15 +267,9 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onChange',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -413,18 +283,10 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'previewPrefixCls',
             'zh-CN': 'previewPrefixCls'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'previewPrefixCls',
-            'zh-CN': 'previewPrefixCls'
           }
         },
         name: 'previewPrefixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       }
     ],
     supports: {

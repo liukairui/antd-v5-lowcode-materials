@@ -9,10 +9,9 @@ const AppMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'App',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,16 +23,12 @@ const AppMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'message',
             'zh-CN': 'message'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'message',
-            'zh-CN': 'message'
           }
         },
         name: 'message',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -46,10 +41,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'top',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -60,10 +52,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'duration',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -74,10 +63,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'prefixCls',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -88,9 +74,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'getContainer',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -101,10 +85,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'transitionName',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -115,10 +96,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'maxCount',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -129,16 +107,9 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rtl',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -149,16 +120,12 @@ const AppMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'notification',
             'zh-CN': 'notification'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'notification',
-            'zh-CN': 'notification'
           }
         },
         name: 'notification',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -171,10 +138,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'top',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -185,10 +149,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'bottom',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -199,10 +160,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'prefixCls',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -213,9 +171,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'getContainer',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -281,8 +237,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                           value: 'bottomRight'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -294,10 +249,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'maxCount',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -308,10 +260,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rtl',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -326,12 +275,10 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        },
+                        'BoolSetter',
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               items: [
@@ -344,16 +291,9 @@ const AppMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'threshold',
-                                  setter: {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'NumberSetter'
                                 }
-                              ],
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
+                              ]
                             }
                           }
                         }
@@ -361,11 +301,7 @@ const AppMeta: IPublicTypeComponentMetadata = {
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }

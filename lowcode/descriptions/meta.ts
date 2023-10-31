@@ -9,10 +9,9 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Descriptions',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,46 +23,25 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'colon',
-            'zh-CN': 'colon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'colon',
             'zh-CN': 'colon'
           }
         },
         name: 'colon',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'column',
-            'zh-CN': 'column'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'column',
             'zh-CN': 'column'
@@ -74,12 +52,10 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -87,8 +63,7 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -100,16 +75,12 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'contentStyle',
             'zh-CN': 'contentStyle'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'contentStyle',
-            'zh-CN': 'contentStyle'
           }
         },
         name: 'contentStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -117,43 +88,23 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'extra',
             'zh-CN': 'extra'
           }
         },
         name: 'extra',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -162,9 +113,11 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -181,12 +134,10 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                         componentName: 'MixedSetter',
                         props: {
                           setters: [
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            },
+                            'NumberSetter',
                             {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -194,33 +145,22 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           ]
                         }
                       }
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'labelStyle',
-            'zh-CN': 'labelStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'labelStyle',
             'zh-CN': 'labelStyle'
@@ -229,6 +169,7 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
         name: 'labelStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -236,18 +177,12 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'layout',
-            'zh-CN': 'layout'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'layout',
             'zh-CN': 'layout'
@@ -277,18 +212,12 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -326,8 +255,7 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                 value: 'middle'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -336,24 +264,10 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       }
     ],
     supports: {

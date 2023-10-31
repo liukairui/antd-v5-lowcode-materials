@@ -9,10 +9,9 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'ListItem',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,39 +23,20 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'actions',
             'zh-CN': 'actions'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'actions',
-            'zh-CN': 'actions'
           }
         },
         name: 'actions',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'SlotSetter',
-              props: {
-                mode: 'node'
-              },
-              initialValue: {
-                type: 'JSSlot',
-                value: []
-              }
-            }
-          },
-          initialValue: undefined
+            itemSetter: 'SlotSetter'
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'colStyle',
-            'zh-CN': 'colStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'colStyle',
             'zh-CN': 'colStyle'
@@ -65,6 +45,7 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
         name: 'colStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -72,8 +53,7 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -82,24 +62,10 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'extra',
             'zh-CN': 'extra'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
           }
         },
         name: 'extra',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       }
     ],
     supports: {

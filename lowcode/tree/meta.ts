@@ -9,10 +9,9 @@ const TreeMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Tree',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,132 +23,74 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'activeKey',
             'zh-CN': 'activeKey'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'activeKey',
-            'zh-CN': 'activeKey'
           }
         },
         name: 'activeKey',
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'NumberSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'allowDrop',
-            'zh-CN': 'allowDrop'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'allowDrop',
             'zh-CN': 'allowDrop'
           }
         },
         name: 'allowDrop',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'autoExpandParent',
-            'zh-CN': 'autoExpandParent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'autoExpandParent',
             'zh-CN': 'autoExpandParent'
           }
         },
         name: 'autoExpandParent',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'blockNode',
-            'zh-CN': 'blockNode'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'blockNode',
             'zh-CN': 'blockNode'
           }
         },
         name: 'blockNode',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'checkStrictly',
-            'zh-CN': 'checkStrictly'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'checkStrictly',
             'zh-CN': 'checkStrictly'
           }
         },
         name: 'checkStrictly',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'checkable',
-            'zh-CN': 'checkable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'checkable',
             'zh-CN': 'checkable'
           }
         },
         name: 'checkable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'checkedKeys',
-            'zh-CN': 'checkedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'checkedKeys',
             'zh-CN': 'checkedKeys'
@@ -162,27 +103,19 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
                   itemSetter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -197,24 +130,15 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                         name: 'checked',
                         setter: {
                           componentName: 'ArraySetter',
+                          condition: () => false,
                           props: {
                             itemSetter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['StringSetter', 'NumberSetter']
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -228,31 +152,18 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                         name: 'halfChecked',
                         setter: {
                           componentName: 'ArraySetter',
+                          condition: () => false,
                           props: {
                             itemSetter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['StringSetter', 'NumberSetter']
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -266,82 +177,47 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'defaultCheckedKeys',
             'zh-CN': 'defaultCheckedKeys'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'defaultCheckedKeys',
-            'zh-CN': 'defaultCheckedKeys'
           }
         },
         name: 'defaultCheckedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                ]
+                setters: ['StringSetter', 'NumberSetter']
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultExpandAll',
-            'zh-CN': 'defaultExpandAll'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultExpandAll',
             'zh-CN': 'defaultExpandAll'
           }
         },
         name: 'defaultExpandAll',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultExpandParent',
-            'zh-CN': 'defaultExpandParent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultExpandParent',
             'zh-CN': 'defaultExpandParent'
           }
         },
         name: 'defaultExpandParent',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultExpandedKeys',
-            'zh-CN': 'defaultExpandedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultExpandedKeys',
             'zh-CN': 'defaultExpandedKeys'
@@ -350,34 +226,20 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'defaultExpandedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                ]
+                setters: ['StringSetter', 'NumberSetter']
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultSelectedKeys',
-            'zh-CN': 'defaultSelectedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultSelectedKeys',
             'zh-CN': 'defaultSelectedKeys'
@@ -386,53 +248,31 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'defaultSelectedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                ]
+                setters: ['StringSetter', 'NumberSetter']
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'draggable',
-            'zh-CN': 'draggable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'draggable',
             'zh-CN': 'draggable'
@@ -443,15 +283,11 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              },
+              'BoolSetter',
+              'FunctionSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -464,16 +300,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'icon',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -484,15 +311,9 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'nodeDraggable',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -506,26 +327,14 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'dropIndicatorRender',
             'zh-CN': 'dropIndicatorRender'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'dropIndicatorRender',
-            'zh-CN': 'dropIndicatorRender'
           }
         },
         name: 'dropIndicatorRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'expandAction',
-            'zh-CN': 'expandAction'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'expandAction',
             'zh-CN': 'expandAction'
@@ -563,18 +372,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                 value: 'doubleClick'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'expandedKeys',
-            'zh-CN': 'expandedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'expandedKeys',
             'zh-CN': 'expandedKeys'
@@ -583,24 +386,15 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'expandedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                ]
+                setters: ['StringSetter', 'NumberSetter']
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -609,16 +403,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'fieldNames',
             'zh-CN': 'fieldNames'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'fieldNames',
-            'zh-CN': 'fieldNames'
           }
         },
         name: 'fieldNames',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -631,10 +421,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'title',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -647,13 +434,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                   name: '_title',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
-                      itemSetter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
-                    },
-                    initialValue: undefined
+                      itemSetter: 'StringSetter'
+                    }
                   }
                 },
                 {
@@ -665,10 +449,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'key',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -679,16 +460,9 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'children',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -699,82 +473,47 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'filterAntTreeNode',
             'zh-CN': 'filterAntTreeNode'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'filterAntTreeNode',
-            'zh-CN': 'filterAntTreeNode'
           }
         },
         name: 'filterAntTreeNode',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'filterTreeNode',
-            'zh-CN': 'filterTreeNode'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'filterTreeNode',
             'zh-CN': 'filterTreeNode'
           }
         },
         name: 'filterTreeNode',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'focusable',
-            'zh-CN': 'focusable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'focusable',
             'zh-CN': 'focusable'
           }
         },
         name: 'focusable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'height',
-            'zh-CN': 'height'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'height',
             'zh-CN': 'height'
           }
         },
         name: 'height',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
@@ -785,20 +524,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -806,15 +537,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter',
+              'FunctionSetter'
             ]
           }
         }
@@ -825,45 +551,25 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'itemHeight',
             'zh-CN': 'itemHeight'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'itemHeight',
-            'zh-CN': 'itemHeight'
           }
         },
         name: 'itemHeight',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loadData',
-            'zh-CN': 'loadData'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loadData',
             'zh-CN': 'loadData'
           }
         },
         name: 'loadData',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loadedKeys',
-            'zh-CN': 'loadedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loadedKeys',
             'zh-CN': 'loadedKeys'
@@ -872,34 +578,20 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'loadedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                ]
+                setters: ['StringSetter', 'NumberSetter']
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'motion',
-            'zh-CN': 'motion'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'motion',
             'zh-CN': 'motion'
@@ -917,135 +609,80 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'multiple',
             'zh-CN': 'multiple'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'multiple',
-            'zh-CN': 'multiple'
           }
         },
         name: 'multiple',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onActiveChange',
-            'zh-CN': 'onActiveChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onActiveChange',
             'zh-CN': 'onActiveChange'
           }
         },
         name: 'onActiveChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onBlur',
-            'zh-CN': 'onBlur'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onBlur',
             'zh-CN': 'onBlur'
           }
         },
         name: 'onBlur',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onContextMenu',
-            'zh-CN': 'onContextMenu'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onContextMenu',
             'zh-CN': 'onContextMenu'
           }
         },
         name: 'onContextMenu',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onFocus',
-            'zh-CN': 'onFocus'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onFocus',
             'zh-CN': 'onFocus'
           }
         },
         name: 'onFocus',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onKeyDown',
             'zh-CN': 'onKeyDown'
           }
         },
         name: 'onKeyDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onScroll',
-            'zh-CN': 'onScroll'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onScroll',
             'zh-CN': 'onScroll'
           }
         },
         name: 'onScroll',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'rootStyle',
-            'zh-CN': 'rootStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'rootStyle',
             'zh-CN': 'rootStyle'
@@ -1054,6 +691,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'rootStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1061,37 +699,23 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'selectable',
-            'zh-CN': 'selectable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'selectable',
             'zh-CN': 'selectable'
           }
         },
         name: 'selectable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'selectedKeys',
-            'zh-CN': 'selectedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'selectedKeys',
             'zh-CN': 'selectedKeys'
@@ -1100,53 +724,31 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'selectedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
-                setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                ]
+                setters: ['StringSetter', 'NumberSetter']
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showIcon',
-            'zh-CN': 'showIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showIcon',
             'zh-CN': 'showIcon'
           }
         },
         name: 'showIcon',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showLine',
-            'zh-CN': 'showLine'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showLine',
             'zh-CN': 'showLine'
@@ -1157,12 +759,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -1179,20 +779,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -1200,21 +792,14 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -1228,11 +813,6 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'switcherIcon',
             'zh-CN': 'switcherIcon'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'switcherIcon',
-            'zh-CN': 'switcherIcon'
           }
         },
         name: 'switcherIcon',
@@ -1240,20 +820,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -1261,15 +833,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter',
+              'FunctionSetter'
             ]
           }
         }
@@ -1278,47 +845,16 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'tabIndex',
-            'zh-CN': 'tabIndex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'tabIndex',
-            'zh-CN': 'tabIndex'
-          }
-        },
-        name: 'tabIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'titleRender',
-            'zh-CN': 'titleRender'
-          },
-          tip: {
-            type: 'i18n',
             'en-US': 'titleRender',
             'zh-CN': 'titleRender'
           }
         },
         name: 'titleRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'treeData',
-            'zh-CN': 'treeData'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'treeData',
             'zh-CN': 'treeData'
@@ -1327,6 +863,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'treeData',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
@@ -1334,6 +871,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                 setters: [
                   {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -1346,10 +884,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'checkable',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1360,10 +895,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'disabled',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1374,10 +906,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'disableCheckbox',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1392,20 +921,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -1413,12 +934,9 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  'FunctionSetter'
                                 ]
                               }
                             }
@@ -1432,10 +950,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'isLeaf',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1446,10 +961,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectable',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1464,20 +976,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -1485,12 +989,9 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  'FunctionSetter'
                                 ]
                               }
                             }
@@ -1504,10 +1005,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'className',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -1520,6 +1018,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                             name: 'style',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1527,26 +1026,18 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   },
-                  {
-                    componentName: 'FunctionSetter'
-                  }
+                  'FunctionSetter'
                 ]
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1555,18 +1046,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'virtual',
             'zh-CN': 'virtual'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'virtual',
-            'zh-CN': 'virtual'
           }
         },
         name: 'virtual',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

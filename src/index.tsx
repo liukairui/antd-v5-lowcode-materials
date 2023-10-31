@@ -3,7 +3,11 @@ import { ComponentProps as CP, FC, createElement, useEffect, useState } from 're
 /**
  * PlainText 纯文本
  */
-const PlainText: FC<{ content?: string }> = (props) => createElement('span', { children: props.content });
+const PlainText: FC<{ content?: string; id?: string }> = (props) => {
+  props.children = props.content;
+  delete props.content;
+  return createElement('span', props);
+};
 export { PlainText };
 
 /**
@@ -122,14 +126,14 @@ export { Steps };
  * AutoComplete 自动完成
  */
 import _AutoComplete from 'antd/es/auto-complete';
-const AutoComplete: FC<CP<typeof _AutoComplete>> = (props) => <_AutoComplete {...props} />;
+const AutoComplete: FC<CP<typeof _AutoComplete>> = ({ children, ...props }) => <_AutoComplete {...props} />;
 export { AutoComplete };
 
 /**
  * Cascader 级联选择
  */
 import _Cascader from 'antd/es/cascader';
-const Cascader: FC<CP<typeof _Cascader>> = (props) => <_Cascader {...props} />;
+const Cascader: FC<CP<typeof _Cascader>> = ({ children, ...props }) => <_Cascader {...props} />;
 export { Cascader };
 
 /**
@@ -137,14 +141,14 @@ export { Cascader };
  */
 import _Checkbox from 'antd/es/checkbox';
 const Checkbox: FC<CP<typeof _Checkbox>> = (props) => <_Checkbox {...props} />;
-const CheckboxGroup: FC<CP<typeof _Checkbox.Group>> = (props) => <_Checkbox.Group {...props} />;
+const CheckboxGroup: FC<CP<typeof _Checkbox.Group>> = ({ children, ...props }) => <_Checkbox.Group {...props} />;
 export { Checkbox, CheckboxGroup };
 
 /**
  * ColorPicker 颜色选择器
  */
 import _ColorPicker from 'antd/es/color-picker';
-const ColorPicker: FC<CP<typeof _ColorPicker>> = (props) => <_ColorPicker {...props} />;
+const ColorPicker: FC<CP<typeof _ColorPicker>> = ({ children, ...props }) => <_ColorPicker {...props} />;
 export { ColorPicker };
 
 /**
@@ -162,7 +166,7 @@ import _Form from 'antd/es/form';
 const Form: FC<CP<typeof _Form>> = (props) => <_Form {...props} />;
 const FormErrorList: FC<CP<typeof _Form.ErrorList>> = (props) => <_Form.ErrorList {...props} />;
 const FormItem: FC<CP<typeof _Form.Item>> = (props) => <_Form.Item {...props} />;
-const FormList: FC<CP<typeof _Form.List>> = (props) => <_Form.List {...props} />;
+const FormList: FC<CP<typeof _Form.List> & { content: any }> = ({ children, content, ...props }) => <_Form.List {...props} children={content} />;
 const FormProvider: FC<CP<typeof _Form.Provider>> = (props) => <_Form.Provider {...props} />;
 export { Form, FormErrorList, FormItem, FormList, FormProvider };
 

@@ -9,10 +9,9 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Avatar',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'alt',
             'zh-CN': 'alt'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'alt',
-            'zh-CN': 'alt'
           }
         },
         name: 'alt',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'crossOrigin',
-            'zh-CN': 'crossOrigin'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'crossOrigin',
             'zh-CN': 'crossOrigin'
@@ -82,18 +68,12 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
                 value: 'use-credentials'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'draggable',
-            'zh-CN': 'draggable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'draggable',
             'zh-CN': 'draggable'
@@ -104,10 +84,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'RadioGroupSetter',
                 props: {
@@ -131,8 +108,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
                       value: 'true'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -144,70 +120,36 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'gap',
             'zh-CN': 'gap'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'gap',
-            'zh-CN': 'gap'
           }
         },
         name: 'gap',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
           }
         },
         name: 'onClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'shape',
-            'zh-CN': 'shape'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -237,18 +179,12 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
                 value: 'square'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -259,12 +195,10 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -272,8 +206,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'RadioGroupSetter',
@@ -306,8 +239,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
                       value: 'large'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -319,24 +251,10 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'src',
             'zh-CN': 'src'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'src',
-            'zh-CN': 'src'
           }
         },
         name: 'src',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -344,18 +262,10 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'srcSet',
             'zh-CN': 'srcSet'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'srcSet',
-            'zh-CN': 'srcSet'
           }
         },
         name: 'srcSet',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       }
     ],
     supports: {

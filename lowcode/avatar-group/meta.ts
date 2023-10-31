@@ -9,10 +9,9 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'AvatarGroup',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'maxCount',
             'zh-CN': 'maxCount'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'maxCount',
-            'zh-CN': 'maxCount'
           }
         },
         name: 'maxCount',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'maxPopoverPlacement',
-            'zh-CN': 'maxPopoverPlacement'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'maxPopoverPlacement',
             'zh-CN': 'maxPopoverPlacement'
@@ -74,18 +60,12 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                 value: 'bottom'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'maxPopoverTrigger',
-            'zh-CN': 'maxPopoverTrigger'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'maxPopoverTrigger',
             'zh-CN': 'maxPopoverTrigger'
@@ -123,18 +103,12 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                 value: 'focus'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'maxStyle',
-            'zh-CN': 'maxStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'maxStyle',
             'zh-CN': 'maxStyle'
@@ -143,6 +117,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
         name: 'maxStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -150,18 +125,12 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'shape',
-            'zh-CN': 'shape'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -191,18 +160,12 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                 value: 'square'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -213,12 +176,10 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -226,8 +187,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'RadioGroupSetter',
@@ -260,8 +220,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                       value: 'large'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }

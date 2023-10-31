@@ -2,17 +2,16 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const LayoutSiderMeta: IPublicTypeComponentMetadata = {
   componentName: 'LayoutSider',
-  title: '布局-侧边',
+  title: '侧边布局',
   group: '原子组件',
   category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'LayoutSider',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -21,11 +20,6 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'breakpoint',
-            'zh-CN': 'breakpoint'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'breakpoint',
             'zh-CN': 'breakpoint'
@@ -87,160 +81,89 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
                 value: 'xxl'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'collapsed',
-            'zh-CN': 'collapsed'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'collapsed',
             'zh-CN': 'collapsed'
           }
         },
         name: 'collapsed',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'collapsedWidth',
-            'zh-CN': 'collapsedWidth'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'collapsedWidth',
             'zh-CN': 'collapsedWidth'
           }
         },
         name: 'collapsedWidth',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
-          }
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'collapsible',
-            'zh-CN': 'collapsible'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'collapsible',
             'zh-CN': 'collapsible'
           }
         },
         name: 'collapsible',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultCollapsed',
-            'zh-CN': 'defaultCollapsed'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultCollapsed',
             'zh-CN': 'defaultCollapsed'
           }
         },
         name: 'defaultCollapsed',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onBreakpoint',
-            'zh-CN': 'onBreakpoint'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onBreakpoint',
             'zh-CN': 'onBreakpoint'
           }
         },
         name: 'onBreakpoint',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onCollapse',
-            'zh-CN': 'onCollapse'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onCollapse',
             'zh-CN': 'onCollapse'
           }
         },
         name: 'onCollapse',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'reverseArrow',
-            'zh-CN': 'reverseArrow'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'reverseArrow',
             'zh-CN': 'reverseArrow'
           }
         },
         name: 'reverseArrow',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'theme',
-            'zh-CN': 'theme'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'theme',
             'zh-CN': 'theme'
@@ -270,43 +193,23 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
                 value: 'dark'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'trigger',
-            'zh-CN': 'trigger'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'trigger',
             'zh-CN': 'trigger'
           }
         },
         name: 'trigger',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': 'width'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'width',
             'zh-CN': 'width'
@@ -316,45 +219,30 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'NumberSetter']
           }
         }
       },
       {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'zeroWidthTriggerStyle',
-            'zh-CN': 'zeroWidthTriggerStyle'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'zeroWidthTriggerStyle',
-            'zh-CN': 'zeroWidthTriggerStyle'
-          }
-        },
-        name: 'zeroWidthTriggerStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
+        title: 'zeroWidthTriggerStyle',
+        display: 'entry',
+        type: 'field',
+        items: [
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'zeroWidthTriggerStyle',
+                'zh-CN': 'zeroWidthTriggerStyle'
               }
-            }
-          },
-          initialValue: undefined
-        }
+            },
+            name: 'zeroWidthTriggerStyle',
+            setter: {
+              componentName: 'StyleSetter'
+            },
+            display: 'block'
+          }
+        ]
       }
     ],
     supports: {

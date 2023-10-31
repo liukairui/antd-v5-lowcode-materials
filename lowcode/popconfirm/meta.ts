@@ -9,10 +9,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Popconfirm',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,26 +23,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'afterOpenChange',
             'zh-CN': 'afterOpenChange'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'afterOpenChange',
-            'zh-CN': 'afterOpenChange'
           }
         },
         name: 'afterOpenChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'align',
-            'zh-CN': 'align'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'align',
             'zh-CN': 'align'
@@ -52,6 +39,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
         name: 'align',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -66,13 +54,13 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'points',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {}
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -86,6 +74,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: '_experimental',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -93,8 +82,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -108,13 +96,13 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'offset',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {}
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -128,13 +116,13 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'targetOffset',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {}
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -148,6 +136,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'overflow',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -163,16 +152,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -188,16 +168,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -213,16 +184,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -238,24 +200,11 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -269,10 +218,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'autoArrow',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -314,8 +260,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           value: 'visibleFirst'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -327,10 +272,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'dynamicInset',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -341,10 +283,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'useCssRight',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -355,10 +294,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'useCssBottom',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -369,10 +305,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'useCssTransform',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -383,16 +316,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'ignoreShake',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -403,11 +329,6 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'arrow',
             'zh-CN': 'arrow'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'arrow',
-            'zh-CN': 'arrow'
           }
         },
         name: 'arrow',
@@ -415,12 +336,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -433,10 +352,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'arrowPointAtCenter',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -447,16 +363,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'pointAtCenter',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -470,33 +379,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'arrowContent',
             'zh-CN': 'arrowContent'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'arrowContent',
-            'zh-CN': 'arrowContent'
           }
         },
         name: 'arrowContent',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'autoAdjustOverflow',
-            'zh-CN': 'autoAdjustOverflow'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'autoAdjustOverflow',
             'zh-CN': 'autoAdjustOverflow'
@@ -507,12 +397,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -548,8 +436,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                 value: 1
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -584,15 +471,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                 value: 1
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -606,33 +488,25 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'builtinPlacements',
             'zh-CN': 'builtinPlacements'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'builtinPlacements',
-            'zh-CN': 'builtinPlacements'
           }
         },
         name: 'builtinPlacements',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
-                    items: [],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    items: []
                   }
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -641,16 +515,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'cancelButtonProps',
             'zh-CN': 'cancelButtonProps'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'cancelButtonProps',
-            'zh-CN': 'cancelButtonProps'
           }
         },
         name: 'cancelButtonProps',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -663,10 +533,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'href',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -708,15 +575,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           value: 'button'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -727,33 +589,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'cancelText',
             'zh-CN': 'cancelText'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'cancelText',
-            'zh-CN': 'cancelText'
           }
         },
         name: 'cancelText',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'color',
             'zh-CN': 'color'
@@ -771,27 +614,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'defaultOpen',
             'zh-CN': 'defaultOpen'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'defaultOpen',
-            'zh-CN': 'defaultOpen'
           }
         },
         name: 'defaultOpen',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'description',
             'zh-CN': 'description'
@@ -802,20 +632,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -823,12 +645,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -839,11 +658,6 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'destroyTooltipOnHide',
             'zh-CN': 'destroyTooltipOnHide'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'destroyTooltipOnHide',
-            'zh-CN': 'destroyTooltipOnHide'
           }
         },
         name: 'destroyTooltipOnHide',
@@ -851,12 +665,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -869,16 +681,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'keepParent',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -892,126 +697,58 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'fresh',
-            'zh-CN': 'fresh'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'fresh',
             'zh-CN': 'fresh'
           }
         },
         name: 'fresh',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getPopupContainer',
             'zh-CN': 'getPopupContainer'
           }
         },
         name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getTooltipContainer',
-            'zh-CN': 'getTooltipContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getTooltipContainer',
             'zh-CN': 'getTooltipContainer'
           }
         },
         name: 'getTooltipContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'motion',
-            'zh-CN': 'motion'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'motion',
             'zh-CN': 'motion'
@@ -1020,6 +757,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
         name: 'motion',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1036,12 +774,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
+                        'StringSetter',
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               items: [
@@ -1054,10 +790,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'appear',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 },
                                 {
                                   title: {
@@ -1068,10 +801,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'enter',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 },
                                 {
                                   title: {
@@ -1082,10 +812,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'leave',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 },
                                 {
                                   title: {
@@ -1096,10 +823,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'appearActive',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 },
                                 {
                                   title: {
@@ -1110,10 +834,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'enterActive',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 },
                                 {
                                   title: {
@@ -1124,16 +845,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'leaveActive',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 }
-                              ],
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
+                              ]
                             }
                           }
                         }
@@ -1150,10 +864,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'visible',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1164,10 +875,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'motionAppear',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1178,10 +886,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'motionEnter',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1192,10 +897,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'motionLeave',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1206,10 +908,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'motionLeaveImmediately',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1220,10 +919,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'motionDeadline',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -1234,10 +930,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'forceRender',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1248,10 +941,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'removeOnLeave',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1262,10 +952,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'leavedClassName',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1278,6 +965,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'eventProps',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1285,8 +973,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -1298,9 +985,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onAppearPrepare',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1311,9 +996,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onEnterPrepare',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1324,9 +1007,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onLeavePrepare',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1337,9 +1018,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onAppearStart',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1350,9 +1029,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onEnterStart',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1363,9 +1040,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onLeaveStart',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1376,9 +1051,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onAppearActive',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1389,9 +1062,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onEnterActive',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1402,9 +1073,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onLeaveActive',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1415,9 +1084,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onAppearEnd',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1428,9 +1095,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onEnterEnd',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1441,9 +1106,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onLeaveEnd',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1454,9 +1117,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onVisibleChanged',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1471,11 +1132,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'FunctionSetter'
-                        },
+                        'FunctionSetter',
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -1483,8 +1143,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
@@ -1499,15 +1158,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'children',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1518,46 +1171,25 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'mouseEnterDelay',
             'zh-CN': 'mouseEnterDelay'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'mouseEnterDelay',
-            'zh-CN': 'mouseEnterDelay'
           }
         },
         name: 'mouseEnterDelay',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mouseLeaveDelay',
-            'zh-CN': 'mouseLeaveDelay'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mouseLeaveDelay',
             'zh-CN': 'mouseLeaveDelay'
           }
         },
         name: 'mouseLeaveDelay',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'okButtonProps',
-            'zh-CN': 'okButtonProps'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'okButtonProps',
             'zh-CN': 'okButtonProps'
@@ -1566,6 +1198,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
         name: 'okButtonProps',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1578,10 +1211,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'href',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1623,15 +1253,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           value: 'button'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1642,33 +1267,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'okText',
             'zh-CN': 'okText'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'okText',
-            'zh-CN': 'okText'
           }
         },
         name: 'okText',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'okType',
-            'zh-CN': 'okType'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'okType',
             'zh-CN': 'okType'
@@ -1730,146 +1336,89 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                 value: 'text'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onCancel',
-            'zh-CN': 'onCancel'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onCancel',
             'zh-CN': 'onCancel'
           }
         },
         name: 'onCancel',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onConfirm',
-            'zh-CN': 'onConfirm'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onConfirm',
             'zh-CN': 'onConfirm'
           }
         },
         name: 'onConfirm',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onOpenChange',
-            'zh-CN': 'onOpenChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onOpenChange',
             'zh-CN': 'onOpenChange'
           }
         },
         name: 'onOpenChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onPopupAlign',
-            'zh-CN': 'onPopupAlign'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onPopupAlign',
             'zh-CN': 'onPopupAlign'
           }
         },
         name: 'onPopupAlign',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onPopupClick',
-            'zh-CN': 'onPopupClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onPopupClick',
             'zh-CN': 'onPopupClick'
           }
         },
         name: 'onPopupClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'open',
-            'zh-CN': 'open'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'open',
             'zh-CN': 'open'
           }
         },
         name: 'open',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'openClassName',
-            'zh-CN': 'openClassName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'openClassName',
             'zh-CN': 'openClassName'
           }
         },
         name: 'openClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'overlay',
-            'zh-CN': 'overlay'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'overlay',
             'zh-CN': 'overlay'
@@ -1880,20 +1429,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -1901,12 +1442,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -1917,27 +1455,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'overlayClassName',
             'zh-CN': 'overlayClassName'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'overlayClassName',
-            'zh-CN': 'overlayClassName'
           }
         },
         name: 'overlayClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'overlayInnerStyle',
-            'zh-CN': 'overlayInnerStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'overlayInnerStyle',
             'zh-CN': 'overlayInnerStyle'
@@ -1946,6 +1471,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
         name: 'overlayInnerStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1953,18 +1479,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'overlayStyle',
-            'zh-CN': 'overlayStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'overlayStyle',
             'zh-CN': 'overlayStyle'
@@ -1973,6 +1493,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
         name: 'overlayStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1980,18 +1501,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'placement',
-            'zh-CN': 'placement'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'placement',
             'zh-CN': 'placement'
@@ -2101,18 +1616,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                 value: 'rightBottom'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showArrow',
-            'zh-CN': 'showArrow'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showArrow',
             'zh-CN': 'showArrow'
@@ -2123,12 +1632,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -2141,10 +1648,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'className',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -2155,22 +1659,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'content',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -2184,27 +1675,14 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'showCancel',
             'zh-CN': 'showCancel'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'showCancel',
-            'zh-CN': 'showCancel'
           }
         },
         name: 'showCancel',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
@@ -2215,20 +1693,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -2236,12 +1706,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -2249,11 +1716,6 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'trigger',
-            'zh-CN': 'trigger'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'trigger',
             'zh-CN': 'trigger'
@@ -2266,6 +1728,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
                   itemSetter: {
                     componentName: 'SelectSetter',
@@ -2306,11 +1769,9 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           value: 'focus'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'SelectSetter',
@@ -2351,8 +1812,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                       value: 'focus'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -2364,18 +1824,10 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'zIndex',
             'zh-CN': 'zIndex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'zIndex',
-            'zh-CN': 'zIndex'
           }
         },
         name: 'zIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       }
     ],
     supports: {

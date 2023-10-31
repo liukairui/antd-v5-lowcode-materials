@@ -9,10 +9,9 @@ const DividerMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Divider',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const DividerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'dashed',
             'zh-CN': 'dashed'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'dashed',
-            'zh-CN': 'dashed'
           }
         },
         name: 'dashed',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'orientation',
-            'zh-CN': 'orientation'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'orientation',
             'zh-CN': 'orientation'
@@ -82,18 +68,12 @@ const DividerMeta: IPublicTypeComponentMetadata = {
                 value: 'center'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'orientationMargin',
-            'zh-CN': 'orientationMargin'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'orientationMargin',
             'zh-CN': 'orientationMargin'
@@ -103,46 +83,24 @@ const DividerMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'NumberSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'plain',
-            'zh-CN': 'plain'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'plain',
             'zh-CN': 'plain'
           }
         },
         name: 'plain',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -172,8 +130,7 @@ const DividerMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

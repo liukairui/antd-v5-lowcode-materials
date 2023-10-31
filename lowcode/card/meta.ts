@@ -9,10 +9,9 @@ const CardMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Card',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,58 +23,31 @@ const CardMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'actions',
             'zh-CN': 'actions'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'actions',
-            'zh-CN': 'actions'
           }
         },
         name: 'actions',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'SlotSetter',
-              props: {
-                mode: 'node'
-              },
-              initialValue: {
-                type: 'JSSlot',
-                value: []
-              }
-            }
-          },
-          initialValue: undefined
+            itemSetter: 'SlotSetter'
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'activeTabKey',
-            'zh-CN': 'activeTabKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'activeTabKey',
             'zh-CN': 'activeTabKey'
           }
         },
         name: 'activeTabKey',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'bodyStyle',
-            'zh-CN': 'bodyStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'bodyStyle',
             'zh-CN': 'bodyStyle'
@@ -84,6 +56,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
         name: 'bodyStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -91,106 +64,56 @@ const CardMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'cover',
-            'zh-CN': 'cover'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'cover',
             'zh-CN': 'cover'
           }
         },
         name: 'cover',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultActiveTabKey',
-            'zh-CN': 'defaultActiveTabKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultActiveTabKey',
             'zh-CN': 'defaultActiveTabKey'
           }
         },
         name: 'defaultActiveTabKey',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'extra',
-            'zh-CN': 'extra'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'extra',
             'zh-CN': 'extra'
           }
         },
         name: 'extra',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'headStyle',
-            'zh-CN': 'headStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'headStyle',
             'zh-CN': 'headStyle'
@@ -199,6 +122,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
         name: 'headStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -206,93 +130,45 @@ const CardMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'hoverable',
-            'zh-CN': 'hoverable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'hoverable',
             'zh-CN': 'hoverable'
           }
         },
         name: 'hoverable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
           }
         },
         name: 'loading',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onTabChange',
-            'zh-CN': 'onTabChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onTabChange',
             'zh-CN': 'onTabChange'
           }
         },
         name: 'onTabChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -322,43 +198,23 @@ const CardMeta: IPublicTypeComponentMetadata = {
                 value: 'small'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabBarExtraContent',
-            'zh-CN': 'tabBarExtraContent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tabBarExtraContent',
             'zh-CN': 'tabBarExtraContent'
           }
         },
         name: 'tabBarExtraContent',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabList',
-            'zh-CN': 'tabList'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tabList',
             'zh-CN': 'tabList'
@@ -367,9 +223,11 @@ const CardMeta: IPublicTypeComponentMetadata = {
         name: 'tabList',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -382,10 +240,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'key',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -396,16 +251,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'tab',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -416,27 +262,13 @@ const CardMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -445,16 +277,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'tabProps',
             'zh-CN': 'tabProps'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'tabProps',
-            'zh-CN': 'tabProps'
           }
         },
         name: 'tabProps',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -498,8 +326,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                           value: 'editable-card'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -542,8 +369,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                           value: 'large'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -555,10 +381,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'hideAdd',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -569,10 +392,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'centered',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -583,16 +403,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'addIcon',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -603,9 +414,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onEdit',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -616,22 +425,9 @@ const CardMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'children',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -642,33 +438,14 @@ const CardMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -690,8 +467,7 @@ const CardMeta: IPublicTypeComponentMetadata = {
                 value: 'inner'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

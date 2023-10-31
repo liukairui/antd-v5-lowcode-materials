@@ -9,10 +9,9 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Anchor',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,46 +23,25 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'affix',
             'zh-CN': 'affix'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'affix',
-            'zh-CN': 'affix'
           }
         },
         name: 'affix',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'bounds',
-            'zh-CN': 'bounds'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'bounds',
             'zh-CN': 'bounds'
           }
         },
         name: 'bounds',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'direction',
             'zh-CN': 'direction'
@@ -93,54 +71,34 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getContainer',
-            'zh-CN': 'getContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getContainer',
             'zh-CN': 'getContainer'
           }
         },
         name: 'getContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getCurrentAnchor',
-            'zh-CN': 'getCurrentAnchor'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getCurrentAnchor',
             'zh-CN': 'getCurrentAnchor'
           }
         },
         name: 'getCurrentAnchor',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -149,12 +107,41 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
+                    /**
+                     * @TODO 暂不支持递归
+                     */
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'children',
+                          'zh-CN': 'children'
+                        }
+                      },
+                      name: 'children',
+                      setter: {
+                        componentName: 'VariableSetter'
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'href',
+                          'zh-CN': 'href'
+                        }
+                      },
+                      name: 'href',
+                      setter: 'StringSetter'
+                    },
                     {
                       title: {
                         label: {
@@ -167,16 +154,7 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
                     },
@@ -184,134 +162,96 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
                       title: {
                         label: {
                           type: 'i18n',
-                          'en-US': 'children',
-                          'zh-CN': 'children'
+                          'en-US': 'replace',
+                          'zh-CN': 'replace'
                         }
                       },
-                      name: 'children',
-                      setter: {
-                        componentName: 'ArraySetter',
-                        props: {
-                          itemSetter: {
-                            componentName: 'ObjectSetter',
-                            props: {
-                              config: {
-                                extraSetter: {
-                                  componentName: 'MixedSetter',
-                                  props: {}
-                                }
-                              }
-                            },
-                            initialValue: undefined
-                          }
-                        },
-                        initialValue: undefined
-                      }
+                      name: 'replace',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'target',
+                          'zh-CN': 'target'
+                        }
+                      },
+                      name: 'target',
+                      setter: 'StringSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'title',
+                          'zh-CN': 'title'
+                        }
+                      },
+                      name: 'title',
+                      setter: 'SlotSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'offsetTop',
-            'zh-CN': 'offsetTop'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'offsetTop',
             'zh-CN': 'offsetTop'
           }
         },
         name: 'offsetTop',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
           }
         },
         name: 'onClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'replace',
-            'zh-CN': 'replace'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'replace',
             'zh-CN': 'replace'
           }
         },
         name: 'replace',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showInkInFixed',
-            'zh-CN': 'showInkInFixed'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showInkInFixed',
             'zh-CN': 'showInkInFixed'
           }
         },
         name: 'showInkInFixed',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
@@ -319,18 +259,10 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'targetOffset',
             'zh-CN': 'targetOffset'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'targetOffset',
-            'zh-CN': 'targetOffset'
           }
         },
         name: 'targetOffset',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       }
     ],
     supports: {

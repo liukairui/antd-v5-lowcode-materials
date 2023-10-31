@@ -9,10 +9,9 @@ const TourMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Tour',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,11 +23,6 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'animated',
             'zh-CN': 'animated'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'animated',
-            'zh-CN': 'animated'
           }
         },
         name: 'animated',
@@ -36,12 +30,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -54,16 +46,9 @@ const TourMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'placeholder',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -77,11 +62,6 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'arrow',
             'zh-CN': 'arrow'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'arrow',
-            'zh-CN': 'arrow'
           }
         },
         name: 'arrow',
@@ -89,12 +69,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -107,16 +85,9 @@ const TourMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'pointAtCenter',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -130,106 +101,63 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'builtinPlacements',
             'zh-CN': 'builtinPlacements'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'builtinPlacements',
-            'zh-CN': 'builtinPlacements'
           }
         },
         name: 'builtinPlacements',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
-                    items: [],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    items: []
                   }
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'closeIcon',
-            'zh-CN': 'closeIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'closeIcon',
             'zh-CN': 'closeIcon'
           }
         },
         name: 'closeIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'current',
-            'zh-CN': 'current'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'current',
             'zh-CN': 'current'
           }
         },
         name: 'current',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultCurrent',
-            'zh-CN': 'defaultCurrent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultCurrent',
             'zh-CN': 'defaultCurrent'
           }
         },
         name: 'defaultCurrent',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'gap',
-            'zh-CN': 'gap'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'gap',
             'zh-CN': 'gap'
@@ -238,6 +166,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
         name: 'gap',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -254,10 +183,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        },
+                        'NumberSetter',
                         {
                           componentName: 'MixedSetter',
                           props: {}
@@ -275,16 +201,9 @@ const TourMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'radius',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -295,26 +214,14 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'indicatorsRender',
             'zh-CN': 'indicatorsRender'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'indicatorsRender',
-            'zh-CN': 'indicatorsRender'
           }
         },
         name: 'indicatorsRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mask',
-            'zh-CN': 'mask'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mask',
             'zh-CN': 'mask'
@@ -325,12 +232,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -345,6 +250,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                         name: 'style',
                         setter: {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -352,8 +258,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -365,16 +270,9 @@ const TourMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'color',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -388,81 +286,47 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onClose',
-            'zh-CN': 'onClose'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onClose',
             'zh-CN': 'onClose'
           }
         },
         name: 'onClose',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onPopupAlign',
-            'zh-CN': 'onPopupAlign'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onPopupAlign',
             'zh-CN': 'onPopupAlign'
           }
         },
         name: 'onPopupAlign',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'open',
-            'zh-CN': 'open'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'open',
             'zh-CN': 'open'
           }
         },
         name: 'open',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'placement',
-            'zh-CN': 'placement'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'placement',
             'zh-CN': 'placement'
@@ -580,18 +444,12 @@ const TourMeta: IPublicTypeComponentMetadata = {
                 value: 'rightBottom'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'scrollIntoViewOptions',
-            'zh-CN': 'scrollIntoViewOptions'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'scrollIntoViewOptions',
             'zh-CN': 'scrollIntoViewOptions'
@@ -602,12 +460,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -659,8 +515,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                 value: 'nearest'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -711,15 +566,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                 value: 'nearest'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -733,19 +583,16 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'steps',
             'zh-CN': 'steps'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'steps',
-            'zh-CN': 'steps'
           }
         },
         name: 'steps',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -758,16 +605,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'cover',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -780,6 +618,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                       name: 'nextButtonProps',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             items: [
@@ -792,16 +631,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'children',
-                                setter: {
-                                  componentName: 'SlotSetter',
-                                  props: {
-                                    mode: 'node'
-                                  },
-                                  initialValue: {
-                                    type: 'JSSlot',
-                                    value: []
-                                  }
-                                }
+                                setter: 'SlotSetter'
                               },
                               {
                                 title: {
@@ -812,9 +642,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'onClick',
-                                setter: {
-                                  componentName: 'FunctionSetter'
-                                }
+                                setter: 'FunctionSetter'
                               },
                               {
                                 title: {
@@ -825,10 +653,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'className',
-                                setter: {
-                                  componentName: 'StringSetter',
-                                  initialValue: undefined
-                                }
+                                setter: 'StringSetter'
                               },
                               {
                                 title: {
@@ -841,6 +666,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                 name: 'style',
                                 setter: {
                                   componentName: 'ObjectSetter',
+                                  condition: () => false,
                                   props: {
                                     config: {
                                       extraSetter: {
@@ -848,15 +674,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                         props: {}
                                       }
                                     }
-                                  },
-                                  initialValue: undefined
+                                  }
                                 }
                               }
-                            ],
-                            extraSetter: {
-                              componentName: 'MixedSetter',
-                              props: {}
-                            }
+                            ]
                           }
                         }
                       }
@@ -872,6 +693,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                       name: 'prevButtonProps',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             items: [
@@ -884,16 +706,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'children',
-                                setter: {
-                                  componentName: 'SlotSetter',
-                                  props: {
-                                    mode: 'node'
-                                  },
-                                  initialValue: {
-                                    type: 'JSSlot',
-                                    value: []
-                                  }
-                                }
+                                setter: 'SlotSetter'
                               },
                               {
                                 title: {
@@ -904,9 +717,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'onClick',
-                                setter: {
-                                  componentName: 'FunctionSetter'
-                                }
+                                setter: 'FunctionSetter'
                               },
                               {
                                 title: {
@@ -917,10 +728,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'className',
-                                setter: {
-                                  componentName: 'StringSetter',
-                                  initialValue: undefined
-                                }
+                                setter: 'StringSetter'
                               },
                               {
                                 title: {
@@ -933,6 +741,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                 name: 'style',
                                 setter: {
                                   componentName: 'ObjectSetter',
+                                  condition: () => false,
                                   props: {
                                     config: {
                                       extraSetter: {
@@ -940,15 +749,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                         props: {}
                                       }
                                     }
-                                  },
-                                  initialValue: undefined
+                                  }
                                 }
                               }
-                            ],
-                            extraSetter: {
-                              componentName: 'MixedSetter',
-                              props: {}
-                            }
+                            ]
                           }
                         }
                       }
@@ -962,9 +766,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'indicatorsRender',
-                      setter: {
-                        componentName: 'FunctionSetter'
-                      }
+                      setter: 'FunctionSetter'
                     },
                     {
                       title: {
@@ -998,30 +800,19 @@ const TourMeta: IPublicTypeComponentMetadata = {
                               value: 'primary'
                             }
                           ]
-                        },
-                        initialValue: undefined
+                        }
                       }
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -1051,8 +842,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                 value: 'primary'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1061,18 +851,10 @@ const TourMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'zIndex',
             'zh-CN': 'zIndex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'zIndex',
-            'zh-CN': 'zIndex'
           }
         },
         name: 'zIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       }
     ],
     supports: {

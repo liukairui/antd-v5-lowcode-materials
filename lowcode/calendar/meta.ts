@@ -9,10 +9,9 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Calendar',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,26 +23,14 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'cellRender',
             'zh-CN': 'cellRender'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'cellRender',
-            'zh-CN': 'cellRender'
           }
         },
         name: 'cellRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultValue',
             'zh-CN': 'defaultValue'
@@ -52,6 +39,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
         name: 'defaultValue',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -78,9 +66,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'clone',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -91,9 +77,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isValid',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -106,6 +90,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'year',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -113,8 +98,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -128,6 +112,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'month',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -135,8 +120,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -150,6 +134,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'date',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -157,8 +142,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -172,6 +156,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'day',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -179,8 +164,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -194,6 +178,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'hour',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -201,8 +186,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -216,6 +200,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'minute',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -223,8 +208,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -238,6 +222,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'second',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -245,8 +230,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -260,6 +244,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'millisecond',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -267,8 +252,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -280,9 +264,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'set',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -293,9 +275,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'get',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -306,9 +286,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'add',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -319,9 +297,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'subtract',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -332,9 +308,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'startOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -345,9 +319,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'endOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -358,9 +330,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'format',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -371,9 +341,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'diff',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -384,9 +352,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'valueOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -397,9 +363,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'unix',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -410,9 +374,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'daysInMonth',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -423,9 +385,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toDate',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -436,9 +396,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toJSON',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -449,9 +407,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toISOString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -462,9 +418,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -475,9 +429,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'utcOffset',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -488,9 +440,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isBefore',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -501,9 +451,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isSame',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -514,9 +462,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isAfter',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -529,6 +475,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'locale',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -536,15 +483,10 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -555,81 +497,47 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'disabledDate',
             'zh-CN': 'disabledDate'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'disabledDate',
-            'zh-CN': 'disabledDate'
           }
         },
         name: 'disabledDate',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'fullCellRender',
-            'zh-CN': 'fullCellRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'fullCellRender',
             'zh-CN': 'fullCellRender'
           }
         },
         name: 'fullCellRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'fullscreen',
-            'zh-CN': 'fullscreen'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'fullscreen',
             'zh-CN': 'fullscreen'
           }
         },
         name: 'fullscreen',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'headerRender',
-            'zh-CN': 'headerRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'headerRender',
             'zh-CN': 'headerRender'
           }
         },
         name: 'headerRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
@@ -638,6 +546,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -645,18 +554,12 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mode',
-            'zh-CN': 'mode'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mode',
             'zh-CN': 'mode'
@@ -686,18 +589,12 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                 value: 'year'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'validRange',
-            'zh-CN': 'validRange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'validRange',
             'zh-CN': 'validRange'
@@ -715,16 +612,12 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
           }
         },
         name: 'value',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -751,9 +644,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'clone',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -764,9 +655,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isValid',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -779,6 +668,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'year',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -786,8 +676,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -801,6 +690,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'month',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -808,8 +698,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -823,6 +712,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'date',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -830,8 +720,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -845,6 +734,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'day',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -852,8 +742,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -867,6 +756,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'hour',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -874,8 +764,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -889,6 +778,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'minute',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -896,8 +786,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -911,6 +800,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'second',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -918,8 +808,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -933,6 +822,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'millisecond',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -940,8 +830,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -953,9 +842,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'set',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -966,9 +853,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'get',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -979,9 +864,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'add',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -992,9 +875,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'subtract',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1005,9 +886,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'startOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1018,9 +897,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'endOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1031,9 +908,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'format',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1044,9 +919,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'diff',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1057,9 +930,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'valueOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1070,9 +941,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'unix',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1083,9 +952,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'daysInMonth',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1096,9 +963,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toDate',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1109,9 +974,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toJSON',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1122,9 +985,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toISOString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1135,9 +996,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1148,9 +1007,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'utcOffset',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1161,9 +1018,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isBefore',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1174,9 +1029,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isSame',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1187,9 +1040,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isAfter',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -1202,6 +1053,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                   name: 'locale',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1209,15 +1061,10 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }

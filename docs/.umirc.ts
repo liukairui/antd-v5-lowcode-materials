@@ -6,7 +6,7 @@ const { version } = JSON.parse(fs.readFileSync(join(__dirname, '../package.json'
 
 const productStyles = '.__dumi-default-menu{display:none} .__dumi-default-layout{padding-left:58px!important}';
 
-const productPath = `/antd-5-lowcode-materials@${version}/build/docs/`;
+const productPath = `/antd-v5-lowcode-materials@${version}/build/docs/`;
 
 export default defineConfig({
   // other config entry
@@ -23,7 +23,7 @@ export default defineConfig({
     // 配置文件import alias
     memo.resolve.alias.set('@', join(__dirname, '../src'));
     memo.resolve.alias.set('@components', join(__dirname, '../src/components'));
-    memo.resolve.alias.set('antd-5-lowcode-materials', join(__dirname, '../src'));
+    memo.resolve.alias.set('antd-v5-lowcode-materials', join(__dirname, '../src'));
   },
   logo: 'https://fusion.alicdn.com/images/jdSvK6gaqaWB.png',
   exportStatic: process.env.NODE_ENV === 'production' ? { htmlSuffix: true } : {},
@@ -38,7 +38,7 @@ export default defineConfig({
   alias: {
     '@': join(__dirname, '../src'),
     '@components': join(__dirname, '../src/components'),
-    'antd-5-lowcode-materials': join(__dirname, '../src')
+    'antd-v5-lowcode-materials': join(__dirname, '../src')
   },
   apiParser: {
     propFilter: (prop) => {

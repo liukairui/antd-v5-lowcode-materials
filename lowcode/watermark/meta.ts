@@ -9,10 +9,9 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Watermark',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,11 +23,6 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'content',
             'zh-CN': 'content'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'content',
-            'zh-CN': 'content'
           }
         },
         name: 'content',
@@ -36,19 +30,13 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                initialValue: undefined
+                  itemSetter: 'StringSetter'
+                }
               }
             ]
           }
@@ -60,16 +48,12 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'font',
             'zh-CN': 'font'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'font',
-            'zh-CN': 'font'
           }
         },
         name: 'font',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -86,12 +70,10 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
+                        'StringSetter',
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               items: [
@@ -104,20 +86,15 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'addColorStop',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 }
-                              ],
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
+                              ]
                             }
                           }
                         },
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               items: [
@@ -130,15 +107,9 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'setTransform',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 }
-                              ],
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
+                              ]
                             }
                           }
                         }
@@ -158,16 +129,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                   setter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
                 },
@@ -184,10 +146,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        },
+                        'NumberSetter',
                         {
                           componentName: 'RadioGroupSetter',
                           props: {
@@ -219,8 +178,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                                 value: 'weight'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
@@ -274,8 +232,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                           value: 'oblique'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -287,10 +244,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'fontFamily',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -348,15 +302,10 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                           value: 'start'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -364,11 +313,6 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'gap',
-            'zh-CN': 'gap'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'gap',
             'zh-CN': 'gap'
@@ -386,46 +330,25 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'height',
             'zh-CN': 'height'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'height',
-            'zh-CN': 'height'
           }
         },
         name: 'height',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'image',
-            'zh-CN': 'image'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'image',
             'zh-CN': 'image'
           }
         },
         name: 'image',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'offset',
-            'zh-CN': 'offset'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'offset',
             'zh-CN': 'offset'
@@ -443,37 +366,21 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'rotate',
             'zh-CN': 'rotate'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'rotate',
-            'zh-CN': 'rotate'
           }
         },
         name: 'rotate',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': 'width'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'width',
             'zh-CN': 'width'
           }
         },
         name: 'width',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
@@ -481,18 +388,10 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'zIndex',
             'zh-CN': 'zIndex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'zIndex',
-            'zh-CN': 'zIndex'
           }
         },
         name: 'zIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       }
     ],
     supports: {

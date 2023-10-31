@@ -9,10 +9,9 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Button',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,255 +23,58 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'block',
             'zh-CN': 'block'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'block',
-            'zh-CN': 'block'
           }
         },
         name: 'block',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'danger',
-            'zh-CN': 'danger'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'danger',
             'zh-CN': 'danger'
           }
         },
         name: 'danger',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'download',
-            'zh-CN': 'download'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'download',
-            'zh-CN': 'download'
-          }
-        },
-        name: 'download',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'form',
-            'zh-CN': 'form'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'form',
-            'zh-CN': 'form'
-          }
-        },
-        name: 'form',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formAction',
-            'zh-CN': 'formAction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'formAction',
-            'zh-CN': 'formAction'
-          }
-        },
-        name: 'formAction',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formEncType',
-            'zh-CN': 'formEncType'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'formEncType',
-            'zh-CN': 'formEncType'
-          }
-        },
-        name: 'formEncType',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formMethod',
-            'zh-CN': 'formMethod'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'formMethod',
-            'zh-CN': 'formMethod'
-          }
-        },
-        name: 'formMethod',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formNoValidate',
-            'zh-CN': 'formNoValidate'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'formNoValidate',
-            'zh-CN': 'formNoValidate'
-          }
-        },
-        name: 'formNoValidate',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formTarget',
-            'zh-CN': 'formTarget'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'formTarget',
-            'zh-CN': 'formTarget'
-          }
-        },
-        name: 'formTarget',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'ghost',
-            'zh-CN': 'ghost'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'ghost',
             'zh-CN': 'ghost'
           }
         },
         name: 'ghost',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'href',
-            'zh-CN': 'href'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'href',
             'zh-CN': 'href'
           }
         },
         name: 'href',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'hrefLang',
-            'zh-CN': 'hrefLang'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'hrefLang',
-            'zh-CN': 'hrefLang'
-          }
-        },
-        name: 'hrefLang',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'htmlType',
-            'zh-CN': 'htmlType'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'htmlType',
             'zh-CN': 'htmlType'
@@ -310,43 +112,23 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                 value: 'button'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
@@ -357,12 +139,10 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -375,16 +155,9 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'delay',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -395,165 +168,6 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'media',
-            'zh-CN': 'media'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'media',
-            'zh-CN': 'media'
-          }
-        },
-        name: 'media',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          }
-        },
-        name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'ping',
-            'zh-CN': 'ping'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'ping',
-            'zh-CN': 'ping'
-          }
-        },
-        name: 'ping',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'referrerPolicy',
-            'zh-CN': 'referrerPolicy'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'referrerPolicy',
-            'zh-CN': 'referrerPolicy'
-          }
-        },
-        name: 'referrerPolicy',
-        setter: {
-          componentName: 'SelectSetter',
-          props: {
-            dataSource: [
-              {
-                label: '',
-                value: ''
-              },
-              {
-                label: 'no-referrer',
-                value: 'no-referrer'
-              },
-              {
-                label: 'no-referrer-when-downgrade',
-                value: 'no-referrer-when-downgrade'
-              },
-              {
-                label: 'origin',
-                value: 'origin'
-              },
-              {
-                label: 'origin-when-cross-origin',
-                value: 'origin-when-cross-origin'
-              },
-              {
-                label: 'same-origin',
-                value: 'same-origin'
-              },
-              {
-                label: 'strict-origin',
-                value: 'strict-origin'
-              },
-              {
-                label: 'strict-origin-when-cross-origin',
-                value: 'strict-origin-when-cross-origin'
-              },
-              {
-                label: 'unsafe-url',
-                value: 'unsafe-url'
-              }
-            ],
-            options: [
-              {
-                label: '',
-                value: ''
-              },
-              {
-                label: 'no-referrer',
-                value: 'no-referrer'
-              },
-              {
-                label: 'no-referrer-when-downgrade',
-                value: 'no-referrer-when-downgrade'
-              },
-              {
-                label: 'origin',
-                value: 'origin'
-              },
-              {
-                label: 'origin-when-cross-origin',
-                value: 'origin-when-cross-origin'
-              },
-              {
-                label: 'same-origin',
-                value: 'same-origin'
-              },
-              {
-                label: 'strict-origin',
-                value: 'strict-origin'
-              },
-              {
-                label: 'strict-origin-when-cross-origin',
-                value: 'strict-origin-when-cross-origin'
-              },
-              {
-                label: 'unsafe-url',
-                value: 'unsafe-url'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'shape',
-            'zh-CN': 'shape'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -591,18 +205,12 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                 value: 'round'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -640,18 +248,12 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'target',
-            'zh-CN': 'target'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'target',
             'zh-CN': 'target'
@@ -664,6 +266,7 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -671,8 +274,7 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'SelectSetter',
@@ -713,8 +315,7 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                       value: '_top'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -723,11 +324,6 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -781,49 +377,265 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
                 value: 'text'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
+            'en-US': 'onClick',
+            'zh-CN': 'onClick'
           }
         },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ArraySetter',
-                props: {
-                  itemSetter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                initialValue: undefined
+        name: 'onClick',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: '原生 a 标签属性',
+        display: 'accordion',
+        type: 'group',
+        items: [
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'download',
+                'zh-CN': 'download'
               }
-            ]
+            },
+            name: 'download',
+            setter: {
+              componentName: 'MixedSetter',
+              props: {
+                setters: ['BoolSetter', 'StringSetter']
+              }
+            }
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'hrefLang',
+                'zh-CN': 'hrefLang'
+              }
+            },
+            name: 'hrefLang',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'ping',
+                'zh-CN': 'ping'
+              }
+            },
+            name: 'ping',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'referrerPolicy',
+                'zh-CN': 'referrerPolicy'
+              }
+            },
+            name: 'referrerPolicy',
+            setter: {
+              componentName: 'SelectSetter',
+              props: {
+                dataSource: [
+                  {
+                    label: '',
+                    value: ''
+                  },
+                  {
+                    label: 'no-referrer',
+                    value: 'no-referrer'
+                  },
+                  {
+                    label: 'no-referrer-when-downgrade',
+                    value: 'no-referrer-when-downgrade'
+                  },
+                  {
+                    label: 'origin',
+                    value: 'origin'
+                  },
+                  {
+                    label: 'origin-when-cross-origin',
+                    value: 'origin-when-cross-origin'
+                  },
+                  {
+                    label: 'same-origin',
+                    value: 'same-origin'
+                  },
+                  {
+                    label: 'strict-origin',
+                    value: 'strict-origin'
+                  },
+                  {
+                    label: 'strict-origin-when-cross-origin',
+                    value: 'strict-origin-when-cross-origin'
+                  },
+                  {
+                    label: 'unsafe-url',
+                    value: 'unsafe-url'
+                  }
+                ],
+                options: [
+                  {
+                    label: '',
+                    value: ''
+                  },
+                  {
+                    label: 'no-referrer',
+                    value: 'no-referrer'
+                  },
+                  {
+                    label: 'no-referrer-when-downgrade',
+                    value: 'no-referrer-when-downgrade'
+                  },
+                  {
+                    label: 'origin',
+                    value: 'origin'
+                  },
+                  {
+                    label: 'origin-when-cross-origin',
+                    value: 'origin-when-cross-origin'
+                  },
+                  {
+                    label: 'same-origin',
+                    value: 'same-origin'
+                  },
+                  {
+                    label: 'strict-origin',
+                    value: 'strict-origin'
+                  },
+                  {
+                    label: 'strict-origin-when-cross-origin',
+                    value: 'strict-origin-when-cross-origin'
+                  },
+                  {
+                    label: 'unsafe-url',
+                    value: 'unsafe-url'
+                  }
+                ]
+              }
+            }
           }
-        }
+        ]
+      },
+      {
+        title: '原生 button 标签属性',
+        display: 'accordion',
+        type: 'group',
+        items: [
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'form',
+                'zh-CN': 'form'
+              }
+            },
+            name: 'form',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'formAction',
+                'zh-CN': 'formAction'
+              }
+            },
+            name: 'formAction',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'formEncType',
+                'zh-CN': 'formEncType'
+              }
+            },
+            name: 'formEncType',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'formMethod',
+                'zh-CN': 'formMethod'
+              }
+            },
+            name: 'formMethod',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'formNoValidate',
+                'zh-CN': 'formNoValidate'
+              }
+            },
+            name: 'formNoValidate',
+            setter: 'BoolSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'formTarget',
+                'zh-CN': 'formTarget'
+              }
+            },
+            name: 'formTarget',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'name',
+                'zh-CN': 'name'
+              }
+            },
+            name: 'name',
+            setter: 'StringSetter'
+          },
+          {
+            title: {
+              label: {
+                type: 'i18n',
+                'en-US': 'value',
+                'zh-CN': 'value'
+              }
+            },
+            name: 'value',
+            setter: {
+              componentName: 'MixedSetter',
+              props: {
+                setters: [
+                  'StringSetter',
+                  'NumberSetter',
+                  {
+                    componentName: 'ArraySetter',
+                    condition: () => false,
+                    props: {
+                      itemSetter: 'StringSetter'
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     ],
     supports: {

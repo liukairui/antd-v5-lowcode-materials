@@ -9,10 +9,9 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'TimePicker',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,26 +23,14 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'addon',
             'zh-CN': 'addon'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'addon',
-            'zh-CN': 'addon'
           }
         },
         name: 'addon',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'allowClear',
-            'zh-CN': 'allowClear'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'allowClear',
             'zh-CN': 'allowClear'
@@ -54,12 +41,10 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -72,22 +57,9 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'clearIcon',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -101,65 +73,36 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'autoComplete',
             'zh-CN': 'autoComplete'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'autoComplete',
-            'zh-CN': 'autoComplete'
           }
         },
         name: 'autoComplete',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'autoFocus',
-            'zh-CN': 'autoFocus'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'autoFocus',
             'zh-CN': 'autoFocus'
           }
         },
         name: 'autoFocus',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'cellRender',
-            'zh-CN': 'cellRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'cellRender',
             'zh-CN': 'cellRender'
@@ -168,6 +111,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'cellRender',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -175,81 +119,45 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'changeOnBlur',
-            'zh-CN': 'changeOnBlur'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'changeOnBlur',
             'zh-CN': 'changeOnBlur'
           }
         },
         name: 'changeOnBlur',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'clearIcon',
-            'zh-CN': 'clearIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'clearIcon',
             'zh-CN': 'clearIcon'
           }
         },
         name: 'clearIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultOpen',
-            'zh-CN': 'defaultOpen'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultOpen',
             'zh-CN': 'defaultOpen'
           }
         },
         name: 'defaultOpen',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultValue',
             'zh-CN': 'defaultValue'
@@ -258,6 +166,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'defaultValue',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -284,9 +193,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'clone',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -297,9 +204,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isValid',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -312,6 +217,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'year',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -319,8 +225,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -334,6 +239,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'month',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -341,8 +247,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -356,6 +261,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'date',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -363,8 +269,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -378,6 +283,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'day',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -385,8 +291,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -400,6 +305,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'hour',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -407,8 +313,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -422,6 +327,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'minute',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -429,8 +335,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -444,6 +349,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'second',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -451,8 +357,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -466,6 +371,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'millisecond',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -473,8 +379,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -486,9 +391,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'set',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -499,9 +402,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'get',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -512,9 +413,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'add',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -525,9 +424,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'subtract',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -538,9 +435,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'startOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -551,9 +446,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'endOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -564,9 +457,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'format',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -577,9 +468,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'diff',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -590,9 +479,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'valueOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -603,9 +490,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'unix',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -616,9 +501,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'daysInMonth',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -629,9 +512,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toDate',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -642,9 +523,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toJSON',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -655,9 +534,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toISOString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -668,9 +545,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -681,9 +556,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'utcOffset',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -694,9 +567,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isBefore',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -707,9 +578,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isSame',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -720,9 +589,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isAfter',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -735,6 +602,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'locale',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -742,123 +610,51 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
       },
+
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'disabledDate',
-            'zh-CN': 'disabledDate'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabledDate',
             'zh-CN': 'disabledDate'
           }
         },
         name: 'disabledDate',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'disabledTime',
-            'zh-CN': 'disabledTime'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabledTime',
             'zh-CN': 'disabledTime'
           }
         },
         name: 'disabledTime',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'dropdownAlign',
-            'zh-CN': 'dropdownAlign'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'dropdownAlign',
             'zh-CN': 'dropdownAlign'
@@ -867,6 +663,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'dropdownAlign',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -881,13 +678,13 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'points',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {}
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -901,6 +698,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: '_experimental',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -908,8 +706,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -923,13 +720,13 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'offset',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {}
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -943,13 +740,13 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'targetOffset',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {}
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -963,6 +760,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'overflow',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -978,16 +776,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -1003,16 +792,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -1028,16 +808,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -1053,24 +824,11 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['NumberSetter', 'BoolSetter']
                               }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -1084,10 +842,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'autoArrow',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1129,8 +884,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           value: 'visibleFirst'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -1142,10 +896,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'dynamicInset',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1156,10 +907,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'useCssRight',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1170,10 +918,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'useCssBottom',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1184,10 +929,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'useCssTransform',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -1198,16 +940,9 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'ignoreShake',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1218,27 +953,14 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'dropdownClassName',
             'zh-CN': 'dropdownClassName'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'dropdownClassName',
-            'zh-CN': 'dropdownClassName'
           }
         },
         name: 'dropdownClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'format',
-            'zh-CN': 'format'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'format',
             'zh-CN': 'format'
@@ -1249,32 +971,19 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              },
+              'StringSetter',
+              'FunctionSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
                   itemSetter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'FunctionSetter'
-                        }
-                      ]
+                      setters: ['StringSetter', 'FunctionSetter']
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -1286,45 +995,25 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'getPopupContainer',
             'zh-CN': 'getPopupContainer'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
           }
         },
         name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'hideDisabledOptions',
-            'zh-CN': 'hideDisabledOptions'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'hideDisabledOptions',
             'zh-CN': 'hideDisabledOptions'
           }
         },
         name: 'hideDisabledOptions',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'hourStep',
-            'zh-CN': 'hourStep'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'hourStep',
             'zh-CN': 'hourStep'
@@ -1333,6 +1022,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'hourStep',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1340,74 +1030,34 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
           }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'inputReadOnly',
-            'zh-CN': 'inputReadOnly'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'inputReadOnly',
             'zh-CN': 'inputReadOnly'
           }
         },
         name: 'inputReadOnly',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'inputRender',
-            'zh-CN': 'inputRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'inputRender',
             'zh-CN': 'inputRender'
           }
         },
         name: 'inputRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
@@ -1416,6 +1066,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1423,18 +1074,12 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'minuteStep',
-            'zh-CN': 'minuteStep'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'minuteStep',
             'zh-CN': 'minuteStep'
@@ -1443,6 +1088,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'minuteStep',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1450,279 +1096,166 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'name',
             'zh-CN': 'name'
           }
         },
         name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'nextIcon',
-            'zh-CN': 'nextIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'nextIcon',
             'zh-CN': 'nextIcon'
           }
         },
         name: 'nextIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onBlur',
-            'zh-CN': 'onBlur'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onBlur',
             'zh-CN': 'onBlur'
           }
         },
         name: 'onBlur',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
           }
         },
         name: 'onClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onContextMenu',
-            'zh-CN': 'onContextMenu'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onContextMenu',
             'zh-CN': 'onContextMenu'
           }
         },
         name: 'onContextMenu',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onFocus',
-            'zh-CN': 'onFocus'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onFocus',
             'zh-CN': 'onFocus'
           }
         },
         name: 'onFocus',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onKeyDown',
             'zh-CN': 'onKeyDown'
           }
         },
         name: 'onKeyDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseDown',
-            'zh-CN': 'onMouseDown'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseDown',
             'zh-CN': 'onMouseDown'
           }
         },
         name: 'onMouseDown',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseEnter',
             'zh-CN': 'onMouseEnter'
           }
         },
         name: 'onMouseEnter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseLeave',
             'zh-CN': 'onMouseLeave'
           }
         },
         name: 'onMouseLeave',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseUp',
-            'zh-CN': 'onMouseUp'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseUp',
             'zh-CN': 'onMouseUp'
           }
         },
         name: 'onMouseUp',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onOpenChange',
-            'zh-CN': 'onOpenChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onOpenChange',
             'zh-CN': 'onOpenChange'
           }
         },
         name: 'onOpenChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'open',
-            'zh-CN': 'open'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'open',
             'zh-CN': 'open'
           }
         },
         name: 'open',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'panelRender',
-            'zh-CN': 'panelRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'panelRender',
             'zh-CN': 'panelRender'
           }
         },
         name: 'panelRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pickerRef',
-            'zh-CN': 'pickerRef'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pickerRef',
             'zh-CN': 'pickerRef'
@@ -1731,6 +1264,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'pickerRef',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1738,37 +1272,23 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'placeholder',
-            'zh-CN': 'placeholder'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'placeholder',
             'zh-CN': 'placeholder'
           }
         },
         name: 'placeholder',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'placement',
-            'zh-CN': 'placement'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'placement',
             'zh-CN': 'placement'
@@ -1814,37 +1334,23 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 value: 'bottomRight'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'popupClassName',
-            'zh-CN': 'popupClassName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'popupClassName',
             'zh-CN': 'popupClassName'
           }
         },
         name: 'popupClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'popupStyle',
-            'zh-CN': 'popupStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'popupStyle',
             'zh-CN': 'popupStyle'
@@ -1853,6 +1359,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'popupStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1860,8 +1367,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1870,19 +1376,16 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'presets',
             'zh-CN': 'presets'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'presets',
-            'zh-CN': 'presets'
           }
         },
         name: 'presets',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -1909,16 +1412,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -1935,6 +1429,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           setters: [
                             {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1942,98 +1437,56 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             },
-                            {
-                              componentName: 'FunctionSetter'
-                            }
+                            'FunctionSetter'
                           ]
                         }
                       }
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'prevIcon',
-            'zh-CN': 'prevIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'prevIcon',
             'zh-CN': 'prevIcon'
           }
         },
         name: 'prevIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'renderExtraFooter',
-            'zh-CN': 'renderExtraFooter'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'renderExtraFooter',
             'zh-CN': 'renderExtraFooter'
           }
         },
         name: 'renderExtraFooter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'role',
-            'zh-CN': 'role'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'role',
             'zh-CN': 'role'
           }
         },
         name: 'role',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'secondStep',
-            'zh-CN': 'secondStep'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'secondStep',
             'zh-CN': 'secondStep'
@@ -2042,6 +1495,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'secondStep',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -2049,94 +1503,56 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showHour',
-            'zh-CN': 'showHour'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showHour',
             'zh-CN': 'showHour'
           }
         },
         name: 'showHour',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showMinute',
-            'zh-CN': 'showMinute'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showMinute',
             'zh-CN': 'showMinute'
           }
         },
         name: 'showMinute',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showNow',
-            'zh-CN': 'showNow'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showNow',
             'zh-CN': 'showNow'
           }
         },
         name: 'showNow',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showSecond',
-            'zh-CN': 'showSecond'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showSecond',
             'zh-CN': 'showSecond'
           }
         },
         name: 'showSecond',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -2174,18 +1590,12 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -2223,150 +1633,67 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                 value: 'error'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'suffixIcon',
-            'zh-CN': 'suffixIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'suffixIcon',
             'zh-CN': 'suffixIcon'
           }
         },
         name: 'suffixIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'superNextIcon',
-            'zh-CN': 'superNextIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'superNextIcon',
             'zh-CN': 'superNextIcon'
           }
         },
         name: 'superNextIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'superPrevIcon',
-            'zh-CN': 'superPrevIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'superPrevIcon',
             'zh-CN': 'superPrevIcon'
           }
         },
         name: 'superPrevIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabIndex',
-            'zh-CN': 'tabIndex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'tabIndex',
-            'zh-CN': 'tabIndex'
-          }
-        },
-        name: 'tabIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'transitionName',
-            'zh-CN': 'transitionName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'transitionName',
             'zh-CN': 'transitionName'
           }
         },
         name: 'transitionName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'use12Hours',
-            'zh-CN': 'use12Hours'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'use12Hours',
             'zh-CN': 'use12Hours'
           }
         },
         name: 'use12Hours',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'
@@ -2375,6 +1702,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
         name: 'value',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -2401,9 +1729,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'clone',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2414,9 +1740,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isValid',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2429,6 +1753,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'year',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2436,8 +1761,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2451,6 +1775,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'month',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2458,8 +1783,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2473,6 +1797,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'date',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2480,8 +1805,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2495,6 +1819,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'day',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2502,8 +1827,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2517,6 +1841,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'hour',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2524,8 +1849,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2539,6 +1863,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'minute',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2546,8 +1871,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2561,6 +1885,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'second',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2568,8 +1893,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2583,6 +1907,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'millisecond',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2590,8 +1915,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2603,9 +1927,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'set',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2616,9 +1938,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'get',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2629,9 +1949,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'add',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2642,9 +1960,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'subtract',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2655,9 +1971,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'startOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2668,9 +1982,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'endOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2681,9 +1993,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'format',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2694,9 +2004,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'diff',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2707,9 +2015,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'valueOf',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2720,9 +2026,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'unix',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2733,9 +2037,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'daysInMonth',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2746,9 +2048,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toDate',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2759,9 +2059,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toJSON',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2772,9 +2070,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toISOString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2785,9 +2081,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'toString',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2798,9 +2092,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'utcOffset',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2811,9 +2103,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isBefore',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2824,9 +2114,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isSame',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2837,9 +2125,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'isAfter',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -2852,6 +2138,7 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                   name: 'locale',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2859,15 +2146,10 @@ const TimePickerMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }

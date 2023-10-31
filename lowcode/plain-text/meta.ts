@@ -9,10 +9,9 @@ const PlainTextMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'PlainText',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,18 +23,21 @@ const PlainTextMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'content',
             'zh-CN': 'content'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'content',
-            'zh-CN': 'content'
           }
         },
         name: 'content',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'id',
+            'zh-CN': 'id'
+          }
+        },
+        name: 'id',
+        setter: 'StringSetter'
       }
     ],
     supports: {

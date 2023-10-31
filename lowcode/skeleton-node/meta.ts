@@ -9,10 +9,9 @@ const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'SkeletonNode',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,18 +23,10 @@ const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'active',
             'zh-CN': 'active'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
           }
         },
         name: 'active',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
@@ -43,18 +34,10 @@ const SkeletonNodeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'fullSize',
             'zh-CN': 'fullSize'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'fullSize',
-            'zh-CN': 'fullSize'
           }
         },
         name: 'fullSize',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

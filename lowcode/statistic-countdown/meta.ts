@@ -9,10 +9,9 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'StatisticCountdown',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,46 +23,25 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'decimalSeparator',
             'zh-CN': 'decimalSeparator'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'decimalSeparator',
-            'zh-CN': 'decimalSeparator'
           }
         },
         name: 'decimalSeparator',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'format',
-            'zh-CN': 'format'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'format',
             'zh-CN': 'format'
           }
         },
         name: 'format',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'formatter',
-            'zh-CN': 'formatter'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'formatter',
             'zh-CN': 'formatter'
@@ -74,9 +52,7 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'FunctionSetter'
-              },
+              'FunctionSetter',
               {
                 componentName: 'RadioGroupSetter',
                 props: {
@@ -108,8 +84,7 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
                       value: 'countdown'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -121,194 +96,102 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'groupSeparator',
             'zh-CN': 'groupSeparator'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'groupSeparator',
-            'zh-CN': 'groupSeparator'
           }
         },
         name: 'groupSeparator',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
           }
         },
         name: 'loading',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseEnter',
             'zh-CN': 'onMouseEnter'
           }
         },
         name: 'onMouseEnter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseLeave',
             'zh-CN': 'onMouseLeave'
           }
         },
         name: 'onMouseLeave',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'precision',
-            'zh-CN': 'precision'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'precision',
             'zh-CN': 'precision'
           }
         },
         name: 'precision',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'prefix',
-            'zh-CN': 'prefix'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'prefix',
             'zh-CN': 'prefix'
           }
         },
         name: 'prefix',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'suffix',
-            'zh-CN': 'suffix'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'suffix',
             'zh-CN': 'suffix'
           }
         },
         name: 'suffix',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'
@@ -318,45 +201,24 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'NumberSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'valueRender',
-            'zh-CN': 'valueRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'valueRender',
             'zh-CN': 'valueRender'
           }
         },
         name: 'valueRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'valueStyle',
-            'zh-CN': 'valueStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'valueStyle',
             'zh-CN': 'valueStyle'
@@ -365,6 +227,7 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
         name: 'valueStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -372,8 +235,7 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

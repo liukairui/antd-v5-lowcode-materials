@@ -9,10 +9,9 @@ const FlexMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Flex',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,167 +23,126 @@ const FlexMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'align',
             'zh-CN': 'align'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'align',
-            'zh-CN': 'align'
           }
         },
         name: 'align',
         setter: {
-          componentName: 'MixedSetter',
+          componentName: 'SelectSetter',
           props: {
-            setters: [
+            dataSource: [
               {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
+                label: 'normal',
+                value: 'normal'
               },
               {
-                componentName: 'SelectSetter',
-                props: {
-                  dataSource: [
-                    {
-                      label: 'center',
-                      value: 'center'
-                    },
-                    {
-                      label: '-moz-initial',
-                      value: '-moz-initial'
-                    },
-                    {
-                      label: 'inherit',
-                      value: 'inherit'
-                    },
-                    {
-                      label: 'initial',
-                      value: 'initial'
-                    },
-                    {
-                      label: 'revert',
-                      value: 'revert'
-                    },
-                    {
-                      label: 'revert-layer',
-                      value: 'revert-layer'
-                    },
-                    {
-                      label: 'unset',
-                      value: 'unset'
-                    },
-                    {
-                      label: 'stretch',
-                      value: 'stretch'
-                    },
-                    {
-                      label: 'end',
-                      value: 'end'
-                    },
-                    {
-                      label: 'flex-end',
-                      value: 'flex-end'
-                    },
-                    {
-                      label: 'flex-start',
-                      value: 'flex-start'
-                    },
-                    {
-                      label: 'start',
-                      value: 'start'
-                    },
-                    {
-                      label: 'normal',
-                      value: 'normal'
-                    },
-                    {
-                      label: 'self-end',
-                      value: 'self-end'
-                    },
-                    {
-                      label: 'self-start',
-                      value: 'self-start'
-                    },
-                    {
-                      label: 'baseline',
-                      value: 'baseline'
-                    }
-                  ],
-                  options: [
-                    {
-                      label: 'center',
-                      value: 'center'
-                    },
-                    {
-                      label: '-moz-initial',
-                      value: '-moz-initial'
-                    },
-                    {
-                      label: 'inherit',
-                      value: 'inherit'
-                    },
-                    {
-                      label: 'initial',
-                      value: 'initial'
-                    },
-                    {
-                      label: 'revert',
-                      value: 'revert'
-                    },
-                    {
-                      label: 'revert-layer',
-                      value: 'revert-layer'
-                    },
-                    {
-                      label: 'unset',
-                      value: 'unset'
-                    },
-                    {
-                      label: 'stretch',
-                      value: 'stretch'
-                    },
-                    {
-                      label: 'end',
-                      value: 'end'
-                    },
-                    {
-                      label: 'flex-end',
-                      value: 'flex-end'
-                    },
-                    {
-                      label: 'flex-start',
-                      value: 'flex-start'
-                    },
-                    {
-                      label: 'start',
-                      value: 'start'
-                    },
-                    {
-                      label: 'normal',
-                      value: 'normal'
-                    },
-                    {
-                      label: 'self-end',
-                      value: 'self-end'
-                    },
-                    {
-                      label: 'self-start',
-                      value: 'self-start'
-                    },
-                    {
-                      label: 'baseline',
-                      value: 'baseline'
-                    }
-                  ]
-                },
-                initialValue: undefined
+                label: 'stretch',
+                value: 'stretch'
+              },
+              {
+                label: 'center',
+                value: 'center'
+              },
+              {
+                label: 'start',
+                value: 'start'
+              },
+              {
+                label: 'end',
+                value: 'end'
+              },
+              {
+                label: 'flex-start',
+                value: 'flex-start'
+              },
+              {
+                label: 'flex-end',
+                value: 'flex-end'
+              },
+              {
+                label: 'self-start',
+                value: 'self-start'
+              },
+              {
+                label: 'self-end',
+                value: 'self-end'
+              },
+              {
+                label: 'baseline',
+                value: 'baseline'
+              },
+              {
+                label: 'inherit',
+                value: 'inherit'
+              },
+              {
+                label: 'initial',
+                value: 'initial'
+              },
+              {
+                label: 'revert',
+                value: 'revert'
+              },
+              {
+                label: 'revert-layer',
+                value: 'revert-layer'
+              },
+              {
+                label: 'unset',
+                value: 'unset'
+              }
+            ],
+            options: [
+              {
+                label: 'normal',
+                value: 'normal'
+              },
+              {
+                label: 'stretch',
+                value: 'stretch'
+              },
+              {
+                label: 'center',
+                value: 'center'
+              },
+              {
+                label: 'start',
+                value: 'start'
+              },
+              {
+                label: 'end',
+                value: 'end'
+              },
+              {
+                label: 'flex-start',
+                value: 'flex-start'
+              },
+              {
+                label: 'flex-end',
+                value: 'flex-end'
+              },
+              {
+                label: 'self-start',
+                value: 'self-start'
+              },
+              {
+                label: 'self-end',
+                value: 'self-end'
+              },
+              {
+                label: 'baseline',
+                value: 'baseline'
+              },
+              {
+                label: 'inherit',
+                value: 'inherit'
+              },
+              {
+                label: 'initial',
+                value: 'initial'
+              },
+              {
+                label: 'unset',
+                value: 'unset'
               }
             ]
           }
@@ -193,49 +151,17 @@ const FlexMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'component',
-            'zh-CN': 'component'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'component',
             'zh-CN': 'component'
           }
         },
         name: 'component',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              }
-            ]
-          }
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'flex',
-            'zh-CN': 'flex'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'flex',
             'zh-CN': 'flex'
@@ -245,39 +171,13 @@ const FlexMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'NumberSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'gap',
-            'zh-CN': 'gap'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'gap',
             'zh-CN': 'gap'
@@ -289,25 +189,40 @@ const FlexMeta: IPublicTypeComponentMetadata = {
           props: {
             setters: [
               {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
+                componentName: 'SelectSetter',
                 props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
+                  dataSource: [
+                    {
+                      label: 'small',
+                      value: 'small'
+                    },
+                    {
+                      label: 'middle',
+                      value: 'middle'
+                    },
+                    {
+                      label: 'large',
+                      value: 'large'
                     }
-                  }
-                },
-                initialValue: undefined
-              }
+                  ],
+                  options: [
+                    {
+                      label: 'small',
+                      value: 'small'
+                    },
+                    {
+                      label: 'middle',
+                      value: 'middle'
+                    },
+                    {
+                      label: 'large',
+                      value: 'large'
+                    }
+                  ]
+                }
+              },
+              'StringSetter',
+              'NumberSetter'
             ]
           }
         }
@@ -315,11 +230,6 @@ const FlexMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'justify',
-            'zh-CN': 'justify'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'justify',
             'zh-CN': 'justify'
@@ -327,174 +237,138 @@ const FlexMeta: IPublicTypeComponentMetadata = {
         },
         name: 'justify',
         setter: {
-          componentName: 'MixedSetter',
+          componentName: 'SelectSetter',
           props: {
-            setters: [
+            dataSource: [
               {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
+                label: 'normal',
+                value: 'normal'
               },
               {
-                componentName: 'SelectSetter',
-                props: {
-                  dataSource: [
-                    {
-                      label: 'left',
-                      value: 'left'
-                    },
-                    {
-                      label: 'right',
-                      value: 'right'
-                    },
-                    {
-                      label: 'center',
-                      value: 'center'
-                    },
-                    {
-                      label: '-moz-initial',
-                      value: '-moz-initial'
-                    },
-                    {
-                      label: 'inherit',
-                      value: 'inherit'
-                    },
-                    {
-                      label: 'initial',
-                      value: 'initial'
-                    },
-                    {
-                      label: 'revert',
-                      value: 'revert'
-                    },
-                    {
-                      label: 'revert-layer',
-                      value: 'revert-layer'
-                    },
-                    {
-                      label: 'unset',
-                      value: 'unset'
-                    },
-                    {
-                      label: 'space-around',
-                      value: 'space-around'
-                    },
-                    {
-                      label: 'space-between',
-                      value: 'space-between'
-                    },
-                    {
-                      label: 'space-evenly',
-                      value: 'space-evenly'
-                    },
-                    {
-                      label: 'stretch',
-                      value: 'stretch'
-                    },
-                    {
-                      label: 'end',
-                      value: 'end'
-                    },
-                    {
-                      label: 'flex-end',
-                      value: 'flex-end'
-                    },
-                    {
-                      label: 'flex-start',
-                      value: 'flex-start'
-                    },
-                    {
-                      label: 'start',
-                      value: 'start'
-                    },
-                    {
-                      label: 'normal',
-                      value: 'normal'
-                    }
-                  ],
-                  options: [
-                    {
-                      label: 'left',
-                      value: 'left'
-                    },
-                    {
-                      label: 'right',
-                      value: 'right'
-                    },
-                    {
-                      label: 'center',
-                      value: 'center'
-                    },
-                    {
-                      label: '-moz-initial',
-                      value: '-moz-initial'
-                    },
-                    {
-                      label: 'inherit',
-                      value: 'inherit'
-                    },
-                    {
-                      label: 'initial',
-                      value: 'initial'
-                    },
-                    {
-                      label: 'revert',
-                      value: 'revert'
-                    },
-                    {
-                      label: 'revert-layer',
-                      value: 'revert-layer'
-                    },
-                    {
-                      label: 'unset',
-                      value: 'unset'
-                    },
-                    {
-                      label: 'space-around',
-                      value: 'space-around'
-                    },
-                    {
-                      label: 'space-between',
-                      value: 'space-between'
-                    },
-                    {
-                      label: 'space-evenly',
-                      value: 'space-evenly'
-                    },
-                    {
-                      label: 'stretch',
-                      value: 'stretch'
-                    },
-                    {
-                      label: 'end',
-                      value: 'end'
-                    },
-                    {
-                      label: 'flex-end',
-                      value: 'flex-end'
-                    },
-                    {
-                      label: 'flex-start',
-                      value: 'flex-start'
-                    },
-                    {
-                      label: 'start',
-                      value: 'start'
-                    },
-                    {
-                      label: 'normal',
-                      value: 'normal'
-                    }
-                  ]
-                },
-                initialValue: undefined
+                label: 'center',
+                value: 'center'
+              },
+              {
+                label: 'start',
+                value: 'start'
+              },
+              {
+                label: 'end',
+                value: 'end'
+              },
+              {
+                label: 'flex-start',
+                value: 'flex-start'
+              },
+              {
+                label: 'flex-end',
+                value: 'flex-end'
+              },
+              {
+                label: 'left',
+                value: 'left'
+              },
+              {
+                label: 'right',
+                value: 'right'
+              },
+              {
+                label: 'baseline',
+                value: 'baseline'
+              },
+              {
+                label: 'space-between',
+                value: 'space-between'
+              },
+              {
+                label: 'space-around',
+                value: 'space-around'
+              },
+              {
+                label: 'space-evenly',
+                value: 'space-evenly'
+              },
+              {
+                label: 'stretch',
+                value: 'stretch'
+              },
+              {
+                label: 'inherit',
+                value: 'inherit'
+              },
+              {
+                label: 'initial',
+                value: 'initial'
+              },
+              {
+                label: 'unset',
+                value: 'unset'
+              }
+            ],
+            options: [
+              {
+                label: 'normal',
+                value: 'normal'
+              },
+              {
+                label: 'center',
+                value: 'center'
+              },
+              {
+                label: 'start',
+                value: 'start'
+              },
+              {
+                label: 'end',
+                value: 'end'
+              },
+              {
+                label: 'flex-start',
+                value: 'flex-start'
+              },
+              {
+                label: 'flex-end',
+                value: 'flex-end'
+              },
+              {
+                label: 'left',
+                value: 'left'
+              },
+              {
+                label: 'right',
+                value: 'right'
+              },
+              {
+                label: 'baseline',
+                value: 'baseline'
+              },
+              {
+                label: 'space-between',
+                value: 'space-between'
+              },
+              {
+                label: 'space-around',
+                value: 'space-around'
+              },
+              {
+                label: 'space-evenly',
+                value: 'space-evenly'
+              },
+              {
+                label: 'stretch',
+                value: 'stretch'
+              },
+              {
+                label: 'inherit',
+                value: 'inherit'
+              },
+              {
+                label: 'initial',
+                value: 'initial'
+              },
+              {
+                label: 'unset',
+                value: 'unset'
               }
             ]
           }
@@ -506,27 +380,14 @@ const FlexMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'vertical',
             'zh-CN': 'vertical'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'vertical',
-            'zh-CN': 'vertical'
           }
         },
         name: 'vertical',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'wrap',
-            'zh-CN': 'wrap'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'wrap',
             'zh-CN': 'wrap'
@@ -538,12 +399,16 @@ const FlexMeta: IPublicTypeComponentMetadata = {
           props: {
             dataSource: [
               {
+                label: 'nowrap',
+                value: 'nowrap'
+              },
+              {
                 label: 'wrap',
                 value: 'wrap'
               },
               {
-                label: '-moz-initial',
-                value: '-moz-initial'
+                label: 'wrap-reverse',
+                value: 'wrap-reverse'
               },
               {
                 label: 'inherit',
@@ -558,30 +423,22 @@ const FlexMeta: IPublicTypeComponentMetadata = {
                 value: 'revert'
               },
               {
-                label: 'revert-layer',
-                value: 'revert-layer'
-              },
-              {
                 label: 'unset',
                 value: 'unset'
-              },
-              {
-                label: 'nowrap',
-                value: 'nowrap'
-              },
-              {
-                label: 'wrap-reverse',
-                value: 'wrap-reverse'
               }
             ],
             options: [
               {
+                label: 'nowrap',
+                value: 'nowrap'
+              },
+              {
                 label: 'wrap',
                 value: 'wrap'
               },
               {
-                label: '-moz-initial',
-                value: '-moz-initial'
+                label: 'wrap-reverse',
+                value: 'wrap-reverse'
               },
               {
                 label: 'inherit',
@@ -596,24 +453,11 @@ const FlexMeta: IPublicTypeComponentMetadata = {
                 value: 'revert'
               },
               {
-                label: 'revert-layer',
-                value: 'revert-layer'
-              },
-              {
                 label: 'unset',
                 value: 'unset'
-              },
-              {
-                label: 'nowrap',
-                value: 'nowrap'
-              },
-              {
-                label: 'wrap-reverse',
-                value: 'wrap-reverse'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

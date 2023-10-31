@@ -9,10 +9,9 @@ const FormListMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'FormList',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -22,35 +21,33 @@ const FormListMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'initialValue',
-            'zh-CN': 'initialValue'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'initialValue',
-            'zh-CN': 'initialValue'
+            'en-US': 'content',
+            'zh-CN': 'content'
           }
         },
-        name: 'initialValue',
+        name: 'content',
         setter: {
-          componentName: 'ArraySetter',
-          props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {}
-            }
-          },
-          initialValue: undefined
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['fields', 'operation', 'meta'],
+            value: []
+          }
         }
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          },
-          tip: {
+            'en-US': 'initialValue',
+            'zh-CN': 'initialValue'
+          }
+        },
+        name: 'initialValue'
+      },
+      {
+        title: {
+          label: {
             type: 'i18n',
             'en-US': 'name',
             'zh-CN': 'name'
@@ -61,34 +58,13 @@ const FormListMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
-                    }
-                  }
-                },
-                initialValue: undefined
+                  itemSetter: 'StringSetter'
+                }
               }
             ]
           }
@@ -100,36 +76,19 @@ const FormListMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'rules',
             'zh-CN': 'rules'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'rules',
-            'zh-CN': 'rules'
           }
         },
         name: 'rules',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'warningOnly',
-                          'zh-CN': 'warningOnly'
-                        }
-                      },
-                      name: 'warningOnly',
-                      setter: {
-                        componentName: 'BoolSetter',
-                        initialValue: undefined
-                      }
-                    },
                     {
                       title: {
                         label: {
@@ -139,29 +98,7 @@ const FormListMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'message',
-                      setter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'ObjectSetter',
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              },
-                              initialValue: undefined
-                            }
-                          ]
-                        }
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -172,20 +109,13 @@ const FormListMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'validator',
-                      setter: {
-                        componentName: 'FunctionSetter'
-                      }
+                      setter: 'FunctionSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

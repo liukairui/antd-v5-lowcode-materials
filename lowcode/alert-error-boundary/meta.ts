@@ -9,10 +9,9 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'AlertErrorBoundary',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,24 +23,10 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'description',
             'zh-CN': 'description'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
           }
         },
         name: 'description',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -49,24 +34,10 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'message',
             'zh-CN': 'message'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'message',
-            'zh-CN': 'message'
           }
         },
         name: 'message',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       }
     ],
     supports: {

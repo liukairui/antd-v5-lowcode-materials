@@ -9,10 +9,9 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Progress',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,45 +23,25 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'format',
             'zh-CN': 'format'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'format',
-            'zh-CN': 'format'
           }
         },
         name: 'format',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'gapDegree',
-            'zh-CN': 'gapDegree'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'gapDegree',
             'zh-CN': 'gapDegree'
           }
         },
         name: 'gapDegree',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'gapPosition',
-            'zh-CN': 'gapPosition'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'gapPosition',
             'zh-CN': 'gapPosition'
@@ -108,56 +87,34 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                 value: 'bottom'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'percent',
-            'zh-CN': 'percent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'percent',
             'zh-CN': 'percent'
           }
         },
         name: 'percent',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showInfo',
-            'zh-CN': 'showInfo'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showInfo',
             'zh-CN': 'showInfo'
           }
         },
         name: 'showInfo',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -168,10 +125,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'MixedSetter',
                 props: {}
@@ -199,8 +153,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                       value: 'small'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -209,11 +162,6 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -259,37 +207,23 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                 value: 'exception'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'steps',
-            'zh-CN': 'steps'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'steps',
             'zh-CN': 'steps'
           }
         },
         name: 'steps',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'strokeColor',
-            'zh-CN': 'strokeColor'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'strokeColor',
             'zh-CN': 'strokeColor'
@@ -300,34 +234,26 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                },
-                initialValue: undefined
+                  itemSetter: 'StringSetter'
+                }
               },
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
-                    extraSetter: {
-                      componentName: 'StringSetter',
-                      initialValue: undefined
-                    }
+                    extraSetter: 'StringSetter'
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -335,8 +261,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -345,11 +270,6 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'strokeLinecap',
-            'zh-CN': 'strokeLinecap'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'strokeLinecap',
             'zh-CN': 'strokeLinecap'
@@ -387,37 +307,23 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                 value: 'butt'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'strokeWidth',
-            'zh-CN': 'strokeWidth'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'strokeWidth',
             'zh-CN': 'strokeWidth'
           }
         },
         name: 'strokeWidth',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'success',
-            'zh-CN': 'success'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'success',
             'zh-CN': 'success'
@@ -426,6 +332,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         name: 'success',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -438,10 +345,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'percent',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -452,10 +356,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'progress',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -466,16 +367,9 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'strokeColor',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -486,27 +380,14 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'trailColor',
             'zh-CN': 'trailColor'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'trailColor',
-            'zh-CN': 'trailColor'
           }
         },
         name: 'trailColor',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -544,8 +425,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
                 value: 'dashboard'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

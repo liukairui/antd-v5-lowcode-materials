@@ -9,10 +9,9 @@ const StepsMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Steps',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const StepsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'current',
             'zh-CN': 'current'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'current',
-            'zh-CN': 'current'
           }
         },
         name: 'current',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'direction',
             'zh-CN': 'direction'
@@ -74,56 +60,23 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'iconPrefix',
-            'zh-CN': 'iconPrefix'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'iconPrefix',
-            'zh-CN': 'iconPrefix'
           }
-        },
-        name: 'iconPrefix',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'initial',
-            'zh-CN': 'initial'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'initial',
             'zh-CN': 'initial'
           }
         },
         name: 'initial',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -132,9 +85,11 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -147,10 +102,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'className',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -161,16 +113,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'description',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -181,29 +124,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'icon',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
-                    },
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'onClick',
-                          'zh-CN': 'onClick'
-                        }
-                      },
-                      name: 'onClick',
-                      setter: {
-                        componentName: 'FunctionSetter'
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -219,42 +140,41 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         props: {
                           dataSource: [
                             {
-                              label: 'error',
-                              value: 'error'
+                              label: 'process',
+                              value: 'process'
                             },
                             {
                               label: 'wait',
                               value: 'wait'
                             },
                             {
-                              label: 'process',
-                              value: 'process'
-                            },
-                            {
                               label: 'finish',
                               value: 'finish'
+                            },
+                            {
+                              label: 'error',
+                              value: 'error'
                             }
                           ],
                           options: [
                             {
-                              label: 'error',
-                              value: 'error'
+                              label: 'process',
+                              value: 'process'
                             },
                             {
                               label: 'wait',
                               value: 'wait'
                             },
                             {
-                              label: 'process',
-                              value: 'process'
-                            },
-                            {
                               label: 'finish',
                               value: 'finish'
+                            },
+                            {
+                              label: 'error',
+                              value: 'error'
                             }
                           ]
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -266,10 +186,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'disabled',
-                      setter: {
-                        componentName: 'BoolSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'BoolSetter'
                     },
                     {
                       title: {
@@ -280,16 +197,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'title',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -300,16 +208,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'subTitle',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -321,38 +220,21 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                       },
                       name: 'style',
                       setter: {
-                        componentName: 'ObjectSetter',
-                        props: {
-                          config: {
-                            extraSetter: {
-                              componentName: 'MixedSetter',
-                              props: {}
-                            }
-                          }
-                        },
-                        initialValue: undefined
-                      }
+                        componentName: 'StyleSetter'
+                      },
+                      display: 'accordion',
+                      type: 'field'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'labelPlacement',
-            'zh-CN': 'labelPlacement'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'labelPlacement',
             'zh-CN': 'labelPlacement'
@@ -382,55 +264,34 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'percent',
-            'zh-CN': 'percent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'percent',
             'zh-CN': 'percent'
           }
         },
         name: 'percent',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'progressDot',
-            'zh-CN': 'progressDot'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'progressDot',
             'zh-CN': 'progressDot'
@@ -440,45 +301,24 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['BoolSetter', 'FunctionSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'responsive',
-            'zh-CN': 'responsive'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'responsive',
             'zh-CN': 'responsive'
           }
         },
         name: 'responsive',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -508,18 +348,12 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                 value: 'small'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -531,52 +365,46 @@ const StepsMeta: IPublicTypeComponentMetadata = {
           props: {
             dataSource: [
               {
-                label: 'error',
-                value: 'error'
+                label: 'process',
+                value: 'process'
               },
               {
                 label: 'wait',
                 value: 'wait'
               },
               {
-                label: 'process',
-                value: 'process'
-              },
-              {
                 label: 'finish',
                 value: 'finish'
+              },
+              {
+                label: 'error',
+                value: 'error'
               }
             ],
             options: [
               {
-                label: 'error',
-                value: 'error'
+                label: 'process',
+                value: 'process'
               },
               {
                 label: 'wait',
                 value: 'wait'
               },
               {
-                label: 'process',
-                value: 'process'
-              },
-              {
                 label: 'finish',
                 value: 'finish'
+              },
+              {
+                label: 'error',
+                value: 'error'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -614,8 +442,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                 value: 'navigation'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

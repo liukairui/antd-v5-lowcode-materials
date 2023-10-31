@@ -9,10 +9,9 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Badge',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,16 +23,12 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'classNames',
             'zh-CN': 'classNames'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
           }
         },
         name: 'classNames',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -46,10 +41,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'root',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -60,16 +52,9 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'indicator',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -77,11 +62,6 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'color',
             'zh-CN': 'color'
@@ -94,6 +74,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -101,8 +82,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
               {
                 componentName: 'SelectSetter',
@@ -215,8 +195,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                       value: 'gold'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -228,52 +207,25 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'count',
             'zh-CN': 'count'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'count',
-            'zh-CN': 'count'
           }
         },
         name: 'count',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'dot',
-            'zh-CN': 'dot'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'dot',
             'zh-CN': 'dot'
           }
         },
         name: 'dot',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'offset',
-            'zh-CN': 'offset'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'offset',
             'zh-CN': 'offset'
@@ -291,65 +243,36 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'overflowCount',
             'zh-CN': 'overflowCount'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'overflowCount',
-            'zh-CN': 'overflowCount'
           }
         },
         name: 'overflowCount',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'scrollNumberPrefixCls',
-            'zh-CN': 'scrollNumberPrefixCls'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'scrollNumberPrefixCls',
             'zh-CN': 'scrollNumberPrefixCls'
           }
         },
         name: 'scrollNumberPrefixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showZero',
-            'zh-CN': 'showZero'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showZero',
             'zh-CN': 'showZero'
           }
         },
         name: 'showZero',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -379,18 +302,12 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                 value: 'small'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -444,8 +361,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                 value: 'processing'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -454,16 +370,12 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'styles',
             'zh-CN': 'styles'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'styles',
-            'zh-CN': 'styles'
           }
         },
         name: 'styles',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -478,6 +390,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                   name: 'root',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -485,8 +398,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -500,6 +412,7 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                   name: 'indicator',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -507,15 +420,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -526,24 +434,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'text',
             'zh-CN': 'text'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'text',
-            'zh-CN': 'text'
           }
         },
         name: 'text',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -551,18 +445,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       }
     ],
     supports: {

@@ -9,10 +9,9 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'TypographyParagraph',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'code',
             'zh-CN': 'code'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'code',
-            'zh-CN': 'code'
           }
         },
         name: 'code',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'copyable',
-            'zh-CN': 'copyable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'copyable',
             'zh-CN': 'copyable'
@@ -55,12 +41,10 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -73,10 +57,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'text',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -87,9 +68,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onCopy',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -100,16 +79,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'icon',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -120,16 +90,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tooltips',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -163,15 +124,10 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                                 value: 'text/html'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -185,87 +141,26 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'delete',
             'zh-CN': 'delete'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'delete',
-            'zh-CN': 'delete'
           }
         },
         name: 'delete',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
+
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'editable',
-            'zh-CN': 'editable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'editable',
             'zh-CN': 'editable'
@@ -276,12 +171,10 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -294,10 +187,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'text',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -308,10 +198,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'editing',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -322,16 +209,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'icon',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -342,16 +220,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tooltip',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -362,9 +231,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onStart',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -375,9 +242,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onChange',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -388,9 +253,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onCancel',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -401,9 +264,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onEnd',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -414,10 +275,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'maxLength',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -432,12 +290,10 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     items: [
@@ -450,10 +306,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                                           }
                                         },
                                         name: 'minRows',
-                                        setter: {
-                                          componentName: 'NumberSetter',
-                                          initialValue: undefined
-                                        }
+                                        setter: 'NumberSetter'
                                       },
                                       {
                                         title: {
@@ -464,16 +317,9 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                                           }
                                         },
                                         name: 'maxRows',
-                                        setter: {
-                                          componentName: 'NumberSetter',
-                                          initialValue: undefined
-                                        }
+                                        setter: 'NumberSetter'
                                       }
-                                    ],
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
+                                    ]
                                   }
                                 }
                               }
@@ -492,6 +338,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                         name: 'triggerType',
                         setter: {
                           componentName: 'ArraySetter',
+                          condition: () => false,
                           props: {
                             itemSetter: {
                               componentName: 'RadioGroupSetter',
@@ -516,11 +363,9 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                                     value: 'text'
                                   }
                                 ]
-                              },
-                              initialValue: undefined
+                              }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -532,22 +377,9 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'enterIcon',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -561,11 +393,6 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'ellipsis',
             'zh-CN': 'ellipsis'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'ellipsis',
-            'zh-CN': 'ellipsis'
           }
         },
         name: 'ellipsis',
@@ -573,12 +400,10 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -591,10 +416,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'rows',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -605,10 +427,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'expandable',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -619,10 +438,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'suffix',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -633,16 +449,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'symbol',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -653,9 +460,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onExpand',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -666,9 +471,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'onEllipsis',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       },
                       {
                         title: {
@@ -682,242 +485,11 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                         setter: {
                           componentName: 'MixedSetter',
                           props: {
-                            setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'ObjectSetter',
-                                props: {
-                                  config: {
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                },
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'ObjectSetter',
-                                props: {
-                                  config: {
-                                    items: [
-                                      {
-                                        title: {
-                                          label: {
-                                            type: 'i18n',
-                                            'en-US': 'title',
-                                            'zh-CN': 'title'
-                                          }
-                                        },
-                                        name: 'title',
-                                        setter: {
-                                          componentName: 'MixedSetter',
-                                          props: {
-                                            setters: [
-                                              {
-                                                componentName: 'StringSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'NumberSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'BoolSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'ObjectSetter',
-                                                props: {
-                                                  config: {
-                                                    extraSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {}
-                                                    }
-                                                  }
-                                                },
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'FunctionSetter'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      },
-                                      {
-                                        title: {
-                                          label: {
-                                            type: 'i18n',
-                                            'en-US': 'overlay',
-                                            'zh-CN': 'overlay'
-                                          }
-                                        },
-                                        name: 'overlay',
-                                        setter: {
-                                          componentName: 'MixedSetter',
-                                          props: {
-                                            setters: [
-                                              {
-                                                componentName: 'StringSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'NumberSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'BoolSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'ObjectSetter',
-                                                props: {
-                                                  config: {
-                                                    extraSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {}
-                                                    }
-                                                  }
-                                                },
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'FunctionSetter'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      }
-                                    ],
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                }
-                              },
-                              {
-                                componentName: 'ObjectSetter',
-                                props: {
-                                  config: {
-                                    items: [
-                                      {
-                                        title: {
-                                          label: {
-                                            type: 'i18n',
-                                            'en-US': 'title',
-                                            'zh-CN': 'title'
-                                          }
-                                        },
-                                        name: 'title',
-                                        setter: {
-                                          componentName: 'MixedSetter',
-                                          props: {
-                                            setters: [
-                                              {
-                                                componentName: 'StringSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'NumberSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'BoolSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'ObjectSetter',
-                                                props: {
-                                                  config: {
-                                                    extraSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {}
-                                                    }
-                                                  }
-                                                },
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'FunctionSetter'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      },
-                                      {
-                                        title: {
-                                          label: {
-                                            type: 'i18n',
-                                            'en-US': 'overlay',
-                                            'zh-CN': 'overlay'
-                                          }
-                                        },
-                                        name: 'overlay',
-                                        setter: {
-                                          componentName: 'MixedSetter',
-                                          props: {
-                                            setters: [
-                                              {
-                                                componentName: 'StringSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'NumberSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'BoolSetter',
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'ObjectSetter',
-                                                props: {
-                                                  config: {
-                                                    extraSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {}
-                                                    }
-                                                  }
-                                                },
-                                                initialValue: undefined
-                                              },
-                                              {
-                                                componentName: 'FunctionSetter'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      }
-                                    ],
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                }
-                              }
-                            ]
+                            setters: ['BoolSetter', 'SlotSetter']
                           }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -929,124 +501,38 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'italic',
-            'zh-CN': 'italic'
-          },
-          tip: {
-            type: 'i18n',
             'en-US': 'italic',
             'zh-CN': 'italic'
           }
         },
         name: 'italic',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'keyboard',
-            'zh-CN': 'keyboard'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'keyboard',
-            'zh-CN': 'keyboard'
-          }
-        },
-        name: 'keyboard',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'mark',
-            'zh-CN': 'mark'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mark',
             'zh-CN': 'mark'
           }
         },
         name: 'mark',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'strong',
-            'zh-CN': 'strong'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'strong',
             'zh-CN': 'strong'
           }
         },
         name: 'strong',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          }
-        },
-        name: 'title',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -1092,8 +578,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                 value: 'warning'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1102,18 +587,10 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'underline',
             'zh-CN': 'underline'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'underline',
-            'zh-CN': 'underline'
           }
         },
         name: 'underline',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

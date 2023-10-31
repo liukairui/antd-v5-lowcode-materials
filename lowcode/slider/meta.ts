@@ -9,10 +9,9 @@ const SliderMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Slider',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'autoFocus',
             'zh-CN': 'autoFocus'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'autoFocus',
-            'zh-CN': 'autoFocus'
           }
         },
         name: 'autoFocus',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'classNames',
             'zh-CN': 'classNames'
@@ -53,6 +39,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         name: 'classNames',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -60,18 +47,12 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultValue',
             'zh-CN': 'defaultValue'
@@ -82,19 +63,13 @@ const SliderMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                },
-                initialValue: undefined
+                  itemSetter: 'NumberSetter'
+                }
               }
             ]
           }
@@ -106,103 +81,47 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'dots',
-            'zh-CN': 'dots'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'dots',
             'zh-CN': 'dots'
           }
         },
         name: 'dots',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'included',
-            'zh-CN': 'included'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'included',
             'zh-CN': 'included'
           }
         },
         name: 'included',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'keyboard',
-            'zh-CN': 'keyboard'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'keyboard',
             'zh-CN': 'keyboard'
           }
         },
         name: 'keyboard',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'marks',
-            'zh-CN': 'marks'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'marks',
             'zh-CN': 'marks'
@@ -211,6 +130,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         name: 'marks',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -220,56 +140,34 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'max',
-            'zh-CN': 'max'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'max',
             'zh-CN': 'max'
           }
         },
         name: 'max',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'min',
-            'zh-CN': 'min'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'min',
             'zh-CN': 'min'
           }
         },
         name: 'min',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onAfterChange',
-            'zh-CN': 'onAfterChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onAfterChange',
             'zh-CN': 'onAfterChange'
@@ -279,25 +177,13 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'FunctionSetter'
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['FunctionSetter', 'FunctionSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
@@ -307,25 +193,13 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'FunctionSetter'
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['FunctionSetter', 'FunctionSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'range',
-            'zh-CN': 'range'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'range',
             'zh-CN': 'range'
@@ -336,12 +210,10 @@ const SliderMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -354,16 +226,9 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'draggableTrack',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -377,46 +242,25 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'reverse',
             'zh-CN': 'reverse'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'reverse',
-            'zh-CN': 'reverse'
           }
         },
         name: 'reverse',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'step',
-            'zh-CN': 'step'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'step',
             'zh-CN': 'step'
           }
         },
         name: 'step',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'styles',
-            'zh-CN': 'styles'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'styles',
             'zh-CN': 'styles'
@@ -425,6 +269,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         name: 'styles',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -432,8 +277,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -442,16 +286,12 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'tooltip',
             'zh-CN': 'tooltip'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'tooltip',
-            'zh-CN': 'tooltip'
           }
         },
         name: 'tooltip',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -464,10 +304,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'prefixCls',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -478,10 +315,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'open',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -595,8 +429,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                           value: 'rightBottom'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -608,9 +441,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'getPopupContainer',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -621,9 +452,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'formatter',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -634,16 +463,9 @@ const SliderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'autoAdjustOverflow',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -654,11 +476,6 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
           }
         },
         name: 'value',
@@ -666,19 +483,13 @@ const SliderMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
-                },
-                initialValue: undefined
+                  itemSetter: 'NumberSetter'
+                }
               }
             ]
           }
@@ -690,18 +501,10 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'vertical',
             'zh-CN': 'vertical'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'vertical',
-            'zh-CN': 'vertical'
           }
         },
         name: 'vertical',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

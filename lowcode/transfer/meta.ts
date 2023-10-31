@@ -9,10 +9,9 @@ const TransferMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Transfer',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,88 +23,56 @@ const TransferMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'dataSource',
             'zh-CN': 'dataSource'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'dataSource',
-            'zh-CN': 'dataSource'
           }
         },
         name: 'dataSource',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {}
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'filterOption',
-            'zh-CN': 'filterOption'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'filterOption',
             'zh-CN': 'filterOption'
           }
         },
         name: 'filterOption',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'footer',
-            'zh-CN': 'footer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'footer',
             'zh-CN': 'footer'
           }
         },
         name: 'footer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'listStyle',
-            'zh-CN': 'listStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'listStyle',
             'zh-CN': 'listStyle'
@@ -118,6 +85,7 @@ const TransferMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -125,12 +93,9 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -141,16 +106,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
           }
         },
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -158,109 +119,67 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onScroll',
-            'zh-CN': 'onScroll'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onScroll',
             'zh-CN': 'onScroll'
           }
         },
         name: 'onScroll',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onSearch',
-            'zh-CN': 'onSearch'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onSearch',
             'zh-CN': 'onSearch'
           }
         },
         name: 'onSearch',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onSelectChange',
-            'zh-CN': 'onSelectChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onSelectChange',
             'zh-CN': 'onSelectChange'
           }
         },
         name: 'onSelectChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'oneWay',
-            'zh-CN': 'oneWay'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'oneWay',
             'zh-CN': 'oneWay'
           }
         },
         name: 'oneWay',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'operationStyle',
-            'zh-CN': 'operationStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'operationStyle',
             'zh-CN': 'operationStyle'
@@ -269,6 +188,7 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         name: 'operationStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -276,18 +196,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'operations',
-            'zh-CN': 'operations'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'operations',
             'zh-CN': 'operations'
@@ -296,23 +210,15 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         name: 'operations',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
+            itemSetter: 'StringSetter'
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pagination',
-            'zh-CN': 'pagination'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pagination',
             'zh-CN': 'pagination'
@@ -323,12 +229,10 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -341,10 +245,7 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'pageSize',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -355,10 +256,7 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'simple',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -369,10 +267,7 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'showSizeChanger',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -383,16 +278,9 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'showLessItems',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -406,44 +294,25 @@ const TransferMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'render',
             'zh-CN': 'render'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'render',
-            'zh-CN': 'render'
           }
         },
         name: 'render',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'rowKey',
-            'zh-CN': 'rowKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'rowKey',
             'zh-CN': 'rowKey'
           }
         },
         name: 'rowKey',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'selectAllLabels',
-            'zh-CN': 'selectAllLabels'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'selectAllLabels',
             'zh-CN': 'selectAllLabels'
@@ -452,25 +321,18 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         name: 'selectAllLabels',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
                 setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  },
+                  'StringSetter',
+                  'NumberSetter',
+                  'BoolSetter',
                   {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -478,27 +340,18 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   },
-                  {
-                    componentName: 'FunctionSetter'
-                  }
+                  'FunctionSetter'
                 ]
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'selectedKeys',
-            'zh-CN': 'selectedKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'selectedKeys',
             'zh-CN': 'selectedKeys'
@@ -507,86 +360,48 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         name: 'selectedKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
+            itemSetter: 'StringSetter'
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'selectionsIcon',
-            'zh-CN': 'selectionsIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'selectionsIcon',
             'zh-CN': 'selectionsIcon'
           }
         },
         name: 'selectionsIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showSearch',
-            'zh-CN': 'showSearch'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showSearch',
             'zh-CN': 'showSearch'
           }
         },
         name: 'showSearch',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showSelectAll',
-            'zh-CN': 'showSelectAll'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showSelectAll',
             'zh-CN': 'showSelectAll'
           }
         },
         name: 'showSelectAll',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -624,18 +439,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                 value: 'error'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'targetKeys',
-            'zh-CN': 'targetKeys'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'targetKeys',
             'zh-CN': 'targetKeys'
@@ -644,13 +453,10 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         name: 'targetKeys',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'StringSetter',
-              initialValue: undefined
-            }
-          },
-          initialValue: undefined
+            itemSetter: 'StringSetter'
+          }
         }
       },
       {
@@ -659,29 +465,15 @@ const TransferMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'titles',
             'zh-CN': 'titles'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'titles',
-            'zh-CN': 'titles'
           }
         },
         name: 'titles',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'SlotSetter',
-              props: {
-                mode: 'node'
-              },
-              initialValue: {
-                type: 'JSSlot',
-                value: []
-              }
-            }
-          },
-          initialValue: undefined
+            itemSetter: 'SlotSetter'
+          }
         }
       }
     ],

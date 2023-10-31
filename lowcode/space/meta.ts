@@ -9,10 +9,9 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Space',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,11 +23,6 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'align',
             'zh-CN': 'align'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'align',
-            'zh-CN': 'align'
           }
         },
         name: 'align',
@@ -37,16 +31,16 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
           props: {
             dataSource: [
               {
-                label: 'center',
-                value: 'center'
+                label: 'start',
+                value: 'start'
               },
               {
                 label: 'end',
                 value: 'end'
               },
               {
-                label: 'start',
-                value: 'start'
+                label: 'center',
+                value: 'center'
               },
               {
                 label: 'baseline',
@@ -55,76 +49,28 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             ],
             options: [
               {
-                label: 'center',
-                value: 'center'
+                label: 'start',
+                value: 'start'
               },
               {
                 label: 'end',
                 value: 'end'
               },
               {
-                label: 'start',
-                value: 'start'
+                label: 'center',
+                value: 'center'
               },
               {
                 label: 'baseline',
                 value: 'baseline'
               }
             ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          }
-        },
-        name: 'classNames',
-        setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'item',
-                      'zh-CN': 'item'
-                    }
-                  },
-                  name: 'item',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
-                }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'direction',
             'zh-CN': 'direction'
@@ -154,18 +100,12 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -176,14 +116,6 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'MixedSetter',
-                props: {}
-              },
               {
                 componentName: 'RadioGroupSetter',
                 props: {
@@ -215,8 +147,58 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
                       value: 'large'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
+              },
+              'NumberSetter',
+              /**
+               * @TODO ArraySetter 暂不支持 MixedSetter，会只显示 RadioGroupSetter
+               */
+              {
+                componentName: 'ArraySetter',
+                condition: () => false,
+                props: {
+                  itemSetter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
+                        {
+                          componentName: 'RadioGroupSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'small',
+                                value: 'small'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'large',
+                                value: 'large'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'small',
+                                value: 'small'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'large',
+                                value: 'large'
+                              }
+                            ]
+                          }
+                        },
+                        'NumberSetter'
+                      ]
+                    }
+                  }
+                }
               }
             ]
           }
@@ -228,41 +210,34 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'split',
             'zh-CN': 'split'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'split',
-            'zh-CN': 'split'
           }
         },
         name: 'split',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'styles',
-            'zh-CN': 'styles'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'styles',
-            'zh-CN': 'styles'
+            'en-US': 'wrap',
+            'zh-CN': 'wrap'
           }
         },
-        name: 'styles',
+        name: 'wrap',
+        setter: 'BoolSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'classNames',
+            'zh-CN': 'classNames'
+          }
+        },
+        name: 'classNames',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -275,24 +250,9 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'item',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    },
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -301,19 +261,41 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'wrap',
-            'zh-CN': 'wrap'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'wrap',
-            'zh-CN': 'wrap'
+            'en-US': 'styles',
+            'zh-CN': 'styles'
           }
         },
-        name: 'wrap',
+        name: 'styles',
         setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
+          componentName: 'ObjectSetter',
+          condition: () => false,
+          props: {
+            config: {
+              items: [
+                {
+                  title: 'item',
+                  display: 'entry',
+                  type: 'group',
+                  items: [
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'item',
+                          'zh-CN': 'item'
+                        }
+                      },
+                      name: 'item',
+                      setter: {
+                        componentName: 'StyleSetter'
+                      },
+                      display: 'block'
+                    }
+                  ]
+                }
+              ]
+            }
+          }
         }
       }
     ],

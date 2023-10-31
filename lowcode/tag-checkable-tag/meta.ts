@@ -9,10 +9,9 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'TagCheckableTag',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,36 +23,21 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'checked',
             'zh-CN': 'checked'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'checked',
-            'zh-CN': 'checked'
           }
         },
         name: 'checked',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -61,17 +45,10 @@ const TagCheckableTagMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
           }
         },
         name: 'onClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       }
     ],
     supports: {

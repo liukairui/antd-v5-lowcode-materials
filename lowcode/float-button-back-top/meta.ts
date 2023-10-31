@@ -9,23 +9,20 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'FloatButtonBackTop',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
   configure: {
     props: [
+      /**
+       * @TODO 入参为 BadgeProps
+       */
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'badge',
-            'zh-CN': 'badge'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'badge',
             'zh-CN': 'badge'
@@ -34,6 +31,7 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         name: 'badge',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -41,124 +39,67 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'description',
             'zh-CN': 'description'
           }
         },
         name: 'description',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'duration',
-            'zh-CN': 'duration'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'duration',
             'zh-CN': 'duration'
           }
         },
         name: 'duration',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'href',
-            'zh-CN': 'href'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'href',
             'zh-CN': 'href'
           }
         },
         name: 'href',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onClick',
             'zh-CN': 'onClick'
           }
         },
         name: 'onClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'shape',
-            'zh-CN': 'shape'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -188,36 +129,23 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
                 value: 'square'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'target',
-            'zh-CN': 'target'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'target',
             'zh-CN': 'target'
           }
         },
         name: 'target',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tooltip',
-            'zh-CN': 'tooltip'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tooltip',
             'zh-CN': 'tooltip'
@@ -227,46 +155,13 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['SlotSetter', 'FunctionSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -296,8 +191,7 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
                 value: 'primary'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -306,18 +200,10 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'visibilityHeight',
             'zh-CN': 'visibilityHeight'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'visibilityHeight',
-            'zh-CN': 'visibilityHeight'
           }
         },
         name: 'visibilityHeight',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       }
     ],
     supports: {

@@ -9,10 +9,9 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Collapse',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'accordion',
             'zh-CN': 'accordion'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'accordion',
-            'zh-CN': 'accordion'
           }
         },
         name: 'accordion',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'activeKey',
-            'zh-CN': 'activeKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'activeKey',
             'zh-CN': 'activeKey'
@@ -55,34 +41,19 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
                   itemSetter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -94,27 +65,14 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'collapsible',
-            'zh-CN': 'collapsible'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'collapsible',
             'zh-CN': 'collapsible'
@@ -152,18 +110,12 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                 value: 'header'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultActiveKey',
-            'zh-CN': 'defaultActiveKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultActiveKey',
             'zh-CN': 'defaultActiveKey'
@@ -174,34 +126,19 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
               {
                 componentName: 'ArraySetter',
+                condition: () => false,
                 props: {
                   itemSetter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -213,45 +150,25 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'destroyInactivePanel',
             'zh-CN': 'destroyInactivePanel'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'destroyInactivePanel',
-            'zh-CN': 'destroyInactivePanel'
           }
         },
         name: 'destroyInactivePanel',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'expandIcon',
-            'zh-CN': 'expandIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'expandIcon',
             'zh-CN': 'expandIcon'
           }
         },
         name: 'expandIcon',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'expandIconPosition',
-            'zh-CN': 'expandIconPosition'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'expandIconPosition',
             'zh-CN': 'expandIconPosition'
@@ -297,37 +214,23 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                 value: 'start'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'ghost',
-            'zh-CN': 'ghost'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'ghost',
             'zh-CN': 'ghost'
           }
         },
         name: 'ghost',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -336,9 +239,11 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -354,16 +259,7 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
                     },
@@ -376,55 +272,29 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -462,8 +332,7 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

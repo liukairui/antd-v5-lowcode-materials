@@ -2,17 +2,16 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const SpaceCompactMeta: IPublicTypeComponentMetadata = {
   componentName: 'SpaceCompact',
-  title: '紧凑布局',
+  title: '紧凑间距',
   group: '原子组件',
   category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'SpaceCompact',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'block',
             'zh-CN': 'block'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'block',
-            'zh-CN': 'block'
           }
         },
         name: 'block',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'direction',
             'zh-CN': 'direction'
@@ -74,18 +60,12 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
                 value: 'vertical'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -123,8 +103,7 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],
@@ -139,7 +118,7 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: '紧凑布局',
+    title: '紧凑间距',
     screenshot: '',
     schema: {
       componentName: 'SpaceCompact',

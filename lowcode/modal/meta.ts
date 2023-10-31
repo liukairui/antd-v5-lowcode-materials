@@ -9,10 +9,9 @@ const ModalMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Modal',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,26 +23,14 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'afterOpenChange',
             'zh-CN': 'afterOpenChange'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'afterOpenChange',
-            'zh-CN': 'afterOpenChange'
           }
         },
         name: 'afterOpenChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'cancelButtonProps',
-            'zh-CN': 'cancelButtonProps'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'cancelButtonProps',
             'zh-CN': 'cancelButtonProps'
@@ -52,6 +39,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
         name: 'cancelButtonProps',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -64,10 +52,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'href',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -109,15 +94,10 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                           value: 'button'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -128,52 +108,25 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'cancelText',
             'zh-CN': 'cancelText'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'cancelText',
-            'zh-CN': 'cancelText'
           }
         },
         name: 'cancelText',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'centered',
-            'zh-CN': 'centered'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'centered',
             'zh-CN': 'centered'
           }
         },
         name: 'centered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'classNames',
             'zh-CN': 'classNames'
@@ -182,6 +135,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
         name: 'classNames',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -189,119 +143,67 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'closable',
-            'zh-CN': 'closable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'closable',
             'zh-CN': 'closable'
           }
         },
         name: 'closable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'closeIcon',
-            'zh-CN': 'closeIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'closeIcon',
             'zh-CN': 'closeIcon'
           }
         },
         name: 'closeIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'confirmLoading',
-            'zh-CN': 'confirmLoading'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'confirmLoading',
             'zh-CN': 'confirmLoading'
           }
         },
         name: 'confirmLoading',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'destroyOnClose',
-            'zh-CN': 'destroyOnClose'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'destroyOnClose',
             'zh-CN': 'destroyOnClose'
           }
         },
         name: 'destroyOnClose',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'focusTriggerAfterClose',
-            'zh-CN': 'focusTriggerAfterClose'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'focusTriggerAfterClose',
             'zh-CN': 'focusTriggerAfterClose'
           }
         },
         name: 'focusTriggerAfterClose',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'footer',
-            'zh-CN': 'footer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'footer',
             'zh-CN': 'footer'
@@ -312,20 +214,12 @@ const ModalMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -333,12 +227,9 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -349,27 +240,14 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'forceRender',
             'zh-CN': 'forceRender'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'forceRender',
-            'zh-CN': 'forceRender'
           }
         },
         name: 'forceRender',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getContainer',
-            'zh-CN': 'getContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getContainer',
             'zh-CN': 'getContainer'
@@ -380,12 +258,10 @@ const ModalMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -393,12 +269,9 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              },
+              'FunctionSetter',
               {
                 componentName: 'RadioGroupSetter',
                 props: {
@@ -414,8 +287,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                       value: false
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -427,102 +299,58 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'keyboard',
             'zh-CN': 'keyboard'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'keyboard',
-            'zh-CN': 'keyboard'
           }
         },
         name: 'keyboard',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mask',
-            'zh-CN': 'mask'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mask',
             'zh-CN': 'mask'
           }
         },
         name: 'mask',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'maskClosable',
-            'zh-CN': 'maskClosable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'maskClosable',
             'zh-CN': 'maskClosable'
           }
         },
         name: 'maskClosable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'maskTransitionName',
-            'zh-CN': 'maskTransitionName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'maskTransitionName',
             'zh-CN': 'maskTransitionName'
           }
         },
         name: 'maskTransitionName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'modalRender',
-            'zh-CN': 'modalRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'modalRender',
             'zh-CN': 'modalRender'
           }
         },
         name: 'modalRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mousePosition',
-            'zh-CN': 'mousePosition'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mousePosition',
             'zh-CN': 'mousePosition'
@@ -531,6 +359,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
         name: 'mousePosition',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -543,10 +372,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'x',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -557,16 +383,9 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'y',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -577,16 +396,12 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'okButtonProps',
             'zh-CN': 'okButtonProps'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'okButtonProps',
-            'zh-CN': 'okButtonProps'
           }
         },
         name: 'okButtonProps',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -599,10 +414,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'href',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -644,15 +456,10 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                           value: 'button'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -663,33 +470,14 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'okText',
             'zh-CN': 'okText'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'okText',
-            'zh-CN': 'okText'
           }
         },
         name: 'okText',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'okType',
-            'zh-CN': 'okType'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'okType',
             'zh-CN': 'okType'
@@ -751,73 +539,45 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                 value: 'text'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onCancel',
-            'zh-CN': 'onCancel'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onCancel',
             'zh-CN': 'onCancel'
           }
         },
         name: 'onCancel',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onOk',
-            'zh-CN': 'onOk'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onOk',
             'zh-CN': 'onOk'
           }
         },
         name: 'onOk',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'open',
-            'zh-CN': 'open'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'open',
             'zh-CN': 'open'
           }
         },
         name: 'open',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'styles',
-            'zh-CN': 'styles'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'styles',
             'zh-CN': 'styles'
@@ -826,6 +586,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
         name: 'styles',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -833,62 +594,34 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'transitionName',
-            'zh-CN': 'transitionName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'transitionName',
             'zh-CN': 'transitionName'
           }
         },
         name: 'transitionName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': 'width'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'width',
             'zh-CN': 'width'
@@ -898,46 +631,24 @@ const ModalMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'NumberSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'wrapClassName',
-            'zh-CN': 'wrapClassName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'wrapClassName',
             'zh-CN': 'wrapClassName'
           }
         },
         name: 'wrapClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'wrapProps',
-            'zh-CN': 'wrapProps'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'wrapProps',
             'zh-CN': 'wrapProps'
@@ -955,18 +666,10 @@ const ModalMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'zIndex',
             'zh-CN': 'zIndex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'zIndex',
-            'zh-CN': 'zIndex'
           }
         },
         name: 'zIndex',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       }
     ],
     supports: {

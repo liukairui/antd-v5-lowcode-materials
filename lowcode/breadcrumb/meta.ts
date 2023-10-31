@@ -9,10 +9,9 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Breadcrumb',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,26 +23,14 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'itemRender',
             'zh-CN': 'itemRender'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'itemRender',
-            'zh-CN': 'itemRender'
           }
         },
         name: 'itemRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
@@ -52,31 +39,111 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  items: [
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'className',
+                          'zh-CN': 'className'
+                        }
+                      },
+                      name: 'className',
+                      setter: 'StringSetter'
+                    },
+                    /**
+                     * @TODO DropdownProps
+                     */
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'dropdownProps',
+                          'zh-CN': 'dropdownProps'
+                        }
+                      },
+                      name: 'dropdownProps',
+                      setter: {
+                        componentName: 'VariableSetter'
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'href',
+                          'zh-CN': 'href'
+                        }
+                      },
+                      name: 'href',
+                      setter: 'StringSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'path',
+                          'zh-CN': 'path'
+                        }
+                      },
+                      name: 'path',
+                      setter: 'StringSetter'
+                    },
+                    /**
+                     * @TODO MenuProps
+                     */
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'menu',
+                          'zh-CN': 'menu'
+                        }
+                      },
+                      name: 'menu',
+                      setter: {
+                        componentName: 'VariableSetter'
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'onClick',
+                          'zh-CN': 'onClick'
+                        }
+                      },
+                      name: 'onClick',
+                      setter: 'FunctionSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'title',
+                          'zh-CN': 'title'
+                        }
+                      },
+                      name: 'title',
+                      setter: 'SlotSetter'
+                    }
+                  ]
                 }
-              },
-              initialValue: undefined
+              }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'params',
-            'zh-CN': 'params'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'params',
             'zh-CN': 'params'
@@ -84,16 +151,7 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
         },
         name: 'params',
         setter: {
-          componentName: 'ObjectSetter',
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          },
-          initialValue: undefined
+          componentName: 'VariableSetter'
         }
       },
       {
@@ -102,24 +160,10 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'separator',
             'zh-CN': 'separator'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'separator',
-            'zh-CN': 'separator'
           }
         },
         name: 'separator',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       }
     ],
     supports: {

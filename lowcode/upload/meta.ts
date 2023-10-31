@@ -9,10 +9,9 @@ const UploadMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Upload',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'accept',
             'zh-CN': 'accept'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'accept',
-            'zh-CN': 'accept'
           }
         },
         name: 'accept',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'action',
-            'zh-CN': 'action'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'action',
             'zh-CN': 'action'
@@ -54,47 +40,24 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['StringSetter', 'FunctionSetter', 'FunctionSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'beforeUpload',
-            'zh-CN': 'beforeUpload'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'beforeUpload',
             'zh-CN': 'beforeUpload'
           }
         },
         name: 'beforeUpload',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'capture',
-            'zh-CN': 'capture'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'capture',
             'zh-CN': 'capture'
@@ -104,45 +67,24 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              }
-            ]
+            setters: ['StringSetter', 'BoolSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'customRequest',
-            'zh-CN': 'customRequest'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'customRequest',
             'zh-CN': 'customRequest'
           }
         },
         name: 'customRequest',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'data',
-            'zh-CN': 'data'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'data',
             'zh-CN': 'data'
@@ -155,10 +97,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
                       componentName: 'ObjectSetter',
+                      condition: () => false,
                       props: {
                         config: {
                           extraSetter: {
@@ -166,16 +110,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                             props: {}
                           }
                         }
-                      },
-                      initialValue: undefined
+                      }
                     }
                   }
-                },
-                initialValue: undefined
+                }
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -186,19 +126,16 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'defaultFileList',
             'zh-CN': 'defaultFileList'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'defaultFileList',
-            'zh-CN': 'defaultFileList'
           }
         },
         name: 'defaultFileList',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -225,10 +162,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'uid',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -239,10 +173,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'size',
-                      setter: {
-                        componentName: 'NumberSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'NumberSetter'
                     },
                     {
                       title: {
@@ -253,10 +184,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'name',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -267,10 +195,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'fileName',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -281,10 +206,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'lastModified',
-                      setter: {
-                        componentName: 'NumberSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'NumberSetter'
                     },
                     {
                       title: {
@@ -297,6 +219,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'lastModifiedDate',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -304,8 +227,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -317,10 +239,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'url',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -370,8 +289,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               value: 'removed'
                             }
                           ]
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -383,10 +301,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'percent',
-                      setter: {
-                        componentName: 'NumberSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'NumberSetter'
                     },
                     {
                       title: {
@@ -397,10 +312,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'thumbUrl',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -442,8 +354,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               value: 'use-credentials'
                             }
                           ]
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -457,6 +368,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'originFileObj',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             items: [
@@ -471,6 +383,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                 name: 'lastModifiedDate',
                                 setter: {
                                   componentName: 'ObjectSetter',
+                                  condition: () => false,
                                   props: {
                                     config: {
                                       extraSetter: {
@@ -478,15 +391,10 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                         props: {}
                                       }
                                     }
-                                  },
-                                  initialValue: undefined
+                                  }
                                 }
                               }
-                            ],
-                            extraSetter: {
-                              componentName: 'MixedSetter',
-                              props: {}
-                            }
+                            ]
                           }
                         }
                       }
@@ -502,6 +410,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'response',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -509,8 +418,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -550,10 +458,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'type',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -566,6 +471,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'xhr',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -573,8 +479,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -586,69 +491,40 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'preview',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'directory',
-            'zh-CN': 'directory'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'directory',
             'zh-CN': 'directory'
           }
         },
         name: 'directory',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'fileList',
-            'zh-CN': 'fileList'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'fileList',
             'zh-CN': 'fileList'
@@ -657,9 +533,11 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         name: 'fileList',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -686,10 +564,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'uid',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -700,10 +575,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'size',
-                      setter: {
-                        componentName: 'NumberSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'NumberSetter'
                     },
                     {
                       title: {
@@ -714,10 +586,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'name',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -728,10 +597,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'fileName',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -742,10 +608,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'lastModified',
-                      setter: {
-                        componentName: 'NumberSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'NumberSetter'
                     },
                     {
                       title: {
@@ -758,6 +621,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'lastModifiedDate',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -765,8 +629,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -778,10 +641,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'url',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -831,8 +691,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               value: 'removed'
                             }
                           ]
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -844,10 +703,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'percent',
-                      setter: {
-                        componentName: 'NumberSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'NumberSetter'
                     },
                     {
                       title: {
@@ -858,10 +714,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'thumbUrl',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -903,8 +756,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               value: 'use-credentials'
                             }
                           ]
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -918,6 +770,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'originFileObj',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             items: [
@@ -932,6 +785,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                 name: 'lastModifiedDate',
                                 setter: {
                                   componentName: 'ObjectSetter',
+                                  condition: () => false,
                                   props: {
                                     config: {
                                       extraSetter: {
@@ -939,15 +793,10 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                         props: {}
                                       }
                                     }
-                                  },
-                                  initialValue: undefined
+                                  }
                                 }
                               }
-                            ],
-                            extraSetter: {
-                              componentName: 'MixedSetter',
-                              props: {}
-                            }
+                            ]
                           }
                         }
                       }
@@ -963,6 +812,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'response',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -970,8 +820,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -1011,10 +860,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'type',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -1027,6 +873,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'xhr',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -1034,8 +881,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -1047,31 +893,18 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'preview',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'headers',
-            'zh-CN': 'headers'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'headers',
             'zh-CN': 'headers'
@@ -1080,98 +913,50 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         name: 'headers',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
-              extraSetter: {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              }
+              extraSetter: 'StringSetter'
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'iconRender',
-            'zh-CN': 'iconRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'iconRender',
             'zh-CN': 'iconRender'
           }
         },
         name: 'iconRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'isImageUrl',
-            'zh-CN': 'isImageUrl'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'isImageUrl',
             'zh-CN': 'isImageUrl'
           }
         },
         name: 'isImageUrl',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'itemRender',
-            'zh-CN': 'itemRender'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'itemRender',
             'zh-CN': 'itemRender'
           }
         },
         name: 'itemRender',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'listType',
-            'zh-CN': 'listType'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'listType',
             'zh-CN': 'listType'
@@ -1217,8 +1002,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                 value: 'picture-circle'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1227,16 +1011,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
           }
         },
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1249,10 +1029,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'uploading',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1263,10 +1040,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'removeFile',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1277,10 +1051,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'downloadFile',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1291,10 +1062,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'uploadError',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1305,16 +1073,9 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'previewFile',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1325,27 +1086,14 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'maxCount',
             'zh-CN': 'maxCount'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'maxCount',
-            'zh-CN': 'maxCount'
           }
         },
         name: 'maxCount',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'method',
-            'zh-CN': 'method'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'method',
             'zh-CN': 'method'
@@ -1407,111 +1155,67 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                 value: 'patch'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'multiple',
-            'zh-CN': 'multiple'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'multiple',
             'zh-CN': 'multiple'
           }
         },
         name: 'multiple',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'name',
             'zh-CN': 'name'
           }
         },
         name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onDrop',
-            'zh-CN': 'onDrop'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onDrop',
             'zh-CN': 'onDrop'
           }
         },
         name: 'onDrop',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'openFileDialogOnClick',
-            'zh-CN': 'openFileDialogOnClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'openFileDialogOnClick',
             'zh-CN': 'openFileDialogOnClick'
           }
         },
         name: 'openFileDialogOnClick',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'previewFile',
-            'zh-CN': 'previewFile'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'previewFile',
             'zh-CN': 'previewFile'
           }
         },
         name: 'previewFile',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'progress',
-            'zh-CN': 'progress'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'progress',
             'zh-CN': 'progress'
@@ -1520,6 +1224,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         name: 'progress',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1527,18 +1232,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showUploadList',
-            'zh-CN': 'showUploadList'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showUploadList',
             'zh-CN': 'showUploadList'
@@ -1549,12 +1248,10 @@ const UploadMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -1581,10 +1278,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'showRemoveIcon',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -1595,10 +1289,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'showPreviewIcon',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -1609,10 +1300,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'showDownloadIcon',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -1627,20 +1315,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -1648,12 +1328,9 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
@@ -1671,20 +1348,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -1692,12 +1361,9 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
@@ -1715,20 +1381,12 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -1736,21 +1394,14 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -1764,27 +1415,14 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'supportServerRender',
             'zh-CN': 'supportServerRender'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'supportServerRender',
-            'zh-CN': 'supportServerRender'
           }
         },
         name: 'supportServerRender',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -1814,8 +1452,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                 value: 'select'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1824,18 +1461,10 @@ const UploadMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'withCredentials',
             'zh-CN': 'withCredentials'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'withCredentials',
-            'zh-CN': 'withCredentials'
           }
         },
         name: 'withCredentials',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

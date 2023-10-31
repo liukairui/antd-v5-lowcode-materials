@@ -2,17 +2,16 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const ConfigProviderMeta: IPublicTypeComponentMetadata = {
   componentName: 'ConfigProvider',
-  title: '配置提供器',
+  title: '全局配置器',
   group: '原子组件',
   category: '其他 Other',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'ConfigProvider',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,16 +23,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'alert',
             'zh-CN': 'alert'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'alert',
-            'zh-CN': 'alert'
           }
         },
         name: 'alert',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -46,10 +41,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -62,6 +54,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -69,15 +62,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -85,11 +73,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'anchor',
-            'zh-CN': 'anchor'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'anchor',
             'zh-CN': 'anchor'
@@ -98,6 +81,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'anchor',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -110,10 +94,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -126,6 +107,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -133,15 +115,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -152,27 +129,14 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'autoInsertSpaceInButton',
             'zh-CN': 'autoInsertSpaceInButton'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'autoInsertSpaceInButton',
-            'zh-CN': 'autoInsertSpaceInButton'
           }
         },
         name: 'autoInsertSpaceInButton',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'avatar',
-            'zh-CN': 'avatar'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'avatar',
             'zh-CN': 'avatar'
@@ -181,6 +145,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'avatar',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -193,10 +158,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -209,6 +171,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -216,15 +179,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -232,11 +190,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'badge',
-            'zh-CN': 'badge'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'badge',
             'zh-CN': 'badge'
@@ -245,6 +198,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'badge',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -259,6 +213,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'classNames',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -271,10 +226,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'root',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -285,16 +237,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'indicator',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -310,6 +255,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'styles',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -324,6 +270,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'root',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -331,8 +278,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -346,6 +292,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'indicator',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -353,24 +300,15 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -378,11 +316,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'breadcrumb',
-            'zh-CN': 'breadcrumb'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'breadcrumb',
             'zh-CN': 'breadcrumb'
@@ -391,6 +324,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'breadcrumb',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -403,10 +337,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -419,6 +350,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -426,15 +358,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -445,16 +372,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'button',
             'zh-CN': 'button'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'button',
-            'zh-CN': 'button'
           }
         },
         name: 'button',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -486,11 +409,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     props: {}
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -498,11 +417,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'calendar',
-            'zh-CN': 'calendar'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'calendar',
             'zh-CN': 'calendar'
@@ -511,6 +425,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'calendar',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -523,10 +438,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -539,6 +451,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -546,15 +459,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -562,11 +470,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'card',
-            'zh-CN': 'card'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'card',
             'zh-CN': 'card'
@@ -575,6 +478,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'card',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -587,10 +491,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -603,6 +504,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -610,15 +512,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -626,11 +523,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'carousel',
-            'zh-CN': 'carousel'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'carousel',
             'zh-CN': 'carousel'
@@ -639,6 +531,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'carousel',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -651,10 +544,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -667,6 +557,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -674,15 +565,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -690,11 +576,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'cascader',
-            'zh-CN': 'cascader'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'cascader',
             'zh-CN': 'cascader'
@@ -703,6 +584,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'cascader',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -715,10 +597,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -731,6 +610,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -738,15 +618,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -754,11 +629,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'checkbox',
-            'zh-CN': 'checkbox'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'checkbox',
             'zh-CN': 'checkbox'
@@ -767,6 +637,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'checkbox',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -779,10 +650,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -795,6 +663,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -802,15 +671,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -818,11 +682,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'collapse',
-            'zh-CN': 'collapse'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'collapse',
             'zh-CN': 'collapse'
@@ -831,6 +690,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'collapse',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -843,10 +703,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -859,6 +716,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -866,15 +724,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -882,11 +735,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'colorPicker',
-            'zh-CN': 'colorPicker'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'colorPicker',
             'zh-CN': 'colorPicker'
@@ -895,6 +743,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'colorPicker',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -907,10 +756,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -923,6 +769,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -930,15 +777,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -949,27 +791,14 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'componentDisabled',
             'zh-CN': 'componentDisabled'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'componentDisabled',
-            'zh-CN': 'componentDisabled'
           }
         },
         name: 'componentDisabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'componentSize',
-            'zh-CN': 'componentSize'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'componentSize',
             'zh-CN': 'componentSize'
@@ -1007,8 +836,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -1017,16 +845,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'csp',
             'zh-CN': 'csp'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'csp',
-            'zh-CN': 'csp'
           }
         },
         name: 'csp',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1039,16 +863,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'nonce',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1056,11 +873,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'datePicker',
-            'zh-CN': 'datePicker'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'datePicker',
             'zh-CN': 'datePicker'
@@ -1069,6 +881,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'datePicker',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1081,10 +894,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1097,6 +907,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1104,15 +915,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1120,11 +926,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'descriptions',
-            'zh-CN': 'descriptions'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'descriptions',
             'zh-CN': 'descriptions'
@@ -1133,6 +934,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'descriptions',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1145,10 +947,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1161,6 +960,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1168,68 +968,18 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
       },
+
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'divider',
-            'zh-CN': 'divider'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'divider',
             'zh-CN': 'divider'
@@ -1238,6 +988,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'divider',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1250,10 +1001,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1266,6 +1014,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1273,15 +1022,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1292,16 +1036,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'drawer',
             'zh-CN': 'drawer'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'drawer',
-            'zh-CN': 'drawer'
           }
         },
         name: 'drawer',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1316,6 +1056,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'classNames',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -1328,10 +1069,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'header',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -1342,10 +1080,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'body',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -1356,10 +1091,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'footer',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -1370,10 +1102,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'mask',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -1384,16 +1113,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'content',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -1409,6 +1131,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'styles',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -1423,6 +1146,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'header',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1430,8 +1154,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1445,6 +1168,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'body',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1452,8 +1176,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1467,6 +1190,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'footer',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1474,8 +1198,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1489,6 +1212,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'mask',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1496,8 +1220,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1511,6 +1234,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'content',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -1518,24 +1242,15 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1546,16 +1261,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'empty',
             'zh-CN': 'empty'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'empty',
-            'zh-CN': 'empty'
           }
         },
         name: 'empty',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1568,10 +1279,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1584,6 +1292,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1591,15 +1300,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1610,16 +1314,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'flex',
             'zh-CN': 'flex'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'flex',
-            'zh-CN': 'flex'
           }
         },
         name: 'flex',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1632,16 +1332,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'vertical',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1649,11 +1342,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'form',
-            'zh-CN': 'form'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'form',
             'zh-CN': 'form'
@@ -1662,6 +1350,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'form',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1669,73 +1358,45 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getPopupContainer',
             'zh-CN': 'getPopupContainer'
           }
         },
         name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getTargetContainer',
-            'zh-CN': 'getTargetContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getTargetContainer',
             'zh-CN': 'getTargetContainer'
           }
         },
         name: 'getTargetContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'iconPrefixCls',
-            'zh-CN': 'iconPrefixCls'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'iconPrefixCls',
             'zh-CN': 'iconPrefixCls'
           }
         },
         name: 'iconPrefixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'image',
-            'zh-CN': 'image'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'image',
             'zh-CN': 'image'
@@ -1744,6 +1405,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'image',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1756,10 +1418,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1772,6 +1431,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1779,15 +1439,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1795,11 +1450,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'input',
-            'zh-CN': 'input'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'input',
             'zh-CN': 'input'
@@ -1808,6 +1458,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'input',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1815,18 +1466,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'layout',
-            'zh-CN': 'layout'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'layout',
             'zh-CN': 'layout'
@@ -1835,6 +1480,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'layout',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1847,10 +1493,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1863,6 +1506,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1870,15 +1514,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1886,11 +1525,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'list',
-            'zh-CN': 'list'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'list',
             'zh-CN': 'list'
@@ -1899,6 +1533,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'list',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1911,10 +1546,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1927,6 +1559,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -1934,15 +1567,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -1953,16 +1581,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
           }
         },
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -1975,10 +1599,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'locale',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -1991,6 +1612,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Pagination',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -2003,10 +1625,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'items_per_page',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2017,10 +1636,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'jump_to',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2031,10 +1647,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'jump_to_confirm',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2045,10 +1658,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'page',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2059,10 +1669,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'prev_page',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2073,10 +1680,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'next_page',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2087,10 +1691,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'prev_5',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2101,10 +1702,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'next_5',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2115,10 +1713,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'prev_3',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2129,16 +1724,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'next_3',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -2154,6 +1742,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'DatePicker',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2161,8 +1750,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2176,6 +1764,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'TimePicker',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2183,8 +1772,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2198,6 +1786,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Calendar',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2205,8 +1794,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2220,6 +1808,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Table',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -2232,10 +1821,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterTitle',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2246,16 +1832,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterConfirm',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2266,16 +1843,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterReset',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2286,16 +1854,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterEmptyText',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2306,16 +1865,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterCheckall',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2326,10 +1876,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterSearchPlaceholder',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2344,20 +1891,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -2365,12 +1904,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  'FunctionSetter'
                                 ]
                               }
                             }
@@ -2384,16 +1920,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectAll',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2404,16 +1931,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectNone',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2424,16 +1942,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectInvert',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2444,16 +1953,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectionAll',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -2464,10 +1964,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'sortTitle',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2478,10 +1975,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'expand',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2492,10 +1986,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'collapse',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2506,10 +1997,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'triggerDesc',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2520,10 +2008,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'triggerAsc',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2534,16 +2019,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'cancelSort',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -2559,6 +2037,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Modal',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -2571,10 +2050,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'okText',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2585,10 +2061,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'cancelText',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2599,16 +2072,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'justOkText',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -2624,6 +2090,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Tour',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -2636,10 +2103,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'Next',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2650,10 +2114,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'Previous',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2664,16 +2125,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'Finish',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -2689,6 +2143,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Popconfirm',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -2701,10 +2156,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'okText',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2715,16 +2167,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'cancelText',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -2740,6 +2185,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Transfer',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -2754,19 +2200,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'titles',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
-                                itemSetter: {
-                                  componentName: 'SlotSetter',
-                                  props: {
-                                    mode: 'node'
-                                  },
-                                  initialValue: {
-                                    type: 'JSSlot',
-                                    value: []
-                                  }
-                                }
-                              },
-                              initialValue: undefined
+                                itemSetter: 'SlotSetter'
+                              }
                             }
                           },
                           {
@@ -2782,20 +2219,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -2803,24 +2232,14 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
                                   {
                                     componentName: 'ArraySetter',
+                                    condition: () => false,
                                     props: {
-                                      itemSetter: {
-                                        componentName: 'SlotSetter',
-                                        props: {
-                                          mode: 'node'
-                                        },
-                                        initialValue: {
-                                          type: 'JSSlot',
-                                          value: []
-                                        }
-                                      }
-                                    },
-                                    initialValue: undefined
+                                      itemSetter: 'SlotSetter'
+                                    }
                                   }
                                 ]
                               }
@@ -2835,10 +2254,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'searchPlaceholder',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2849,10 +2265,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'itemUnit',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2863,10 +2276,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'itemsUnit',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2877,10 +2287,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'remove',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2891,10 +2298,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectAll',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2905,10 +2309,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectCurrent',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2919,10 +2320,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectInvert',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2933,10 +2331,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'removeAll',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -2947,16 +2342,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'removeCurrent',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -2972,6 +2360,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Select',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -2979,8 +2368,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -2994,6 +2382,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Upload',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -3006,10 +2395,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'uploading',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -3020,10 +2406,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'removeFile',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -3034,10 +2417,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'downloadFile',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -3048,10 +2428,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'uploadError',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -3062,16 +2439,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'previewFile',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -3087,6 +2457,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Empty',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -3099,16 +2470,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'description',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -3124,6 +2488,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'global',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -3131,8 +2496,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -3146,6 +2510,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'PageHeader',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -3158,16 +2523,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'back',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -3183,6 +2541,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Icon',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -3190,8 +2549,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -3205,6 +2563,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Text',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -3264,11 +2623,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -3284,6 +2639,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Form',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -3296,10 +2652,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'optional',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -3312,6 +2665,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'defaultValidateMessages',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   items: [
@@ -3327,15 +2681,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       setter: {
                                         componentName: 'MixedSetter',
                                         props: {
-                                          setters: [
-                                            {
-                                              componentName: 'StringSetter',
-                                              initialValue: undefined
-                                            },
-                                            {
-                                              componentName: 'FunctionSetter'
-                                            }
-                                          ]
+                                          setters: ['StringSetter', 'FunctionSetter']
                                         }
                                       }
                                     },
@@ -3351,15 +2697,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       setter: {
                                         componentName: 'MixedSetter',
                                         props: {
-                                          setters: [
-                                            {
-                                              componentName: 'StringSetter',
-                                              initialValue: undefined
-                                            },
-                                            {
-                                              componentName: 'FunctionSetter'
-                                            }
-                                          ]
+                                          setters: ['StringSetter', 'FunctionSetter']
                                         }
                                       }
                                     },
@@ -3375,15 +2713,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       setter: {
                                         componentName: 'MixedSetter',
                                         props: {
-                                          setters: [
-                                            {
-                                              componentName: 'StringSetter',
-                                              initialValue: undefined
-                                            },
-                                            {
-                                              componentName: 'FunctionSetter'
-                                            }
-                                          ]
+                                          setters: ['StringSetter', 'FunctionSetter']
                                         }
                                       }
                                     },
@@ -3399,15 +2729,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       setter: {
                                         componentName: 'MixedSetter',
                                         props: {
-                                          setters: [
-                                            {
-                                              componentName: 'StringSetter',
-                                              initialValue: undefined
-                                            },
-                                            {
-                                              componentName: 'FunctionSetter'
-                                            }
-                                          ]
+                                          setters: ['StringSetter', 'FunctionSetter']
                                         }
                                       }
                                     },
@@ -3422,6 +2744,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       name: 'date',
                                       setter: {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -3437,15 +2760,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3461,15 +2776,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3485,23 +2792,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
@@ -3517,6 +2812,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       name: 'types',
                                       setter: {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -3532,15 +2828,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3556,15 +2844,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3580,15 +2860,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3604,15 +2876,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3628,15 +2892,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3652,15 +2908,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3676,15 +2924,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3700,15 +2940,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3724,15 +2956,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3748,15 +2972,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3772,15 +2988,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3796,15 +3004,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3820,23 +3020,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
@@ -3852,6 +3040,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       name: 'string',
                                       setter: {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -3867,15 +3056,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3891,15 +3072,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3915,15 +3088,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -3939,23 +3104,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
@@ -3971,6 +3124,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       name: 'number',
                                       setter: {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -3986,15 +3140,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -4010,15 +3156,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -4034,15 +3172,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -4058,23 +3188,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
@@ -4090,6 +3208,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       name: 'array',
                                       setter: {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -4105,15 +3224,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -4129,15 +3240,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -4153,15 +3256,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -4177,23 +3272,11 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
@@ -4209,6 +3292,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                       name: 'pattern',
                                       setter: {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -4224,41 +3308,21 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['StringSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
                                     }
-                                  ],
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
+                                  ]
                                 }
                               }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -4274,6 +3338,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'Image',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -4286,16 +3351,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'preview',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -4311,6 +3369,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'QRCode',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -4323,10 +3382,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'expired',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -4337,16 +3393,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'refresh',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -4362,6 +3411,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'ColorPicker',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -4374,25 +3424,14 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'presetEmpty',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4400,11 +3439,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mentions',
-            'zh-CN': 'mentions'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mentions',
             'zh-CN': 'mentions'
@@ -4413,6 +3447,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'mentions',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4425,10 +3460,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -4441,6 +3473,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4448,15 +3481,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4464,11 +3492,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'menu',
-            'zh-CN': 'menu'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'menu',
             'zh-CN': 'menu'
@@ -4477,6 +3500,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'menu',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4489,10 +3513,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -4505,6 +3526,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4512,15 +3534,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4528,11 +3545,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'message',
-            'zh-CN': 'message'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'message',
             'zh-CN': 'message'
@@ -4541,6 +3553,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'message',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4553,10 +3566,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -4569,6 +3579,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4576,15 +3587,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4595,16 +3601,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'modal',
             'zh-CN': 'modal'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'modal',
-            'zh-CN': 'modal'
           }
         },
         name: 'modal',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4619,6 +3621,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'classNames',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4626,8 +3629,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -4641,6 +3643,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'styles',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4648,15 +3651,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4667,16 +3665,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'notification',
             'zh-CN': 'notification'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'notification',
-            'zh-CN': 'notification'
           }
         },
         name: 'notification',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4689,10 +3683,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -4705,6 +3696,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4712,15 +3704,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4731,16 +3718,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'pageHeader',
             'zh-CN': 'pageHeader'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'pageHeader',
-            'zh-CN': 'pageHeader'
           }
         },
         name: 'pageHeader',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4753,16 +3736,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'ghost',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4770,11 +3746,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pagination',
-            'zh-CN': 'pagination'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pagination',
             'zh-CN': 'pagination'
@@ -4783,6 +3754,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'pagination',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -4790,37 +3762,23 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'popupMatchSelectWidth',
-            'zh-CN': 'popupMatchSelectWidth'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'popupMatchSelectWidth',
             'zh-CN': 'popupMatchSelectWidth'
           }
         },
         name: 'popupMatchSelectWidth',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'popupOverflow',
-            'zh-CN': 'popupOverflow'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'popupOverflow',
             'zh-CN': 'popupOverflow'
@@ -4850,18 +3808,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 value: 'viewport'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'progress',
-            'zh-CN': 'progress'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'progress',
             'zh-CN': 'progress'
@@ -4870,6 +3822,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'progress',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4882,10 +3835,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -4898,6 +3848,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4905,15 +3856,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4921,11 +3867,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'radio',
-            'zh-CN': 'radio'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'radio',
             'zh-CN': 'radio'
@@ -4934,6 +3875,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'radio',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -4946,10 +3888,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -4962,6 +3901,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -4969,15 +3909,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -4985,11 +3920,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'rate',
-            'zh-CN': 'rate'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'rate',
             'zh-CN': 'rate'
@@ -4998,6 +3928,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'rate',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5010,10 +3941,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5026,6 +3954,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5033,15 +3962,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5052,26 +3976,14 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'renderEmpty',
             'zh-CN': 'renderEmpty'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'renderEmpty',
-            'zh-CN': 'renderEmpty'
           }
         },
         name: 'renderEmpty',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'result',
-            'zh-CN': 'result'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'result',
             'zh-CN': 'result'
@@ -5080,6 +3992,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'result',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5092,10 +4005,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5108,6 +4018,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5115,15 +4026,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5131,11 +4037,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'segmented',
-            'zh-CN': 'segmented'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'segmented',
             'zh-CN': 'segmented'
@@ -5144,6 +4045,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'segmented',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5156,10 +4058,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5172,6 +4071,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5179,15 +4079,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5195,11 +4090,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'select',
-            'zh-CN': 'select'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'select',
             'zh-CN': 'select'
@@ -5208,6 +4098,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'select',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -5215,18 +4106,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'skeleton',
-            'zh-CN': 'skeleton'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'skeleton',
             'zh-CN': 'skeleton'
@@ -5235,6 +4120,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'skeleton',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5247,10 +4133,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5263,6 +4146,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5270,15 +4154,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5286,11 +4165,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'slider',
-            'zh-CN': 'slider'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'slider',
             'zh-CN': 'slider'
@@ -5299,6 +4173,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'slider',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5311,10 +4186,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5327,6 +4199,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5334,15 +4207,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5353,16 +4221,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'space',
             'zh-CN': 'space'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'space',
-            'zh-CN': 'space'
           }
         },
         name: 'space',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5379,10 +4243,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        },
+                        'NumberSetter',
                         {
                           componentName: 'RadioGroupSetter',
                           props: {
@@ -5414,8 +4275,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                 value: 'large'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
@@ -5430,10 +4290,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5446,6 +4303,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'classNames',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -5458,16 +4316,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'item',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -5483,6 +4334,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5490,8 +4342,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -5505,6 +4356,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'styles',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -5519,6 +4371,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                             name: 'item',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -5526,24 +4379,15 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5551,11 +4395,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'spin',
-            'zh-CN': 'spin'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'spin',
             'zh-CN': 'spin'
@@ -5564,6 +4403,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'spin',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5576,10 +4416,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5592,6 +4429,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5599,15 +4437,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5615,11 +4448,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'statistic',
-            'zh-CN': 'statistic'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'statistic',
             'zh-CN': 'statistic'
@@ -5628,6 +4456,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'statistic',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5640,10 +4469,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5656,6 +4482,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5663,15 +4490,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5679,11 +4501,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'steps',
-            'zh-CN': 'steps'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'steps',
             'zh-CN': 'steps'
@@ -5692,6 +4509,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'steps',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5704,10 +4522,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5720,6 +4535,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5727,15 +4543,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5743,11 +4554,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'switch',
-            'zh-CN': 'switch'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'switch',
             'zh-CN': 'switch'
@@ -5756,6 +4562,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'switch',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5768,10 +4575,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5784,6 +4588,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5791,15 +4596,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5807,11 +4607,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'table',
-            'zh-CN': 'table'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'table',
             'zh-CN': 'table'
@@ -5820,6 +4615,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'table',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5832,10 +4628,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5848,6 +4641,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5855,15 +4649,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5871,11 +4660,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabs',
-            'zh-CN': 'tabs'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tabs',
             'zh-CN': 'tabs'
@@ -5884,6 +4668,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'tabs',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -5891,8 +4676,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -5901,16 +4685,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'tag',
             'zh-CN': 'tag'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'tag',
-            'zh-CN': 'tag'
           }
         },
         name: 'tag',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5923,10 +4703,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -5939,6 +4716,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5946,15 +4724,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -5965,16 +4738,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'theme',
             'zh-CN': 'theme'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'theme',
-            'zh-CN': 'theme'
           }
         },
         name: 'theme',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -5989,6 +4758,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'token',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -5996,8 +4766,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -6011,6 +4780,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'components',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6018,8 +4788,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -6035,17 +4804,13 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'FunctionSetter'
-                        },
+                        'FunctionSetter',
                         {
                           componentName: 'ArraySetter',
+                          condition: () => false,
                           props: {
-                            itemSetter: {
-                              componentName: 'FunctionSetter'
-                            }
-                          },
-                          initialValue: undefined
+                            itemsetter: 'FunctionSetter'
+                          }
                         }
                       ]
                     }
@@ -6060,10 +4825,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'hashed',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -6074,16 +4836,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'inherit',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6091,11 +4846,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'timePicker',
-            'zh-CN': 'timePicker'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'timePicker',
             'zh-CN': 'timePicker'
@@ -6104,6 +4854,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'timePicker',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6116,10 +4867,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -6132,6 +4880,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6139,15 +4888,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6155,11 +4899,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'timeline',
-            'zh-CN': 'timeline'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'timeline',
             'zh-CN': 'timeline'
@@ -6168,6 +4907,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'timeline',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6180,10 +4920,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -6196,6 +4933,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6203,15 +4941,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6219,11 +4952,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'transfer',
-            'zh-CN': 'transfer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'transfer',
             'zh-CN': 'transfer'
@@ -6232,6 +4960,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'transfer',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6244,10 +4973,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -6260,6 +4986,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6267,15 +4994,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6283,11 +5005,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tree',
-            'zh-CN': 'tree'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tree',
             'zh-CN': 'tree'
@@ -6296,6 +5013,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'tree',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6308,10 +5026,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -6324,6 +5039,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6331,15 +5047,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6347,11 +5058,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'typography',
-            'zh-CN': 'typography'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'typography',
             'zh-CN': 'typography'
@@ -6360,6 +5066,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'typography',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6372,10 +5079,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -6388,6 +5092,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6395,15 +5100,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6411,11 +5111,6 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'upload',
-            'zh-CN': 'upload'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'upload',
             'zh-CN': 'upload'
@@ -6424,6 +5119,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'upload',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6436,10 +5132,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'className',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -6452,6 +5145,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                   name: 'style',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         extraSetter: {
@@ -6459,15 +5153,10 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                           props: {}
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6478,27 +5167,14 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'virtual',
             'zh-CN': 'virtual'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'virtual',
-            'zh-CN': 'virtual'
           }
         },
         name: 'virtual',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'warning',
-            'zh-CN': 'warning'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'warning',
             'zh-CN': 'warning'
@@ -6507,6 +5183,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'warning',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6519,16 +5196,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'strict',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6539,16 +5209,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'wave',
             'zh-CN': 'wave'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'wave',
-            'zh-CN': 'wave'
           }
         },
         name: 'wave',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -6561,10 +5227,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'disabled',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -6575,15 +5238,9 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'showEffect',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -6600,7 +5257,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: '配置提供器',
+    title: '全局配置器',
     screenshot: '',
     schema: {
       componentName: 'ConfigProvider',

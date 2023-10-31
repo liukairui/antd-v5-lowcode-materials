@@ -9,10 +9,9 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'QRCode',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,65 +23,36 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bgColor',
             'zh-CN': 'bgColor'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'bgColor',
-            'zh-CN': 'bgColor'
           }
         },
         name: 'bgColor',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'color',
             'zh-CN': 'color'
           }
         },
         name: 'color',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'errorLevel',
-            'zh-CN': 'errorLevel'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'errorLevel',
             'zh-CN': 'errorLevel'
@@ -128,56 +98,34 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                 value: 'H'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'iconSize',
-            'zh-CN': 'iconSize'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'iconSize',
             'zh-CN': 'iconSize'
           }
         },
         name: 'iconSize',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'imageSettings',
-            'zh-CN': 'imageSettings'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'imageSettings',
             'zh-CN': 'imageSettings'
@@ -186,6 +134,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
         name: 'imageSettings',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -198,10 +147,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'src',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -212,10 +158,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'height',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -226,10 +169,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'width',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -240,10 +180,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'excavate',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -254,10 +191,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'x',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -268,16 +202,9 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'y',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -288,46 +215,25 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'includeMargin',
             'zh-CN': 'includeMargin'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'includeMargin',
-            'zh-CN': 'includeMargin'
           }
         },
         name: 'includeMargin',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
           }
         },
         name: 'size',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'status',
-            'zh-CN': 'status'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
@@ -365,18 +271,12 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                 value: 'expired'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -406,8 +306,7 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
                 value: 'svg'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -416,18 +315,10 @@ const QRCodeMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
           }
         },
         name: 'value',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       }
     ],
     supports: {

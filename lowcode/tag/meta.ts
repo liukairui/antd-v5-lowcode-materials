@@ -9,10 +9,9 @@ const TagMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Tag',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,71 +23,36 @@ const TagMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'closable',
-            'zh-CN': 'closable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'closable',
             'zh-CN': 'closable'
           }
         },
         name: 'closable',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'closeIcon',
-            'zh-CN': 'closeIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'closeIcon',
             'zh-CN': 'closeIcon'
           }
         },
         name: 'closeIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'color',
             'zh-CN': 'color'
@@ -106,24 +70,10 @@ const TagMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'icon',
             'zh-CN': 'icon'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'icon',
-            'zh-CN': 'icon'
           }
         },
         name: 'icon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -131,17 +81,10 @@ const TagMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onClose',
             'zh-CN': 'onClose'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'onClose',
-            'zh-CN': 'onClose'
           }
         },
         name: 'onClose',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       }
     ],
     supports: {

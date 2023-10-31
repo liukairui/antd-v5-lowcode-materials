@@ -2,17 +2,16 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const LayoutContentMeta: IPublicTypeComponentMetadata = {
   componentName: 'LayoutContent',
-  title: '布局-内容',
+  title: '内容布局',
   group: '原子组件',
   category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'LayoutContent',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,37 +23,10 @@ const LayoutContentMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'hasSider',
             'zh-CN': 'hasSider'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'hasSider',
-            'zh-CN': 'hasSider'
           }
         },
         name: 'hasSider',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'suffixCls',
-            'zh-CN': 'suffixCls'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'suffixCls',
-            'zh-CN': 'suffixCls'
-          }
-        },
-        name: 'suffixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

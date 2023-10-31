@@ -9,10 +9,9 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Empty',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,58 +23,25 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'description',
             'zh-CN': 'description'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'description',
-            'zh-CN': 'description'
           }
         },
         name: 'description',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'image',
-            'zh-CN': 'image'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'image',
             'zh-CN': 'image'
           }
         },
         name: 'image',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'imageStyle',
-            'zh-CN': 'imageStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'imageStyle',
             'zh-CN': 'imageStyle'
@@ -84,6 +50,7 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
         name: 'imageStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -91,8 +58,7 @@ const EmptyMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

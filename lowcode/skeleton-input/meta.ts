@@ -9,10 +9,9 @@ const SkeletonInputMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'SkeletonInput',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,46 +23,25 @@ const SkeletonInputMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'active',
             'zh-CN': 'active'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
           }
         },
         name: 'active',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'block',
-            'zh-CN': 'block'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'block',
             'zh-CN': 'block'
           }
         },
         name: 'block',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -101,8 +79,7 @@ const SkeletonInputMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

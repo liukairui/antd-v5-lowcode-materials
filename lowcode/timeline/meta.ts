@@ -9,10 +9,9 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Timeline',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,19 +23,16 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
           }
         },
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -52,16 +48,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
                     },
@@ -74,10 +61,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'prefixCls',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -88,10 +72,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'className',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -108,6 +89,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                           setters: [
                             {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -115,8 +97,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             },
                             {
                               componentName: 'SelectSetter',
@@ -157,8 +138,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                                     value: 'gray'
                                   }
                                 ]
-                              },
-                              initialValue: undefined
+                              }
                             }
                           ]
                         }
@@ -173,16 +153,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'dot',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -193,10 +164,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'pending',
-                      setter: {
-                        componentName: 'BoolSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'BoolSetter'
                     },
                     {
                       title: {
@@ -207,10 +175,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'position',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -223,6 +188,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                       name: 'style',
                       setter: {
                         componentName: 'ObjectSetter',
+                        condition: () => false,
                         props: {
                           config: {
                             extraSetter: {
@@ -230,8 +196,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                               props: {}
                             }
                           }
-                        },
-                        initialValue: undefined
+                        }
                       }
                     },
                     {
@@ -243,16 +208,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -263,37 +219,18 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'children',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'mode',
-            'zh-CN': 'mode'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'mode',
             'zh-CN': 'mode'
@@ -331,59 +268,30 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                 value: 'alternate'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pending',
-            'zh-CN': 'pending'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pending',
             'zh-CN': 'pending'
           }
         },
         name: 'pending',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pendingDot',
-            'zh-CN': 'pendingDot'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pendingDot',
             'zh-CN': 'pendingDot'
           }
         },
         name: 'pendingDot',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -391,18 +299,10 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'reverse',
             'zh-CN': 'reverse'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'reverse',
-            'zh-CN': 'reverse'
           }
         },
         name: 'reverse',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

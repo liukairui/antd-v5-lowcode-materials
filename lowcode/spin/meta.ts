@@ -9,10 +9,9 @@ const SpinMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Spin',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const SpinMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'delay',
             'zh-CN': 'delay'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'delay',
-            'zh-CN': 'delay'
           }
         },
         name: 'delay',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'indicator',
-            'zh-CN': 'indicator'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'indicator',
             'zh-CN': 'indicator'
@@ -53,6 +39,7 @@ const SpinMeta: IPublicTypeComponentMetadata = {
         name: 'indicator',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -60,18 +47,12 @@ const SpinMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -109,53 +90,30 @@ const SpinMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'spinning',
-            'zh-CN': 'spinning'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'spinning',
             'zh-CN': 'spinning'
           }
         },
         name: 'spinning',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tip',
-            'zh-CN': 'tip'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tip',
             'zh-CN': 'tip'
           }
         },
         name: 'tip',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
@@ -163,18 +121,10 @@ const SpinMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'wrapperClassName',
             'zh-CN': 'wrapperClassName'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'wrapperClassName',
-            'zh-CN': 'wrapperClassName'
           }
         },
         name: 'wrapperClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       }
     ],
     supports: {

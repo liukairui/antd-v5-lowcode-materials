@@ -9,10 +9,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Table',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,52 +23,25 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'bordered',
             'zh-CN': 'bordered'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'bordered',
-            'zh-CN': 'bordered'
           }
         },
         name: 'bordered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'caption',
-            'zh-CN': 'caption'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'caption',
             'zh-CN': 'caption'
           }
         },
         name: 'caption',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'columns',
-            'zh-CN': 'columns'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'columns',
             'zh-CN': 'columns'
@@ -78,6 +50,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
         name: 'columns',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
@@ -85,6 +58,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                 setters: [
                   {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -113,6 +87,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'children',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
                                 itemSetter: {
                                   componentName: 'MixedSetter',
@@ -120,6 +95,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                     setters: [
                                       {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             extraSetter: {
@@ -127,11 +103,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               props: {}
                                             }
                                           }
-                                        },
-                                        initialValue: undefined
+                                        }
                                       },
                                       {
                                         componentName: 'ObjectSetter',
+                                        condition: () => false,
                                         props: {
                                           config: {
                                             items: [
@@ -162,20 +138,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   componentName: 'MixedSetter',
                                                   props: {
                                                     setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'NumberSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'BoolSetter',
-                                                        initialValue: undefined
-                                                      },
+                                                      'StringSetter',
+                                                      'NumberSetter',
+                                                      'BoolSetter',
                                                       {
                                                         componentName: 'ObjectSetter',
+                                                        condition: () => false,
                                                         props: {
                                                           config: {
                                                             extraSetter: {
@@ -183,12 +151,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                               props: {}
                                                             }
                                                           }
-                                                        },
-                                                        initialValue: undefined
+                                                        }
                                                       },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
+                                                      'FunctionSetter'
                                                     ]
                                                   }
                                                 }
@@ -206,15 +171,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   componentName: 'MixedSetter',
                                                   props: {
                                                     setters: [
-                                                      {
-                                                        componentName: 'BoolSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      },
+                                                      'BoolSetter',
+                                                      'FunctionSetter',
                                                       {
                                                         componentName: 'ObjectSetter',
+                                                        condition: () => false,
                                                         props: {
                                                           config: {
                                                             items: [
@@ -227,9 +188,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                   }
                                                                 },
                                                                 name: 'compare',
-                                                                setter: {
-                                                                  componentName: 'FunctionSetter'
-                                                                }
+                                                                setter: 'FunctionSetter'
                                                               },
                                                               {
                                                                 title: {
@@ -240,16 +199,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                   }
                                                                 },
                                                                 name: 'multiple',
-                                                                setter: {
-                                                                  componentName: 'NumberSetter',
-                                                                  initialValue: undefined
-                                                                }
+                                                                setter: 'NumberSetter'
                                                               }
-                                                            ],
-                                                            extraSetter: {
-                                                              componentName: 'MixedSetter',
-                                                              props: {}
-                                                            }
+                                                            ]
                                                           }
                                                         }
                                                       }
@@ -289,8 +241,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                         value: 'ascend'
                                                       }
                                                     ]
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -325,8 +276,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                         value: 'ascend'
                                                       }
                                                     ]
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -340,6 +290,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'sortDirections',
                                                 setter: {
                                                   componentName: 'ArraySetter',
+                                                  condition: () => false,
                                                   props: {
                                                     itemSetter: {
                                                       componentName: 'RadioGroupSetter',
@@ -364,11 +315,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                             value: 'ascend'
                                                           }
                                                         ]
-                                                      },
-                                                      initialValue: undefined
+                                                      }
                                                     }
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -380,9 +329,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'sortIcon',
-                                                setter: {
-                                                  componentName: 'FunctionSetter'
-                                                }
+                                                setter: 'FunctionSetter'
                                               },
                                               {
                                                 title: {
@@ -397,12 +344,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   componentName: 'MixedSetter',
                                                   props: {
                                                     setters: [
-                                                      {
-                                                        componentName: 'BoolSetter',
-                                                        initialValue: undefined
-                                                      },
+                                                      'BoolSetter',
                                                       {
                                                         componentName: 'ObjectSetter',
+                                                        condition: () => false,
                                                         props: {
                                                           config: {
                                                             items: [
@@ -419,20 +364,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                   componentName: 'MixedSetter',
                                                                   props: {
                                                                     setters: [
-                                                                      {
-                                                                        componentName: 'StringSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'NumberSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'BoolSetter',
-                                                                        initialValue: undefined
-                                                                      },
+                                                                      'StringSetter',
+                                                                      'NumberSetter',
+                                                                      'BoolSetter',
                                                                       {
                                                                         componentName: 'ObjectSetter',
+                                                                        condition: () => false,
                                                                         props: {
                                                                           config: {
                                                                             extraSetter: {
@@ -440,12 +377,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                               props: {}
                                                                             }
                                                                           }
-                                                                        },
-                                                                        initialValue: undefined
+                                                                        }
                                                                       },
-                                                                      {
-                                                                        componentName: 'FunctionSetter'
-                                                                      }
+                                                                      'FunctionSetter'
                                                                     ]
                                                                   }
                                                                 }
@@ -463,20 +397,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                   componentName: 'MixedSetter',
                                                                   props: {
                                                                     setters: [
-                                                                      {
-                                                                        componentName: 'StringSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'NumberSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'BoolSetter',
-                                                                        initialValue: undefined
-                                                                      },
+                                                                      'StringSetter',
+                                                                      'NumberSetter',
+                                                                      'BoolSetter',
                                                                       {
                                                                         componentName: 'ObjectSetter',
+                                                                        condition: () => false,
                                                                         props: {
                                                                           config: {
                                                                             extraSetter: {
@@ -484,26 +410,20 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                               props: {}
                                                                             }
                                                                           }
-                                                                        },
-                                                                        initialValue: undefined
+                                                                        }
                                                                       },
-                                                                      {
-                                                                        componentName: 'FunctionSetter'
-                                                                      }
+                                                                      'FunctionSetter'
                                                                     ]
                                                                   }
                                                                 }
                                                               }
-                                                            ],
-                                                            extraSetter: {
-                                                              componentName: 'MixedSetter',
-                                                              props: {}
-                                                            }
+                                                            ]
                                                           }
                                                         }
                                                       },
                                                       {
                                                         componentName: 'ObjectSetter',
+                                                        condition: () => false,
                                                         props: {
                                                           config: {
                                                             items: [
@@ -520,20 +440,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                   componentName: 'MixedSetter',
                                                                   props: {
                                                                     setters: [
-                                                                      {
-                                                                        componentName: 'StringSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'NumberSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'BoolSetter',
-                                                                        initialValue: undefined
-                                                                      },
+                                                                      'StringSetter',
+                                                                      'NumberSetter',
+                                                                      'BoolSetter',
                                                                       {
                                                                         componentName: 'ObjectSetter',
+                                                                        condition: () => false,
                                                                         props: {
                                                                           config: {
                                                                             extraSetter: {
@@ -541,12 +453,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                               props: {}
                                                                             }
                                                                           }
-                                                                        },
-                                                                        initialValue: undefined
+                                                                        }
                                                                       },
-                                                                      {
-                                                                        componentName: 'FunctionSetter'
-                                                                      }
+                                                                      'FunctionSetter'
                                                                     ]
                                                                   }
                                                                 }
@@ -564,20 +473,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                   componentName: 'MixedSetter',
                                                                   props: {
                                                                     setters: [
-                                                                      {
-                                                                        componentName: 'StringSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'NumberSetter',
-                                                                        initialValue: undefined
-                                                                      },
-                                                                      {
-                                                                        componentName: 'BoolSetter',
-                                                                        initialValue: undefined
-                                                                      },
+                                                                      'StringSetter',
+                                                                      'NumberSetter',
+                                                                      'BoolSetter',
                                                                       {
                                                                         componentName: 'ObjectSetter',
+                                                                        condition: () => false,
                                                                         props: {
                                                                           config: {
                                                                             extraSetter: {
@@ -585,21 +486,14 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                               props: {}
                                                                             }
                                                                           }
-                                                                        },
-                                                                        initialValue: undefined
+                                                                        }
                                                                       },
-                                                                      {
-                                                                        componentName: 'FunctionSetter'
-                                                                      }
+                                                                      'FunctionSetter'
                                                                     ]
                                                                   }
                                                                 }
                                                               }
-                                                            ],
-                                                            extraSetter: {
-                                                              componentName: 'MixedSetter',
-                                                              props: {}
-                                                            }
+                                                            ]
                                                           }
                                                         }
                                                       }
@@ -616,10 +510,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'filtered',
-                                                setter: {
-                                                  componentName: 'BoolSetter',
-                                                  initialValue: undefined
-                                                }
+                                                setter: 'BoolSetter'
                                               },
                                               {
                                                 title: {
@@ -632,9 +523,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'filters',
                                                 setter: {
                                                   componentName: 'ArraySetter',
+                                                  condition: () => false,
                                                   props: {
                                                     itemSetter: {
                                                       componentName: 'ObjectSetter',
+                                                      condition: () => false,
                                                       props: {
                                                         config: {
                                                           items: [
@@ -647,16 +540,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                 }
                                                               },
                                                               name: 'text',
-                                                              setter: {
-                                                                componentName: 'SlotSetter',
-                                                                props: {
-                                                                  mode: 'node'
-                                                                },
-                                                                initialValue: {
-                                                                  type: 'JSSlot',
-                                                                  value: []
-                                                                }
-                                                              }
+                                                              setter: 'SlotSetter'
                                                             },
                                                             {
                                                               title: {
@@ -670,20 +554,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                               setter: {
                                                                 componentName: 'MixedSetter',
                                                                 props: {
-                                                                  setters: [
-                                                                    {
-                                                                      componentName: 'StringSetter',
-                                                                      initialValue: undefined
-                                                                    },
-                                                                    {
-                                                                      componentName: 'NumberSetter',
-                                                                      initialValue: undefined
-                                                                    },
-                                                                    {
-                                                                      componentName: 'BoolSetter',
-                                                                      initialValue: undefined
-                                                                    }
-                                                                  ]
+                                                                  setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                                                                 }
                                                               }
                                                             },
@@ -698,9 +569,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                               name: 'children',
                                                               setter: {
                                                                 componentName: 'ArraySetter',
+                                                                condition: () => false,
                                                                 props: {
                                                                   itemSetter: {
                                                                     componentName: 'ObjectSetter',
+                                                                    condition: () => false,
                                                                     props: {
                                                                       config: {
                                                                         extraSetter: {
@@ -708,23 +581,16 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                                           props: {}
                                                                         }
                                                                       }
-                                                                    },
-                                                                    initialValue: undefined
+                                                                    }
                                                                   }
-                                                                },
-                                                                initialValue: undefined
+                                                                }
                                                               }
                                                             }
-                                                          ],
-                                                          extraSetter: {
-                                                            componentName: 'MixedSetter',
-                                                            props: {}
-                                                          }
+                                                          ]
                                                         }
                                                       }
                                                     }
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -740,20 +606,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   componentName: 'MixedSetter',
                                                   props: {
                                                     setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'NumberSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'BoolSetter',
-                                                        initialValue: undefined
-                                                      },
+                                                      'StringSetter',
+                                                      'NumberSetter',
+                                                      'BoolSetter',
                                                       {
                                                         componentName: 'ObjectSetter',
+                                                        condition: () => false,
                                                         props: {
                                                           config: {
                                                             extraSetter: {
@@ -761,12 +619,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                               props: {}
                                                             }
                                                           }
-                                                        },
-                                                        initialValue: undefined
+                                                        }
                                                       },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
+                                                      'FunctionSetter'
                                                     ]
                                                   }
                                                 }
@@ -780,10 +635,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'filterMultiple',
-                                                setter: {
-                                                  componentName: 'BoolSetter',
-                                                  initialValue: undefined
-                                                }
+                                                setter: 'BoolSetter'
                                               },
                                               {
                                                 title: {
@@ -796,28 +648,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'filteredValue',
                                                 setter: {
                                                   componentName: 'ArraySetter',
+                                                  condition: () => false,
                                                   props: {
                                                     itemSetter: {
                                                       componentName: 'MixedSetter',
                                                       props: {
-                                                        setters: [
-                                                          {
-                                                            componentName: 'StringSetter',
-                                                            initialValue: undefined
-                                                          },
-                                                          {
-                                                            componentName: 'NumberSetter',
-                                                            initialValue: undefined
-                                                          },
-                                                          {
-                                                            componentName: 'BoolSetter',
-                                                            initialValue: undefined
-                                                          }
-                                                        ]
+                                                        setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                                                       }
                                                     }
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -831,28 +670,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'defaultFilteredValue',
                                                 setter: {
                                                   componentName: 'ArraySetter',
+                                                  condition: () => false,
                                                   props: {
                                                     itemSetter: {
                                                       componentName: 'MixedSetter',
                                                       props: {
-                                                        setters: [
-                                                          {
-                                                            componentName: 'StringSetter',
-                                                            initialValue: undefined
-                                                          },
-                                                          {
-                                                            componentName: 'NumberSetter',
-                                                            initialValue: undefined
-                                                          },
-                                                          {
-                                                            componentName: 'BoolSetter',
-                                                            initialValue: undefined
-                                                          }
-                                                        ]
+                                                        setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                                                       }
                                                     }
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -868,20 +694,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   componentName: 'MixedSetter',
                                                   props: {
                                                     setters: [
-                                                      {
-                                                        componentName: 'StringSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'NumberSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'BoolSetter',
-                                                        initialValue: undefined
-                                                      },
+                                                      'StringSetter',
+                                                      'NumberSetter',
+                                                      'BoolSetter',
                                                       {
                                                         componentName: 'ObjectSetter',
+                                                        condition: () => false,
                                                         props: {
                                                           config: {
                                                             extraSetter: {
@@ -889,12 +707,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                               props: {}
                                                             }
                                                           }
-                                                        },
-                                                        initialValue: undefined
+                                                        }
                                                       },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
+                                                      'FunctionSetter'
                                                     ]
                                                   }
                                                 }
@@ -931,8 +746,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                         value: 'tree'
                                                       }
                                                     ]
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -947,15 +761,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 setter: {
                                                   componentName: 'MixedSetter',
                                                   props: {
-                                                    setters: [
-                                                      {
-                                                        componentName: 'BoolSetter',
-                                                        initialValue: undefined
-                                                      },
-                                                      {
-                                                        componentName: 'FunctionSetter'
-                                                      }
-                                                    ]
+                                                    setters: ['BoolSetter', 'FunctionSetter']
                                                   }
                                                 }
                                               },
@@ -968,9 +774,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'onFilter',
-                                                setter: {
-                                                  componentName: 'FunctionSetter'
-                                                }
+                                                setter: 'FunctionSetter'
                                               },
                                               {
                                                 title: {
@@ -981,10 +785,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'filterDropdownOpen',
-                                                setter: {
-                                                  componentName: 'BoolSetter',
-                                                  initialValue: undefined
-                                                }
+                                                setter: 'BoolSetter'
                                               },
                                               {
                                                 title: {
@@ -995,9 +796,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'onFilterDropdownOpenChange',
-                                                setter: {
-                                                  componentName: 'FunctionSetter'
-                                                }
+                                                setter: 'FunctionSetter'
                                               },
                                               {
                                                 title: {
@@ -1008,10 +807,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'filterResetToDefaultFilteredValue',
-                                                setter: {
-                                                  componentName: 'BoolSetter',
-                                                  initialValue: undefined
-                                                }
+                                                setter: 'BoolSetter'
                                               },
                                               {
                                                 title: {
@@ -1024,6 +820,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'responsive',
                                                 setter: {
                                                   componentName: 'ArraySetter',
+                                                  condition: () => false,
                                                   props: {
                                                     itemSetter: {
                                                       componentName: 'SelectSetter',
@@ -1080,11 +877,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                             value: 'xxl'
                                                           }
                                                         ]
-                                                      },
-                                                      initialValue: undefined
+                                                      }
                                                     }
-                                                  },
-                                                  initialValue: undefined
+                                                  }
                                                 }
                                               },
                                               {
@@ -1096,10 +891,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'filterDropdownVisible',
-                                                setter: {
-                                                  componentName: 'BoolSetter',
-                                                  initialValue: undefined
-                                                }
+                                                setter: 'BoolSetter'
                                               },
                                               {
                                                 title: {
@@ -1110,35 +902,25 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   }
                                                 },
                                                 name: 'onFilterDropdownVisibleChange',
-                                                setter: {
-                                                  componentName: 'FunctionSetter'
-                                                }
+                                                setter: 'FunctionSetter'
                                               }
-                                            ],
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
-                                            }
+                                            ]
                                           }
                                         }
                                       }
                                     ]
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   },
                   {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -1169,20 +951,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -1190,12 +964,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  'FunctionSetter'
                                 ]
                               }
                             }
@@ -1213,15 +984,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  },
+                                  'BoolSetter',
+                                  'FunctionSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         items: [
@@ -1234,9 +1001,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               }
                                             },
                                             name: 'compare',
-                                            setter: {
-                                              componentName: 'FunctionSetter'
-                                            }
+                                            setter: 'FunctionSetter'
                                           },
                                           {
                                             title: {
@@ -1247,16 +1012,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               }
                                             },
                                             name: 'multiple',
-                                            setter: {
-                                              componentName: 'NumberSetter',
-                                              initialValue: undefined
-                                            }
+                                            setter: 'NumberSetter'
                                           }
-                                        ],
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
+                                        ]
                                       }
                                     }
                                   }
@@ -1296,8 +1054,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                     value: 'ascend'
                                   }
                                 ]
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1332,8 +1089,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                     value: 'ascend'
                                   }
                                 ]
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1347,6 +1103,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'sortDirections',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
                                 itemSetter: {
                                   componentName: 'RadioGroupSetter',
@@ -1371,11 +1128,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                         value: 'ascend'
                                       }
                                     ]
-                                  },
-                                  initialValue: undefined
+                                  }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1387,9 +1142,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'sortIcon',
-                            setter: {
-                              componentName: 'FunctionSetter'
-                            }
+                            setter: 'FunctionSetter'
                           },
                           {
                             title: {
@@ -1404,12 +1157,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         items: [
@@ -1426,20 +1177,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               componentName: 'MixedSetter',
                                               props: {
                                                 setters: [
-                                                  {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'NumberSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'BoolSetter',
-                                                    initialValue: undefined
-                                                  },
+                                                  'StringSetter',
+                                                  'NumberSetter',
+                                                  'BoolSetter',
                                                   {
                                                     componentName: 'ObjectSetter',
+                                                    condition: () => false,
                                                     props: {
                                                       config: {
                                                         extraSetter: {
@@ -1447,12 +1190,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                           props: {}
                                                         }
                                                       }
-                                                    },
-                                                    initialValue: undefined
+                                                    }
                                                   },
-                                                  {
-                                                    componentName: 'FunctionSetter'
-                                                  }
+                                                  'FunctionSetter'
                                                 ]
                                               }
                                             }
@@ -1470,20 +1210,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               componentName: 'MixedSetter',
                                               props: {
                                                 setters: [
-                                                  {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'NumberSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'BoolSetter',
-                                                    initialValue: undefined
-                                                  },
+                                                  'StringSetter',
+                                                  'NumberSetter',
+                                                  'BoolSetter',
                                                   {
                                                     componentName: 'ObjectSetter',
+                                                    condition: () => false,
                                                     props: {
                                                       config: {
                                                         extraSetter: {
@@ -1491,26 +1223,20 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                           props: {}
                                                         }
                                                       }
-                                                    },
-                                                    initialValue: undefined
+                                                    }
                                                   },
-                                                  {
-                                                    componentName: 'FunctionSetter'
-                                                  }
+                                                  'FunctionSetter'
                                                 ]
                                               }
                                             }
                                           }
-                                        ],
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
+                                        ]
                                       }
                                     }
                                   },
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         items: [
@@ -1527,20 +1253,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               componentName: 'MixedSetter',
                                               props: {
                                                 setters: [
-                                                  {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'NumberSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'BoolSetter',
-                                                    initialValue: undefined
-                                                  },
+                                                  'StringSetter',
+                                                  'NumberSetter',
+                                                  'BoolSetter',
                                                   {
                                                     componentName: 'ObjectSetter',
+                                                    condition: () => false,
                                                     props: {
                                                       config: {
                                                         extraSetter: {
@@ -1548,12 +1266,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                           props: {}
                                                         }
                                                       }
-                                                    },
-                                                    initialValue: undefined
+                                                    }
                                                   },
-                                                  {
-                                                    componentName: 'FunctionSetter'
-                                                  }
+                                                  'FunctionSetter'
                                                 ]
                                               }
                                             }
@@ -1571,20 +1286,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               componentName: 'MixedSetter',
                                               props: {
                                                 setters: [
-                                                  {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'NumberSetter',
-                                                    initialValue: undefined
-                                                  },
-                                                  {
-                                                    componentName: 'BoolSetter',
-                                                    initialValue: undefined
-                                                  },
+                                                  'StringSetter',
+                                                  'NumberSetter',
+                                                  'BoolSetter',
                                                   {
                                                     componentName: 'ObjectSetter',
+                                                    condition: () => false,
                                                     props: {
                                                       config: {
                                                         extraSetter: {
@@ -1592,21 +1299,14 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                           props: {}
                                                         }
                                                       }
-                                                    },
-                                                    initialValue: undefined
+                                                    }
                                                   },
-                                                  {
-                                                    componentName: 'FunctionSetter'
-                                                  }
+                                                  'FunctionSetter'
                                                 ]
                                               }
                                             }
                                           }
-                                        ],
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
+                                        ]
                                       }
                                     }
                                   }
@@ -1623,10 +1323,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filtered',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1639,9 +1336,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'filters',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
                                 itemSetter: {
                                   componentName: 'ObjectSetter',
+                                  condition: () => false,
                                   props: {
                                     config: {
                                       items: [
@@ -1654,16 +1353,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                             }
                                           },
                                           name: 'text',
-                                          setter: {
-                                            componentName: 'SlotSetter',
-                                            props: {
-                                              mode: 'node'
-                                            },
-                                            initialValue: {
-                                              type: 'JSSlot',
-                                              value: []
-                                            }
-                                          }
+                                          setter: 'SlotSetter'
                                         },
                                         {
                                           title: {
@@ -1677,20 +1367,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           setter: {
                                             componentName: 'MixedSetter',
                                             props: {
-                                              setters: [
-                                                {
-                                                  componentName: 'StringSetter',
-                                                  initialValue: undefined
-                                                },
-                                                {
-                                                  componentName: 'NumberSetter',
-                                                  initialValue: undefined
-                                                },
-                                                {
-                                                  componentName: 'BoolSetter',
-                                                  initialValue: undefined
-                                                }
-                                              ]
+                                              setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                                             }
                                           }
                                         },
@@ -1705,9 +1382,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           name: 'children',
                                           setter: {
                                             componentName: 'ArraySetter',
+                                            condition: () => false,
                                             props: {
                                               itemSetter: {
                                                 componentName: 'ObjectSetter',
+                                                condition: () => false,
                                                 props: {
                                                   config: {
                                                     extraSetter: {
@@ -1715,23 +1394,16 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                       props: {}
                                                     }
                                                   }
-                                                },
-                                                initialValue: undefined
+                                                }
                                               }
-                                            },
-                                            initialValue: undefined
+                                            }
                                           }
                                         }
-                                      ],
-                                      extraSetter: {
-                                        componentName: 'MixedSetter',
-                                        props: {}
-                                      }
+                                      ]
                                     }
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1747,20 +1419,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -1768,12 +1432,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  'FunctionSetter'
                                 ]
                               }
                             }
@@ -1787,10 +1448,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterMultiple',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -1803,28 +1461,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'filteredValue',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
                                 itemSetter: {
                                   componentName: 'MixedSetter',
                                   props: {
-                                    setters: [
-                                      {
-                                        componentName: 'StringSetter',
-                                        initialValue: undefined
-                                      },
-                                      {
-                                        componentName: 'NumberSetter',
-                                        initialValue: undefined
-                                      },
-                                      {
-                                        componentName: 'BoolSetter',
-                                        initialValue: undefined
-                                      }
-                                    ]
+                                    setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1838,28 +1483,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'defaultFilteredValue',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
                                 itemSetter: {
                                   componentName: 'MixedSetter',
                                   props: {
-                                    setters: [
-                                      {
-                                        componentName: 'StringSetter',
-                                        initialValue: undefined
-                                      },
-                                      {
-                                        componentName: 'NumberSetter',
-                                        initialValue: undefined
-                                      },
-                                      {
-                                        componentName: 'BoolSetter',
-                                        initialValue: undefined
-                                      }
-                                    ]
+                                    setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1875,20 +1507,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               componentName: 'MixedSetter',
                               props: {
                                 setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
+                                  'StringSetter',
+                                  'NumberSetter',
+                                  'BoolSetter',
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -1896,12 +1520,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  'FunctionSetter'
                                 ]
                               }
                             }
@@ -1938,8 +1559,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                     value: 'tree'
                                   }
                                 ]
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -1954,15 +1574,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'FunctionSetter'
-                                  }
-                                ]
+                                setters: ['BoolSetter', 'FunctionSetter']
                               }
                             }
                           },
@@ -1975,9 +1587,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'onFilter',
-                            setter: {
-                              componentName: 'FunctionSetter'
-                            }
+                            setter: 'FunctionSetter'
                           },
                           {
                             title: {
@@ -1988,10 +1598,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterDropdownOpen',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -2002,9 +1609,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'onFilterDropdownOpenChange',
-                            setter: {
-                              componentName: 'FunctionSetter'
-                            }
+                            setter: 'FunctionSetter'
                           },
                           {
                             title: {
@@ -2015,10 +1620,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterResetToDefaultFilteredValue',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -2031,6 +1633,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'responsive',
                             setter: {
                               componentName: 'ArraySetter',
+                              condition: () => false,
                               props: {
                                 itemSetter: {
                                   componentName: 'SelectSetter',
@@ -2087,11 +1690,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                         value: 'xxl'
                                       }
                                     ]
-                                  },
-                                  initialValue: undefined
+                                  }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -2103,10 +1704,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterDropdownVisible',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -2117,23 +1715,16 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'onFilterDropdownVisibleChange',
-                            setter: {
-                              componentName: 'FunctionSetter'
-                            }
+                            setter: 'FunctionSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
                 ]
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -2142,16 +1733,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'components',
             'zh-CN': 'components'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'components',
-            'zh-CN': 'components'
           }
         },
         name: 'components',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -2184,6 +1771,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                       setters: [
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -2191,8 +1779,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         },
                         {
                           componentName: 'SelectSetter',
@@ -3129,8 +2716,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 value: 'webview'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
@@ -3147,6 +2733,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'header',
                   setter: {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -3165,6 +2752,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 setters: [
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -3172,8 +2760,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
                                   {
                                     componentName: 'SelectSetter',
@@ -4110,8 +3697,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           value: 'webview'
                                         }
                                       ]
-                                    },
-                                    initialValue: undefined
+                                    }
                                   }
                                 ]
                               }
@@ -4132,6 +3718,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 setters: [
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -4139,8 +3726,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
                                   {
                                     componentName: 'SelectSetter',
@@ -5077,8 +4663,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           value: 'webview'
                                         }
                                       ]
-                                    },
-                                    initialValue: undefined
+                                    }
                                   }
                                 ]
                               }
@@ -5099,6 +4684,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 setters: [
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -5106,8 +4692,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   },
                                   {
                                     componentName: 'SelectSetter',
@@ -6044,18 +5629,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           value: 'webview'
                                         }
                                       ]
-                                    },
-                                    initialValue: undefined
+                                    }
                                   }
                                 ]
                               }
                             }
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
@@ -6073,11 +5653,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'FunctionSetter'
-                        },
+                        'FunctionSetter',
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               items: [
@@ -6096,6 +5675,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       setters: [
                                         {
                                           componentName: 'ObjectSetter',
+                                          condition: () => false,
                                           props: {
                                             config: {
                                               extraSetter: {
@@ -6103,8 +5683,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 props: {}
                                               }
                                             }
-                                          },
-                                          initialValue: undefined
+                                          }
                                         },
                                         {
                                           componentName: 'SelectSetter',
@@ -7041,8 +6620,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 value: 'webview'
                                               }
                                             ]
-                                          },
-                                          initialValue: undefined
+                                          }
                                         }
                                       ]
                                     }
@@ -7063,6 +6641,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       setters: [
                                         {
                                           componentName: 'ObjectSetter',
+                                          condition: () => false,
                                           props: {
                                             config: {
                                               extraSetter: {
@@ -7070,8 +6649,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 props: {}
                                               }
                                             }
-                                          },
-                                          initialValue: undefined
+                                          }
                                         },
                                         {
                                           componentName: 'SelectSetter',
@@ -8008,8 +7586,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 value: 'webview'
                                               }
                                             ]
-                                          },
-                                          initialValue: undefined
+                                          }
                                         }
                                       ]
                                     }
@@ -8030,6 +7607,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       setters: [
                                         {
                                           componentName: 'ObjectSetter',
+                                          condition: () => false,
                                           props: {
                                             config: {
                                               extraSetter: {
@@ -8037,8 +7615,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 props: {}
                                               }
                                             }
-                                          },
-                                          initialValue: undefined
+                                          }
                                         },
                                         {
                                           componentName: 'SelectSetter',
@@ -8975,18 +8552,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 value: 'webview'
                                               }
                                             ]
-                                          },
-                                          initialValue: undefined
+                                          }
                                         }
                                       ]
                                     }
                                   }
                                 }
-                              ],
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
+                              ]
                             }
                           }
                         }
@@ -8994,11 +8566,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -9006,11 +8574,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'dataSource',
-            'zh-CN': 'dataSource'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'dataSource',
             'zh-CN': 'dataSource'
@@ -9019,9 +8582,11 @@ const TableMeta: IPublicTypeComponentMetadata = {
         name: 'dataSource',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   extraSetter: {
@@ -9029,81 +8594,26 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     props: {}
                   }
                 }
-              },
-              initialValue: undefined
+              }
             }
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
           }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
         }
       },
+
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'dropdownPrefixCls',
-            'zh-CN': 'dropdownPrefixCls'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'dropdownPrefixCls',
             'zh-CN': 'dropdownPrefixCls'
           }
         },
         name: 'dropdownPrefixCls',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'expandable',
-            'zh-CN': 'expandable'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'expandable',
             'zh-CN': 'expandable'
@@ -9112,6 +8622,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
         name: 'expandable',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -9140,24 +8651,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'expandedRowKeys',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -9171,24 +8673,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'defaultExpandedRowKeys',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -9200,9 +8693,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'expandedRowRender',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -9213,16 +8704,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'columnTitle',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -9233,10 +8715,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'expandRowByClick',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -9247,9 +8726,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'expandIcon',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -9260,9 +8737,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onExpand',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -9273,9 +8748,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onExpandedRowsChange',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -9286,10 +8759,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'defaultExpandAllRows',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -9300,10 +8770,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'indentSize',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -9314,10 +8781,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'expandIconColumnIndex',
-                  setter: {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -9328,10 +8792,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'showExpandColumn',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -9342,9 +8803,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'expandedRowClassName',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -9355,10 +8814,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'childrenColumnName',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -9369,9 +8825,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rowExpandable',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -9385,16 +8839,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   setter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
                 },
@@ -9411,10 +8856,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        },
+                        'BoolSetter',
                         {
                           componentName: 'RadioGroupSetter',
                           props: {
@@ -9438,18 +8880,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 value: 'right'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
                   }
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -9460,100 +8897,47 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'footer',
             'zh-CN': 'footer'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'footer',
-            'zh-CN': 'footer'
           }
         },
         name: 'footer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getContainerWidth',
-            'zh-CN': 'getContainerWidth'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getContainerWidth',
             'zh-CN': 'getContainerWidth'
           }
         },
         name: 'getContainerWidth',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getPopupContainer',
             'zh-CN': 'getPopupContainer'
           }
         },
         name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'indentSize',
-            'zh-CN': 'indentSize'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'indentSize',
             'zh-CN': 'indentSize'
           }
         },
         name: 'indentSize',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'loading',
-            'zh-CN': 'loading'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
@@ -9564,12 +8948,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -9582,10 +8964,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'prefixCls',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -9596,10 +8975,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'className',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -9610,10 +8986,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'spinning',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -9626,6 +8999,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         name: 'style',
                         setter: {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -9633,8 +9007,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -9677,8 +9050,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 value: 'large'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -9690,16 +9062,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tip',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       },
                       {
                         title: {
@@ -9710,10 +9073,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'delay',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -9724,10 +9084,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'wrapperClassName',
-                        setter: {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'StringSetter'
                       },
                       {
                         title: {
@@ -9740,6 +9097,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         name: 'indicator',
                         setter: {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -9747,8 +9105,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       },
                       {
@@ -9760,22 +9117,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'children',
-                        setter: {
-                          componentName: 'SlotSetter',
-                          props: {
-                            mode: 'node'
-                          },
-                          initialValue: {
-                            type: 'JSSlot',
-                            value: []
-                          }
-                        }
+                        setter: 'SlotSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -9789,16 +9133,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
           }
         },
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -9811,10 +9151,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterTitle',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -9825,16 +9162,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterConfirm',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -9845,16 +9173,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterReset',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -9865,16 +9184,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterEmptyText',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -9885,16 +9195,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterCheckall',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -9905,10 +9206,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterSearchPlaceholder',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -9923,20 +9221,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        },
+                        'StringSetter',
+                        'NumberSetter',
+                        'BoolSetter',
                         {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               extraSetter: {
@@ -9944,12 +9234,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 props: {}
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         },
-                        {
-                          componentName: 'FunctionSetter'
-                        }
+                        'FunctionSetter'
                       ]
                     }
                   }
@@ -9963,16 +9250,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectAll',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -9983,16 +9261,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectNone',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -10003,16 +9272,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectInvert',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -10023,16 +9283,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectionAll',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -10043,10 +9294,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'sortTitle',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -10057,10 +9305,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'expand',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -10071,10 +9316,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'collapse',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -10085,10 +9327,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'triggerDesc',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -10099,10 +9338,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'triggerAsc',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -10113,16 +9349,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'cancelSort',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -10130,11 +9359,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'pagination',
-            'zh-CN': 'pagination'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'pagination',
             'zh-CN': 'pagination'
@@ -10147,6 +9371,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -10161,6 +9386,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         name: 'position',
                         setter: {
                           componentName: 'ArraySetter',
+                          condition: () => false,
                           props: {
                             itemSetter: {
                               componentName: 'SelectSetter',
@@ -10217,18 +9443,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                     value: 'bottomRight'
                                   }
                                 ]
-                              },
-                              initialValue: undefined
+                              }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               },
@@ -10247,8 +9467,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                       value: false
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -10257,11 +9476,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'rowClassName',
-            'zh-CN': 'rowClassName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'rowClassName',
             'zh-CN': 'rowClassName'
@@ -10271,26 +9485,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['StringSetter', 'FunctionSetter']
           }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'rowKey',
-            'zh-CN': 'rowKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'rowKey',
             'zh-CN': 'rowKey'
@@ -10301,21 +9502,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
               {
                 componentName: 'MixedSetter',
                 props: {}
               },
-              {
-                componentName: 'FunctionSetter'
-              }
+              'FunctionSetter'
             ]
           }
         }
@@ -10326,16 +9519,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'rowSelection',
             'zh-CN': 'rowSelection'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'rowSelection',
-            'zh-CN': 'rowSelection'
           }
         },
         name: 'rowSelection',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -10362,10 +9551,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'preserveSelectedRowKeys',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -10399,8 +9585,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           value: 'radio'
                         }
                       ]
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -10414,24 +9599,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'selectedRowKeys',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -10445,24 +9621,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'defaultSelectedRowKeys',
                   setter: {
                     componentName: 'ArraySetter',
+                    condition: () => false,
                     props: {
                       itemSetter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: [
-                            {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            },
-                            {
-                              componentName: 'NumberSetter',
-                              initialValue: undefined
-                            }
-                          ]
+                          setters: ['StringSetter', 'NumberSetter']
                         }
                       }
-                    },
-                    initialValue: undefined
+                    }
                   }
                 },
                 {
@@ -10474,9 +9641,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onChange',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10487,9 +9652,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'getCheckboxProps',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10500,9 +9663,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onSelect',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10513,9 +9674,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onSelectMultiple',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10526,9 +9685,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onSelectAll',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10539,9 +9696,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onSelectInvert',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10552,9 +9707,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onSelectNone',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10569,12 +9722,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        },
+                        'BoolSetter',
                         {
                           componentName: 'ArraySetter',
+                          condition: () => false,
                           props: {
                             itemSetter: {
                               componentName: 'MixedSetter',
@@ -10582,6 +9733,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 setters: [
                                   {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         items: [
@@ -10594,10 +9746,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               }
                                             },
                                             name: 'key',
-                                            setter: {
-                                              componentName: 'StringSetter',
-                                              initialValue: undefined
-                                            }
+                                            setter: 'StringSetter'
                                           },
                                           {
                                             title: {
@@ -10608,16 +9757,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               }
                                             },
                                             name: 'text',
-                                            setter: {
-                                              componentName: 'SlotSetter',
-                                              props: {
-                                                mode: 'node'
-                                              },
-                                              initialValue: {
-                                                type: 'JSSlot',
-                                                value: []
-                                              }
-                                            }
+                                            setter: 'SlotSetter'
                                           },
                                           {
                                             title: {
@@ -10628,15 +9768,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                               }
                                             },
                                             name: 'onSelect',
-                                            setter: {
-                                              componentName: 'FunctionSetter'
-                                            }
+                                            setter: 'FunctionSetter'
                                           }
-                                        ],
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
+                                        ]
                                       }
                                     }
                                   },
@@ -10671,14 +9805,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                           value: 'SELECT_NONE'
                                         }
                                       ]
-                                    },
-                                    initialValue: undefined
+                                    }
                                   }
                                 ]
                               }
                             }
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
@@ -10693,10 +9825,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'hideSelectAll',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -10711,10 +9840,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     componentName: 'MixedSetter',
                     props: {
                       setters: [
-                        {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        },
+                        'BoolSetter',
                         {
                           componentName: 'RadioGroupSetter',
                           props: {
@@ -10738,8 +9864,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                 value: 'right'
                               }
                             ]
-                          },
-                          initialValue: undefined
+                          }
                         }
                       ]
                     }
@@ -10757,16 +9882,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   setter: {
                     componentName: 'MixedSetter',
                     props: {
-                      setters: [
-                        {
-                          componentName: 'StringSetter',
-                          initialValue: undefined
-                        },
-                        {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
-                      ]
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
                 },
@@ -10779,16 +9895,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'columnTitle',
-                  setter: {
-                    componentName: 'SlotSetter',
-                    props: {
-                      mode: 'node'
-                    },
-                    initialValue: {
-                      type: 'JSSlot',
-                      value: []
-                    }
-                  }
+                  setter: 'SlotSetter'
                 },
                 {
                   title: {
@@ -10799,10 +9906,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'checkStrictly',
-                  setter: {
-                    componentName: 'BoolSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -10813,9 +9917,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'renderCell',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 },
                 {
                   title: {
@@ -10826,15 +9928,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'onCell',
-                  setter: {
-                    componentName: 'FunctionSetter'
-                  }
+                  setter: 'FunctionSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -10842,11 +9938,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'scroll',
-            'zh-CN': 'scroll'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'scroll',
             'zh-CN': 'scroll'
@@ -10855,6 +9946,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
         name: 'scroll',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -10862,37 +9954,23 @@ const TableMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showHeader',
-            'zh-CN': 'showHeader'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showHeader',
             'zh-CN': 'showHeader'
           }
         },
         name: 'showHeader',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'showSorterTooltip',
-            'zh-CN': 'showSorterTooltip'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'showSorterTooltip',
             'zh-CN': 'showSorterTooltip'
@@ -10903,12 +9981,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -10925,20 +10001,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -10946,12 +10014,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
@@ -10969,20 +10034,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -10990,26 +10047,20 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               },
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -11026,20 +10077,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -11047,12 +10090,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
@@ -11070,20 +10110,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              {
-                                componentName: 'StringSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'NumberSetter',
-                                initialValue: undefined
-                              },
-                              {
-                                componentName: 'BoolSetter',
-                                initialValue: undefined
-                              },
+                              'StringSetter',
+                              'NumberSetter',
+                              'BoolSetter',
                               {
                                 componentName: 'ObjectSetter',
+                                condition: () => false,
                                 props: {
                                   config: {
                                     extraSetter: {
@@ -11091,21 +10123,14 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       props: {}
                                     }
                                   }
-                                },
-                                initialValue: undefined
+                                }
                               },
-                              {
-                                componentName: 'FunctionSetter'
-                              }
+                              'FunctionSetter'
                             ]
                           }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -11116,11 +10141,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -11158,8 +10178,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -11168,16 +10187,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'sortDirections',
             'zh-CN': 'sortDirections'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'sortDirections',
-            'zh-CN': 'sortDirections'
           }
         },
         name: 'sortDirections',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'RadioGroupSetter',
@@ -11202,21 +10217,14 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     value: 'ascend'
                   }
                 ]
-              },
-              initialValue: undefined
+              }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'sticky',
-            'zh-CN': 'sticky'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'sticky',
             'zh-CN': 'sticky'
@@ -11227,12 +10235,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -11245,10 +10251,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'offsetHeader',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -11259,10 +10262,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'offsetSummary',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -11273,10 +10273,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'offsetScroll',
-                        setter: {
-                          componentName: 'NumberSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'NumberSetter'
                       },
                       {
                         title: {
@@ -11287,15 +10284,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'getContainer',
-                        setter: {
-                          componentName: 'FunctionSetter'
-                        }
+                        setter: 'FunctionSetter'
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -11309,26 +10300,14 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'summary',
             'zh-CN': 'summary'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'summary',
-            'zh-CN': 'summary'
           }
         },
         name: 'summary',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tableLayout',
-            'zh-CN': 'tableLayout'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tableLayout',
             'zh-CN': 'tableLayout'
@@ -11358,46 +10337,30 @@ const TableMeta: IPublicTypeComponentMetadata = {
                 value: 'fixed'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tailor',
-            'zh-CN': 'tailor'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tailor',
             'zh-CN': 'tailor'
           }
         },
         name: 'tailor',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -11405,18 +10368,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'virtual',
             'zh-CN': 'virtual'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'virtual',
-            'zh-CN': 'virtual'
           }
         },
         name: 'virtual',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

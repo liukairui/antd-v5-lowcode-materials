@@ -9,10 +9,9 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'RadioGroup',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -21,11 +20,6 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'buttonStyle',
-            'zh-CN': 'buttonStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'buttonStyle',
             'zh-CN': 'buttonStyle'
@@ -55,18 +49,12 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                 value: 'solid'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultValue',
-            'zh-CN': 'defaultValue'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultValue',
             'zh-CN': 'defaultValue'
@@ -84,155 +72,80 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'disabled',
-            'zh-CN': 'disabled'
           }
         },
         name: 'disabled',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'name',
             'zh-CN': 'name'
           }
         },
         name: 'name',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onBlur',
-            'zh-CN': 'onBlur'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onBlur',
             'zh-CN': 'onBlur'
           }
         },
         name: 'onBlur',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onFocus',
-            'zh-CN': 'onFocus'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onFocus',
             'zh-CN': 'onFocus'
           }
         },
         name: 'onFocus',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseEnter',
             'zh-CN': 'onMouseEnter'
           }
         },
         name: 'onMouseEnter',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onMouseLeave',
             'zh-CN': 'onMouseLeave'
           }
         },
         name: 'onMouseLeave',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'optionType',
-            'zh-CN': 'optionType'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'optionType',
             'zh-CN': 'optionType'
@@ -262,8 +175,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                 value: 'default'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -272,31 +184,22 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'options',
             'zh-CN': 'options'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'options',
-            'zh-CN': 'options'
           }
         },
         name: 'options',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'MixedSetter',
               props: {
                 setters: [
-                  {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  },
-                  {
-                    componentName: 'NumberSetter',
-                    initialValue: undefined
-                  },
+                  'StringSetter',
+                  'NumberSetter',
                   {
                     componentName: 'ObjectSetter',
+                    condition: () => false,
                     props: {
                       config: {
                         items: [
@@ -309,16 +212,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'label',
-                            setter: {
-                              componentName: 'SlotSetter',
-                              props: {
-                                mode: 'node'
-                              },
-                              initialValue: {
-                                type: 'JSSlot',
-                                value: []
-                              }
-                            }
+                            setter: 'SlotSetter'
                           },
                           {
                             title: {
@@ -332,20 +226,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                             setter: {
                               componentName: 'MixedSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  },
-                                  {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
-                                ]
+                                setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
                               }
                             }
                           },
@@ -360,6 +241,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                             name: 'style',
                             setter: {
                               componentName: 'ObjectSetter',
+                              condition: () => false,
                               props: {
                                 config: {
                                   extraSetter: {
@@ -367,8 +249,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                                     props: {}
                                   }
                                 }
-                              },
-                              initialValue: undefined
+                              }
                             }
                           },
                           {
@@ -380,10 +261,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'disabled',
-                            setter: {
-                              componentName: 'BoolSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'BoolSetter'
                           },
                           {
                             title: {
@@ -394,10 +272,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'title',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -408,10 +283,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'id',
-                            setter: {
-                              componentName: 'StringSetter',
-                              initialValue: undefined
-                            }
+                            setter: 'StringSetter'
                           },
                           {
                             title: {
@@ -422,33 +294,21 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'onChange',
-                            setter: {
-                              componentName: 'FunctionSetter'
-                            }
+                            setter: 'FunctionSetter'
                           }
-                        ],
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
+                        ]
                       }
                     }
                   }
                 ]
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -486,18 +346,12 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'value',
-            'zh-CN': 'value'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'

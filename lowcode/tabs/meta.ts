@@ -9,10 +9,9 @@ const TabsMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'Tabs',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,52 +23,25 @@ const TabsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'activeKey',
             'zh-CN': 'activeKey'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'activeKey',
-            'zh-CN': 'activeKey'
           }
         },
         name: 'activeKey',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'addIcon',
-            'zh-CN': 'addIcon'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'addIcon',
             'zh-CN': 'addIcon'
           }
         },
         name: 'addIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'animated',
-            'zh-CN': 'animated'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'animated',
             'zh-CN': 'animated'
@@ -80,12 +52,10 @@ const TabsMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     items: [
@@ -98,10 +68,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'inkBar',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -112,10 +79,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tabPane',
-                        setter: {
-                          componentName: 'BoolSetter',
-                          initialValue: undefined
-                        }
+                        setter: 'BoolSetter'
                       },
                       {
                         title: {
@@ -128,6 +92,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                         name: 'tabPaneMotion',
                         setter: {
                           componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
                             config: {
                               items: [
@@ -144,12 +109,10 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     componentName: 'MixedSetter',
                                     props: {
                                       setters: [
-                                        {
-                                          componentName: 'StringSetter',
-                                          initialValue: undefined
-                                        },
+                                        'StringSetter',
                                         {
                                           componentName: 'ObjectSetter',
+                                          condition: () => false,
                                           props: {
                                             config: {
                                               items: [
@@ -162,10 +125,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'appear',
-                                                  setter: {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  }
+                                                  setter: 'StringSetter'
                                                 },
                                                 {
                                                   title: {
@@ -176,10 +136,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'enter',
-                                                  setter: {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  }
+                                                  setter: 'StringSetter'
                                                 },
                                                 {
                                                   title: {
@@ -190,10 +147,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'leave',
-                                                  setter: {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  }
+                                                  setter: 'StringSetter'
                                                 },
                                                 {
                                                   title: {
@@ -204,10 +158,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'appearActive',
-                                                  setter: {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  }
+                                                  setter: 'StringSetter'
                                                 },
                                                 {
                                                   title: {
@@ -218,10 +169,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'enterActive',
-                                                  setter: {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  }
+                                                  setter: 'StringSetter'
                                                 },
                                                 {
                                                   title: {
@@ -232,16 +180,9 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'leaveActive',
-                                                  setter: {
-                                                    componentName: 'StringSetter',
-                                                    initialValue: undefined
-                                                  }
+                                                  setter: 'StringSetter'
                                                 }
-                                              ],
-                                              extraSetter: {
-                                                componentName: 'MixedSetter',
-                                                props: {}
-                                              }
+                                              ]
                                             }
                                           }
                                         }
@@ -258,10 +199,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'visible',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -272,10 +210,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'motionAppear',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -286,10 +221,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'motionEnter',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -300,10 +232,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'motionLeave',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -314,10 +243,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'motionLeaveImmediately',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -328,10 +254,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'motionDeadline',
-                                  setter: {
-                                    componentName: 'NumberSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'NumberSetter'
                                 },
                                 {
                                   title: {
@@ -342,10 +265,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'forceRender',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -356,10 +276,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'removeOnLeave',
-                                  setter: {
-                                    componentName: 'BoolSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'BoolSetter'
                                 },
                                 {
                                   title: {
@@ -370,10 +287,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'leavedClassName',
-                                  setter: {
-                                    componentName: 'StringSetter',
-                                    initialValue: undefined
-                                  }
+                                  setter: 'StringSetter'
                                 },
                                 {
                                   title: {
@@ -386,6 +300,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                   name: 'eventProps',
                                   setter: {
                                     componentName: 'ObjectSetter',
+                                    condition: () => false,
                                     props: {
                                       config: {
                                         extraSetter: {
@@ -393,8 +308,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                           props: {}
                                         }
                                       }
-                                    },
-                                    initialValue: undefined
+                                    }
                                   }
                                 },
                                 {
@@ -406,9 +320,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onAppearPrepare',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -419,9 +331,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onEnterPrepare',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -432,9 +342,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onLeavePrepare',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -445,9 +353,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onAppearStart',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -458,9 +364,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onEnterStart',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -471,9 +375,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onLeaveStart',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -484,9 +386,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onAppearActive',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -497,9 +397,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onEnterActive',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -510,9 +408,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onLeaveActive',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -523,9 +419,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onAppearEnd',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -536,9 +430,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onEnterEnd',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -549,9 +441,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onLeaveEnd',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -562,9 +452,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'onVisibleChanged',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 },
                                 {
                                   title: {
@@ -579,11 +467,10 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     componentName: 'MixedSetter',
                                     props: {
                                       setters: [
-                                        {
-                                          componentName: 'FunctionSetter'
-                                        },
+                                        'FunctionSetter',
                                         {
                                           componentName: 'ObjectSetter',
+                                          condition: () => false,
                                           props: {
                                             config: {
                                               extraSetter: {
@@ -591,8 +478,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                                 props: {}
                                               }
                                             }
-                                          },
-                                          initialValue: undefined
+                                          }
                                         }
                                       ]
                                     }
@@ -607,24 +493,14 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                                     }
                                   },
                                   name: 'children',
-                                  setter: {
-                                    componentName: 'FunctionSetter'
-                                  }
+                                  setter: 'FunctionSetter'
                                 }
-                              ],
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
+                              ]
                             }
                           }
                         }
                       }
-                    ],
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    ]
                   }
                 }
               }
@@ -638,162 +514,59 @@ const TabsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'centered',
             'zh-CN': 'centered'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'centered',
-            'zh-CN': 'centered'
           }
         },
         name: 'centered',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'defaultActiveKey',
-            'zh-CN': 'defaultActiveKey'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'defaultActiveKey',
             'zh-CN': 'defaultActiveKey'
           }
         },
         name: 'defaultActiveKey',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'destroyInactiveTabPane',
-            'zh-CN': 'destroyInactiveTabPane'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'destroyInactiveTabPane',
             'zh-CN': 'destroyInactiveTabPane'
           }
         },
         name: 'destroyInactiveTabPane',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
+
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          props: {
-            dataSource: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ],
-            options: [
-              {
-                label: 'ltr',
-                value: 'ltr'
-              },
-              {
-                label: 'rtl',
-                value: 'rtl'
-              }
-            ]
-          },
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'getPopupContainer',
-            'zh-CN': 'getPopupContainer'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'getPopupContainer',
             'zh-CN': 'getPopupContainer'
           }
         },
         name: 'getPopupContainer',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'hideAdd',
-            'zh-CN': 'hideAdd'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'hideAdd',
             'zh-CN': 'hideAdd'
           }
         },
         name: 'hideAdd',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'id',
-            'zh-CN': 'id'
-          }
-        },
-        name: 'id',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'indicatorSize',
-            'zh-CN': 'indicatorSize'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'indicatorSize',
             'zh-CN': 'indicatorSize'
@@ -803,15 +576,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'FunctionSetter'
-              }
-            ]
+            setters: ['NumberSetter', 'FunctionSetter']
           }
         }
       },
@@ -821,19 +586,16 @@ const TabsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'items',
             'zh-CN': 'items'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'items',
-            'zh-CN': 'items'
           }
         },
         name: 'items',
         setter: {
           componentName: 'ArraySetter',
+          condition: () => false,
           props: {
             itemSetter: {
               componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
                 config: {
                   items: [
@@ -846,10 +608,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'key',
-                      setter: {
-                        componentName: 'StringSetter',
-                        initialValue: undefined
-                      }
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -860,27 +619,13 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        props: {
-                          mode: 'node'
-                        },
-                        initialValue: {
-                          type: 'JSSlot',
-                          value: []
-                        }
-                      }
+                      setter: 'SlotSetter'
                     }
-                  ],
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
+                  ]
                 }
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -889,16 +634,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'locale',
             'zh-CN': 'locale'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'locale',
-            'zh-CN': 'locale'
           }
         },
         name: 'locale',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               items: [
@@ -911,10 +652,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'dropdownAriaLabel',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -925,10 +663,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'removeAriaLabel',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -939,16 +674,9 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'addAriaLabel',
-                  setter: {
-                    componentName: 'StringSetter',
-                    initialValue: undefined
-                  }
+                  setter: 'StringSetter'
                 }
-              ],
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              ]
             }
           }
         }
@@ -959,161 +687,91 @@ const TabsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'moreIcon',
             'zh-CN': 'moreIcon'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'moreIcon',
-            'zh-CN': 'moreIcon'
           }
         },
         name: 'moreIcon',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'moreTransitionName',
-            'zh-CN': 'moreTransitionName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'moreTransitionName',
             'zh-CN': 'moreTransitionName'
           }
         },
         name: 'moreTransitionName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onChange',
-            'zh-CN': 'onChange'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onEdit',
-            'zh-CN': 'onEdit'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onEdit',
             'zh-CN': 'onEdit'
           }
         },
         name: 'onEdit',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onTabClick',
-            'zh-CN': 'onTabClick'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onTabClick',
             'zh-CN': 'onTabClick'
           }
         },
         name: 'onTabClick',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'onTabScroll',
-            'zh-CN': 'onTabScroll'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'onTabScroll',
             'zh-CN': 'onTabScroll'
           }
         },
         name: 'onTabScroll',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'popupClassName',
-            'zh-CN': 'popupClassName'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'popupClassName',
             'zh-CN': 'popupClassName'
           }
         },
         name: 'popupClassName',
-        setter: {
-          componentName: 'StringSetter',
-          initialValue: undefined
-        }
+        setter: 'StringSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'renderTabBar',
-            'zh-CN': 'renderTabBar'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'renderTabBar',
             'zh-CN': 'renderTabBar'
           }
         },
         name: 'renderTabBar',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -1151,18 +809,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                 value: 'large'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabBarExtraContent',
-            'zh-CN': 'tabBarExtraContent'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tabBarExtraContent',
             'zh-CN': 'tabBarExtraContent'
@@ -1173,20 +825,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'StringSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
-              {
-                componentName: 'BoolSetter',
-                initialValue: undefined
-              },
+              'StringSetter',
+              'NumberSetter',
+              'BoolSetter',
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
                     extraSetter: {
@@ -1194,8 +838,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                       props: {}
                     }
                   }
-                },
-                initialValue: undefined
+                }
               }
             ]
           }
@@ -1207,27 +850,14 @@ const TabsMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'tabBarGutter',
             'zh-CN': 'tabBarGutter'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'tabBarGutter',
-            'zh-CN': 'tabBarGutter'
           }
         },
         name: 'tabBarGutter',
-        setter: {
-          componentName: 'NumberSetter',
-          initialValue: undefined
-        }
+        setter: 'NumberSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabBarStyle',
-            'zh-CN': 'tabBarStyle'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tabBarStyle',
             'zh-CN': 'tabBarStyle'
@@ -1236,6 +866,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
         name: 'tabBarStyle',
         setter: {
           componentName: 'ObjectSetter',
+          condition: () => false,
           props: {
             config: {
               extraSetter: {
@@ -1243,18 +874,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                 props: {}
               }
             }
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'tabPosition',
-            'zh-CN': 'tabPosition'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'tabPosition',
             'zh-CN': 'tabPosition'
@@ -1300,18 +925,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                 value: 'bottom'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'type',
             'zh-CN': 'type'
@@ -1349,8 +968,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                 value: 'editable-card'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       }
     ],

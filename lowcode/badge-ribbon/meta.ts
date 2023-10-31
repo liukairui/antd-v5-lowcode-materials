@@ -9,10 +9,9 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'BadgeRibbon',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -21,11 +20,6 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'color',
-            'zh-CN': 'color'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'color',
             'zh-CN': 'color'
@@ -40,11 +34,6 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'placement',
-            'zh-CN': 'placement'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'placement',
             'zh-CN': 'placement'
@@ -74,8 +63,7 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
                 value: 'start'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
@@ -84,24 +72,10 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'text',
             'zh-CN': 'text'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'text',
-            'zh-CN': 'text'
           }
         },
         name: 'text',
-        setter: {
-          componentName: 'SlotSetter',
-          props: {
-            mode: 'node'
-          },
-          initialValue: {
-            type: 'JSSlot',
-            value: []
-          }
-        }
+        setter: 'SlotSetter'
       }
     ],
     supports: {

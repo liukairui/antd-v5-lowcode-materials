@@ -2,17 +2,16 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const GridRowMeta: IPublicTypeComponentMetadata = {
   componentName: 'GridRow',
-  title: '栅格-行',
+  title: '栅格行',
   group: '原子组件',
   category: '布局 Layout',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'GridRow',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,11 +23,6 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'align',
             'zh-CN': 'align'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'align',
-            'zh-CN': 'align'
           }
         },
         name: 'align',
@@ -37,58 +31,361 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
           props: {
             setters: [
               {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              },
-              {
                 componentName: 'SelectSetter',
                 props: {
                   dataSource: [
                     {
-                      label: 'middle',
-                      value: 'middle'
-                    },
-                    {
-                      label: 'stretch',
-                      value: 'stretch'
-                    },
-                    {
                       label: 'top',
                       value: 'top'
                     },
                     {
+                      label: 'middle',
+                      value: 'middle'
+                    },
+                    {
                       label: 'bottom',
                       value: 'bottom'
+                    },
+                    {
+                      label: 'stretch',
+                      value: 'stretch'
                     }
                   ],
                   options: [
                     {
-                      label: 'middle',
-                      value: 'middle'
-                    },
-                    {
-                      label: 'stretch',
-                      value: 'stretch'
-                    },
-                    {
                       label: 'top',
                       value: 'top'
                     },
                     {
+                      label: 'middle',
+                      value: 'middle'
+                    },
+                    {
                       label: 'bottom',
                       value: 'bottom'
+                    },
+                    {
+                      label: 'stretch',
+                      value: 'stretch'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
+              },
+              {
+                componentName: 'ObjectSetter',
+                condition: () => false,
+                props: {
+                  config: {
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xs',
+                            'zh-CN': 'xs'
+                          }
+                        },
+                        name: 'xs',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'sm',
+                            'zh-CN': 'sm'
+                          }
+                        },
+                        name: 'sm',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'md',
+                            'zh-CN': 'md'
+                          }
+                        },
+                        name: 'md',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'lg',
+                            'zh-CN': 'lg'
+                          }
+                        },
+                        name: 'lg',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xl',
+                            'zh-CN': 'xl'
+                          }
+                        },
+                        name: 'xl',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xxl',
+                            'zh-CN': 'xxl'
+                          }
+                        },
+                        name: 'xxl',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'top',
+                                value: 'top'
+                              },
+                              {
+                                label: 'middle',
+                                value: 'middle'
+                              },
+                              {
+                                label: 'bottom',
+                                value: 'bottom'
+                              },
+                              {
+                                label: 'stretch',
+                                value: 'stretch'
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
               }
             ]
           }
@@ -97,11 +394,6 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'gutter',
-            'zh-CN': 'gutter'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'gutter',
             'zh-CN': 'gutter'
@@ -112,25 +404,89 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
+              'NumberSetter',
               {
-                componentName: 'NumberSetter',
-                initialValue: undefined
+                componentName: 'ArraySetter',
+                condition: () => false,
+                props: {
+                  itemSetter: 'NumberSetter'
+                }
               },
               {
                 componentName: 'ObjectSetter',
+                condition: () => false,
                 props: {
                   config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xs',
+                            'zh-CN': 'xs'
+                          }
+                        },
+                        name: 'xs',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'sm',
+                            'zh-CN': 'sm'
+                          }
+                        },
+                        name: 'sm',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'md',
+                            'zh-CN': 'md'
+                          }
+                        },
+                        name: 'md',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'lg',
+                            'zh-CN': 'lg'
+                          }
+                        },
+                        name: 'lg',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xl',
+                            'zh-CN': 'xl'
+                          }
+                        },
+                        name: 'xl',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xxl',
+                            'zh-CN': 'xxl'
+                          }
+                        },
+                        name: 'xxl',
+                        setter: 'NumberSetter'
+                      }
+                    ]
                   }
-                },
-                initialValue: undefined
-              },
-              {
-                componentName: 'MixedSetter',
-                props: {}
+                }
               }
             ]
           }
@@ -139,11 +495,6 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'justify',
-            'zh-CN': 'justify'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'justify',
             'zh-CN': 'justify'
@@ -155,18 +506,6 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
           props: {
             setters: [
               {
-                componentName: 'ObjectSetter',
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                },
-                initialValue: undefined
-              },
-              {
                 componentName: 'SelectSetter',
                 props: {
                   dataSource: [
@@ -175,6 +514,14 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
                       value: 'center'
                     },
                     {
+                      label: 'start',
+                      value: 'start'
+                    },
+                    {
+                      label: 'end',
+                      value: 'end'
+                    },
+                    {
                       label: 'space-around',
                       value: 'space-around'
                     },
@@ -185,14 +532,6 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
                     {
                       label: 'space-evenly',
                       value: 'space-evenly'
-                    },
-                    {
-                      label: 'end',
-                      value: 'end'
-                    },
-                    {
-                      label: 'start',
-                      value: 'start'
                     }
                   ],
                   options: [
@@ -201,6 +540,14 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
                       value: 'center'
                     },
                     {
+                      label: 'start',
+                      value: 'start'
+                    },
+                    {
+                      label: 'end',
+                      value: 'end'
+                    },
+                    {
                       label: 'space-around',
                       value: 'space-around'
                     },
@@ -211,18 +558,421 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
                     {
                       label: 'space-evenly',
                       value: 'space-evenly'
-                    },
-                    {
-                      label: 'end',
-                      value: 'end'
-                    },
-                    {
-                      label: 'start',
-                      value: 'start'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
+              },
+              {
+                componentName: 'ObjectSetter',
+                condition: () => false,
+                props: {
+                  config: {
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xs',
+                            'zh-CN': 'xs'
+                          }
+                        },
+                        name: 'xs',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'sm',
+                            'zh-CN': 'sm'
+                          }
+                        },
+                        name: 'sm',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'md',
+                            'zh-CN': 'md'
+                          }
+                        },
+                        name: 'md',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'lg',
+                            'zh-CN': 'lg'
+                          }
+                        },
+                        name: 'lg',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xl',
+                            'zh-CN': 'xl'
+                          }
+                        },
+                        name: 'xl',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xxl',
+                            'zh-CN': 'xxl'
+                          }
+                        },
+                        name: 'xxl',
+                        setter: {
+                          componentName: 'SelectSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'center',
+                                value: 'center'
+                              },
+                              {
+                                label: 'start',
+                                value: 'start'
+                              },
+                              {
+                                label: 'end',
+                                value: 'end'
+                              },
+                              {
+                                label: 'space-around',
+                                value: 'space-around'
+                              },
+                              {
+                                label: 'space-between',
+                                value: 'space-between'
+                              },
+                              {
+                                label: 'space-evenly',
+                                value: 'space-evenly'
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
               }
             ]
           }
@@ -234,18 +984,10 @@ const GridRowMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'wrap',
             'zh-CN': 'wrap'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'wrap',
-            'zh-CN': 'wrap'
           }
         },
         name: 'wrap',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       }
     ],
     supports: {

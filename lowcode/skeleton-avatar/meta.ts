@@ -9,10 +9,9 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'SkeletonAvatar',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,27 +23,14 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'active',
             'zh-CN': 'active'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'active',
-            'zh-CN': 'active'
           }
         },
         name: 'active',
-        setter: {
-          componentName: 'BoolSetter',
-          initialValue: undefined
-        }
+        setter: 'BoolSetter'
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'shape',
-            'zh-CN': 'shape'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'shape',
             'zh-CN': 'shape'
@@ -74,18 +60,12 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
                 value: 'square'
               }
             ]
-          },
-          initialValue: undefined
+          }
         }
       },
       {
         title: {
           label: {
-            type: 'i18n',
-            'en-US': 'size',
-            'zh-CN': 'size'
-          },
-          tip: {
             type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
@@ -96,10 +76,7 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
           componentName: 'MixedSetter',
           props: {
             setters: [
-              {
-                componentName: 'NumberSetter',
-                initialValue: undefined
-              },
+              'NumberSetter',
               {
                 componentName: 'RadioGroupSetter',
                 props: {
@@ -131,8 +108,7 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
                       value: 'large'
                     }
                   ]
-                },
-                initialValue: undefined
+                }
               }
             ]
           }

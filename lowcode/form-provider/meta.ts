@@ -2,17 +2,16 @@ import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode
 
 const FormProviderMeta: IPublicTypeComponentMetadata = {
   componentName: 'FormProvider',
-  title: '表单提供器',
+  title: '表单配置器',
   group: '原子组件',
   category: '数据录入 Data Entry',
   docUrl: '',
   screenshot: '',
   devMode: 'proCode',
   npm: {
-    package: 'antd-5-lowcode-materials',
+    package: 'antd-v5-lowcode-materials',
     version: '0.0.1',
     exportName: 'FormProvider',
-    main: 'src/index.tsx',
     destructuring: true,
     subName: ''
   },
@@ -24,17 +23,10 @@ const FormProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onFormChange',
             'zh-CN': 'onFormChange'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'onFormChange',
-            'zh-CN': 'onFormChange'
           }
         },
         name: 'onFormChange',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -42,17 +34,10 @@ const FormProviderMeta: IPublicTypeComponentMetadata = {
             type: 'i18n',
             'en-US': 'onFormFinish',
             'zh-CN': 'onFormFinish'
-          },
-          tip: {
-            type: 'i18n',
-            'en-US': 'onFormFinish',
-            'zh-CN': 'onFormFinish'
           }
         },
         name: 'onFormFinish',
-        setter: {
-          componentName: 'FunctionSetter'
-        }
+        setter: 'FunctionSetter'
       }
     ],
     supports: {
@@ -66,7 +51,7 @@ const FormProviderMeta: IPublicTypeComponentMetadata = {
 };
 const snippets: IPublicTypeSnippet[] = [
   {
-    title: '表单提供器',
+    title: '表单配置器',
     screenshot: '',
     schema: {
       componentName: 'FormProvider',
