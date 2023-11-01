@@ -87,7 +87,13 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'cellRender',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['current', 'info']
+          }
+        }
       },
       {
         title: {
@@ -278,7 +284,13 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'panelRender',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['panelNode']
+          }
+        }
       },
       {
         title: {
@@ -410,23 +422,19 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
         }
       },
       {
-        title: 'popupStyle',
-        display: 'entry',
-        type: 'field',
-        items: [
-          {
-            title: {
-              label: {
-                type: 'i18n',
-                'en-US': 'popupStyle',
-                'zh-CN': 'popupStyle'
-              }
-            },
-            name: 'popupStyle',
-            setter: 'StyleSetter',
-            display: 'block'
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'popupStyle',
+            'zh-CN': 'popupStyle'
           }
-        ]
+        },
+        name: 'popupStyle',
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        }
       },
       {
         title: {
@@ -447,14 +455,7 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'presets'
           }
         },
-        name: 'presets',
-        setter: {
-          componentName: 'ArraySetter',
-          condition: () => false,
-          props: {
-            itemSetter: 'FunctionSetter'
-          }
-        }
+        name: 'presets'
       },
       {
         title: {
@@ -476,7 +477,13 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'renderExtraFooter',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['__placeholder__']
+          }
+        }
       },
       {
         title: {
@@ -525,6 +532,7 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -568,6 +576,7 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
         name: 'status',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

@@ -779,6 +779,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
                       name: 'type',
                       setter: {
                         componentName: 'RadioGroupSetter',
+                        condition: () => false,
                         props: {
                           dataSource: [
                             {
@@ -821,6 +822,7 @@ const TourMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

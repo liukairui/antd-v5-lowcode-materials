@@ -104,18 +104,13 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'cellRender',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'changeOnBlur',
-            'zh-CN': 'changeOnBlur'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['current', 'info']
           }
-        },
-        name: 'changeOnBlur',
-        setter: 'BoolSetter'
+        }
       },
       {
         title: {
@@ -127,7 +122,6 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
         },
         name: 'defaultValue'
       },
-
       {
         title: {
           label: {
@@ -302,7 +296,13 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'panelRender',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['panelNode']
+          }
+        }
       },
       {
         title: {
@@ -459,23 +459,19 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
         setter: 'StringSetter'
       },
       {
-        title: 'popupStyle',
-        display: 'entry',
-        type: 'field',
-        items: [
-          {
-            title: {
-              label: {
-                type: 'i18n',
-                'en-US': 'popupStyle',
-                'zh-CN': 'popupStyle'
-              }
-            },
-            name: 'popupStyle',
-            setter: 'StyleSetter',
-            display: 'block'
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'popupStyle',
+            'zh-CN': 'popupStyle'
           }
-        ]
+        },
+        name: 'popupStyle',
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        }
       },
       {
         title: {
@@ -485,14 +481,7 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'presets'
           }
         },
-        name: 'presets',
-        setter: {
-          componentName: 'ArraySetter',
-          condition: () => false,
-          props: {
-            itemSetter: 'FunctionSetter'
-          }
-        }
+        name: 'presets'
       },
       {
         title: {
@@ -514,7 +503,13 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'renderExtraFooter',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['__placeholder__']
+          }
+        }
       },
       {
         title: {
@@ -552,6 +547,7 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -595,6 +591,7 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
         name: 'status',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

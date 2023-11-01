@@ -247,6 +247,7 @@ const MenuMeta: IPublicTypeComponentMetadata = {
                       name: 'theme',
                       setter: {
                         componentName: 'RadioGroupSetter',
+                        condition: () => false,
                         props: {
                           dataSource: [
                             {
@@ -300,6 +301,7 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         name: 'mode',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -476,6 +478,7 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         name: 'theme',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -511,6 +514,7 @@ const MenuMeta: IPublicTypeComponentMetadata = {
         name: 'triggerSubMenuAction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

@@ -42,6 +42,7 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
         name: 'placement',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

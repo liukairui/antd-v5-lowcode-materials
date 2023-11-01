@@ -39,6 +39,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
         name: 'maxPopoverPlacement',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -74,6 +75,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
         name: 'maxPopoverTrigger',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -139,6 +141,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
         name: 'shape',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -191,6 +194,7 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
               },
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {

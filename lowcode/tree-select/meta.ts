@@ -441,6 +441,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlRegion',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {
@@ -755,6 +756,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
               'NumberSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -1137,6 +1139,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
           props: {
             itemSetter: {
               componentName: 'RadioGroupSetter',
+              condition: () => false,
               props: {
                 dataSource: [
                   {
@@ -1174,6 +1177,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
         name: 'showCheckedStrategy',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -1228,6 +1232,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -1271,6 +1276,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
         name: 'status',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -1726,6 +1732,7 @@ const TreeSelectMeta: IPublicTypeComponentMetadata = {
         name: 'treeExpandAction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

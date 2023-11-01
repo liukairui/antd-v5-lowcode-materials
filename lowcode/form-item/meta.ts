@@ -185,6 +185,7 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
         name: 'labelAlign',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -210,30 +211,27 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
         }
       },
       {
-        title: 'labelCol',
-        display: 'entry',
-        type: 'field',
-        items: [
-          {
-            title: {
-              label: {
-                type: 'i18n',
-                'en-US': 'labelCol',
-                'zh-CN': 'labelCol'
-              }
-            },
-            name: 'labelCol',
-            setter: {
-              componentName: 'ObjectSetter',
-              condition: () => false,
-              props: {
-                config: {
-                  items: GridColMeta.configure!['props']
-                }
-              }
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'labelCol',
+            'zh-CN': 'labelCol'
+          }
+        },
+        name: 'labelCol',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
+        setter: {
+          componentName: 'ObjectSetter',
+          condition: () => false,
+          props: {
+            config: {
+              items: GridColMeta.configure!['props']
             }
           }
-        ]
+        }
       },
       {
         title: {
@@ -331,50 +329,47 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
         }
       },
       {
-        title: 'tooltip',
-        display: 'entry',
-        type: 'field',
-        items: [
-          {
-            title: {
-              label: {
-                type: 'i18n',
-                'en-US': 'tooltip',
-                'zh-CN': 'tooltip'
-              }
-            },
-            name: 'tooltip',
-            setter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: [
-                  'SlotSetter',
-                  {
-                    componentName: 'ObjectSetter',
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'icon',
-                                'zh-CN': 'icon'
-                              }
-                            },
-                            name: 'icon',
-                            setter: 'SlotSetter'
-                          },
-                          ...TooltipMeta.configure!['props']
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'tooltip',
+            'zh-CN': 'tooltip'
           }
-        ]
+        },
+        name: 'tooltip',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: [
+              'SlotSetter',
+              {
+                componentName: 'ObjectSetter',
+                props: {
+                  config: {
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'icon',
+                            'zh-CN': 'icon'
+                          }
+                        },
+                        name: 'icon',
+                        setter: 'SlotSetter'
+                      },
+                      ...TooltipMeta.configure!['props']
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
       },
       {
         title: {
@@ -414,6 +409,7 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
               'BoolSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -513,38 +509,24 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'valuePropName',
-            'zh-CN': 'valuePropName'
+            'en-US': 'wrapperCol',
+            'zh-CN': 'wrapperCol'
           }
         },
-        name: 'valuePropName',
-        setter: 'StringSetter'
-      },
-      {
-        title: 'wrapperCol',
-        display: 'entry',
-        type: 'field',
-        items: [
-          {
-            title: {
-              label: {
-                type: 'i18n',
-                'en-US': 'wrapperCol',
-                'zh-CN': 'wrapperCol'
-              }
-            },
-            name: 'wrapperCol',
-            setter: {
-              componentName: 'ObjectSetter',
-              condition: () => false,
-              props: {
-                config: {
-                  items: GridColMeta.configure!['props']
-                }
-              }
+        name: 'wrapperCol',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
+        setter: {
+          componentName: 'ObjectSetter',
+          condition: () => false,
+          props: {
+            config: {
+              items: GridColMeta.configure!['props']
             }
           }
-        ]
+        }
       }
     ],
     supports: {

@@ -39,6 +39,7 @@ const DividerMeta: IPublicTypeComponentMetadata = {
         name: 'orientation',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -109,6 +110,7 @@ const DividerMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

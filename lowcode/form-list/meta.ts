@@ -30,8 +30,7 @@ const FormListMeta: IPublicTypeComponentMetadata = {
           componentName: 'SlotSetter',
           initialValue: {
             type: 'JSSlot',
-            params: ['fields', 'operation', 'meta'],
-            value: []
+            params: ['fields', 'operation', 'meta']
           }
         }
       },

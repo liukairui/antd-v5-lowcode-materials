@@ -65,6 +65,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlType',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {
@@ -274,6 +275,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
               'FunctionSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -427,6 +429,7 @@ const ModalMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlType',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {

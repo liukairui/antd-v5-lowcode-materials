@@ -116,6 +116,7 @@ const SwitchMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -139,17 +140,6 @@ const SwitchMeta: IPublicTypeComponentMetadata = {
             ]
           }
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          }
-        },
-        name: 'title',
-        setter: 'StringSetter'
       },
       {
         title: {

@@ -44,6 +44,7 @@ const StatisticMeta: IPublicTypeComponentMetadata = {
               'FunctionSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {

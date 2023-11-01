@@ -79,6 +79,7 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
         name: 'direction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -118,6 +119,7 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             setters: [
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -163,6 +165,7 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
                       setters: [
                         {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -273,25 +276,20 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             config: {
               items: [
                 {
-                  title: 'item',
-                  display: 'entry',
-                  type: 'group',
-                  items: [
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'item',
-                          'zh-CN': 'item'
-                        }
-                      },
-                      name: 'item',
-                      setter: {
-                        componentName: 'StyleSetter'
-                      },
-                      display: 'block'
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'item',
+                      'zh-CN': 'item'
                     }
-                  ]
+                  },
+                  name: 'item',
+                  extraProps: {
+                    display: 'accordion',
+                    defaultCollapsed: true
+                  },
+                  setter: 'StyleSetter',
+                  display: 'block'
                 }
               ]
             }

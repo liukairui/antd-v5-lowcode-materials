@@ -358,6 +358,7 @@ const CarouselMeta: IPublicTypeComponentMetadata = {
         name: 'effect',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -437,6 +438,7 @@ const CarouselMeta: IPublicTypeComponentMetadata = {
         name: 'lazyLoad',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -988,6 +990,7 @@ const CarouselMeta: IPublicTypeComponentMetadata = {
                                       name: 'lazyLoad',
                                       setter: {
                                         componentName: 'RadioGroupSetter',
+                                        condition: () => false,
                                         props: {
                                           dataSource: [
                                             {
@@ -1372,6 +1375,7 @@ const CarouselMeta: IPublicTypeComponentMetadata = {
                             },
                             {
                               componentName: 'RadioGroupSetter',
+                              condition: () => false,
                               props: {
                                 dataSource: [
                                   {

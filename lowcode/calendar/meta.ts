@@ -26,7 +26,13 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'cellRender',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['current', 'info']
+          }
+        }
       },
       {
         title: {
@@ -568,6 +574,7 @@ const CalendarMeta: IPublicTypeComponentMetadata = {
         name: 'mode',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

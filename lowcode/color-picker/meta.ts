@@ -78,6 +78,7 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
         name: 'defaultFormat',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -248,6 +249,7 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
         name: 'format',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -355,7 +357,13 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'panelRender',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['panel', 'extra']
+          }
+        }
       },
       {
         title: {
@@ -432,54 +440,7 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'presets'
           }
         },
-        name: 'presets',
-        setter: {
-          componentName: 'ArraySetter',
-          condition: () => false,
-          props: {
-            itemSetter: {
-              componentName: 'ObjectSetter',
-              condition: () => false,
-              props: {
-                config: {
-                  items: [
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'label',
-                          'zh-CN': 'label'
-                        }
-                      },
-                      name: 'label',
-                      setter: 'SlotSetter'
-                    },
-                    /**
-                     * @TODO ArraySetter 暂时仅支持一种类型
-                     */
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'colors',
-                          'zh-CN': 'colors'
-                        }
-                      },
-                      name: 'colors',
-                      setter: {
-                        componentName: 'ArraySetter',
-                        condition: () => false,
-                        props: {
-                          itemSetter: 'StringSetter'
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
+        name: 'presets'
       },
       {
         title: {
@@ -493,7 +454,16 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: ['BoolSetter', 'FunctionSetter']
+            setters: [
+              'BoolSetter',
+              {
+                componentName: 'SlotSetter',
+                initialValue: {
+                  type: 'JSSlot',
+                  params: ['color']
+                }
+              }
+            ]
           }
         }
       },
@@ -508,6 +478,7 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -551,6 +522,7 @@ const ColorPickerMeta: IPublicTypeComponentMetadata = {
         name: 'trigger',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

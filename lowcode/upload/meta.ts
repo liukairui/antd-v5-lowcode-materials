@@ -325,6 +325,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'crossOrigin',
                       setter: {
                         componentName: 'RadioGroupSetter',
+                        condition: () => false,
                         props: {
                           dataSource: [
                             {
@@ -727,6 +728,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
                       name: 'crossOrigin',
                       setter: {
                         componentName: 'RadioGroupSetter',
+                        condition: () => false,
                         props: {
                           dataSource: [
                             {
@@ -1431,6 +1433,7 @@ const UploadMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

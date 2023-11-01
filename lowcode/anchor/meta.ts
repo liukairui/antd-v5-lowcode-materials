@@ -50,6 +50,7 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
         name: 'direction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

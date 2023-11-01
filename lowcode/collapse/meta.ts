@@ -81,6 +81,7 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         name: 'collapsible',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -303,6 +304,7 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

@@ -140,10 +140,11 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'style',
-                      setter: {
-                        componentName: 'StyleSetter'
-                      },
-                      display: 'accordion'
+                      setter: 'StyleSetter',
+                      extraProps: {
+                        display: 'accordion',
+                        defaultCollapsed: true
+                      }
                     }
                   ]
                 }

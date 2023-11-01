@@ -62,37 +62,9 @@ const RateMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              'StringSetter',
-              'NumberSetter',
-              'BoolSetter',
-              {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              'FunctionSetter'
-            ]
+            setters: ['SlotSetter', 'FunctionSetter']
           }
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'characterRender',
-            'zh-CN': 'characterRender'
-          }
-        },
-        name: 'characterRender',
-        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -120,17 +92,6 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'direction',
-            'zh-CN': 'direction'
-          }
-        },
-        name: 'direction',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'disabled',
             'zh-CN': 'disabled'
           }
@@ -142,11 +103,33 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'onBlur',
+            'zh-CN': 'onBlur'
+          }
+        },
+        name: 'onBlur',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
             'en-US': 'onChange',
             'zh-CN': 'onChange'
           }
         },
         name: 'onChange',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onFocus',
+            'zh-CN': 'onFocus'
+          }
+        },
+        name: 'onFocus',
         setter: 'FunctionSetter'
       },
       {
@@ -175,28 +158,6 @@ const RateMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          }
-        },
-        name: 'onMouseEnter',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          }
-        },
-        name: 'onMouseLeave',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'tooltips',
             'zh-CN': 'tooltips'
           }
@@ -218,21 +179,12 @@ const RateMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'value'
           }
         },
-        name: 'value',
-        setter: 'NumberSetter'
+        name: 'value'
       }
     ],
     supports: {
       className: true,
-      style: true,
-      events: [
-        {
-          name: 'onFocus'
-        },
-        {
-          name: 'onBlur'
-        }
-      ]
+      style: true
     },
     component: {
       isContainer: true

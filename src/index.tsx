@@ -174,22 +174,22 @@ export { Form, FormErrorList, FormItem, FormList, FormProvider };
  * Input 输入框
  */
 import _Input from 'antd/es/input';
-const Input: FC<CP<typeof _Input>> = (props) => <_Input {...props} />;
-const InputTextArea: FC<CP<typeof _Input.TextArea>> = (props) => <_Input.TextArea {...props} />;
+const Input: FC<CP<typeof _Input>> = ({ children, ...props }) => <_Input {...props} />;
+const InputTextArea: FC<CP<typeof _Input.TextArea>> = ({ children, ...props }) => <_Input.TextArea {...props} />;
 export { Input, InputTextArea };
 
 /**
  * InputNumber 数字输入框
  */
 import _InputNumber from 'antd/es/input-number';
-const InputNumber: FC<CP<typeof _InputNumber>> = (props) => <_InputNumber {...props} />;
+const InputNumber: FC<CP<typeof _InputNumber>> = ({ children, ...props }) => <_InputNumber {...props} />;
 export { InputNumber };
 
 /**
  * Mentions 提及
  */
 import _Mentions from 'antd/es/mentions';
-const Mentions: FC<CP<typeof _Mentions>> = (props) => <_Mentions {...props} />;
+const Mentions: FC<CP<typeof _Mentions>> = ({ children, ...props }) => <_Mentions {...props} />;
 export { Mentions };
 
 /**
@@ -241,7 +241,7 @@ export { TimePicker, TimeRangePicker };
  * Transfer 穿梭框
  */
 import _Transfer, { TransferProps } from 'antd/es/transfer';
-const Transfer: FC<TransferProps<any>> = (props) => <_Transfer {...props} />;
+const Transfer: FC<TransferProps<any>> = ({ children, ...props }) => <_Transfer {...props} />;
 export { Transfer };
 
 /**

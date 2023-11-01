@@ -103,6 +103,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                         name: 'format',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -342,6 +343,7 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           props: {
                             itemSetter: {
                               componentName: 'RadioGroupSetter',
+                              condition: () => false,
                               props: {
                                 dataSource: [
                                   {

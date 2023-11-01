@@ -780,6 +780,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -939,6 +940,7 @@ const TabsMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

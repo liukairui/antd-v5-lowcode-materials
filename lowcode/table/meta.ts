@@ -220,6 +220,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'sortOrder',
                                                 setter: {
                                                   componentName: 'RadioGroupSetter',
+                                                  condition: () => false,
                                                   props: {
                                                     dataSource: [
                                                       {
@@ -255,6 +256,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'defaultSortOrder',
                                                 setter: {
                                                   componentName: 'RadioGroupSetter',
+                                                  condition: () => false,
                                                   props: {
                                                     dataSource: [
                                                       {
@@ -294,6 +296,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                   props: {
                                                     itemSetter: {
                                                       componentName: 'RadioGroupSetter',
+                                                      condition: () => false,
                                                       props: {
                                                         dataSource: [
                                                           {
@@ -725,6 +728,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                 name: 'filterMode',
                                                 setter: {
                                                   componentName: 'RadioGroupSetter',
+                                                  condition: () => false,
                                                   props: {
                                                     dataSource: [
                                                       {
@@ -1033,6 +1037,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'sortOrder',
                             setter: {
                               componentName: 'RadioGroupSetter',
+                              condition: () => false,
                               props: {
                                 dataSource: [
                                   {
@@ -1068,6 +1073,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'defaultSortOrder',
                             setter: {
                               componentName: 'RadioGroupSetter',
+                              condition: () => false,
                               props: {
                                 dataSource: [
                                   {
@@ -1107,6 +1113,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                               props: {
                                 itemSetter: {
                                   componentName: 'RadioGroupSetter',
+                                  condition: () => false,
                                   props: {
                                     dataSource: [
                                       {
@@ -1538,6 +1545,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             name: 'filterMode',
                             setter: {
                               componentName: 'RadioGroupSetter',
+                              condition: () => false,
                               props: {
                                 dataSource: [
                                   {
@@ -8859,6 +8867,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         'BoolSetter',
                         {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -9021,6 +9030,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         name: 'size',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -9454,6 +9464,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
               },
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -9564,6 +9575,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'type',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {
@@ -9776,6 +9788,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                   },
                                   {
                                     componentName: 'RadioGroupSetter',
+                                    condition: () => false,
                                     props: {
                                       dataSource: [
                                         {
@@ -9843,6 +9856,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         'BoolSetter',
                         {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -10149,6 +10163,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -10196,6 +10211,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
           props: {
             itemSetter: {
               componentName: 'RadioGroupSetter',
+              condition: () => false,
               props: {
                 dataSource: [
                   {
@@ -10316,6 +10332,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
         name: 'tableLayout',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

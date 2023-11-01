@@ -83,6 +83,7 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
         name: 'htmlType',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -176,6 +177,7 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
         name: 'shape',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -219,6 +221,7 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -393,8 +396,11 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
       },
       {
         title: '原生 a 标签属性',
-        display: 'accordion',
         type: 'group',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         items: [
           {
             title: {
@@ -529,8 +535,11 @@ const ButtonMeta: IPublicTypeComponentMetadata = {
       },
       {
         title: '原生 button 标签属性',
-        display: 'accordion',
         type: 'group',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         items: [
           {
             title: {

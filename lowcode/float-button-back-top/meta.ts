@@ -108,6 +108,7 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         name: 'shape',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -170,6 +171,7 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

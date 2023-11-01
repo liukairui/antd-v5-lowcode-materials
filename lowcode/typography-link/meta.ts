@@ -103,6 +103,7 @@ const TypographyLinkMeta: IPublicTypeComponentMetadata = {
                         name: 'format',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -358,6 +359,7 @@ const TypographyLinkMeta: IPublicTypeComponentMetadata = {
                           props: {
                             itemSetter: {
                               componentName: 'RadioGroupSetter',
+                              condition: () => false,
                               props: {
                                 dataSource: [
                                   {
@@ -584,8 +586,11 @@ const TypographyLinkMeta: IPublicTypeComponentMetadata = {
       },
       {
         title: '原生 a 标签属性',
-        display: 'accordion',
         type: 'group',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         items: [
           {
             title: {

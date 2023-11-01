@@ -31,8 +31,60 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           condition: () => false,
           props: {
             itemSetter: {
-              componentName: 'MixedSetter',
-              props: {}
+              componentName: 'ObjectSetter',
+              condition: () => false,
+              props: {
+                config: {
+                  items: [
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'description',
+                          'zh-CN': 'description'
+                        }
+                      },
+                      name: 'description',
+                      setter: 'StringSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'disabled',
+                          'zh-CN': 'disabled'
+                        }
+                      },
+                      name: 'disabled',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'key',
+                          'zh-CN': 'key'
+                        }
+                      },
+                      name: 'key',
+                      setter: 'StringSetter',
+                      isRequired: true
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'title',
+                          'zh-CN': 'title'
+                        }
+                      },
+                      name: 'title',
+                      setter: 'StringSetter',
+                      isRequired: true
+                    }
+                  ]
+                }
+              }
             }
           }
         }
@@ -68,7 +120,13 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'footer',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['props', 'config']
+          }
+        }
       },
       {
         title: {
@@ -82,22 +140,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              'FunctionSetter'
-            ]
+            setters: ['StyleSetter', 'FunctionSetter']
           }
+        },
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -114,10 +162,52 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           condition: () => false,
           props: {
             config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'itemUnit',
+                      'zh-CN': 'itemUnit'
+                    }
+                  },
+                  name: 'itemUnit',
+                  setter: 'StringSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'itemsUnit',
+                      'zh-CN': 'itemsUnit'
+                    }
+                  },
+                  name: 'itemsUnit',
+                  setter: 'StringSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'searchPlaceholder',
+                      'zh-CN': 'searchPlaceholder'
+                    }
+                  },
+                  name: 'searchPlaceholder',
+                  setter: 'StringSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'notFoundContent',
+                      'zh-CN': 'notFoundContent'
+                    }
+                  },
+                  name: 'notFoundContent',
+                  setter: 'SlotSetter'
+                }
+              ]
             }
           }
         }
@@ -186,17 +276,10 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'operationStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -297,18 +380,13 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'render',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'rowKey',
-            'zh-CN': 'rowKey'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['record']
           }
-        },
-        name: 'rowKey',
-        setter: 'FunctionSetter'
+        }
       },
       {
         title: {
@@ -324,26 +402,10 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           condition: () => false,
           props: {
             itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: [
-                  'StringSetter',
-                  'NumberSetter',
-                  'BoolSetter',
-                  {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
-                  },
-                  'FunctionSetter'
-                ]
+              componentName: 'SlotSetter',
+              initialValue: {
+                type: 'JSSlot',
+                params: ['info']
               }
             }
           }
@@ -410,12 +472,9 @@ const TransferMeta: IPublicTypeComponentMetadata = {
         name: 'status',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
-              {
-                label: '',
-                value: ''
-              },
               {
                 label: 'warning',
                 value: 'warning'
@@ -426,10 +485,6 @@ const TransferMeta: IPublicTypeComponentMetadata = {
               }
             ],
             options: [
-              {
-                label: '',
-                value: ''
-              },
               {
                 label: 'warning',
                 value: 'warning'

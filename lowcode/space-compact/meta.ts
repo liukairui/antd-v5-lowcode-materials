@@ -39,6 +39,7 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
         name: 'direction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -74,6 +75,7 @@ const SpaceCompactMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

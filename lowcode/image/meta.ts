@@ -39,6 +39,7 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         name: 'crossOrigin',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -82,6 +83,7 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         name: 'decoding',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -152,6 +154,7 @@ const ImageMeta: IPublicTypeComponentMetadata = {
         name: 'loading',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -313,6 +316,7 @@ const ImageMeta: IPublicTypeComponentMetadata = {
                               'FunctionSetter',
                               {
                                 componentName: 'RadioGroupSetter',
+                                condition: () => false,
                                 props: {
                                   dataSource: [
                                     {

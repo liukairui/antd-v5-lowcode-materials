@@ -149,6 +149,7 @@ const WatermarkMeta: IPublicTypeComponentMetadata = {
                         'NumberSetter',
                         {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {

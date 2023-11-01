@@ -374,6 +374,7 @@ const DropdownButtonMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -421,6 +422,7 @@ const DropdownButtonMeta: IPublicTypeComponentMetadata = {
           props: {
             itemSetter: {
               componentName: 'RadioGroupSetter',
+              condition: () => false,
               props: {
                 dataSource: [
                   {

@@ -21,17 +21,6 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'accept',
-            'zh-CN': 'accept'
-          }
-        },
-        name: 'accept',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'addonAfter',
             'zh-CN': 'addonAfter'
           }
@@ -54,23 +43,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'alt',
-            'zh-CN': 'alt'
+            'en-US': 'autoFocus',
+            'zh-CN': 'autoFocus'
           }
         },
-        name: 'alt',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'autoComplete',
-            'zh-CN': 'autoComplete'
-          }
-        },
-        name: 'autoComplete',
-        setter: 'StringSetter'
+        name: 'autoFocus',
+        setter: 'BoolSetter'
       },
       {
         title: {
@@ -82,150 +60,6 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         },
         name: 'bordered',
         setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'capture',
-            'zh-CN': 'capture'
-          }
-        },
-        name: 'capture',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'BoolSetter']
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'checked',
-            'zh-CN': 'checked'
-          }
-        },
-        name: 'checked',
-        setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          }
-        },
-        name: 'classNames',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'affixWrapper',
-                      'zh-CN': 'affixWrapper'
-                    }
-                  },
-                  name: 'affixWrapper',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'group',
-                      'zh-CN': 'group'
-                    }
-                  },
-                  name: 'group',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'wrapper',
-                      'zh-CN': 'wrapper'
-                    }
-                  },
-                  name: 'wrapper',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'input',
-                      'zh-CN': 'input'
-                    }
-                  },
-                  name: 'input',
-                  setter: 'StringSetter'
-                }
-              ]
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'classes',
-            'zh-CN': 'classes'
-          }
-        },
-        name: 'classes',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'affixWrapper',
-                      'zh-CN': 'affixWrapper'
-                    }
-                  },
-                  name: 'affixWrapper',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'group',
-                      'zh-CN': 'group'
-                    }
-                  },
-                  name: 'group',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'wrapper',
-                      'zh-CN': 'wrapper'
-                    }
-                  },
-                  name: 'wrapper',
-                  setter: 'StringSetter'
-                }
-              ]
-            }
-          }
-        }
       },
       {
         title: {
@@ -296,13 +130,7 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'defaultValue'
           }
         },
-        name: 'defaultValue',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
+        name: 'defaultValue'
       },
       {
         title: {
@@ -319,105 +147,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'downHandler',
-            'zh-CN': 'downHandler'
-          }
-        },
-        name: 'downHandler',
-        setter: 'SlotSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'form',
-            'zh-CN': 'form'
-          }
-        },
-        name: 'form',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formAction',
-            'zh-CN': 'formAction'
-          }
-        },
-        name: 'formAction',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formEncType',
-            'zh-CN': 'formEncType'
-          }
-        },
-        name: 'formEncType',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formMethod',
-            'zh-CN': 'formMethod'
-          }
-        },
-        name: 'formMethod',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formNoValidate',
-            'zh-CN': 'formNoValidate'
-          }
-        },
-        name: 'formNoValidate',
-        setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'formTarget',
-            'zh-CN': 'formTarget'
-          }
-        },
-        name: 'formTarget',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'formatter',
             'zh-CN': 'formatter'
           }
         },
         name: 'formatter',
         setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'height',
-            'zh-CN': 'height'
-          }
-        },
-        name: 'height',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
       },
       {
         title: {
@@ -434,38 +169,11 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'list',
-            'zh-CN': 'list'
-          }
-        },
-        name: 'list',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'max',
             'zh-CN': 'max'
           }
         },
         name: 'max',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'maxLength',
-            'zh-CN': 'maxLength'
-          }
-        },
-        name: 'maxLength',
         setter: 'NumberSetter'
       },
       {
@@ -477,55 +185,17 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'min',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'minLength',
-            'zh-CN': 'minLength'
-          }
-        },
-        name: 'minLength',
         setter: 'NumberSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'multiple',
-            'zh-CN': 'multiple'
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
           }
         },
-        name: 'multiple',
-        setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
-          }
-        },
-        name: 'name',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onInput',
-            'zh-CN': 'onInput'
-          }
-        },
-        name: 'onInput',
+        name: 'onChange',
         setter: 'FunctionSetter'
       },
       {
@@ -543,23 +213,23 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'parser',
-            'zh-CN': 'parser'
+            'en-US': 'onStep',
+            'zh-CN': 'onStep'
           }
         },
-        name: 'parser',
+        name: 'onStep',
         setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'pattern',
-            'zh-CN': 'pattern'
+            'en-US': 'parser',
+            'zh-CN': 'parser'
           }
         },
-        name: 'pattern',
-        setter: 'StringSetter'
+        name: 'parser',
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -609,17 +279,6 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'required',
-            'zh-CN': 'required'
-          }
-        },
-        name: 'required',
-        setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'size',
             'zh-CN': 'size'
           }
@@ -627,6 +286,7 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -663,17 +323,6 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'src',
-            'zh-CN': 'src'
-          }
-        },
-        name: 'src',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'status',
             'zh-CN': 'status'
           }
@@ -681,12 +330,9 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         name: 'status',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
-              {
-                label: '',
-                value: ''
-              },
               {
                 label: 'warning',
                 value: 'warning'
@@ -697,10 +343,6 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
               }
             ],
             options: [
-              {
-                label: '',
-                value: ''
-              },
               {
                 label: 'warning',
                 value: 'warning'
@@ -744,282 +386,16 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'suffix',
-            'zh-CN': 'suffix'
-          }
-        },
-        name: 'suffix',
-        setter: 'SlotSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          }
-        },
-        name: 'type',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              {
-                componentName: 'SelectSetter',
-                props: {
-                  dataSource: [
-                    {
-                      label: 'number',
-                      value: 'number'
-                    },
-                    {
-                      label: 'submit',
-                      value: 'submit'
-                    },
-                    {
-                      label: 'reset',
-                      value: 'reset'
-                    },
-                    {
-                      label: 'button',
-                      value: 'button'
-                    },
-                    {
-                      label: 'text',
-                      value: 'text'
-                    },
-                    {
-                      label: 'color',
-                      value: 'color'
-                    },
-                    {
-                      label: 'time',
-                      value: 'time'
-                    },
-                    {
-                      label: 'image',
-                      value: 'image'
-                    },
-                    {
-                      label: 'hidden',
-                      value: 'hidden'
-                    },
-                    {
-                      label: 'date',
-                      value: 'date'
-                    },
-                    {
-                      label: 'week',
-                      value: 'week'
-                    },
-                    {
-                      label: 'month',
-                      value: 'month'
-                    },
-                    {
-                      label: 'checkbox',
-                      value: 'checkbox'
-                    },
-                    {
-                      label: 'datetime-local',
-                      value: 'datetime-local'
-                    },
-                    {
-                      label: 'email',
-                      value: 'email'
-                    },
-                    {
-                      label: 'file',
-                      value: 'file'
-                    },
-                    {
-                      label: 'password',
-                      value: 'password'
-                    },
-                    {
-                      label: 'radio',
-                      value: 'radio'
-                    },
-                    {
-                      label: 'range',
-                      value: 'range'
-                    },
-                    {
-                      label: 'search',
-                      value: 'search'
-                    },
-                    {
-                      label: 'tel',
-                      value: 'tel'
-                    },
-                    {
-                      label: 'url',
-                      value: 'url'
-                    }
-                  ],
-                  options: [
-                    {
-                      label: 'number',
-                      value: 'number'
-                    },
-                    {
-                      label: 'submit',
-                      value: 'submit'
-                    },
-                    {
-                      label: 'reset',
-                      value: 'reset'
-                    },
-                    {
-                      label: 'button',
-                      value: 'button'
-                    },
-                    {
-                      label: 'text',
-                      value: 'text'
-                    },
-                    {
-                      label: 'color',
-                      value: 'color'
-                    },
-                    {
-                      label: 'time',
-                      value: 'time'
-                    },
-                    {
-                      label: 'image',
-                      value: 'image'
-                    },
-                    {
-                      label: 'hidden',
-                      value: 'hidden'
-                    },
-                    {
-                      label: 'date',
-                      value: 'date'
-                    },
-                    {
-                      label: 'week',
-                      value: 'week'
-                    },
-                    {
-                      label: 'month',
-                      value: 'month'
-                    },
-                    {
-                      label: 'checkbox',
-                      value: 'checkbox'
-                    },
-                    {
-                      label: 'datetime-local',
-                      value: 'datetime-local'
-                    },
-                    {
-                      label: 'email',
-                      value: 'email'
-                    },
-                    {
-                      label: 'file',
-                      value: 'file'
-                    },
-                    {
-                      label: 'password',
-                      value: 'password'
-                    },
-                    {
-                      label: 'radio',
-                      value: 'radio'
-                    },
-                    {
-                      label: 'range',
-                      value: 'range'
-                    },
-                    {
-                      label: 'search',
-                      value: 'search'
-                    },
-                    {
-                      label: 'tel',
-                      value: 'tel'
-                    },
-                    {
-                      label: 'url',
-                      value: 'url'
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'upHandler',
-            'zh-CN': 'upHandler'
-          }
-        },
-        name: 'upHandler',
-        setter: 'SlotSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'value',
             'zh-CN': 'value'
           }
         },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'width',
-            'zh-CN': 'width'
-          }
-        },
-        name: 'width',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
+        name: 'value'
       }
     ],
     supports: {
       className: true,
-      style: true,
-      events: [
-        {
-          name: 'onChange'
-        },
-        {
-          name: 'onStep'
-        }
-      ]
+      style: true
     },
     component: {
       isContainer: true

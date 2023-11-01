@@ -39,6 +39,7 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
         name: 'shape',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -79,6 +80,7 @@ const SkeletonAvatarMeta: IPublicTypeComponentMetadata = {
               'NumberSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {

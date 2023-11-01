@@ -55,6 +55,7 @@ const StatisticCountdownMeta: IPublicTypeComponentMetadata = {
               'FunctionSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {

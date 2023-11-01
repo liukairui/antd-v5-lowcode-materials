@@ -39,6 +39,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
         name: 'crossOrigin',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -87,6 +88,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
               'BoolSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -158,6 +160,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
         name: 'shape',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -210,6 +213,7 @@ const AvatarMeta: IPublicTypeComponentMetadata = {
               },
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {

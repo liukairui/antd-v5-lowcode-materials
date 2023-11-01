@@ -343,6 +343,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         name: 'expandAction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

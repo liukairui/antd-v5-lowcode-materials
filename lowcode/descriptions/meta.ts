@@ -191,6 +191,7 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
         name: 'layout',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -226,6 +227,7 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

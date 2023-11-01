@@ -36,8 +36,7 @@ const RadioMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'checked'
           }
         },
-        name: 'checked',
-        setter: 'BoolSetter'
+        name: 'checked'
       },
       {
         title: {
@@ -65,100 +64,12 @@ const RadioMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'name',
-            'zh-CN': 'name'
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
           }
         },
-        name: 'name',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onClick',
-            'zh-CN': 'onClick'
-          }
-        },
-        name: 'onClick',
+        name: 'onChange',
         setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
-          }
-        },
-        name: 'onKeyDown',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onKeyPress',
-            'zh-CN': 'onKeyPress'
-          }
-        },
-        name: 'onKeyPress',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseEnter',
-            'zh-CN': 'onMouseEnter'
-          }
-        },
-        name: 'onMouseEnter',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'onMouseLeave',
-            'zh-CN': 'onMouseLeave'
-          }
-        },
-        name: 'onMouseLeave',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'skipGroup',
-            'zh-CN': 'skipGroup'
-          }
-        },
-        name: 'skipGroup',
-        setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'title',
-            'zh-CN': 'title'
-          }
-        },
-        name: 'title',
-        setter: 'StringSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'type',
-            'zh-CN': 'type'
-          }
-        },
-        name: 'type',
-        setter: 'StringSetter'
       },
       {
         title: {
@@ -168,21 +79,12 @@ const RadioMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'value'
           }
         },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
-        }
+        name: 'value'
       }
     ],
     supports: {
       className: true,
-      style: true,
-      events: [
-        {
-          name: 'onChange'
-        }
-      ]
+      style: true
     },
     component: {
       isContainer: true

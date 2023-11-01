@@ -39,6 +39,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         name: 'direction',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -219,11 +220,11 @@ const StepsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'style',
-                      setter: {
-                        componentName: 'StyleSetter'
-                      },
-                      display: 'accordion',
-                      type: 'field'
+                      setter: 'StyleSetter',
+                      extraProps: {
+                        display: 'accordion',
+                        defaultCollapsed: true
+                      }
                     }
                   ]
                 }
@@ -243,6 +244,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         name: 'labelPlacement',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -327,6 +329,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -413,6 +416,7 @@ const StepsMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

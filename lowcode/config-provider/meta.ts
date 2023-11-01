@@ -807,6 +807,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'componentSize',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -3787,6 +3788,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
         name: 'popupOverflow',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -4246,6 +4248,7 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                         'NumberSetter',
                         {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {

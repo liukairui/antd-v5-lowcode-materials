@@ -172,6 +172,7 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
         name: 'theme',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -224,25 +225,20 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
         }
       },
       {
-        title: 'zeroWidthTriggerStyle',
-        display: 'entry',
-        type: 'field',
-        items: [
-          {
-            title: {
-              label: {
-                type: 'i18n',
-                'en-US': 'zeroWidthTriggerStyle',
-                'zh-CN': 'zeroWidthTriggerStyle'
-              }
-            },
-            name: 'zeroWidthTriggerStyle',
-            setter: {
-              componentName: 'StyleSetter'
-            },
-            display: 'block'
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'zeroWidthTriggerStyle',
+            'zh-CN': 'zeroWidthTriggerStyle'
           }
-        ]
+        },
+        name: 'zeroWidthTriggerStyle',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
+        setter: 'StyleSetter',
+        display: 'block'
       }
     ],
     supports: {

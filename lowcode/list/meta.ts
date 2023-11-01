@@ -208,6 +208,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
         name: 'itemLayout',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -329,6 +330,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                         name: 'size',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -496,6 +498,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                         name: 'position',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -539,6 +542,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
                         name: 'align',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -577,6 +581,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
               },
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -629,6 +634,7 @@ const ListMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

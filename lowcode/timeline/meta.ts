@@ -239,6 +239,7 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
         name: 'mode',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

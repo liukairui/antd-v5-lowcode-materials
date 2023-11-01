@@ -295,6 +295,7 @@ const DropdownMeta: IPublicTypeComponentMetadata = {
           props: {
             itemSetter: {
               componentName: 'RadioGroupSetter',
+              condition: () => false,
               props: {
                 dataSource: [
                   {

@@ -296,6 +296,7 @@ const DrawerMeta: IPublicTypeComponentMetadata = {
               'FunctionSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -1489,6 +1490,7 @@ const DrawerMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

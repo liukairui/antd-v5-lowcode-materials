@@ -231,6 +231,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlRegion',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {
@@ -415,6 +416,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                         name: 'adjustX',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -450,6 +452,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                         name: 'adjustY',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -546,6 +549,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlType',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {
@@ -1224,6 +1228,7 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlType',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {

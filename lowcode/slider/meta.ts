@@ -1,4 +1,5 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
+import TooltipMeta from '../tooltip/meta';
 
 const SliderMeta: IPublicTypeComponentMetadata = {
   componentName: 'Slider',
@@ -27,28 +28,6 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         },
         name: 'autoFocus',
         setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'classNames',
-            'zh-CN': 'classNames'
-          }
-        },
-        name: 'classNames',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
       },
       {
         title: {
@@ -127,21 +106,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'marks'
           }
         },
-        name: 'marks',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {
-                  setters: []
-                }
-              }
-            }
-          }
-        }
+        name: 'marks'
       },
       {
         title: {
@@ -174,12 +139,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'onAfterChange',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['FunctionSetter', 'FunctionSetter']
-          }
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -190,12 +150,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'onChange',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['FunctionSetter', 'FunctionSetter']
-          }
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -262,28 +217,6 @@ const SliderMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'styles',
-            'zh-CN': 'styles'
-          }
-        },
-        name: 'styles',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'tooltip',
             'zh-CN': 'tooltip'
           }
@@ -294,178 +227,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
           condition: () => false,
           props: {
             config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'prefixCls',
-                      'zh-CN': 'prefixCls'
-                    }
-                  },
-                  name: 'prefixCls',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'open',
-                      'zh-CN': 'open'
-                    }
-                  },
-                  name: 'open',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'placement',
-                      'zh-CN': 'placement'
-                    }
-                  },
-                  name: 'placement',
-                  setter: {
-                    componentName: 'SelectSetter',
-                    props: {
-                      dataSource: [
-                        {
-                          label: 'left',
-                          value: 'left'
-                        },
-                        {
-                          label: 'right',
-                          value: 'right'
-                        },
-                        {
-                          label: 'top',
-                          value: 'top'
-                        },
-                        {
-                          label: 'bottom',
-                          value: 'bottom'
-                        },
-                        {
-                          label: 'topLeft',
-                          value: 'topLeft'
-                        },
-                        {
-                          label: 'topRight',
-                          value: 'topRight'
-                        },
-                        {
-                          label: 'bottomLeft',
-                          value: 'bottomLeft'
-                        },
-                        {
-                          label: 'bottomRight',
-                          value: 'bottomRight'
-                        },
-                        {
-                          label: 'leftTop',
-                          value: 'leftTop'
-                        },
-                        {
-                          label: 'leftBottom',
-                          value: 'leftBottom'
-                        },
-                        {
-                          label: 'rightTop',
-                          value: 'rightTop'
-                        },
-                        {
-                          label: 'rightBottom',
-                          value: 'rightBottom'
-                        }
-                      ],
-                      options: [
-                        {
-                          label: 'left',
-                          value: 'left'
-                        },
-                        {
-                          label: 'right',
-                          value: 'right'
-                        },
-                        {
-                          label: 'top',
-                          value: 'top'
-                        },
-                        {
-                          label: 'bottom',
-                          value: 'bottom'
-                        },
-                        {
-                          label: 'topLeft',
-                          value: 'topLeft'
-                        },
-                        {
-                          label: 'topRight',
-                          value: 'topRight'
-                        },
-                        {
-                          label: 'bottomLeft',
-                          value: 'bottomLeft'
-                        },
-                        {
-                          label: 'bottomRight',
-                          value: 'bottomRight'
-                        },
-                        {
-                          label: 'leftTop',
-                          value: 'leftTop'
-                        },
-                        {
-                          label: 'leftBottom',
-                          value: 'leftBottom'
-                        },
-                        {
-                          label: 'rightTop',
-                          value: 'rightTop'
-                        },
-                        {
-                          label: 'rightBottom',
-                          value: 'rightBottom'
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'getPopupContainer',
-                      'zh-CN': 'getPopupContainer'
-                    }
-                  },
-                  name: 'getPopupContainer',
-                  setter: 'FunctionSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'formatter',
-                      'zh-CN': 'formatter'
-                    }
-                  },
-                  name: 'formatter',
-                  setter: 'FunctionSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'autoAdjustOverflow',
-                      'zh-CN': 'autoAdjustOverflow'
-                    }
-                  },
-                  name: 'autoAdjustOverflow',
-                  setter: 'BoolSetter'
-                }
-              ]
+              items: TooltipMeta.configure!['props']
             }
           }
         }
@@ -478,22 +240,7 @@ const SliderMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'value'
           }
         },
-        name: 'value',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              'NumberSetter',
-              {
-                componentName: 'ArraySetter',
-                condition: () => false,
-                props: {
-                  itemSetter: 'NumberSetter'
-                }
-              }
-            ]
-          }
-        }
+        name: 'value'
       },
       {
         title: {

@@ -209,6 +209,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
         name: 'expandTrigger',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -324,6 +325,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
               'NumberSetter',
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -661,6 +663,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
         name: 'showCheckedStrategy',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -765,6 +768,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
                               'NumberSetter',
                               {
                                 componentName: 'RadioGroupSetter',
+                                condition: () => false,
                                 props: {
                                   dataSource: [
                                     {
@@ -803,6 +807,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -846,6 +851,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
         name: 'status',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

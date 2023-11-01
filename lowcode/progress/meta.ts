@@ -132,6 +132,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
               },
               {
                 componentName: 'RadioGroupSetter',
+                condition: () => false,
                 props: {
                   dataSource: [
                     {
@@ -278,6 +279,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         name: 'strokeLinecap',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -396,6 +398,7 @@ const ProgressMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

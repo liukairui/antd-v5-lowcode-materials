@@ -296,6 +296,7 @@ const SegmentedMeta: IPublicTypeComponentMetadata = {
         name: 'crossOrigin',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -1161,6 +1162,7 @@ const SegmentedMeta: IPublicTypeComponentMetadata = {
         name: 'size',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

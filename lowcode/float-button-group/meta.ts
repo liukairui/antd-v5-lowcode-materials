@@ -119,6 +119,7 @@ const FloatButtonGroupMeta: IPublicTypeComponentMetadata = {
         name: 'shape',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -221,6 +222,7 @@ const FloatButtonGroupMeta: IPublicTypeComponentMetadata = {
         name: 'trigger',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {
@@ -256,6 +258,7 @@ const FloatButtonGroupMeta: IPublicTypeComponentMetadata = {
         name: 'type',
         setter: {
           componentName: 'RadioGroupSetter',
+          condition: () => false,
           props: {
             dataSource: [
               {

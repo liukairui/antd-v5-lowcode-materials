@@ -231,6 +231,7 @@ const TooltipMeta: IPublicTypeComponentMetadata = {
                   name: 'htmlRegion',
                   setter: {
                     componentName: 'RadioGroupSetter',
+                    condition: () => false,
                     props: {
                       dataSource: [
                         {
@@ -415,6 +416,7 @@ const TooltipMeta: IPublicTypeComponentMetadata = {
                         name: 'adjustX',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
@@ -450,6 +452,7 @@ const TooltipMeta: IPublicTypeComponentMetadata = {
                         name: 'adjustY',
                         setter: {
                           componentName: 'RadioGroupSetter',
+                          condition: () => false,
                           props: {
                             dataSource: [
                               {
