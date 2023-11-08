@@ -496,9 +496,6 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
                               }
                             }
                           },
-                          /**
-                           * @TODO 暂不支持递归
-                           */
                           {
                             title: {
                               label: {
@@ -507,6 +504,7 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
                                 'zh-CN': 'children'
                               }
                             },
+                            description: '@todo 暂不支持递归',
                             name: 'children',
                             setter: {
                               componentName: 'VariableSetter'

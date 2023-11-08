@@ -433,10 +433,6 @@ const FormMeta: IPublicTypeComponentMetadata = {
           }
         }
       },
-      /**
-       * @TODO 待添加 scrollIntoView 的 Options
-       * @SEE https://github.com/scroll-into-view/scroll-into-view-if-needed/tree/ece40bd9143f48caf4b99503425ecb16b0ad8249#scrollintoviewtarget-options
-       */
       {
         title: {
           label: {
@@ -445,6 +441,8 @@ const FormMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'scrollToFirstError'
           }
         },
+        description:
+          '@todo 待添加 scrollIntoView 的 Options https://github.com/scroll-into-view/scroll-into-view-if-needed/tree/ece40bd9143f48caf4b99503425ecb16b0ad8249#scrollintoviewtarget-options',
         name: 'scrollToFirstError',
         setter: 'BoolSetter'
       },

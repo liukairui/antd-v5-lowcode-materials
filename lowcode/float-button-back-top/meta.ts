@@ -1,4 +1,5 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
+import BadgeMeta from '../badge/meta';
 
 const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
   componentName: 'FloatButtonBackTop',
@@ -17,9 +18,6 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
   },
   configure: {
     props: [
-      /**
-       * @TODO 入参为 BadgeProps
-       */
       {
         title: {
           label: {
@@ -34,10 +32,7 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
           condition: () => false,
           props: {
             config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              items: BadgeMeta.configure!['props']
             }
           }
         }

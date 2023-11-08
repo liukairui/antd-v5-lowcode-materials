@@ -58,9 +58,6 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
                       name: 'className',
                       setter: 'StringSetter'
                     },
-                    /**
-                     * @TODO DropdownProps
-                     */
                     {
                       title: {
                         label: {
@@ -69,6 +66,7 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
                           'zh-CN': 'dropdownProps'
                         }
                       },
+                      description: '@todo DropdownProps',
                       name: 'dropdownProps',
                       setter: {
                         componentName: 'VariableSetter'
@@ -96,9 +94,6 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
                       name: 'path',
                       setter: 'StringSetter'
                     },
-                    /**
-                     * @TODO MenuProps
-                     */
                     {
                       title: {
                         label: {
@@ -107,6 +102,7 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
                           'zh-CN': 'menu'
                         }
                       },
+                      description: '@todo MenuProps',
                       name: 'menu',
                       setter: {
                         componentName: 'VariableSetter'

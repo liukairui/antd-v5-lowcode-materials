@@ -1,12 +1,11 @@
-import { ComponentProps as CP, FC, createElement, useEffect, useState } from 'react';
+import { ComponentProps as CP, Component, FC, Fragment, createElement, createRef, useEffect, useState } from 'react';
 
 /**
  * PlainText 纯文本
  */
 const PlainText: FC<{ content?: string; id?: string }> = (props) => {
-  props.children = props.content;
-  delete props.content;
-  return createElement('span', props);
+  const { content, children, ...restProps } = props;
+  return createElement('span', { children: content, ...restProps });
 };
 export { PlainText };
 
@@ -162,8 +161,13 @@ export { DatePicker, DateRangePicker };
 /**
  * Form 表单
  */
-import _Form from 'antd/es/form';
-const Form: FC<CP<typeof _Form>> = (props) => <_Form {...props} />;
+import _Form, { FormInstance } from 'antd/es/form';
+class Form extends Component<CP<typeof _Form>> {
+  ref = createRef<FormInstance>();
+  render() {
+    return <_Form ref={this.ref} {...this.props} />;
+  }
+}
 const FormErrorList: FC<CP<typeof _Form.ErrorList>> = (props) => <_Form.ErrorList {...props} />;
 const FormItem: FC<CP<typeof _Form.Item>> = (props) => <_Form.Item {...props} />;
 const FormList: FC<CP<typeof _Form.List> & { content: any }> = ({ children, content, ...props }) => <_Form.List {...props} children={content} />;
@@ -514,12 +518,34 @@ export { Affix };
  * App 包裹组件
  */
 import _App from 'antd/es/app';
-const App: FC<CP<typeof _App>> = (props) => <_App {...props} />;
+import _Message from 'antd/es/message';
+import _Notification from 'antd/es/notification';
+const App: FC<CP<typeof _App> & { this: any }> = (props) => {
+  const [message, messageContextHolder] = _Message.useMessage(props.message);
+  const [modal, modalContextHolder] = _Modal.useModal();
+  const [notification, notificationContextHolder] = _Notification.useNotification(props.notification);
+  props.this.cmd = { message, modal, notification };
+  return (
+    <Fragment>
+      {messageContextHolder}
+      {modalContextHolder}
+      {notificationContextHolder}
+      <_App children={props.children} />
+    </Fragment>
+  );
+};
 export { App };
 
 /**
  * ConfigProvider 全局化配置
  */
 import _ConfigProvider from 'antd/es/config-provider';
-const ConfigProvider: FC<CP<typeof _ConfigProvider>> = (props) => <_ConfigProvider {...props} />;
+import zhCN from 'antd/locale/zh_CN';
+import { Dayjs } from 'dayjs';
+import 'dayjs/locale/zh-cn';
+const ConfigProvider: FC<CP<typeof _ConfigProvider>> = (props) => {
+  const { locale, ...restProps } = props;
+  if ('dayjs' in window) (window.dayjs as Dayjs).locale('zh-cn');
+  return <_ConfigProvider locale={{ ...zhCN, ...locale }} {...restProps} />;
+};
 export { ConfigProvider };

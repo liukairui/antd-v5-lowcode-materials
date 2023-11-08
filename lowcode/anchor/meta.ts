@@ -116,9 +116,6 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
               props: {
                 config: {
                   items: [
-                    /**
-                     * @TODO 暂不支持递归
-                     */
                     {
                       title: {
                         label: {
@@ -127,6 +124,7 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
                           'zh-CN': 'children'
                         }
                       },
+                      description: '@todo 暂不支持递归',
                       name: 'children',
                       setter: {
                         componentName: 'VariableSetter'

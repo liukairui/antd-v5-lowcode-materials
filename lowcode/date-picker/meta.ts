@@ -206,8 +206,7 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'locale'
           }
         },
-        name: 'locale',
-        setter: 'JsonSetter'
+        name: 'locale'
       },
       {
         title: {
@@ -496,9 +495,6 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
         name: 'showNow',
         setter: 'BoolSetter'
       },
-      /**
-       * @TODO 待增加 TimePicker Options
-       */
       {
         title: {
           label: {
@@ -507,6 +503,7 @@ const DatePickerMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'showTime'
           }
         },
+        description: '@todo 待增加 TimePicker Options',
         name: 'showTime',
         setter: 'BoolSetter'
       },

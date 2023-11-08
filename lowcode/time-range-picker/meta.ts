@@ -240,8 +240,7 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'locale'
           }
         },
-        name: 'locale',
-        setter: 'JsonSetter'
+        name: 'locale'
       },
       {
         title: {

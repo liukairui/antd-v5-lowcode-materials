@@ -40,7 +40,16 @@ const 对象的数组 = {
 const 融合 = {
   componentName: 'MixedSetter',
   props: {
-    setters: ['StringSetter', 'NumberSetter']
+    setters: [
+      'StringSetter',
+      {
+        componentName: 'ArraySetter',
+        condition: () => false,
+        props: {
+          itemSetter: 'StringSetter'
+        }
+      }
+    ]
   }
 };
 
@@ -51,3 +60,15 @@ const 样式 = {
     defaultCollapsed: true
   }
 };
+
+const 调用其他组件Props = `
+  setter: {
+    componentName: 'ObjectSetter',
+    condition: () => false,
+    props: {
+      config: {
+        items: GridColMeta.configure!['props']
+      }
+    }
+  }
+`;

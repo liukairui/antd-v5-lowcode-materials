@@ -275,9 +275,6 @@ const MentionsMeta: IPublicTypeComponentMetadata = {
                       name: 'key',
                       setter: 'StringSetter'
                     },
-                    /**
-                     * @TODO 应为 SlotSetter，但无法在画布上显示出插槽
-                     */
                     {
                       title: {
                         label: {
@@ -286,6 +283,7 @@ const MentionsMeta: IPublicTypeComponentMetadata = {
                           'zh-CN': 'label'
                         }
                       },
+                      description: '@todo 应为 SlotSetter，但无法在画布上显示出插槽',
                       name: 'label',
                       setter: 'StringSetter',
                       isRequired: true

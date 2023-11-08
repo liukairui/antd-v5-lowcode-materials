@@ -1,4 +1,5 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
+import TooltipMeta from '../tooltip/meta';
 
 const TypographyTextMeta: IPublicTypeComponentMetadata = {
   componentName: 'TypographyText',
@@ -441,9 +442,6 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
                         name: 'onEllipsis',
                         setter: 'FunctionSetter'
                       },
-                      /**
-                       * @TODO 缺少 TooltipProps
-                       */
                       {
                         title: {
                           label: {
@@ -454,9 +452,12 @@ const TypographyTextMeta: IPublicTypeComponentMetadata = {
                         },
                         name: 'tooltip',
                         setter: {
-                          componentName: 'MixedSetter',
+                          componentName: 'ObjectSetter',
+                          condition: () => false,
                           props: {
-                            setters: ['BoolSetter', 'SlotSetter']
+                            config: {
+                              items: TooltipMeta.configure!['props']
+                            }
                           }
                         }
                       }

@@ -112,6 +112,7 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'size'
           }
         },
+        description: '@todo ArraySetter 暂不支持 MixedSetter，会只显示 RadioGroupSetter',
         name: 'size',
         setter: {
           componentName: 'MixedSetter',
@@ -152,9 +153,6 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
                 }
               },
               'NumberSetter',
-              /**
-               * @TODO ArraySetter 暂不支持 MixedSetter，会只显示 RadioGroupSetter
-               */
               {
                 componentName: 'ArraySetter',
                 condition: () => false,

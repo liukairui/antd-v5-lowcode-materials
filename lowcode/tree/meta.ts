@@ -21,22 +21,6 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'activeKey',
-            'zh-CN': 'activeKey'
-          }
-        },
-        name: 'activeKey',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'NumberSetter']
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'allowDrop',
             'zh-CN': 'allowDrop'
           }
@@ -105,12 +89,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                 componentName: 'ArraySetter',
                 condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: ['StringSetter', 'NumberSetter']
-                    }
-                  }
+                  itemSetter: 'StringSetter'
                 }
               },
               {
@@ -132,12 +111,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                           componentName: 'ArraySetter',
                           condition: () => false,
                           props: {
-                            itemSetter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: ['StringSetter', 'NumberSetter']
-                              }
-                            }
+                            itemSetter: 'StringSetter'
                           }
                         }
                       },
@@ -154,12 +128,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                           componentName: 'ArraySetter',
                           condition: () => false,
                           props: {
-                            itemSetter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: ['StringSetter', 'NumberSetter']
-                              }
-                            }
+                            itemSetter: 'StringSetter'
                           }
                         }
                       }
@@ -184,12 +153,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: ['StringSetter', 'NumberSetter']
-              }
-            }
+            itemSetter: 'StringSetter'
           }
         }
       },
@@ -228,12 +192,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: ['StringSetter', 'NumberSetter']
-              }
-            }
+            itemSetter: 'StringSetter'
           }
         }
       },
@@ -250,12 +209,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: ['StringSetter', 'NumberSetter']
-              }
-            }
+            itemSetter: 'StringSetter'
           }
         }
       },
@@ -325,61 +279,6 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'dropIndicatorRender',
-            'zh-CN': 'dropIndicatorRender'
-          }
-        },
-        name: 'dropIndicatorRender',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'expandAction',
-            'zh-CN': 'expandAction'
-          }
-        },
-        name: 'expandAction',
-        setter: {
-          componentName: 'RadioGroupSetter',
-          condition: () => false,
-          props: {
-            dataSource: [
-              {
-                label: 'false',
-                value: false
-              },
-              {
-                label: 'click',
-                value: 'click'
-              },
-              {
-                label: 'doubleClick',
-                value: 'doubleClick'
-              }
-            ],
-            options: [
-              {
-                label: 'false',
-                value: false
-              },
-              {
-                label: 'click',
-                value: 'click'
-              },
-              {
-                label: 'doubleClick',
-                value: 'doubleClick'
-              }
-            ]
-          }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'expandedKeys',
             'zh-CN': 'expandedKeys'
           }
@@ -389,12 +288,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: ['StringSetter', 'NumberSetter']
-              }
-            }
+            itemSetter: 'StringSetter'
           }
         }
       },
@@ -417,29 +311,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'title',
-                      'zh-CN': 'title'
+                      'en-US': 'children',
+                      'zh-CN': 'children'
                     }
                   },
-                  name: 'title',
+                  name: 'children',
                   setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': '_title',
-                      'zh-CN': '_title'
-                    }
-                  },
-                  name: '_title',
-                  setter: {
-                    componentName: 'ArraySetter',
-                    condition: () => false,
-                    props: {
-                      itemSetter: 'StringSetter'
-                    }
-                  }
                 },
                 {
                   title: {
@@ -456,11 +333,11 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'children',
-                      'zh-CN': 'children'
+                      'en-US': 'title',
+                      'zh-CN': 'title'
                     }
                   },
-                  name: 'children',
+                  name: 'title',
                   setter: 'StringSetter'
                 }
               ]
@@ -472,34 +349,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'filterAntTreeNode',
-            'zh-CN': 'filterAntTreeNode'
-          }
-        },
-        name: 'filterAntTreeNode',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'filterTreeNode',
             'zh-CN': 'filterTreeNode'
           }
         },
         name: 'filterTreeNode',
         setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'focusable',
-            'zh-CN': 'focusable'
-          }
-        },
-        name: 'focusable',
-        setter: 'BoolSetter'
       },
       {
         title: {
@@ -522,40 +377,12 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         },
         name: 'icon',
         setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              'StringSetter',
-              'NumberSetter',
-              'BoolSetter',
-              {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              'FunctionSetter',
-              'FunctionSetter'
-            ]
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['props']
           }
         }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'itemHeight',
-            'zh-CN': 'itemHeight'
-          }
-        },
-        name: 'itemHeight',
-        setter: 'NumberSetter'
       },
       {
         title: {
@@ -581,27 +408,8 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: ['StringSetter', 'NumberSetter']
-              }
-            }
+            itemSetter: 'StringSetter'
           }
-        }
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'motion',
-            'zh-CN': 'motion'
-          }
-        },
-        name: 'motion',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {}
         }
       },
       {
@@ -619,66 +427,121 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onActiveChange',
-            'zh-CN': 'onActiveChange'
+            'en-US': 'onCheck',
+            'zh-CN': 'onCheck'
           }
         },
-        name: 'onActiveChange',
+        name: 'onCheck',
         setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onBlur',
-            'zh-CN': 'onBlur'
+            'en-US': 'onDragEnd',
+            'zh-CN': 'onDragEnd'
           }
         },
-        name: 'onBlur',
+        name: 'onDragEnd',
         setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onContextMenu',
-            'zh-CN': 'onContextMenu'
+            'en-US': 'onDragEnter',
+            'zh-CN': 'onDragEnter'
           }
         },
-        name: 'onContextMenu',
+        name: 'onDragEnter',
         setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onFocus',
-            'zh-CN': 'onFocus'
+            'en-US': 'onDragLeave',
+            'zh-CN': 'onDragLeave'
           }
         },
-        name: 'onFocus',
+        name: 'onDragLeave',
         setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onKeyDown',
-            'zh-CN': 'onKeyDown'
+            'en-US': 'onDragOver',
+            'zh-CN': 'onDragOver'
           }
         },
-        name: 'onKeyDown',
+        name: 'onDragOver',
         setter: 'FunctionSetter'
       },
       {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'onScroll',
-            'zh-CN': 'onScroll'
+            'en-US': 'onDragStart',
+            'zh-CN': 'onDragStart'
           }
         },
-        name: 'onScroll',
+        name: 'onDragStart',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onDrop',
+            'zh-CN': 'onDrop'
+          }
+        },
+        name: 'onDrop',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onExpand',
+            'zh-CN': 'onExpand'
+          }
+        },
+        name: 'onExpand',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onLoad',
+            'zh-CN': 'onLoad'
+          }
+        },
+        name: 'onLoad',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onRightClick',
+            'zh-CN': 'onRightClick'
+          }
+        },
+        name: 'onRightClick',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onSelect',
+            'zh-CN': 'onSelect'
+          }
+        },
+        name: 'onSelect',
         setter: 'FunctionSetter'
       },
       {
@@ -690,17 +553,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'rootStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -727,12 +583,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: ['StringSetter', 'NumberSetter']
-              }
-            }
+            itemSetter: 'StringSetter'
           }
         }
       },
@@ -780,22 +631,14 @@ const TreeMeta: IPublicTypeComponentMetadata = {
                           componentName: 'MixedSetter',
                           props: {
                             setters: [
-                              'StringSetter',
-                              'NumberSetter',
                               'BoolSetter',
                               {
-                                componentName: 'ObjectSetter',
-                                condition: () => false,
-                                props: {
-                                  config: {
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
+                                componentName: 'SlotSetter',
+                                initialValue: {
+                                  type: 'JSSlot',
+                                  params: ['props']
                                 }
-                              },
-                              'FunctionSetter'
+                              }
                             ]
                           }
                         }
@@ -818,27 +661,10 @@ const TreeMeta: IPublicTypeComponentMetadata = {
         },
         name: 'switcherIcon',
         setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: [
-              'StringSetter',
-              'NumberSetter',
-              'BoolSetter',
-              {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              'FunctionSetter',
-              'FunctionSetter'
-            ]
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['props']
           }
         }
       },
@@ -851,7 +677,13 @@ const TreeMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'titleRender',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['nodeData']
+          }
+        }
       },
       {
         title: {
@@ -861,185 +693,8 @@ const TreeMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'treeData'
           }
         },
-        name: 'treeData',
-        setter: {
-          componentName: 'ArraySetter',
-          condition: () => false,
-          props: {
-            itemSetter: {
-              componentName: 'MixedSetter',
-              props: {
-                setters: [
-                  {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'checkable',
-                                'zh-CN': 'checkable'
-                              }
-                            },
-                            name: 'checkable',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'disabled',
-                                'zh-CN': 'disabled'
-                              }
-                            },
-                            name: 'disabled',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'disableCheckbox',
-                                'zh-CN': 'disableCheckbox'
-                              }
-                            },
-                            name: 'disableCheckbox',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'icon',
-                                'zh-CN': 'icon'
-                              }
-                            },
-                            name: 'icon',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'StringSetter',
-                                  'NumberSetter',
-                                  'BoolSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  'FunctionSetter'
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'isLeaf',
-                                'zh-CN': 'isLeaf'
-                              }
-                            },
-                            name: 'isLeaf',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'selectable',
-                                'zh-CN': 'selectable'
-                              }
-                            },
-                            name: 'selectable',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'switcherIcon',
-                                'zh-CN': 'switcherIcon'
-                              }
-                            },
-                            name: 'switcherIcon',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'StringSetter',
-                                  'NumberSetter',
-                                  'BoolSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  'FunctionSetter'
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'className',
-                                'zh-CN': 'className'
-                              }
-                            },
-                            name: 'className',
-                            setter: 'StringSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'style',
-                                'zh-CN': 'style'
-                              }
-                            },
-                            name: 'style',
-                            setter: {
-                              componentName: 'ObjectSetter',
-                              condition: () => false,
-                              props: {
-                                config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  },
-                  'FunctionSetter'
-                ]
-              }
-            }
-          }
-        }
+        description: '@todo 拖拽的方式配置起来操作复杂，且暂不支持递归，故先使用变量配置',
+        name: 'treeData'
       },
       {
         title: {
@@ -1055,54 +710,7 @@ const TreeMeta: IPublicTypeComponentMetadata = {
     ],
     supports: {
       className: true,
-      style: true,
-      events: [
-        {
-          name: 'onClick'
-        },
-        {
-          name: 'onExpand'
-        },
-        {
-          name: 'onSelect'
-        },
-        {
-          name: 'onMouseEnter'
-        },
-        {
-          name: 'onMouseLeave'
-        },
-        {
-          name: 'onDoubleClick'
-        },
-        {
-          name: 'onCheck'
-        },
-        {
-          name: 'onLoad'
-        },
-        {
-          name: 'onRightClick'
-        },
-        {
-          name: 'onDragStart'
-        },
-        {
-          name: 'onDragEnter'
-        },
-        {
-          name: 'onDragOver'
-        },
-        {
-          name: 'onDragLeave'
-        },
-        {
-          name: 'onDragEnd'
-        },
-        {
-          name: 'onDrop'
-        }
-      ]
+      style: true
     },
     component: {
       isContainer: true

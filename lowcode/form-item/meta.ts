@@ -241,8 +241,7 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'messageVariables'
           }
         },
-        name: 'messageVariables',
-        setter: 'JsonSetter'
+        name: 'messageVariables'
       },
       {
         title: {
@@ -299,9 +298,6 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
         name: 'required',
         setter: 'BoolSetter'
       },
-      /**
-       * @TODO 待完善 Rule[]
-       */
       {
         title: {
           label: {
@@ -310,6 +306,7 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'rules'
           }
         },
+        description: '@todo 待完善 Rule[]',
         name: 'rules'
       },
       {

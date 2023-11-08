@@ -9,7 +9,20 @@ module.exports = {
       '@alifd/build-plugin-lowcode',
       {
         library,
-        engineScope: '@alilc'
+        engineScope: '@alilc',
+        builtinAssets: [
+          {
+            packages: [
+              {
+                package: 'dayjs',
+                version: '2.24.0',
+                urls: ['https://cdn.net.gtjaqh.com/qlc/deps/dayjs.min.js'],
+                library: 'dayjs'
+              }
+            ],
+            components: []
+          }
+        ]
       }
     ],
     [
@@ -18,7 +31,7 @@ module.exports = {
         type: 'component',
         inject: true,
         library,
-        openUrl: 'http://localhost:5556?debug&device=default'
+        openUrl: 'http://localhost:5556?debug&device=desktop'
       }
     ]
   ]

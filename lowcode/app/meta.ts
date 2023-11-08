@@ -21,6 +21,24 @@ const AppMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'this',
+            'zh-CN': 'this'
+          }
+        },
+        name: 'this',
+        condition: () => false,
+        setter: {
+          componentName: 'VariableSetter',
+          initialValue: {
+            type: 'JSExpression',
+            value: 'this'
+          }
+        }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
             'en-US': 'message',
             'zh-CN': 'message'
           }
@@ -36,22 +54,33 @@ const AppMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'top',
-                      'zh-CN': 'top'
+                      'en-US': 'duration',
+                      'zh-CN': 'duration'
                     }
                   },
-                  name: 'top',
+                  name: 'duration',
                   setter: 'NumberSetter'
                 },
                 {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'duration',
-                      'zh-CN': 'duration'
+                      'en-US': 'getContainer',
+                      'zh-CN': 'getContainer'
                     }
                   },
-                  name: 'duration',
+                  name: 'getContainer',
+                  setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'maxCount',
+                      'zh-CN': 'maxCount'
+                    }
+                  },
+                  name: 'maxCount',
                   setter: 'NumberSetter'
                 },
                 {
@@ -69,45 +98,23 @@ const AppMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'getContainer',
-                      'zh-CN': 'getContainer'
-                    }
-                  },
-                  name: 'getContainer',
-                  setter: 'FunctionSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'transitionName',
-                      'zh-CN': 'transitionName'
-                    }
-                  },
-                  name: 'transitionName',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'maxCount',
-                      'zh-CN': 'maxCount'
-                    }
-                  },
-                  name: 'maxCount',
-                  setter: 'NumberSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
                       'en-US': 'rtl',
                       'zh-CN': 'rtl'
                     }
                   },
                   name: 'rtl',
                   setter: 'BoolSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'top',
+                      'zh-CN': 'top'
+                    }
+                  },
+                  name: 'top',
+                  setter: 'NumberSetter'
                 }
               ]
             }
@@ -133,17 +140,6 @@ const AppMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'top',
-                      'zh-CN': 'top'
-                    }
-                  },
-                  name: 'top',
-                  setter: 'NumberSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
                       'en-US': 'bottom',
                       'zh-CN': 'bottom'
                     }
@@ -155,23 +151,23 @@ const AppMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'prefixCls',
-                      'zh-CN': 'prefixCls'
-                    }
-                  },
-                  name: 'prefixCls',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
                       'en-US': 'getContainer',
                       'zh-CN': 'getContainer'
                     }
                   },
                   name: 'getContainer',
                   setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'maxCount',
+                      'zh-CN': 'maxCount'
+                    }
+                  },
+                  name: 'maxCount',
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -191,16 +187,16 @@ const AppMeta: IPublicTypeComponentMetadata = {
                           value: 'top'
                         },
                         {
-                          label: 'bottom',
-                          value: 'bottom'
-                        },
-                        {
                           label: 'topLeft',
                           value: 'topLeft'
                         },
                         {
                           label: 'topRight',
                           value: 'topRight'
+                        },
+                        {
+                          label: 'bottom',
+                          value: 'bottom'
                         },
                         {
                           label: 'bottomLeft',
@@ -217,16 +213,16 @@ const AppMeta: IPublicTypeComponentMetadata = {
                           value: 'top'
                         },
                         {
-                          label: 'bottom',
-                          value: 'bottom'
-                        },
-                        {
                           label: 'topLeft',
                           value: 'topLeft'
                         },
                         {
                           label: 'topRight',
                           value: 'topRight'
+                        },
+                        {
+                          label: 'bottom',
+                          value: 'bottom'
                         },
                         {
                           label: 'bottomLeft',
@@ -244,17 +240,6 @@ const AppMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'maxCount',
-                      'zh-CN': 'maxCount'
-                    }
-                  },
-                  name: 'maxCount',
-                  setter: 'NumberSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
                       'en-US': 'rtl',
                       'zh-CN': 'rtl'
                     }
@@ -266,40 +251,12 @@ const AppMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'stack',
-                      'zh-CN': 'stack'
+                      'en-US': 'top',
+                      'zh-CN': 'top'
                     }
                   },
-                  name: 'stack',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: [
-                        'BoolSetter',
-                        {
-                          componentName: 'ObjectSetter',
-                          condition: () => false,
-                          props: {
-                            config: {
-                              items: [
-                                {
-                                  title: {
-                                    label: {
-                                      type: 'i18n',
-                                      'en-US': 'threshold',
-                                      'zh-CN': 'threshold'
-                                    }
-                                  },
-                                  name: 'threshold',
-                                  setter: 'NumberSetter'
-                                }
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
+                  name: 'top',
+                  setter: 'NumberSetter'
                 }
               ]
             }

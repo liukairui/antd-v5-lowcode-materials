@@ -1,4 +1,5 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
+import TabsMeta from '../tabs/meta';
 
 const CardMeta: IPublicTypeComponentMetadata = {
   componentName: 'Card',
@@ -54,17 +55,10 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'bodyStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -120,17 +114,10 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'headStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -236,23 +223,72 @@ const CardMeta: IPublicTypeComponentMetadata = {
                       title: {
                         label: {
                           type: 'i18n',
+                          'en-US': 'children',
+                          'zh-CN': 'children'
+                        }
+                      },
+                      name: 'children',
+                      setter: 'SlotSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'closeIcon',
+                          'zh-CN': 'closeIcon'
+                        }
+                      },
+                      name: 'closeIcon',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['BoolSetter', 'SlotSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'destroyInactiveTabPane',
+                          'zh-CN': 'destroyInactiveTabPane'
+                        }
+                      },
+                      name: 'destroyInactiveTabPane',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'disabled',
+                          'zh-CN': 'disabled'
+                        }
+                      },
+                      name: 'disabled',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'forceRender',
+                          'zh-CN': 'forceRender'
+                        }
+                      },
+                      name: 'forceRender',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
                           'en-US': 'key',
                           'zh-CN': 'key'
                         }
                       },
                       name: 'key',
                       setter: 'StringSetter'
-                    },
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'tab',
-                          'zh-CN': 'tab'
-                        }
-                      },
-                      name: 'tab',
-                      setter: 'SlotSetter'
                     },
                     {
                       title: {
@@ -281,156 +317,16 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'tabProps',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'ObjectSetter',
           condition: () => false,
           props: {
             config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'type',
-                      'zh-CN': 'type'
-                    }
-                  },
-                  name: 'type',
-                  setter: {
-                    componentName: 'RadioGroupSetter',
-                    condition: () => false,
-                    props: {
-                      dataSource: [
-                        {
-                          label: 'line',
-                          value: 'line'
-                        },
-                        {
-                          label: 'card',
-                          value: 'card'
-                        },
-                        {
-                          label: 'editable-card',
-                          value: 'editable-card'
-                        }
-                      ],
-                      options: [
-                        {
-                          label: 'line',
-                          value: 'line'
-                        },
-                        {
-                          label: 'card',
-                          value: 'card'
-                        },
-                        {
-                          label: 'editable-card',
-                          value: 'editable-card'
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'size',
-                      'zh-CN': 'size'
-                    }
-                  },
-                  name: 'size',
-                  setter: {
-                    componentName: 'RadioGroupSetter',
-                    condition: () => false,
-                    props: {
-                      dataSource: [
-                        {
-                          label: 'small',
-                          value: 'small'
-                        },
-                        {
-                          label: 'middle',
-                          value: 'middle'
-                        },
-                        {
-                          label: 'large',
-                          value: 'large'
-                        }
-                      ],
-                      options: [
-                        {
-                          label: 'small',
-                          value: 'small'
-                        },
-                        {
-                          label: 'middle',
-                          value: 'middle'
-                        },
-                        {
-                          label: 'large',
-                          value: 'large'
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'hideAdd',
-                      'zh-CN': 'hideAdd'
-                    }
-                  },
-                  name: 'hideAdd',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'centered',
-                      'zh-CN': 'centered'
-                    }
-                  },
-                  name: 'centered',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'addIcon',
-                      'zh-CN': 'addIcon'
-                    }
-                  },
-                  name: 'addIcon',
-                  setter: 'SlotSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'onEdit',
-                      'zh-CN': 'onEdit'
-                    }
-                  },
-                  name: 'onEdit',
-                  setter: 'FunctionSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'children',
-                      'zh-CN': 'children'
-                    }
-                  },
-                  name: 'children',
-                  setter: 'SlotSetter'
-                }
-              ]
+              items: TabsMeta.configure!['props']
             }
           }
         }
