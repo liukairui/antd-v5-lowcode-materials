@@ -53,6 +53,13 @@ const 融合 = {
   }
 };
 
+const 融合2 = {
+  componentName: 'MixedSetter',
+  props: {
+    setters: ['StringSetter', 'SlotSetter']
+  }
+};
+
 const 样式 = {
   setter: 'StyleSetter',
   extraProps: {
@@ -71,4 +78,11 @@ const 调用其他组件Props = `
       }
     }
   }
+`;
+
+const 折叠显示 = `
+extraProps: {
+  display: 'accordion',
+  defaultCollapsed: true
+},
 `;

@@ -1,4 +1,6 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
+import SpinMeta from '../spin/meta';
+import TooltipMeta from '../tooltip/meta';
 
 const TableMeta: IPublicTypeComponentMetadata = {
   componentName: 'Table',
@@ -32,17 +34,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'caption',
-            'zh-CN': 'caption'
-          }
-        },
-        name: 'caption',
-        setter: 'SlotSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'columns',
             'zh-CN': 'columns'
           }
@@ -53,1683 +44,820 @@ const TableMeta: IPublicTypeComponentMetadata = {
           condition: () => false,
           props: {
             itemSetter: {
-              componentName: 'MixedSetter',
+              componentName: 'ObjectSetter',
+              condition: () => false,
               props: {
-                setters: [
-                  {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'RecordType',
-                                'zh-CN': 'RecordType'
-                              }
+                config: {
+                  items: [
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'align',
+                          'zh-CN': 'align'
+                        }
+                      },
+                      name: 'align',
+                      setter: {
+                        componentName: 'RadioGroupSetter',
+                        props: {
+                          dataSource: [
+                            {
+                              label: 'center',
+                              value: 'center'
                             },
-                            name: 'RecordType',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {}
+                            {
+                              label: 'left',
+                              value: 'left'
+                            },
+                            {
+                              label: 'right',
+                              value: 'right'
                             }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'children',
-                                'zh-CN': 'children'
-                              }
+                          ],
+                          options: [
+                            {
+                              label: 'center',
+                              value: 'center'
                             },
-                            name: 'children',
-                            setter: {
+                            {
+                              label: 'left',
+                              value: 'left'
+                            },
+                            {
+                              label: 'right',
+                              value: 'right'
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'colSpan',
+                          'zh-CN': 'colSpan'
+                        }
+                      },
+                      name: 'colSpan',
+                      setter: 'NumberSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'dataIndex',
+                          'zh-CN': 'dataIndex'
+                        }
+                      },
+                      name: 'dataIndex',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'StringSetter',
+                            {
                               componentName: 'ArraySetter',
                               condition: () => false,
                               props: {
-                                itemSetter: {
-                                  componentName: 'MixedSetter',
-                                  props: {
-                                    setters: [
-                                      {
-                                        componentName: 'ObjectSetter',
-                                        condition: () => false,
-                                        props: {
-                                          config: {
-                                            extraSetter: {
-                                              componentName: 'MixedSetter',
-                                              props: {}
+                                itemSetter: 'StringSetter'
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'defaultFilteredValue',
+                          'zh-CN': 'defaultFilteredValue'
+                        }
+                      },
+                      name: 'defaultFilteredValue',
+                      setter: {
+                        componentName: 'ArraySetter',
+                        condition: () => false,
+                        props: {
+                          itemSetter: 'StringSetter'
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'defaultSortOrder',
+                          'zh-CN': 'defaultSortOrder'
+                        }
+                      },
+                      name: 'defaultSortOrder',
+                      setter: {
+                        componentName: 'RadioGroupSetter',
+                        props: {
+                          dataSource: [
+                            {
+                              label: 'descend',
+                              value: 'descend'
+                            },
+                            {
+                              label: 'ascend',
+                              value: 'ascend'
+                            }
+                          ],
+                          options: [
+                            {
+                              label: 'descend',
+                              value: 'descend'
+                            },
+                            {
+                              label: 'ascend',
+                              value: 'ascend'
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'ellipsis',
+                          'zh-CN': 'ellipsis'
+                        }
+                      },
+                      name: 'ellipsis',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'BoolSetter',
+                            {
+                              componentName: 'ObjectSetter',
+                              condition: () => false,
+                              props: {
+                                config: {
+                                  items: [
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'showTitle',
+                                          'zh-CN': 'showTitle'
+                                        }
+                                      },
+                                      name: 'showTitle',
+                                      setter: 'BoolSetter'
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterDropdown',
+                          'zh-CN': 'filterDropdown'
+                        }
+                      },
+                      name: 'filterDropdown',
+                      setter: {
+                        componentName: 'SlotSetter',
+                        initialValue: {
+                          type: 'JSSlot',
+                          params: ['props']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterDropdownOpen',
+                          'zh-CN': 'filterDropdownOpen'
+                        }
+                      },
+                      name: 'filterDropdownOpen',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filtered',
+                          'zh-CN': 'filtered'
+                        }
+                      },
+                      name: 'filtered',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filteredValue',
+                          'zh-CN': 'filteredValue'
+                        }
+                      },
+                      name: 'filteredValue',
+                      setter: {
+                        componentName: 'ArraySetter',
+                        props: {
+                          itemSetter: 'StringSetter'
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterIcon',
+                          'zh-CN': 'filterIcon'
+                        }
+                      },
+                      name: 'filterIcon',
+                      setter: {
+                        componentName: 'SlotSetter',
+                        initialValue: {
+                          type: 'JSSlot',
+                          params: ['filtered']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterMode',
+                          'zh-CN': 'filterMode'
+                        }
+                      },
+                      name: 'filterMode',
+                      setter: {
+                        componentName: 'RadioGroupSetter',
+                        props: {
+                          dataSource: [
+                            {
+                              label: 'menu',
+                              value: 'menu'
+                            },
+                            {
+                              label: 'tree',
+                              value: 'tree'
+                            }
+                          ],
+                          options: [
+                            {
+                              label: 'menu',
+                              value: 'menu'
+                            },
+                            {
+                              label: 'tree',
+                              value: 'tree'
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterMultiple',
+                          'zh-CN': 'filterMultiple'
+                        }
+                      },
+                      name: 'filterMultiple',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterResetToDefaultFilteredValue',
+                          'zh-CN': 'filterResetToDefaultFilteredValue'
+                        }
+                      },
+                      name: 'filterResetToDefaultFilteredValue',
+                      setter: 'BoolSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filters',
+                          'zh-CN': 'filters'
+                        }
+                      },
+                      name: 'filters',
+                      setter: {
+                        componentName: 'ArraySetter',
+                        props: {
+                          itemSetter: {
+                            componentName: 'ObjectSetter',
+                            props: {
+                              config: {
+                                items: [
+                                  {
+                                    title: {
+                                      label: {
+                                        type: 'i18n',
+                                        'en-US': 'text',
+                                        'zh-CN': 'text'
+                                      }
+                                    },
+                                    name: 'text',
+                                    setter: {
+                                      componentName: 'MixedSetter',
+                                      props: {
+                                        setters: ['StringSetter', 'SlotSetter']
+                                      }
+                                    },
+                                    isRequired: true
+                                  },
+                                  {
+                                    title: {
+                                      label: {
+                                        type: 'i18n',
+                                        'en-US': 'value',
+                                        'zh-CN': 'value'
+                                      }
+                                    },
+                                    name: 'value',
+                                    setter: 'StringSetter',
+                                    isRequired: true
+                                  },
+                                  {
+                                    title: {
+                                      label: {
+                                        type: 'i18n',
+                                        'en-US': 'children',
+                                        'zh-CN': 'children'
+                                      }
+                                    },
+                                    name: 'children',
+                                    setter: {
+                                      componentName: 'ArraySetter',
+                                      props: {
+                                        itemSetter: {
+                                          componentName: 'ObjectSetter',
+                                          props: {
+                                            config: {
+                                              items: [
+                                                {
+                                                  title: {
+                                                    label: {
+                                                      type: 'i18n',
+                                                      'en-US': 'text',
+                                                      'zh-CN': 'text'
+                                                    }
+                                                  },
+                                                  name: 'text',
+                                                  setter: {
+                                                    componentName: 'MixedSetter',
+                                                    props: {
+                                                      setters: ['StringSetter', 'SlotSetter']
+                                                    }
+                                                  },
+                                                  isRequired: true
+                                                },
+                                                {
+                                                  title: {
+                                                    label: {
+                                                      type: 'i18n',
+                                                      'en-US': 'value',
+                                                      'zh-CN': 'value'
+                                                    }
+                                                  },
+                                                  name: 'value',
+                                                  setter: 'StringSetter',
+                                                  isRequired: true
+                                                }
+                                              ]
                                             }
                                           }
                                         }
-                                      },
-                                      {
-                                        componentName: 'ObjectSetter',
-                                        condition: () => false,
-                                        props: {
-                                          config: {
-                                            items: [
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'RecordType',
-                                                    'zh-CN': 'RecordType'
-                                                  }
-                                                },
-                                                name: 'RecordType',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {}
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'title',
-                                                    'zh-CN': 'title'
-                                                  }
-                                                },
-                                                name: 'title',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {
-                                                    setters: [
-                                                      'StringSetter',
-                                                      'NumberSetter',
-                                                      'BoolSetter',
-                                                      {
-                                                        componentName: 'ObjectSetter',
-                                                        condition: () => false,
-                                                        props: {
-                                                          config: {
-                                                            extraSetter: {
-                                                              componentName: 'MixedSetter',
-                                                              props: {}
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      'FunctionSetter'
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'sorter',
-                                                    'zh-CN': 'sorter'
-                                                  }
-                                                },
-                                                name: 'sorter',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {
-                                                    setters: [
-                                                      'BoolSetter',
-                                                      'FunctionSetter',
-                                                      {
-                                                        componentName: 'ObjectSetter',
-                                                        condition: () => false,
-                                                        props: {
-                                                          config: {
-                                                            items: [
-                                                              {
-                                                                title: {
-                                                                  label: {
-                                                                    type: 'i18n',
-                                                                    'en-US': 'compare',
-                                                                    'zh-CN': 'compare'
-                                                                  }
-                                                                },
-                                                                name: 'compare',
-                                                                setter: 'FunctionSetter'
-                                                              },
-                                                              {
-                                                                title: {
-                                                                  label: {
-                                                                    type: 'i18n',
-                                                                    'en-US': 'multiple',
-                                                                    'zh-CN': 'multiple'
-                                                                  }
-                                                                },
-                                                                name: 'multiple',
-                                                                setter: 'NumberSetter'
-                                                              }
-                                                            ]
-                                                          }
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'sortOrder',
-                                                    'zh-CN': 'sortOrder'
-                                                  }
-                                                },
-                                                name: 'sortOrder',
-                                                setter: {
-                                                  componentName: 'RadioGroupSetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    dataSource: [
-                                                      {
-                                                        label: 'descend',
-                                                        value: 'descend'
-                                                      },
-                                                      {
-                                                        label: 'ascend',
-                                                        value: 'ascend'
-                                                      }
-                                                    ],
-                                                    options: [
-                                                      {
-                                                        label: 'descend',
-                                                        value: 'descend'
-                                                      },
-                                                      {
-                                                        label: 'ascend',
-                                                        value: 'ascend'
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'defaultSortOrder',
-                                                    'zh-CN': 'defaultSortOrder'
-                                                  }
-                                                },
-                                                name: 'defaultSortOrder',
-                                                setter: {
-                                                  componentName: 'RadioGroupSetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    dataSource: [
-                                                      {
-                                                        label: 'descend',
-                                                        value: 'descend'
-                                                      },
-                                                      {
-                                                        label: 'ascend',
-                                                        value: 'ascend'
-                                                      }
-                                                    ],
-                                                    options: [
-                                                      {
-                                                        label: 'descend',
-                                                        value: 'descend'
-                                                      },
-                                                      {
-                                                        label: 'ascend',
-                                                        value: 'ascend'
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'sortDirections',
-                                                    'zh-CN': 'sortDirections'
-                                                  }
-                                                },
-                                                name: 'sortDirections',
-                                                setter: {
-                                                  componentName: 'ArraySetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    itemSetter: {
-                                                      componentName: 'RadioGroupSetter',
-                                                      condition: () => false,
-                                                      props: {
-                                                        dataSource: [
-                                                          {
-                                                            label: 'descend',
-                                                            value: 'descend'
-                                                          },
-                                                          {
-                                                            label: 'ascend',
-                                                            value: 'ascend'
-                                                          }
-                                                        ],
-                                                        options: [
-                                                          {
-                                                            label: 'descend',
-                                                            value: 'descend'
-                                                          },
-                                                          {
-                                                            label: 'ascend',
-                                                            value: 'ascend'
-                                                          }
-                                                        ]
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'sortIcon',
-                                                    'zh-CN': 'sortIcon'
-                                                  }
-                                                },
-                                                name: 'sortIcon',
-                                                setter: 'FunctionSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'showSorterTooltip',
-                                                    'zh-CN': 'showSorterTooltip'
-                                                  }
-                                                },
-                                                name: 'showSorterTooltip',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {
-                                                    setters: [
-                                                      'BoolSetter',
-                                                      {
-                                                        componentName: 'ObjectSetter',
-                                                        condition: () => false,
-                                                        props: {
-                                                          config: {
-                                                            items: [
-                                                              {
-                                                                title: {
-                                                                  label: {
-                                                                    type: 'i18n',
-                                                                    'en-US': 'title',
-                                                                    'zh-CN': 'title'
-                                                                  }
-                                                                },
-                                                                name: 'title',
-                                                                setter: {
-                                                                  componentName: 'MixedSetter',
-                                                                  props: {
-                                                                    setters: [
-                                                                      'StringSetter',
-                                                                      'NumberSetter',
-                                                                      'BoolSetter',
-                                                                      {
-                                                                        componentName: 'ObjectSetter',
-                                                                        condition: () => false,
-                                                                        props: {
-                                                                          config: {
-                                                                            extraSetter: {
-                                                                              componentName: 'MixedSetter',
-                                                                              props: {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      'FunctionSetter'
-                                                                    ]
-                                                                  }
-                                                                }
-                                                              },
-                                                              {
-                                                                title: {
-                                                                  label: {
-                                                                    type: 'i18n',
-                                                                    'en-US': 'overlay',
-                                                                    'zh-CN': 'overlay'
-                                                                  }
-                                                                },
-                                                                name: 'overlay',
-                                                                setter: {
-                                                                  componentName: 'MixedSetter',
-                                                                  props: {
-                                                                    setters: [
-                                                                      'StringSetter',
-                                                                      'NumberSetter',
-                                                                      'BoolSetter',
-                                                                      {
-                                                                        componentName: 'ObjectSetter',
-                                                                        condition: () => false,
-                                                                        props: {
-                                                                          config: {
-                                                                            extraSetter: {
-                                                                              componentName: 'MixedSetter',
-                                                                              props: {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      'FunctionSetter'
-                                                                    ]
-                                                                  }
-                                                                }
-                                                              }
-                                                            ]
-                                                          }
-                                                        }
-                                                      },
-                                                      {
-                                                        componentName: 'ObjectSetter',
-                                                        condition: () => false,
-                                                        props: {
-                                                          config: {
-                                                            items: [
-                                                              {
-                                                                title: {
-                                                                  label: {
-                                                                    type: 'i18n',
-                                                                    'en-US': 'title',
-                                                                    'zh-CN': 'title'
-                                                                  }
-                                                                },
-                                                                name: 'title',
-                                                                setter: {
-                                                                  componentName: 'MixedSetter',
-                                                                  props: {
-                                                                    setters: [
-                                                                      'StringSetter',
-                                                                      'NumberSetter',
-                                                                      'BoolSetter',
-                                                                      {
-                                                                        componentName: 'ObjectSetter',
-                                                                        condition: () => false,
-                                                                        props: {
-                                                                          config: {
-                                                                            extraSetter: {
-                                                                              componentName: 'MixedSetter',
-                                                                              props: {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      'FunctionSetter'
-                                                                    ]
-                                                                  }
-                                                                }
-                                                              },
-                                                              {
-                                                                title: {
-                                                                  label: {
-                                                                    type: 'i18n',
-                                                                    'en-US': 'overlay',
-                                                                    'zh-CN': 'overlay'
-                                                                  }
-                                                                },
-                                                                name: 'overlay',
-                                                                setter: {
-                                                                  componentName: 'MixedSetter',
-                                                                  props: {
-                                                                    setters: [
-                                                                      'StringSetter',
-                                                                      'NumberSetter',
-                                                                      'BoolSetter',
-                                                                      {
-                                                                        componentName: 'ObjectSetter',
-                                                                        condition: () => false,
-                                                                        props: {
-                                                                          config: {
-                                                                            extraSetter: {
-                                                                              componentName: 'MixedSetter',
-                                                                              props: {}
-                                                                            }
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      'FunctionSetter'
-                                                                    ]
-                                                                  }
-                                                                }
-                                                              }
-                                                            ]
-                                                          }
-                                                        }
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filtered',
-                                                    'zh-CN': 'filtered'
-                                                  }
-                                                },
-                                                name: 'filtered',
-                                                setter: 'BoolSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filters',
-                                                    'zh-CN': 'filters'
-                                                  }
-                                                },
-                                                name: 'filters',
-                                                setter: {
-                                                  componentName: 'ArraySetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    itemSetter: {
-                                                      componentName: 'ObjectSetter',
-                                                      condition: () => false,
-                                                      props: {
-                                                        config: {
-                                                          items: [
-                                                            {
-                                                              title: {
-                                                                label: {
-                                                                  type: 'i18n',
-                                                                  'en-US': 'text',
-                                                                  'zh-CN': 'text'
-                                                                }
-                                                              },
-                                                              name: 'text',
-                                                              setter: 'SlotSetter'
-                                                            },
-                                                            {
-                                                              title: {
-                                                                label: {
-                                                                  type: 'i18n',
-                                                                  'en-US': 'value',
-                                                                  'zh-CN': 'value'
-                                                                }
-                                                              },
-                                                              name: 'value',
-                                                              setter: {
-                                                                componentName: 'MixedSetter',
-                                                                props: {
-                                                                  setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
-                                                                }
-                                                              }
-                                                            },
-                                                            {
-                                                              title: {
-                                                                label: {
-                                                                  type: 'i18n',
-                                                                  'en-US': 'children',
-                                                                  'zh-CN': 'children'
-                                                                }
-                                                              },
-                                                              name: 'children',
-                                                              setter: {
-                                                                componentName: 'ArraySetter',
-                                                                condition: () => false,
-                                                                props: {
-                                                                  itemSetter: {
-                                                                    componentName: 'ObjectSetter',
-                                                                    condition: () => false,
-                                                                    props: {
-                                                                      config: {
-                                                                        extraSetter: {
-                                                                          componentName: 'MixedSetter',
-                                                                          props: {}
-                                                                        }
-                                                                      }
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                            }
-                                                          ]
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterDropdown',
-                                                    'zh-CN': 'filterDropdown'
-                                                  }
-                                                },
-                                                name: 'filterDropdown',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {
-                                                    setters: [
-                                                      'StringSetter',
-                                                      'NumberSetter',
-                                                      'BoolSetter',
-                                                      {
-                                                        componentName: 'ObjectSetter',
-                                                        condition: () => false,
-                                                        props: {
-                                                          config: {
-                                                            extraSetter: {
-                                                              componentName: 'MixedSetter',
-                                                              props: {}
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      'FunctionSetter'
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterMultiple',
-                                                    'zh-CN': 'filterMultiple'
-                                                  }
-                                                },
-                                                name: 'filterMultiple',
-                                                setter: 'BoolSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filteredValue',
-                                                    'zh-CN': 'filteredValue'
-                                                  }
-                                                },
-                                                name: 'filteredValue',
-                                                setter: {
-                                                  componentName: 'ArraySetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    itemSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {
-                                                        setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'defaultFilteredValue',
-                                                    'zh-CN': 'defaultFilteredValue'
-                                                  }
-                                                },
-                                                name: 'defaultFilteredValue',
-                                                setter: {
-                                                  componentName: 'ArraySetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    itemSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {
-                                                        setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterIcon',
-                                                    'zh-CN': 'filterIcon'
-                                                  }
-                                                },
-                                                name: 'filterIcon',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {
-                                                    setters: [
-                                                      'StringSetter',
-                                                      'NumberSetter',
-                                                      'BoolSetter',
-                                                      {
-                                                        componentName: 'ObjectSetter',
-                                                        condition: () => false,
-                                                        props: {
-                                                          config: {
-                                                            extraSetter: {
-                                                              componentName: 'MixedSetter',
-                                                              props: {}
-                                                            }
-                                                          }
-                                                        }
-                                                      },
-                                                      'FunctionSetter'
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterMode',
-                                                    'zh-CN': 'filterMode'
-                                                  }
-                                                },
-                                                name: 'filterMode',
-                                                setter: {
-                                                  componentName: 'RadioGroupSetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    dataSource: [
-                                                      {
-                                                        label: 'menu',
-                                                        value: 'menu'
-                                                      },
-                                                      {
-                                                        label: 'tree',
-                                                        value: 'tree'
-                                                      }
-                                                    ],
-                                                    options: [
-                                                      {
-                                                        label: 'menu',
-                                                        value: 'menu'
-                                                      },
-                                                      {
-                                                        label: 'tree',
-                                                        value: 'tree'
-                                                      }
-                                                    ]
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterSearch',
-                                                    'zh-CN': 'filterSearch'
-                                                  }
-                                                },
-                                                name: 'filterSearch',
-                                                setter: {
-                                                  componentName: 'MixedSetter',
-                                                  props: {
-                                                    setters: ['BoolSetter', 'FunctionSetter']
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'onFilter',
-                                                    'zh-CN': 'onFilter'
-                                                  }
-                                                },
-                                                name: 'onFilter',
-                                                setter: 'FunctionSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterDropdownOpen',
-                                                    'zh-CN': 'filterDropdownOpen'
-                                                  }
-                                                },
-                                                name: 'filterDropdownOpen',
-                                                setter: 'BoolSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'onFilterDropdownOpenChange',
-                                                    'zh-CN': 'onFilterDropdownOpenChange'
-                                                  }
-                                                },
-                                                name: 'onFilterDropdownOpenChange',
-                                                setter: 'FunctionSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterResetToDefaultFilteredValue',
-                                                    'zh-CN': 'filterResetToDefaultFilteredValue'
-                                                  }
-                                                },
-                                                name: 'filterResetToDefaultFilteredValue',
-                                                setter: 'BoolSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'responsive',
-                                                    'zh-CN': 'responsive'
-                                                  }
-                                                },
-                                                name: 'responsive',
-                                                setter: {
-                                                  componentName: 'ArraySetter',
-                                                  condition: () => false,
-                                                  props: {
-                                                    itemSetter: {
-                                                      componentName: 'SelectSetter',
-                                                      props: {
-                                                        dataSource: [
-                                                          {
-                                                            label: 'xs',
-                                                            value: 'xs'
-                                                          },
-                                                          {
-                                                            label: 'sm',
-                                                            value: 'sm'
-                                                          },
-                                                          {
-                                                            label: 'md',
-                                                            value: 'md'
-                                                          },
-                                                          {
-                                                            label: 'lg',
-                                                            value: 'lg'
-                                                          },
-                                                          {
-                                                            label: 'xl',
-                                                            value: 'xl'
-                                                          },
-                                                          {
-                                                            label: 'xxl',
-                                                            value: 'xxl'
-                                                          }
-                                                        ],
-                                                        options: [
-                                                          {
-                                                            label: 'xs',
-                                                            value: 'xs'
-                                                          },
-                                                          {
-                                                            label: 'sm',
-                                                            value: 'sm'
-                                                          },
-                                                          {
-                                                            label: 'md',
-                                                            value: 'md'
-                                                          },
-                                                          {
-                                                            label: 'lg',
-                                                            value: 'lg'
-                                                          },
-                                                          {
-                                                            label: 'xl',
-                                                            value: 'xl'
-                                                          },
-                                                          {
-                                                            label: 'xxl',
-                                                            value: 'xxl'
-                                                          }
-                                                        ]
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'filterDropdownVisible',
-                                                    'zh-CN': 'filterDropdownVisible'
-                                                  }
-                                                },
-                                                name: 'filterDropdownVisible',
-                                                setter: 'BoolSetter'
-                                              },
-                                              {
-                                                title: {
-                                                  label: {
-                                                    type: 'i18n',
-                                                    'en-US': 'onFilterDropdownVisibleChange',
-                                                    'zh-CN': 'onFilterDropdownVisibleChange'
-                                                  }
-                                                },
-                                                name: 'onFilterDropdownVisibleChange',
-                                                setter: 'FunctionSetter'
-                                              }
-                                            ]
-                                          }
-                                        }
                                       }
-                                    ]
+                                    }
                                   }
-                                }
+                                ]
                               }
                             }
                           }
-                        ]
+                        }
                       }
-                    }
-                  },
-                  {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'RecordType',
-                                'zh-CN': 'RecordType'
-                              }
-                            },
-                            name: 'RecordType',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {}
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'title',
-                                'zh-CN': 'title'
-                              }
-                            },
-                            name: 'title',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'StringSetter',
-                                  'NumberSetter',
-                                  'BoolSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  'FunctionSetter'
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'sorter',
-                                'zh-CN': 'sorter'
-                              }
-                            },
-                            name: 'sorter',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'BoolSetter',
-                                  'FunctionSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        items: [
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'compare',
-                                                'zh-CN': 'compare'
-                                              }
-                                            },
-                                            name: 'compare',
-                                            setter: 'FunctionSetter'
-                                          },
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'multiple',
-                                                'zh-CN': 'multiple'
-                                              }
-                                            },
-                                            name: 'multiple',
-                                            setter: 'NumberSetter'
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'sortOrder',
-                                'zh-CN': 'sortOrder'
-                              }
-                            },
-                            name: 'sortOrder',
-                            setter: {
-                              componentName: 'RadioGroupSetter',
-                              condition: () => false,
-                              props: {
-                                dataSource: [
-                                  {
-                                    label: 'descend',
-                                    value: 'descend'
-                                  },
-                                  {
-                                    label: 'ascend',
-                                    value: 'ascend'
-                                  }
-                                ],
-                                options: [
-                                  {
-                                    label: 'descend',
-                                    value: 'descend'
-                                  },
-                                  {
-                                    label: 'ascend',
-                                    value: 'ascend'
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'defaultSortOrder',
-                                'zh-CN': 'defaultSortOrder'
-                              }
-                            },
-                            name: 'defaultSortOrder',
-                            setter: {
-                              componentName: 'RadioGroupSetter',
-                              condition: () => false,
-                              props: {
-                                dataSource: [
-                                  {
-                                    label: 'descend',
-                                    value: 'descend'
-                                  },
-                                  {
-                                    label: 'ascend',
-                                    value: 'ascend'
-                                  }
-                                ],
-                                options: [
-                                  {
-                                    label: 'descend',
-                                    value: 'descend'
-                                  },
-                                  {
-                                    label: 'ascend',
-                                    value: 'ascend'
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'sortDirections',
-                                'zh-CN': 'sortDirections'
-                              }
-                            },
-                            name: 'sortDirections',
-                            setter: {
-                              componentName: 'ArraySetter',
-                              condition: () => false,
-                              props: {
-                                itemSetter: {
-                                  componentName: 'RadioGroupSetter',
-                                  condition: () => false,
-                                  props: {
-                                    dataSource: [
-                                      {
-                                        label: 'descend',
-                                        value: 'descend'
-                                      },
-                                      {
-                                        label: 'ascend',
-                                        value: 'ascend'
-                                      }
-                                    ],
-                                    options: [
-                                      {
-                                        label: 'descend',
-                                        value: 'descend'
-                                      },
-                                      {
-                                        label: 'ascend',
-                                        value: 'ascend'
-                                      }
-                                    ]
-                                  }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'filterSearch',
+                          'zh-CN': 'filterSearch'
+                        }
+                      },
+                      name: 'filterSearch',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['BoolSetter', 'FunctionSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'onCell',
+                          'zh-CN': 'onCell'
+                        }
+                      },
+                      name: 'onCell',
+                      setter: 'FunctionSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'onFilter',
+                          'zh-CN': 'onFilter'
+                        }
+                      },
+                      name: 'onFilter',
+                      setter: 'FunctionSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'onFilterDropdownOpenChange',
+                          'zh-CN': 'onFilterDropdownOpenChange'
+                        }
+                      },
+                      name: 'onFilterDropdownOpenChange',
+                      setter: 'FunctionSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'onHeaderCell',
+                          'zh-CN': 'onHeaderCell'
+                        }
+                      },
+                      name: 'onHeaderCell',
+                      setter: 'FunctionSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'render',
+                          'zh-CN': 'render'
+                        }
+                      },
+                      name: 'render',
+                      setter: {
+                        componentName: 'SlotSetter',
+                        initialValue: {
+                          type: 'JSSlot',
+                          params: ['text', 'record', 'index']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'responsive',
+                          'zh-CN': 'responsive'
+                        }
+                      },
+                      name: 'responsive',
+                      setter: {
+                        componentName: 'ArraySetter',
+                        props: {
+                          itemSetter: {
+                            componentName: 'SelectSetter',
+                            props: {
+                              dataSource: [
+                                {
+                                  label: 'xs',
+                                  value: 'xs'
+                                },
+                                {
+                                  label: 'sm',
+                                  value: 'sm'
+                                },
+                                {
+                                  label: 'md',
+                                  value: 'md'
+                                },
+                                {
+                                  label: 'lg',
+                                  value: 'lg'
+                                },
+                                {
+                                  label: 'xl',
+                                  value: 'xl'
+                                },
+                                {
+                                  label: 'xxl',
+                                  value: 'xxl'
                                 }
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'sortIcon',
-                                'zh-CN': 'sortIcon'
-                              }
-                            },
-                            name: 'sortIcon',
-                            setter: 'FunctionSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'showSorterTooltip',
-                                'zh-CN': 'showSorterTooltip'
-                              }
-                            },
-                            name: 'showSorterTooltip',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'BoolSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        items: [
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'title',
-                                                'zh-CN': 'title'
-                                              }
-                                            },
-                                            name: 'title',
-                                            setter: {
-                                              componentName: 'MixedSetter',
-                                              props: {
-                                                setters: [
-                                                  'StringSetter',
-                                                  'NumberSetter',
-                                                  'BoolSetter',
-                                                  {
-                                                    componentName: 'ObjectSetter',
-                                                    condition: () => false,
-                                                    props: {
-                                                      config: {
-                                                        extraSetter: {
-                                                          componentName: 'MixedSetter',
-                                                          props: {}
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  'FunctionSetter'
-                                                ]
-                                              }
-                                            }
-                                          },
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'overlay',
-                                                'zh-CN': 'overlay'
-                                              }
-                                            },
-                                            name: 'overlay',
-                                            setter: {
-                                              componentName: 'MixedSetter',
-                                              props: {
-                                                setters: [
-                                                  'StringSetter',
-                                                  'NumberSetter',
-                                                  'BoolSetter',
-                                                  {
-                                                    componentName: 'ObjectSetter',
-                                                    condition: () => false,
-                                                    props: {
-                                                      config: {
-                                                        extraSetter: {
-                                                          componentName: 'MixedSetter',
-                                                          props: {}
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  'FunctionSetter'
-                                                ]
-                                              }
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  },
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        items: [
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'title',
-                                                'zh-CN': 'title'
-                                              }
-                                            },
-                                            name: 'title',
-                                            setter: {
-                                              componentName: 'MixedSetter',
-                                              props: {
-                                                setters: [
-                                                  'StringSetter',
-                                                  'NumberSetter',
-                                                  'BoolSetter',
-                                                  {
-                                                    componentName: 'ObjectSetter',
-                                                    condition: () => false,
-                                                    props: {
-                                                      config: {
-                                                        extraSetter: {
-                                                          componentName: 'MixedSetter',
-                                                          props: {}
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  'FunctionSetter'
-                                                ]
-                                              }
-                                            }
-                                          },
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'overlay',
-                                                'zh-CN': 'overlay'
-                                              }
-                                            },
-                                            name: 'overlay',
-                                            setter: {
-                                              componentName: 'MixedSetter',
-                                              props: {
-                                                setters: [
-                                                  'StringSetter',
-                                                  'NumberSetter',
-                                                  'BoolSetter',
-                                                  {
-                                                    componentName: 'ObjectSetter',
-                                                    condition: () => false,
-                                                    props: {
-                                                      config: {
-                                                        extraSetter: {
-                                                          componentName: 'MixedSetter',
-                                                          props: {}
-                                                        }
-                                                      }
-                                                    }
-                                                  },
-                                                  'FunctionSetter'
-                                                ]
-                                              }
-                                            }
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filtered',
-                                'zh-CN': 'filtered'
-                              }
-                            },
-                            name: 'filtered',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filters',
-                                'zh-CN': 'filters'
-                              }
-                            },
-                            name: 'filters',
-                            setter: {
-                              componentName: 'ArraySetter',
-                              condition: () => false,
-                              props: {
-                                itemSetter: {
-                                  componentName: 'ObjectSetter',
-                                  condition: () => false,
-                                  props: {
-                                    config: {
-                                      items: [
-                                        {
-                                          title: {
-                                            label: {
-                                              type: 'i18n',
-                                              'en-US': 'text',
-                                              'zh-CN': 'text'
-                                            }
-                                          },
-                                          name: 'text',
-                                          setter: 'SlotSetter'
-                                        },
-                                        {
-                                          title: {
-                                            label: {
-                                              type: 'i18n',
-                                              'en-US': 'value',
-                                              'zh-CN': 'value'
-                                            }
-                                          },
-                                          name: 'value',
-                                          setter: {
-                                            componentName: 'MixedSetter',
-                                            props: {
-                                              setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
-                                            }
-                                          }
-                                        },
-                                        {
-                                          title: {
-                                            label: {
-                                              type: 'i18n',
-                                              'en-US': 'children',
-                                              'zh-CN': 'children'
-                                            }
-                                          },
-                                          name: 'children',
-                                          setter: {
-                                            componentName: 'ArraySetter',
-                                            condition: () => false,
-                                            props: {
-                                              itemSetter: {
-                                                componentName: 'ObjectSetter',
-                                                condition: () => false,
-                                                props: {
-                                                  config: {
-                                                    extraSetter: {
-                                                      componentName: 'MixedSetter',
-                                                      props: {}
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
+                              ],
+                              options: [
+                                {
+                                  label: 'xs',
+                                  value: 'xs'
+                                },
+                                {
+                                  label: 'sm',
+                                  value: 'sm'
+                                },
+                                {
+                                  label: 'md',
+                                  value: 'md'
+                                },
+                                {
+                                  label: 'lg',
+                                  value: 'lg'
+                                },
+                                {
+                                  label: 'xl',
+                                  value: 'xl'
+                                },
+                                {
+                                  label: 'xxl',
+                                  value: 'xxl'
                                 }
-                              }
+                              ]
                             }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterDropdown',
-                                'zh-CN': 'filterDropdown'
-                              }
-                            },
-                            name: 'filterDropdown',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'StringSetter',
-                                  'NumberSetter',
-                                  'BoolSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  'FunctionSetter'
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterMultiple',
-                                'zh-CN': 'filterMultiple'
-                              }
-                            },
-                            name: 'filterMultiple',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filteredValue',
-                                'zh-CN': 'filteredValue'
-                              }
-                            },
-                            name: 'filteredValue',
-                            setter: {
-                              componentName: 'ArraySetter',
-                              condition: () => false,
-                              props: {
-                                itemSetter: {
-                                  componentName: 'MixedSetter',
-                                  props: {
-                                    setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'defaultFilteredValue',
-                                'zh-CN': 'defaultFilteredValue'
-                              }
-                            },
-                            name: 'defaultFilteredValue',
-                            setter: {
-                              componentName: 'ArraySetter',
-                              condition: () => false,
-                              props: {
-                                itemSetter: {
-                                  componentName: 'MixedSetter',
-                                  props: {
-                                    setters: ['StringSetter', 'NumberSetter', 'BoolSetter']
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterIcon',
-                                'zh-CN': 'filterIcon'
-                              }
-                            },
-                            name: 'filterIcon',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  'StringSetter',
-                                  'NumberSetter',
-                                  'BoolSetter',
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  'FunctionSetter'
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterMode',
-                                'zh-CN': 'filterMode'
-                              }
-                            },
-                            name: 'filterMode',
-                            setter: {
-                              componentName: 'RadioGroupSetter',
-                              condition: () => false,
-                              props: {
-                                dataSource: [
-                                  {
-                                    label: 'menu',
-                                    value: 'menu'
-                                  },
-                                  {
-                                    label: 'tree',
-                                    value: 'tree'
-                                  }
-                                ],
-                                options: [
-                                  {
-                                    label: 'menu',
-                                    value: 'menu'
-                                  },
-                                  {
-                                    label: 'tree',
-                                    value: 'tree'
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterSearch',
-                                'zh-CN': 'filterSearch'
-                              }
-                            },
-                            name: 'filterSearch',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: ['BoolSetter', 'FunctionSetter']
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'onFilter',
-                                'zh-CN': 'onFilter'
-                              }
-                            },
-                            name: 'onFilter',
-                            setter: 'FunctionSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterDropdownOpen',
-                                'zh-CN': 'filterDropdownOpen'
-                              }
-                            },
-                            name: 'filterDropdownOpen',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'onFilterDropdownOpenChange',
-                                'zh-CN': 'onFilterDropdownOpenChange'
-                              }
-                            },
-                            name: 'onFilterDropdownOpenChange',
-                            setter: 'FunctionSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterResetToDefaultFilteredValue',
-                                'zh-CN': 'filterResetToDefaultFilteredValue'
-                              }
-                            },
-                            name: 'filterResetToDefaultFilteredValue',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'responsive',
-                                'zh-CN': 'responsive'
-                              }
-                            },
-                            name: 'responsive',
-                            setter: {
-                              componentName: 'ArraySetter',
-                              condition: () => false,
-                              props: {
-                                itemSetter: {
-                                  componentName: 'SelectSetter',
-                                  props: {
-                                    dataSource: [
-                                      {
-                                        label: 'xs',
-                                        value: 'xs'
-                                      },
-                                      {
-                                        label: 'sm',
-                                        value: 'sm'
-                                      },
-                                      {
-                                        label: 'md',
-                                        value: 'md'
-                                      },
-                                      {
-                                        label: 'lg',
-                                        value: 'lg'
-                                      },
-                                      {
-                                        label: 'xl',
-                                        value: 'xl'
-                                      },
-                                      {
-                                        label: 'xxl',
-                                        value: 'xxl'
-                                      }
-                                    ],
-                                    options: [
-                                      {
-                                        label: 'xs',
-                                        value: 'xs'
-                                      },
-                                      {
-                                        label: 'sm',
-                                        value: 'sm'
-                                      },
-                                      {
-                                        label: 'md',
-                                        value: 'md'
-                                      },
-                                      {
-                                        label: 'lg',
-                                        value: 'lg'
-                                      },
-                                      {
-                                        label: 'xl',
-                                        value: 'xl'
-                                      },
-                                      {
-                                        label: 'xxl',
-                                        value: 'xxl'
-                                      }
-                                    ]
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'filterDropdownVisible',
-                                'zh-CN': 'filterDropdownVisible'
-                              }
-                            },
-                            name: 'filterDropdownVisible',
-                            setter: 'BoolSetter'
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'onFilterDropdownVisibleChange',
-                                'zh-CN': 'onFilterDropdownVisibleChange'
-                              }
-                            },
-                            name: 'onFilterDropdownVisibleChange',
-                            setter: 'FunctionSetter'
                           }
-                        ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'rowScope',
+                          'zh-CN': 'rowScope'
+                        }
+                      },
+                      name: 'rowScope',
+                      setter: {
+                        componentName: 'ArraySetter',
+                        props: {
+                          itemSetter: {
+                            componentName: 'SelectSetter',
+                            props: {
+                              dataSource: [
+                                {
+                                  label: 'row',
+                                  value: 'row'
+                                },
+                                {
+                                  label: 'rowgroup',
+                                  value: 'rowgroup'
+                                }
+                              ],
+                              options: [
+                                {
+                                  label: 'row',
+                                  value: 'row'
+                                },
+                                {
+                                  label: 'rowgroup',
+                                  value: 'rowgroup'
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'showSorterTooltip',
+                          'zh-CN': 'showSorterTooltip'
+                        }
+                      },
+                      name: 'showSorterTooltip',
+                      extraProps: {
+                        display: 'accordion',
+                        defaultCollapsed: true
+                      },
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'BoolSetter',
+                            {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  items: TooltipMeta.configure!['props']
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'sortDirections',
+                          'zh-CN': 'sortDirections'
+                        }
+                      },
+                      name: 'sortDirections',
+                      setter: {
+                        componentName: 'ArraySetter',
+                        props: {
+                          itemSetter: {
+                            componentName: 'RadioGroupSetter',
+                            props: {
+                              dataSource: [
+                                {
+                                  label: 'descend',
+                                  value: 'descend'
+                                },
+                                {
+                                  label: 'ascend',
+                                  value: 'ascend'
+                                }
+                              ],
+                              options: [
+                                {
+                                  label: 'descend',
+                                  value: 'descend'
+                                },
+                                {
+                                  label: 'ascend',
+                                  value: 'ascend'
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'sorter',
+                          'zh-CN': 'sorter'
+                        }
+                      },
+                      name: 'sorter',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'BoolSetter',
+                            'FunctionSetter',
+                            {
+                              componentName: 'ObjectSetter',
+                              props: {
+                                config: {
+                                  items: [
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'compare',
+                                          'zh-CN': 'compare'
+                                        }
+                                      },
+                                      name: 'compare',
+                                      setter: 'FunctionSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'multiple',
+                                          'zh-CN': 'multiple'
+                                        }
+                                      },
+                                      name: 'multiple',
+                                      setter: 'NumberSetter'
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'sortIcon',
+                          'zh-CN': 'sortIcon'
+                        }
+                      },
+                      name: 'sortIcon',
+                      setter: {
+                        componentName: 'SlotSetter',
+                        initialValue: {
+                          type: 'JSSlot',
+                          params: ['props']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'sortOrder',
+                          'zh-CN': 'sortOrder'
+                        }
+                      },
+                      name: 'sortOrder',
+                      setter: {
+                        componentName: 'RadioGroupSetter',
+                        props: {
+                          dataSource: [
+                            {
+                              label: 'descend',
+                              value: 'descend'
+                            },
+                            {
+                              label: 'ascend',
+                              value: 'ascend'
+                            }
+                          ],
+                          options: [
+                            {
+                              label: 'descend',
+                              value: 'descend'
+                            },
+                            {
+                              label: 'ascend',
+                              value: 'ascend'
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'title',
+                          'zh-CN': 'title'
+                        }
+                      },
+                      name: 'title',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'StringSetter',
+                            {
+                              componentName: 'SlotSetter',
+                              initialValue: {
+                                type: 'JSSlot',
+                                params: ['props']
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'width',
+                          'zh-CN': 'width'
+                        }
+                      },
+                      name: 'width',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'NumberSetter']
+                        }
                       }
                     }
-                  }
-                ]
+                  ]
+                }
               }
             }
           }
@@ -1743,6841 +871,8 @@ const TableMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'components'
           }
         },
-        name: 'components',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              items: [
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'RecordType',
-                      'zh-CN': 'RecordType'
-                    }
-                  },
-                  name: 'RecordType',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'table',
-                      'zh-CN': 'table'
-                    }
-                  },
-                  name: 'table',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: [
-                        {
-                          componentName: 'ObjectSetter',
-                          condition: () => false,
-                          props: {
-                            config: {
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
-                            }
-                          }
-                        },
-                        {
-                          componentName: 'SelectSetter',
-                          props: {
-                            dataSource: [
-                              {
-                                label: 'object',
-                                value: 'object'
-                              },
-                              {
-                                label: 'button',
-                                value: 'button'
-                              },
-                              {
-                                label: 'style',
-                                value: 'style'
-                              },
-                              {
-                                label: 'form',
-                                value: 'form'
-                              },
-                              {
-                                label: 'link',
-                                value: 'link'
-                              },
-                              {
-                                label: 'small',
-                                value: 'small'
-                              },
-                              {
-                                label: 'title',
-                                value: 'title'
-                              },
-                              {
-                                label: 'a',
-                                value: 'a'
-                              },
-                              {
-                                label: 'code',
-                                value: 'code'
-                              },
-                              {
-                                label: 'mark',
-                                value: 'mark'
-                              },
-                              {
-                                label: 'strong',
-                                value: 'strong'
-                              },
-                              {
-                                label: 'div',
-                                value: 'div'
-                              },
-                              {
-                                label: 'span',
-                                value: 'span'
-                              },
-                              {
-                                label: 'h1',
-                                value: 'h1'
-                              },
-                              {
-                                label: 'h2',
-                                value: 'h2'
-                              },
-                              {
-                                label: 'h3',
-                                value: 'h3'
-                              },
-                              {
-                                label: 'h4',
-                                value: 'h4'
-                              },
-                              {
-                                label: 'h5',
-                                value: 'h5'
-                              },
-                              {
-                                label: 'menu',
-                                value: 'menu'
-                              },
-                              {
-                                label: 'label',
-                                value: 'label'
-                              },
-                              {
-                                label: 'input',
-                                value: 'input'
-                              },
-                              {
-                                label: 'progress',
-                                value: 'progress'
-                              },
-                              {
-                                label: 'select',
-                                value: 'select'
-                              },
-                              {
-                                label: 'abbr',
-                                value: 'abbr'
-                              },
-                              {
-                                label: 'address',
-                                value: 'address'
-                              },
-                              {
-                                label: 'area',
-                                value: 'area'
-                              },
-                              {
-                                label: 'article',
-                                value: 'article'
-                              },
-                              {
-                                label: 'aside',
-                                value: 'aside'
-                              },
-                              {
-                                label: 'audio',
-                                value: 'audio'
-                              },
-                              {
-                                label: 'b',
-                                value: 'b'
-                              },
-                              {
-                                label: 'base',
-                                value: 'base'
-                              },
-                              {
-                                label: 'bdi',
-                                value: 'bdi'
-                              },
-                              {
-                                label: 'bdo',
-                                value: 'bdo'
-                              },
-                              {
-                                label: 'blockquote',
-                                value: 'blockquote'
-                              },
-                              {
-                                label: 'body',
-                                value: 'body'
-                              },
-                              {
-                                label: 'br',
-                                value: 'br'
-                              },
-                              {
-                                label: 'canvas',
-                                value: 'canvas'
-                              },
-                              {
-                                label: 'caption',
-                                value: 'caption'
-                              },
-                              {
-                                label: 'cite',
-                                value: 'cite'
-                              },
-                              {
-                                label: 'col',
-                                value: 'col'
-                              },
-                              {
-                                label: 'colgroup',
-                                value: 'colgroup'
-                              },
-                              {
-                                label: 'data',
-                                value: 'data'
-                              },
-                              {
-                                label: 'datalist',
-                                value: 'datalist'
-                              },
-                              {
-                                label: 'dd',
-                                value: 'dd'
-                              },
-                              {
-                                label: 'del',
-                                value: 'del'
-                              },
-                              {
-                                label: 'details',
-                                value: 'details'
-                              },
-                              {
-                                label: 'dfn',
-                                value: 'dfn'
-                              },
-                              {
-                                label: 'dialog',
-                                value: 'dialog'
-                              },
-                              {
-                                label: 'dl',
-                                value: 'dl'
-                              },
-                              {
-                                label: 'dt',
-                                value: 'dt'
-                              },
-                              {
-                                label: 'em',
-                                value: 'em'
-                              },
-                              {
-                                label: 'embed',
-                                value: 'embed'
-                              },
-                              {
-                                label: 'fieldset',
-                                value: 'fieldset'
-                              },
-                              {
-                                label: 'figcaption',
-                                value: 'figcaption'
-                              },
-                              {
-                                label: 'figure',
-                                value: 'figure'
-                              },
-                              {
-                                label: 'footer',
-                                value: 'footer'
-                              },
-                              {
-                                label: 'h6',
-                                value: 'h6'
-                              },
-                              {
-                                label: 'head',
-                                value: 'head'
-                              },
-                              {
-                                label: 'header',
-                                value: 'header'
-                              },
-                              {
-                                label: 'hgroup',
-                                value: 'hgroup'
-                              },
-                              {
-                                label: 'hr',
-                                value: 'hr'
-                              },
-                              {
-                                label: 'html',
-                                value: 'html'
-                              },
-                              {
-                                label: 'i',
-                                value: 'i'
-                              },
-                              {
-                                label: 'iframe',
-                                value: 'iframe'
-                              },
-                              {
-                                label: 'img',
-                                value: 'img'
-                              },
-                              {
-                                label: 'ins',
-                                value: 'ins'
-                              },
-                              {
-                                label: 'kbd',
-                                value: 'kbd'
-                              },
-                              {
-                                label: 'legend',
-                                value: 'legend'
-                              },
-                              {
-                                label: 'li',
-                                value: 'li'
-                              },
-                              {
-                                label: 'main',
-                                value: 'main'
-                              },
-                              {
-                                label: 'map',
-                                value: 'map'
-                              },
-                              {
-                                label: 'meta',
-                                value: 'meta'
-                              },
-                              {
-                                label: 'meter',
-                                value: 'meter'
-                              },
-                              {
-                                label: 'nav',
-                                value: 'nav'
-                              },
-                              {
-                                label: 'noscript',
-                                value: 'noscript'
-                              },
-                              {
-                                label: 'ol',
-                                value: 'ol'
-                              },
-                              {
-                                label: 'optgroup',
-                                value: 'optgroup'
-                              },
-                              {
-                                label: 'option',
-                                value: 'option'
-                              },
-                              {
-                                label: 'output',
-                                value: 'output'
-                              },
-                              {
-                                label: 'p',
-                                value: 'p'
-                              },
-                              {
-                                label: 'param',
-                                value: 'param'
-                              },
-                              {
-                                label: 'picture',
-                                value: 'picture'
-                              },
-                              {
-                                label: 'pre',
-                                value: 'pre'
-                              },
-                              {
-                                label: 'q',
-                                value: 'q'
-                              },
-                              {
-                                label: 'rp',
-                                value: 'rp'
-                              },
-                              {
-                                label: 'rt',
-                                value: 'rt'
-                              },
-                              {
-                                label: 'ruby',
-                                value: 'ruby'
-                              },
-                              {
-                                label: 's',
-                                value: 's'
-                              },
-                              {
-                                label: 'samp',
-                                value: 'samp'
-                              },
-                              {
-                                label: 'script',
-                                value: 'script'
-                              },
-                              {
-                                label: 'section',
-                                value: 'section'
-                              },
-                              {
-                                label: 'slot',
-                                value: 'slot'
-                              },
-                              {
-                                label: 'source',
-                                value: 'source'
-                              },
-                              {
-                                label: 'sub',
-                                value: 'sub'
-                              },
-                              {
-                                label: 'summary',
-                                value: 'summary'
-                              },
-                              {
-                                label: 'sup',
-                                value: 'sup'
-                              },
-                              {
-                                label: 'table',
-                                value: 'table'
-                              },
-                              {
-                                label: 'tbody',
-                                value: 'tbody'
-                              },
-                              {
-                                label: 'td',
-                                value: 'td'
-                              },
-                              {
-                                label: 'template',
-                                value: 'template'
-                              },
-                              {
-                                label: 'textarea',
-                                value: 'textarea'
-                              },
-                              {
-                                label: 'tfoot',
-                                value: 'tfoot'
-                              },
-                              {
-                                label: 'th',
-                                value: 'th'
-                              },
-                              {
-                                label: 'thead',
-                                value: 'thead'
-                              },
-                              {
-                                label: 'time',
-                                value: 'time'
-                              },
-                              {
-                                label: 'tr',
-                                value: 'tr'
-                              },
-                              {
-                                label: 'track',
-                                value: 'track'
-                              },
-                              {
-                                label: 'u',
-                                value: 'u'
-                              },
-                              {
-                                label: 'ul',
-                                value: 'ul'
-                              },
-                              {
-                                label: 'var',
-                                value: 'var'
-                              },
-                              {
-                                label: 'video',
-                                value: 'video'
-                              },
-                              {
-                                label: 'wbr',
-                                value: 'wbr'
-                              },
-                              {
-                                label: 'big',
-                                value: 'big'
-                              },
-                              {
-                                label: 'keygen',
-                                value: 'keygen'
-                              },
-                              {
-                                label: 'menuitem',
-                                value: 'menuitem'
-                              },
-                              {
-                                label: 'webview',
-                                value: 'webview'
-                              }
-                            ],
-                            options: [
-                              {
-                                label: 'object',
-                                value: 'object'
-                              },
-                              {
-                                label: 'button',
-                                value: 'button'
-                              },
-                              {
-                                label: 'style',
-                                value: 'style'
-                              },
-                              {
-                                label: 'form',
-                                value: 'form'
-                              },
-                              {
-                                label: 'link',
-                                value: 'link'
-                              },
-                              {
-                                label: 'small',
-                                value: 'small'
-                              },
-                              {
-                                label: 'title',
-                                value: 'title'
-                              },
-                              {
-                                label: 'a',
-                                value: 'a'
-                              },
-                              {
-                                label: 'code',
-                                value: 'code'
-                              },
-                              {
-                                label: 'mark',
-                                value: 'mark'
-                              },
-                              {
-                                label: 'strong',
-                                value: 'strong'
-                              },
-                              {
-                                label: 'div',
-                                value: 'div'
-                              },
-                              {
-                                label: 'span',
-                                value: 'span'
-                              },
-                              {
-                                label: 'h1',
-                                value: 'h1'
-                              },
-                              {
-                                label: 'h2',
-                                value: 'h2'
-                              },
-                              {
-                                label: 'h3',
-                                value: 'h3'
-                              },
-                              {
-                                label: 'h4',
-                                value: 'h4'
-                              },
-                              {
-                                label: 'h5',
-                                value: 'h5'
-                              },
-                              {
-                                label: 'menu',
-                                value: 'menu'
-                              },
-                              {
-                                label: 'label',
-                                value: 'label'
-                              },
-                              {
-                                label: 'input',
-                                value: 'input'
-                              },
-                              {
-                                label: 'progress',
-                                value: 'progress'
-                              },
-                              {
-                                label: 'select',
-                                value: 'select'
-                              },
-                              {
-                                label: 'abbr',
-                                value: 'abbr'
-                              },
-                              {
-                                label: 'address',
-                                value: 'address'
-                              },
-                              {
-                                label: 'area',
-                                value: 'area'
-                              },
-                              {
-                                label: 'article',
-                                value: 'article'
-                              },
-                              {
-                                label: 'aside',
-                                value: 'aside'
-                              },
-                              {
-                                label: 'audio',
-                                value: 'audio'
-                              },
-                              {
-                                label: 'b',
-                                value: 'b'
-                              },
-                              {
-                                label: 'base',
-                                value: 'base'
-                              },
-                              {
-                                label: 'bdi',
-                                value: 'bdi'
-                              },
-                              {
-                                label: 'bdo',
-                                value: 'bdo'
-                              },
-                              {
-                                label: 'blockquote',
-                                value: 'blockquote'
-                              },
-                              {
-                                label: 'body',
-                                value: 'body'
-                              },
-                              {
-                                label: 'br',
-                                value: 'br'
-                              },
-                              {
-                                label: 'canvas',
-                                value: 'canvas'
-                              },
-                              {
-                                label: 'caption',
-                                value: 'caption'
-                              },
-                              {
-                                label: 'cite',
-                                value: 'cite'
-                              },
-                              {
-                                label: 'col',
-                                value: 'col'
-                              },
-                              {
-                                label: 'colgroup',
-                                value: 'colgroup'
-                              },
-                              {
-                                label: 'data',
-                                value: 'data'
-                              },
-                              {
-                                label: 'datalist',
-                                value: 'datalist'
-                              },
-                              {
-                                label: 'dd',
-                                value: 'dd'
-                              },
-                              {
-                                label: 'del',
-                                value: 'del'
-                              },
-                              {
-                                label: 'details',
-                                value: 'details'
-                              },
-                              {
-                                label: 'dfn',
-                                value: 'dfn'
-                              },
-                              {
-                                label: 'dialog',
-                                value: 'dialog'
-                              },
-                              {
-                                label: 'dl',
-                                value: 'dl'
-                              },
-                              {
-                                label: 'dt',
-                                value: 'dt'
-                              },
-                              {
-                                label: 'em',
-                                value: 'em'
-                              },
-                              {
-                                label: 'embed',
-                                value: 'embed'
-                              },
-                              {
-                                label: 'fieldset',
-                                value: 'fieldset'
-                              },
-                              {
-                                label: 'figcaption',
-                                value: 'figcaption'
-                              },
-                              {
-                                label: 'figure',
-                                value: 'figure'
-                              },
-                              {
-                                label: 'footer',
-                                value: 'footer'
-                              },
-                              {
-                                label: 'h6',
-                                value: 'h6'
-                              },
-                              {
-                                label: 'head',
-                                value: 'head'
-                              },
-                              {
-                                label: 'header',
-                                value: 'header'
-                              },
-                              {
-                                label: 'hgroup',
-                                value: 'hgroup'
-                              },
-                              {
-                                label: 'hr',
-                                value: 'hr'
-                              },
-                              {
-                                label: 'html',
-                                value: 'html'
-                              },
-                              {
-                                label: 'i',
-                                value: 'i'
-                              },
-                              {
-                                label: 'iframe',
-                                value: 'iframe'
-                              },
-                              {
-                                label: 'img',
-                                value: 'img'
-                              },
-                              {
-                                label: 'ins',
-                                value: 'ins'
-                              },
-                              {
-                                label: 'kbd',
-                                value: 'kbd'
-                              },
-                              {
-                                label: 'legend',
-                                value: 'legend'
-                              },
-                              {
-                                label: 'li',
-                                value: 'li'
-                              },
-                              {
-                                label: 'main',
-                                value: 'main'
-                              },
-                              {
-                                label: 'map',
-                                value: 'map'
-                              },
-                              {
-                                label: 'meta',
-                                value: 'meta'
-                              },
-                              {
-                                label: 'meter',
-                                value: 'meter'
-                              },
-                              {
-                                label: 'nav',
-                                value: 'nav'
-                              },
-                              {
-                                label: 'noscript',
-                                value: 'noscript'
-                              },
-                              {
-                                label: 'ol',
-                                value: 'ol'
-                              },
-                              {
-                                label: 'optgroup',
-                                value: 'optgroup'
-                              },
-                              {
-                                label: 'option',
-                                value: 'option'
-                              },
-                              {
-                                label: 'output',
-                                value: 'output'
-                              },
-                              {
-                                label: 'p',
-                                value: 'p'
-                              },
-                              {
-                                label: 'param',
-                                value: 'param'
-                              },
-                              {
-                                label: 'picture',
-                                value: 'picture'
-                              },
-                              {
-                                label: 'pre',
-                                value: 'pre'
-                              },
-                              {
-                                label: 'q',
-                                value: 'q'
-                              },
-                              {
-                                label: 'rp',
-                                value: 'rp'
-                              },
-                              {
-                                label: 'rt',
-                                value: 'rt'
-                              },
-                              {
-                                label: 'ruby',
-                                value: 'ruby'
-                              },
-                              {
-                                label: 's',
-                                value: 's'
-                              },
-                              {
-                                label: 'samp',
-                                value: 'samp'
-                              },
-                              {
-                                label: 'script',
-                                value: 'script'
-                              },
-                              {
-                                label: 'section',
-                                value: 'section'
-                              },
-                              {
-                                label: 'slot',
-                                value: 'slot'
-                              },
-                              {
-                                label: 'source',
-                                value: 'source'
-                              },
-                              {
-                                label: 'sub',
-                                value: 'sub'
-                              },
-                              {
-                                label: 'summary',
-                                value: 'summary'
-                              },
-                              {
-                                label: 'sup',
-                                value: 'sup'
-                              },
-                              {
-                                label: 'table',
-                                value: 'table'
-                              },
-                              {
-                                label: 'tbody',
-                                value: 'tbody'
-                              },
-                              {
-                                label: 'td',
-                                value: 'td'
-                              },
-                              {
-                                label: 'template',
-                                value: 'template'
-                              },
-                              {
-                                label: 'textarea',
-                                value: 'textarea'
-                              },
-                              {
-                                label: 'tfoot',
-                                value: 'tfoot'
-                              },
-                              {
-                                label: 'th',
-                                value: 'th'
-                              },
-                              {
-                                label: 'thead',
-                                value: 'thead'
-                              },
-                              {
-                                label: 'time',
-                                value: 'time'
-                              },
-                              {
-                                label: 'tr',
-                                value: 'tr'
-                              },
-                              {
-                                label: 'track',
-                                value: 'track'
-                              },
-                              {
-                                label: 'u',
-                                value: 'u'
-                              },
-                              {
-                                label: 'ul',
-                                value: 'ul'
-                              },
-                              {
-                                label: 'var',
-                                value: 'var'
-                              },
-                              {
-                                label: 'video',
-                                value: 'video'
-                              },
-                              {
-                                label: 'wbr',
-                                value: 'wbr'
-                              },
-                              {
-                                label: 'big',
-                                value: 'big'
-                              },
-                              {
-                                label: 'keygen',
-                                value: 'keygen'
-                              },
-                              {
-                                label: 'menuitem',
-                                value: 'menuitem'
-                              },
-                              {
-                                label: 'webview',
-                                value: 'webview'
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'header',
-                      'zh-CN': 'header'
-                    }
-                  },
-                  name: 'header',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        items: [
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'wrapper',
-                                'zh-CN': 'wrapper'
-                              }
-                            },
-                            name: 'wrapper',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  {
-                                    componentName: 'SelectSetter',
-                                    props: {
-                                      dataSource: [
-                                        {
-                                          label: 'object',
-                                          value: 'object'
-                                        },
-                                        {
-                                          label: 'button',
-                                          value: 'button'
-                                        },
-                                        {
-                                          label: 'style',
-                                          value: 'style'
-                                        },
-                                        {
-                                          label: 'form',
-                                          value: 'form'
-                                        },
-                                        {
-                                          label: 'link',
-                                          value: 'link'
-                                        },
-                                        {
-                                          label: 'small',
-                                          value: 'small'
-                                        },
-                                        {
-                                          label: 'title',
-                                          value: 'title'
-                                        },
-                                        {
-                                          label: 'a',
-                                          value: 'a'
-                                        },
-                                        {
-                                          label: 'code',
-                                          value: 'code'
-                                        },
-                                        {
-                                          label: 'mark',
-                                          value: 'mark'
-                                        },
-                                        {
-                                          label: 'strong',
-                                          value: 'strong'
-                                        },
-                                        {
-                                          label: 'div',
-                                          value: 'div'
-                                        },
-                                        {
-                                          label: 'span',
-                                          value: 'span'
-                                        },
-                                        {
-                                          label: 'h1',
-                                          value: 'h1'
-                                        },
-                                        {
-                                          label: 'h2',
-                                          value: 'h2'
-                                        },
-                                        {
-                                          label: 'h3',
-                                          value: 'h3'
-                                        },
-                                        {
-                                          label: 'h4',
-                                          value: 'h4'
-                                        },
-                                        {
-                                          label: 'h5',
-                                          value: 'h5'
-                                        },
-                                        {
-                                          label: 'menu',
-                                          value: 'menu'
-                                        },
-                                        {
-                                          label: 'label',
-                                          value: 'label'
-                                        },
-                                        {
-                                          label: 'input',
-                                          value: 'input'
-                                        },
-                                        {
-                                          label: 'progress',
-                                          value: 'progress'
-                                        },
-                                        {
-                                          label: 'select',
-                                          value: 'select'
-                                        },
-                                        {
-                                          label: 'abbr',
-                                          value: 'abbr'
-                                        },
-                                        {
-                                          label: 'address',
-                                          value: 'address'
-                                        },
-                                        {
-                                          label: 'area',
-                                          value: 'area'
-                                        },
-                                        {
-                                          label: 'article',
-                                          value: 'article'
-                                        },
-                                        {
-                                          label: 'aside',
-                                          value: 'aside'
-                                        },
-                                        {
-                                          label: 'audio',
-                                          value: 'audio'
-                                        },
-                                        {
-                                          label: 'b',
-                                          value: 'b'
-                                        },
-                                        {
-                                          label: 'base',
-                                          value: 'base'
-                                        },
-                                        {
-                                          label: 'bdi',
-                                          value: 'bdi'
-                                        },
-                                        {
-                                          label: 'bdo',
-                                          value: 'bdo'
-                                        },
-                                        {
-                                          label: 'blockquote',
-                                          value: 'blockquote'
-                                        },
-                                        {
-                                          label: 'body',
-                                          value: 'body'
-                                        },
-                                        {
-                                          label: 'br',
-                                          value: 'br'
-                                        },
-                                        {
-                                          label: 'canvas',
-                                          value: 'canvas'
-                                        },
-                                        {
-                                          label: 'caption',
-                                          value: 'caption'
-                                        },
-                                        {
-                                          label: 'cite',
-                                          value: 'cite'
-                                        },
-                                        {
-                                          label: 'col',
-                                          value: 'col'
-                                        },
-                                        {
-                                          label: 'colgroup',
-                                          value: 'colgroup'
-                                        },
-                                        {
-                                          label: 'data',
-                                          value: 'data'
-                                        },
-                                        {
-                                          label: 'datalist',
-                                          value: 'datalist'
-                                        },
-                                        {
-                                          label: 'dd',
-                                          value: 'dd'
-                                        },
-                                        {
-                                          label: 'del',
-                                          value: 'del'
-                                        },
-                                        {
-                                          label: 'details',
-                                          value: 'details'
-                                        },
-                                        {
-                                          label: 'dfn',
-                                          value: 'dfn'
-                                        },
-                                        {
-                                          label: 'dialog',
-                                          value: 'dialog'
-                                        },
-                                        {
-                                          label: 'dl',
-                                          value: 'dl'
-                                        },
-                                        {
-                                          label: 'dt',
-                                          value: 'dt'
-                                        },
-                                        {
-                                          label: 'em',
-                                          value: 'em'
-                                        },
-                                        {
-                                          label: 'embed',
-                                          value: 'embed'
-                                        },
-                                        {
-                                          label: 'fieldset',
-                                          value: 'fieldset'
-                                        },
-                                        {
-                                          label: 'figcaption',
-                                          value: 'figcaption'
-                                        },
-                                        {
-                                          label: 'figure',
-                                          value: 'figure'
-                                        },
-                                        {
-                                          label: 'footer',
-                                          value: 'footer'
-                                        },
-                                        {
-                                          label: 'h6',
-                                          value: 'h6'
-                                        },
-                                        {
-                                          label: 'head',
-                                          value: 'head'
-                                        },
-                                        {
-                                          label: 'header',
-                                          value: 'header'
-                                        },
-                                        {
-                                          label: 'hgroup',
-                                          value: 'hgroup'
-                                        },
-                                        {
-                                          label: 'hr',
-                                          value: 'hr'
-                                        },
-                                        {
-                                          label: 'html',
-                                          value: 'html'
-                                        },
-                                        {
-                                          label: 'i',
-                                          value: 'i'
-                                        },
-                                        {
-                                          label: 'iframe',
-                                          value: 'iframe'
-                                        },
-                                        {
-                                          label: 'img',
-                                          value: 'img'
-                                        },
-                                        {
-                                          label: 'ins',
-                                          value: 'ins'
-                                        },
-                                        {
-                                          label: 'kbd',
-                                          value: 'kbd'
-                                        },
-                                        {
-                                          label: 'legend',
-                                          value: 'legend'
-                                        },
-                                        {
-                                          label: 'li',
-                                          value: 'li'
-                                        },
-                                        {
-                                          label: 'main',
-                                          value: 'main'
-                                        },
-                                        {
-                                          label: 'map',
-                                          value: 'map'
-                                        },
-                                        {
-                                          label: 'meta',
-                                          value: 'meta'
-                                        },
-                                        {
-                                          label: 'meter',
-                                          value: 'meter'
-                                        },
-                                        {
-                                          label: 'nav',
-                                          value: 'nav'
-                                        },
-                                        {
-                                          label: 'noscript',
-                                          value: 'noscript'
-                                        },
-                                        {
-                                          label: 'ol',
-                                          value: 'ol'
-                                        },
-                                        {
-                                          label: 'optgroup',
-                                          value: 'optgroup'
-                                        },
-                                        {
-                                          label: 'option',
-                                          value: 'option'
-                                        },
-                                        {
-                                          label: 'output',
-                                          value: 'output'
-                                        },
-                                        {
-                                          label: 'p',
-                                          value: 'p'
-                                        },
-                                        {
-                                          label: 'param',
-                                          value: 'param'
-                                        },
-                                        {
-                                          label: 'picture',
-                                          value: 'picture'
-                                        },
-                                        {
-                                          label: 'pre',
-                                          value: 'pre'
-                                        },
-                                        {
-                                          label: 'q',
-                                          value: 'q'
-                                        },
-                                        {
-                                          label: 'rp',
-                                          value: 'rp'
-                                        },
-                                        {
-                                          label: 'rt',
-                                          value: 'rt'
-                                        },
-                                        {
-                                          label: 'ruby',
-                                          value: 'ruby'
-                                        },
-                                        {
-                                          label: 's',
-                                          value: 's'
-                                        },
-                                        {
-                                          label: 'samp',
-                                          value: 'samp'
-                                        },
-                                        {
-                                          label: 'script',
-                                          value: 'script'
-                                        },
-                                        {
-                                          label: 'section',
-                                          value: 'section'
-                                        },
-                                        {
-                                          label: 'slot',
-                                          value: 'slot'
-                                        },
-                                        {
-                                          label: 'source',
-                                          value: 'source'
-                                        },
-                                        {
-                                          label: 'sub',
-                                          value: 'sub'
-                                        },
-                                        {
-                                          label: 'summary',
-                                          value: 'summary'
-                                        },
-                                        {
-                                          label: 'sup',
-                                          value: 'sup'
-                                        },
-                                        {
-                                          label: 'table',
-                                          value: 'table'
-                                        },
-                                        {
-                                          label: 'tbody',
-                                          value: 'tbody'
-                                        },
-                                        {
-                                          label: 'td',
-                                          value: 'td'
-                                        },
-                                        {
-                                          label: 'template',
-                                          value: 'template'
-                                        },
-                                        {
-                                          label: 'textarea',
-                                          value: 'textarea'
-                                        },
-                                        {
-                                          label: 'tfoot',
-                                          value: 'tfoot'
-                                        },
-                                        {
-                                          label: 'th',
-                                          value: 'th'
-                                        },
-                                        {
-                                          label: 'thead',
-                                          value: 'thead'
-                                        },
-                                        {
-                                          label: 'time',
-                                          value: 'time'
-                                        },
-                                        {
-                                          label: 'tr',
-                                          value: 'tr'
-                                        },
-                                        {
-                                          label: 'track',
-                                          value: 'track'
-                                        },
-                                        {
-                                          label: 'u',
-                                          value: 'u'
-                                        },
-                                        {
-                                          label: 'ul',
-                                          value: 'ul'
-                                        },
-                                        {
-                                          label: 'var',
-                                          value: 'var'
-                                        },
-                                        {
-                                          label: 'video',
-                                          value: 'video'
-                                        },
-                                        {
-                                          label: 'wbr',
-                                          value: 'wbr'
-                                        },
-                                        {
-                                          label: 'big',
-                                          value: 'big'
-                                        },
-                                        {
-                                          label: 'keygen',
-                                          value: 'keygen'
-                                        },
-                                        {
-                                          label: 'menuitem',
-                                          value: 'menuitem'
-                                        },
-                                        {
-                                          label: 'webview',
-                                          value: 'webview'
-                                        }
-                                      ],
-                                      options: [
-                                        {
-                                          label: 'object',
-                                          value: 'object'
-                                        },
-                                        {
-                                          label: 'button',
-                                          value: 'button'
-                                        },
-                                        {
-                                          label: 'style',
-                                          value: 'style'
-                                        },
-                                        {
-                                          label: 'form',
-                                          value: 'form'
-                                        },
-                                        {
-                                          label: 'link',
-                                          value: 'link'
-                                        },
-                                        {
-                                          label: 'small',
-                                          value: 'small'
-                                        },
-                                        {
-                                          label: 'title',
-                                          value: 'title'
-                                        },
-                                        {
-                                          label: 'a',
-                                          value: 'a'
-                                        },
-                                        {
-                                          label: 'code',
-                                          value: 'code'
-                                        },
-                                        {
-                                          label: 'mark',
-                                          value: 'mark'
-                                        },
-                                        {
-                                          label: 'strong',
-                                          value: 'strong'
-                                        },
-                                        {
-                                          label: 'div',
-                                          value: 'div'
-                                        },
-                                        {
-                                          label: 'span',
-                                          value: 'span'
-                                        },
-                                        {
-                                          label: 'h1',
-                                          value: 'h1'
-                                        },
-                                        {
-                                          label: 'h2',
-                                          value: 'h2'
-                                        },
-                                        {
-                                          label: 'h3',
-                                          value: 'h3'
-                                        },
-                                        {
-                                          label: 'h4',
-                                          value: 'h4'
-                                        },
-                                        {
-                                          label: 'h5',
-                                          value: 'h5'
-                                        },
-                                        {
-                                          label: 'menu',
-                                          value: 'menu'
-                                        },
-                                        {
-                                          label: 'label',
-                                          value: 'label'
-                                        },
-                                        {
-                                          label: 'input',
-                                          value: 'input'
-                                        },
-                                        {
-                                          label: 'progress',
-                                          value: 'progress'
-                                        },
-                                        {
-                                          label: 'select',
-                                          value: 'select'
-                                        },
-                                        {
-                                          label: 'abbr',
-                                          value: 'abbr'
-                                        },
-                                        {
-                                          label: 'address',
-                                          value: 'address'
-                                        },
-                                        {
-                                          label: 'area',
-                                          value: 'area'
-                                        },
-                                        {
-                                          label: 'article',
-                                          value: 'article'
-                                        },
-                                        {
-                                          label: 'aside',
-                                          value: 'aside'
-                                        },
-                                        {
-                                          label: 'audio',
-                                          value: 'audio'
-                                        },
-                                        {
-                                          label: 'b',
-                                          value: 'b'
-                                        },
-                                        {
-                                          label: 'base',
-                                          value: 'base'
-                                        },
-                                        {
-                                          label: 'bdi',
-                                          value: 'bdi'
-                                        },
-                                        {
-                                          label: 'bdo',
-                                          value: 'bdo'
-                                        },
-                                        {
-                                          label: 'blockquote',
-                                          value: 'blockquote'
-                                        },
-                                        {
-                                          label: 'body',
-                                          value: 'body'
-                                        },
-                                        {
-                                          label: 'br',
-                                          value: 'br'
-                                        },
-                                        {
-                                          label: 'canvas',
-                                          value: 'canvas'
-                                        },
-                                        {
-                                          label: 'caption',
-                                          value: 'caption'
-                                        },
-                                        {
-                                          label: 'cite',
-                                          value: 'cite'
-                                        },
-                                        {
-                                          label: 'col',
-                                          value: 'col'
-                                        },
-                                        {
-                                          label: 'colgroup',
-                                          value: 'colgroup'
-                                        },
-                                        {
-                                          label: 'data',
-                                          value: 'data'
-                                        },
-                                        {
-                                          label: 'datalist',
-                                          value: 'datalist'
-                                        },
-                                        {
-                                          label: 'dd',
-                                          value: 'dd'
-                                        },
-                                        {
-                                          label: 'del',
-                                          value: 'del'
-                                        },
-                                        {
-                                          label: 'details',
-                                          value: 'details'
-                                        },
-                                        {
-                                          label: 'dfn',
-                                          value: 'dfn'
-                                        },
-                                        {
-                                          label: 'dialog',
-                                          value: 'dialog'
-                                        },
-                                        {
-                                          label: 'dl',
-                                          value: 'dl'
-                                        },
-                                        {
-                                          label: 'dt',
-                                          value: 'dt'
-                                        },
-                                        {
-                                          label: 'em',
-                                          value: 'em'
-                                        },
-                                        {
-                                          label: 'embed',
-                                          value: 'embed'
-                                        },
-                                        {
-                                          label: 'fieldset',
-                                          value: 'fieldset'
-                                        },
-                                        {
-                                          label: 'figcaption',
-                                          value: 'figcaption'
-                                        },
-                                        {
-                                          label: 'figure',
-                                          value: 'figure'
-                                        },
-                                        {
-                                          label: 'footer',
-                                          value: 'footer'
-                                        },
-                                        {
-                                          label: 'h6',
-                                          value: 'h6'
-                                        },
-                                        {
-                                          label: 'head',
-                                          value: 'head'
-                                        },
-                                        {
-                                          label: 'header',
-                                          value: 'header'
-                                        },
-                                        {
-                                          label: 'hgroup',
-                                          value: 'hgroup'
-                                        },
-                                        {
-                                          label: 'hr',
-                                          value: 'hr'
-                                        },
-                                        {
-                                          label: 'html',
-                                          value: 'html'
-                                        },
-                                        {
-                                          label: 'i',
-                                          value: 'i'
-                                        },
-                                        {
-                                          label: 'iframe',
-                                          value: 'iframe'
-                                        },
-                                        {
-                                          label: 'img',
-                                          value: 'img'
-                                        },
-                                        {
-                                          label: 'ins',
-                                          value: 'ins'
-                                        },
-                                        {
-                                          label: 'kbd',
-                                          value: 'kbd'
-                                        },
-                                        {
-                                          label: 'legend',
-                                          value: 'legend'
-                                        },
-                                        {
-                                          label: 'li',
-                                          value: 'li'
-                                        },
-                                        {
-                                          label: 'main',
-                                          value: 'main'
-                                        },
-                                        {
-                                          label: 'map',
-                                          value: 'map'
-                                        },
-                                        {
-                                          label: 'meta',
-                                          value: 'meta'
-                                        },
-                                        {
-                                          label: 'meter',
-                                          value: 'meter'
-                                        },
-                                        {
-                                          label: 'nav',
-                                          value: 'nav'
-                                        },
-                                        {
-                                          label: 'noscript',
-                                          value: 'noscript'
-                                        },
-                                        {
-                                          label: 'ol',
-                                          value: 'ol'
-                                        },
-                                        {
-                                          label: 'optgroup',
-                                          value: 'optgroup'
-                                        },
-                                        {
-                                          label: 'option',
-                                          value: 'option'
-                                        },
-                                        {
-                                          label: 'output',
-                                          value: 'output'
-                                        },
-                                        {
-                                          label: 'p',
-                                          value: 'p'
-                                        },
-                                        {
-                                          label: 'param',
-                                          value: 'param'
-                                        },
-                                        {
-                                          label: 'picture',
-                                          value: 'picture'
-                                        },
-                                        {
-                                          label: 'pre',
-                                          value: 'pre'
-                                        },
-                                        {
-                                          label: 'q',
-                                          value: 'q'
-                                        },
-                                        {
-                                          label: 'rp',
-                                          value: 'rp'
-                                        },
-                                        {
-                                          label: 'rt',
-                                          value: 'rt'
-                                        },
-                                        {
-                                          label: 'ruby',
-                                          value: 'ruby'
-                                        },
-                                        {
-                                          label: 's',
-                                          value: 's'
-                                        },
-                                        {
-                                          label: 'samp',
-                                          value: 'samp'
-                                        },
-                                        {
-                                          label: 'script',
-                                          value: 'script'
-                                        },
-                                        {
-                                          label: 'section',
-                                          value: 'section'
-                                        },
-                                        {
-                                          label: 'slot',
-                                          value: 'slot'
-                                        },
-                                        {
-                                          label: 'source',
-                                          value: 'source'
-                                        },
-                                        {
-                                          label: 'sub',
-                                          value: 'sub'
-                                        },
-                                        {
-                                          label: 'summary',
-                                          value: 'summary'
-                                        },
-                                        {
-                                          label: 'sup',
-                                          value: 'sup'
-                                        },
-                                        {
-                                          label: 'table',
-                                          value: 'table'
-                                        },
-                                        {
-                                          label: 'tbody',
-                                          value: 'tbody'
-                                        },
-                                        {
-                                          label: 'td',
-                                          value: 'td'
-                                        },
-                                        {
-                                          label: 'template',
-                                          value: 'template'
-                                        },
-                                        {
-                                          label: 'textarea',
-                                          value: 'textarea'
-                                        },
-                                        {
-                                          label: 'tfoot',
-                                          value: 'tfoot'
-                                        },
-                                        {
-                                          label: 'th',
-                                          value: 'th'
-                                        },
-                                        {
-                                          label: 'thead',
-                                          value: 'thead'
-                                        },
-                                        {
-                                          label: 'time',
-                                          value: 'time'
-                                        },
-                                        {
-                                          label: 'tr',
-                                          value: 'tr'
-                                        },
-                                        {
-                                          label: 'track',
-                                          value: 'track'
-                                        },
-                                        {
-                                          label: 'u',
-                                          value: 'u'
-                                        },
-                                        {
-                                          label: 'ul',
-                                          value: 'ul'
-                                        },
-                                        {
-                                          label: 'var',
-                                          value: 'var'
-                                        },
-                                        {
-                                          label: 'video',
-                                          value: 'video'
-                                        },
-                                        {
-                                          label: 'wbr',
-                                          value: 'wbr'
-                                        },
-                                        {
-                                          label: 'big',
-                                          value: 'big'
-                                        },
-                                        {
-                                          label: 'keygen',
-                                          value: 'keygen'
-                                        },
-                                        {
-                                          label: 'menuitem',
-                                          value: 'menuitem'
-                                        },
-                                        {
-                                          label: 'webview',
-                                          value: 'webview'
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'row',
-                                'zh-CN': 'row'
-                              }
-                            },
-                            name: 'row',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  {
-                                    componentName: 'SelectSetter',
-                                    props: {
-                                      dataSource: [
-                                        {
-                                          label: 'object',
-                                          value: 'object'
-                                        },
-                                        {
-                                          label: 'button',
-                                          value: 'button'
-                                        },
-                                        {
-                                          label: 'style',
-                                          value: 'style'
-                                        },
-                                        {
-                                          label: 'form',
-                                          value: 'form'
-                                        },
-                                        {
-                                          label: 'link',
-                                          value: 'link'
-                                        },
-                                        {
-                                          label: 'small',
-                                          value: 'small'
-                                        },
-                                        {
-                                          label: 'title',
-                                          value: 'title'
-                                        },
-                                        {
-                                          label: 'a',
-                                          value: 'a'
-                                        },
-                                        {
-                                          label: 'code',
-                                          value: 'code'
-                                        },
-                                        {
-                                          label: 'mark',
-                                          value: 'mark'
-                                        },
-                                        {
-                                          label: 'strong',
-                                          value: 'strong'
-                                        },
-                                        {
-                                          label: 'div',
-                                          value: 'div'
-                                        },
-                                        {
-                                          label: 'span',
-                                          value: 'span'
-                                        },
-                                        {
-                                          label: 'h1',
-                                          value: 'h1'
-                                        },
-                                        {
-                                          label: 'h2',
-                                          value: 'h2'
-                                        },
-                                        {
-                                          label: 'h3',
-                                          value: 'h3'
-                                        },
-                                        {
-                                          label: 'h4',
-                                          value: 'h4'
-                                        },
-                                        {
-                                          label: 'h5',
-                                          value: 'h5'
-                                        },
-                                        {
-                                          label: 'menu',
-                                          value: 'menu'
-                                        },
-                                        {
-                                          label: 'label',
-                                          value: 'label'
-                                        },
-                                        {
-                                          label: 'input',
-                                          value: 'input'
-                                        },
-                                        {
-                                          label: 'progress',
-                                          value: 'progress'
-                                        },
-                                        {
-                                          label: 'select',
-                                          value: 'select'
-                                        },
-                                        {
-                                          label: 'abbr',
-                                          value: 'abbr'
-                                        },
-                                        {
-                                          label: 'address',
-                                          value: 'address'
-                                        },
-                                        {
-                                          label: 'area',
-                                          value: 'area'
-                                        },
-                                        {
-                                          label: 'article',
-                                          value: 'article'
-                                        },
-                                        {
-                                          label: 'aside',
-                                          value: 'aside'
-                                        },
-                                        {
-                                          label: 'audio',
-                                          value: 'audio'
-                                        },
-                                        {
-                                          label: 'b',
-                                          value: 'b'
-                                        },
-                                        {
-                                          label: 'base',
-                                          value: 'base'
-                                        },
-                                        {
-                                          label: 'bdi',
-                                          value: 'bdi'
-                                        },
-                                        {
-                                          label: 'bdo',
-                                          value: 'bdo'
-                                        },
-                                        {
-                                          label: 'blockquote',
-                                          value: 'blockquote'
-                                        },
-                                        {
-                                          label: 'body',
-                                          value: 'body'
-                                        },
-                                        {
-                                          label: 'br',
-                                          value: 'br'
-                                        },
-                                        {
-                                          label: 'canvas',
-                                          value: 'canvas'
-                                        },
-                                        {
-                                          label: 'caption',
-                                          value: 'caption'
-                                        },
-                                        {
-                                          label: 'cite',
-                                          value: 'cite'
-                                        },
-                                        {
-                                          label: 'col',
-                                          value: 'col'
-                                        },
-                                        {
-                                          label: 'colgroup',
-                                          value: 'colgroup'
-                                        },
-                                        {
-                                          label: 'data',
-                                          value: 'data'
-                                        },
-                                        {
-                                          label: 'datalist',
-                                          value: 'datalist'
-                                        },
-                                        {
-                                          label: 'dd',
-                                          value: 'dd'
-                                        },
-                                        {
-                                          label: 'del',
-                                          value: 'del'
-                                        },
-                                        {
-                                          label: 'details',
-                                          value: 'details'
-                                        },
-                                        {
-                                          label: 'dfn',
-                                          value: 'dfn'
-                                        },
-                                        {
-                                          label: 'dialog',
-                                          value: 'dialog'
-                                        },
-                                        {
-                                          label: 'dl',
-                                          value: 'dl'
-                                        },
-                                        {
-                                          label: 'dt',
-                                          value: 'dt'
-                                        },
-                                        {
-                                          label: 'em',
-                                          value: 'em'
-                                        },
-                                        {
-                                          label: 'embed',
-                                          value: 'embed'
-                                        },
-                                        {
-                                          label: 'fieldset',
-                                          value: 'fieldset'
-                                        },
-                                        {
-                                          label: 'figcaption',
-                                          value: 'figcaption'
-                                        },
-                                        {
-                                          label: 'figure',
-                                          value: 'figure'
-                                        },
-                                        {
-                                          label: 'footer',
-                                          value: 'footer'
-                                        },
-                                        {
-                                          label: 'h6',
-                                          value: 'h6'
-                                        },
-                                        {
-                                          label: 'head',
-                                          value: 'head'
-                                        },
-                                        {
-                                          label: 'header',
-                                          value: 'header'
-                                        },
-                                        {
-                                          label: 'hgroup',
-                                          value: 'hgroup'
-                                        },
-                                        {
-                                          label: 'hr',
-                                          value: 'hr'
-                                        },
-                                        {
-                                          label: 'html',
-                                          value: 'html'
-                                        },
-                                        {
-                                          label: 'i',
-                                          value: 'i'
-                                        },
-                                        {
-                                          label: 'iframe',
-                                          value: 'iframe'
-                                        },
-                                        {
-                                          label: 'img',
-                                          value: 'img'
-                                        },
-                                        {
-                                          label: 'ins',
-                                          value: 'ins'
-                                        },
-                                        {
-                                          label: 'kbd',
-                                          value: 'kbd'
-                                        },
-                                        {
-                                          label: 'legend',
-                                          value: 'legend'
-                                        },
-                                        {
-                                          label: 'li',
-                                          value: 'li'
-                                        },
-                                        {
-                                          label: 'main',
-                                          value: 'main'
-                                        },
-                                        {
-                                          label: 'map',
-                                          value: 'map'
-                                        },
-                                        {
-                                          label: 'meta',
-                                          value: 'meta'
-                                        },
-                                        {
-                                          label: 'meter',
-                                          value: 'meter'
-                                        },
-                                        {
-                                          label: 'nav',
-                                          value: 'nav'
-                                        },
-                                        {
-                                          label: 'noscript',
-                                          value: 'noscript'
-                                        },
-                                        {
-                                          label: 'ol',
-                                          value: 'ol'
-                                        },
-                                        {
-                                          label: 'optgroup',
-                                          value: 'optgroup'
-                                        },
-                                        {
-                                          label: 'option',
-                                          value: 'option'
-                                        },
-                                        {
-                                          label: 'output',
-                                          value: 'output'
-                                        },
-                                        {
-                                          label: 'p',
-                                          value: 'p'
-                                        },
-                                        {
-                                          label: 'param',
-                                          value: 'param'
-                                        },
-                                        {
-                                          label: 'picture',
-                                          value: 'picture'
-                                        },
-                                        {
-                                          label: 'pre',
-                                          value: 'pre'
-                                        },
-                                        {
-                                          label: 'q',
-                                          value: 'q'
-                                        },
-                                        {
-                                          label: 'rp',
-                                          value: 'rp'
-                                        },
-                                        {
-                                          label: 'rt',
-                                          value: 'rt'
-                                        },
-                                        {
-                                          label: 'ruby',
-                                          value: 'ruby'
-                                        },
-                                        {
-                                          label: 's',
-                                          value: 's'
-                                        },
-                                        {
-                                          label: 'samp',
-                                          value: 'samp'
-                                        },
-                                        {
-                                          label: 'script',
-                                          value: 'script'
-                                        },
-                                        {
-                                          label: 'section',
-                                          value: 'section'
-                                        },
-                                        {
-                                          label: 'slot',
-                                          value: 'slot'
-                                        },
-                                        {
-                                          label: 'source',
-                                          value: 'source'
-                                        },
-                                        {
-                                          label: 'sub',
-                                          value: 'sub'
-                                        },
-                                        {
-                                          label: 'summary',
-                                          value: 'summary'
-                                        },
-                                        {
-                                          label: 'sup',
-                                          value: 'sup'
-                                        },
-                                        {
-                                          label: 'table',
-                                          value: 'table'
-                                        },
-                                        {
-                                          label: 'tbody',
-                                          value: 'tbody'
-                                        },
-                                        {
-                                          label: 'td',
-                                          value: 'td'
-                                        },
-                                        {
-                                          label: 'template',
-                                          value: 'template'
-                                        },
-                                        {
-                                          label: 'textarea',
-                                          value: 'textarea'
-                                        },
-                                        {
-                                          label: 'tfoot',
-                                          value: 'tfoot'
-                                        },
-                                        {
-                                          label: 'th',
-                                          value: 'th'
-                                        },
-                                        {
-                                          label: 'thead',
-                                          value: 'thead'
-                                        },
-                                        {
-                                          label: 'time',
-                                          value: 'time'
-                                        },
-                                        {
-                                          label: 'tr',
-                                          value: 'tr'
-                                        },
-                                        {
-                                          label: 'track',
-                                          value: 'track'
-                                        },
-                                        {
-                                          label: 'u',
-                                          value: 'u'
-                                        },
-                                        {
-                                          label: 'ul',
-                                          value: 'ul'
-                                        },
-                                        {
-                                          label: 'var',
-                                          value: 'var'
-                                        },
-                                        {
-                                          label: 'video',
-                                          value: 'video'
-                                        },
-                                        {
-                                          label: 'wbr',
-                                          value: 'wbr'
-                                        },
-                                        {
-                                          label: 'big',
-                                          value: 'big'
-                                        },
-                                        {
-                                          label: 'keygen',
-                                          value: 'keygen'
-                                        },
-                                        {
-                                          label: 'menuitem',
-                                          value: 'menuitem'
-                                        },
-                                        {
-                                          label: 'webview',
-                                          value: 'webview'
-                                        }
-                                      ],
-                                      options: [
-                                        {
-                                          label: 'object',
-                                          value: 'object'
-                                        },
-                                        {
-                                          label: 'button',
-                                          value: 'button'
-                                        },
-                                        {
-                                          label: 'style',
-                                          value: 'style'
-                                        },
-                                        {
-                                          label: 'form',
-                                          value: 'form'
-                                        },
-                                        {
-                                          label: 'link',
-                                          value: 'link'
-                                        },
-                                        {
-                                          label: 'small',
-                                          value: 'small'
-                                        },
-                                        {
-                                          label: 'title',
-                                          value: 'title'
-                                        },
-                                        {
-                                          label: 'a',
-                                          value: 'a'
-                                        },
-                                        {
-                                          label: 'code',
-                                          value: 'code'
-                                        },
-                                        {
-                                          label: 'mark',
-                                          value: 'mark'
-                                        },
-                                        {
-                                          label: 'strong',
-                                          value: 'strong'
-                                        },
-                                        {
-                                          label: 'div',
-                                          value: 'div'
-                                        },
-                                        {
-                                          label: 'span',
-                                          value: 'span'
-                                        },
-                                        {
-                                          label: 'h1',
-                                          value: 'h1'
-                                        },
-                                        {
-                                          label: 'h2',
-                                          value: 'h2'
-                                        },
-                                        {
-                                          label: 'h3',
-                                          value: 'h3'
-                                        },
-                                        {
-                                          label: 'h4',
-                                          value: 'h4'
-                                        },
-                                        {
-                                          label: 'h5',
-                                          value: 'h5'
-                                        },
-                                        {
-                                          label: 'menu',
-                                          value: 'menu'
-                                        },
-                                        {
-                                          label: 'label',
-                                          value: 'label'
-                                        },
-                                        {
-                                          label: 'input',
-                                          value: 'input'
-                                        },
-                                        {
-                                          label: 'progress',
-                                          value: 'progress'
-                                        },
-                                        {
-                                          label: 'select',
-                                          value: 'select'
-                                        },
-                                        {
-                                          label: 'abbr',
-                                          value: 'abbr'
-                                        },
-                                        {
-                                          label: 'address',
-                                          value: 'address'
-                                        },
-                                        {
-                                          label: 'area',
-                                          value: 'area'
-                                        },
-                                        {
-                                          label: 'article',
-                                          value: 'article'
-                                        },
-                                        {
-                                          label: 'aside',
-                                          value: 'aside'
-                                        },
-                                        {
-                                          label: 'audio',
-                                          value: 'audio'
-                                        },
-                                        {
-                                          label: 'b',
-                                          value: 'b'
-                                        },
-                                        {
-                                          label: 'base',
-                                          value: 'base'
-                                        },
-                                        {
-                                          label: 'bdi',
-                                          value: 'bdi'
-                                        },
-                                        {
-                                          label: 'bdo',
-                                          value: 'bdo'
-                                        },
-                                        {
-                                          label: 'blockquote',
-                                          value: 'blockquote'
-                                        },
-                                        {
-                                          label: 'body',
-                                          value: 'body'
-                                        },
-                                        {
-                                          label: 'br',
-                                          value: 'br'
-                                        },
-                                        {
-                                          label: 'canvas',
-                                          value: 'canvas'
-                                        },
-                                        {
-                                          label: 'caption',
-                                          value: 'caption'
-                                        },
-                                        {
-                                          label: 'cite',
-                                          value: 'cite'
-                                        },
-                                        {
-                                          label: 'col',
-                                          value: 'col'
-                                        },
-                                        {
-                                          label: 'colgroup',
-                                          value: 'colgroup'
-                                        },
-                                        {
-                                          label: 'data',
-                                          value: 'data'
-                                        },
-                                        {
-                                          label: 'datalist',
-                                          value: 'datalist'
-                                        },
-                                        {
-                                          label: 'dd',
-                                          value: 'dd'
-                                        },
-                                        {
-                                          label: 'del',
-                                          value: 'del'
-                                        },
-                                        {
-                                          label: 'details',
-                                          value: 'details'
-                                        },
-                                        {
-                                          label: 'dfn',
-                                          value: 'dfn'
-                                        },
-                                        {
-                                          label: 'dialog',
-                                          value: 'dialog'
-                                        },
-                                        {
-                                          label: 'dl',
-                                          value: 'dl'
-                                        },
-                                        {
-                                          label: 'dt',
-                                          value: 'dt'
-                                        },
-                                        {
-                                          label: 'em',
-                                          value: 'em'
-                                        },
-                                        {
-                                          label: 'embed',
-                                          value: 'embed'
-                                        },
-                                        {
-                                          label: 'fieldset',
-                                          value: 'fieldset'
-                                        },
-                                        {
-                                          label: 'figcaption',
-                                          value: 'figcaption'
-                                        },
-                                        {
-                                          label: 'figure',
-                                          value: 'figure'
-                                        },
-                                        {
-                                          label: 'footer',
-                                          value: 'footer'
-                                        },
-                                        {
-                                          label: 'h6',
-                                          value: 'h6'
-                                        },
-                                        {
-                                          label: 'head',
-                                          value: 'head'
-                                        },
-                                        {
-                                          label: 'header',
-                                          value: 'header'
-                                        },
-                                        {
-                                          label: 'hgroup',
-                                          value: 'hgroup'
-                                        },
-                                        {
-                                          label: 'hr',
-                                          value: 'hr'
-                                        },
-                                        {
-                                          label: 'html',
-                                          value: 'html'
-                                        },
-                                        {
-                                          label: 'i',
-                                          value: 'i'
-                                        },
-                                        {
-                                          label: 'iframe',
-                                          value: 'iframe'
-                                        },
-                                        {
-                                          label: 'img',
-                                          value: 'img'
-                                        },
-                                        {
-                                          label: 'ins',
-                                          value: 'ins'
-                                        },
-                                        {
-                                          label: 'kbd',
-                                          value: 'kbd'
-                                        },
-                                        {
-                                          label: 'legend',
-                                          value: 'legend'
-                                        },
-                                        {
-                                          label: 'li',
-                                          value: 'li'
-                                        },
-                                        {
-                                          label: 'main',
-                                          value: 'main'
-                                        },
-                                        {
-                                          label: 'map',
-                                          value: 'map'
-                                        },
-                                        {
-                                          label: 'meta',
-                                          value: 'meta'
-                                        },
-                                        {
-                                          label: 'meter',
-                                          value: 'meter'
-                                        },
-                                        {
-                                          label: 'nav',
-                                          value: 'nav'
-                                        },
-                                        {
-                                          label: 'noscript',
-                                          value: 'noscript'
-                                        },
-                                        {
-                                          label: 'ol',
-                                          value: 'ol'
-                                        },
-                                        {
-                                          label: 'optgroup',
-                                          value: 'optgroup'
-                                        },
-                                        {
-                                          label: 'option',
-                                          value: 'option'
-                                        },
-                                        {
-                                          label: 'output',
-                                          value: 'output'
-                                        },
-                                        {
-                                          label: 'p',
-                                          value: 'p'
-                                        },
-                                        {
-                                          label: 'param',
-                                          value: 'param'
-                                        },
-                                        {
-                                          label: 'picture',
-                                          value: 'picture'
-                                        },
-                                        {
-                                          label: 'pre',
-                                          value: 'pre'
-                                        },
-                                        {
-                                          label: 'q',
-                                          value: 'q'
-                                        },
-                                        {
-                                          label: 'rp',
-                                          value: 'rp'
-                                        },
-                                        {
-                                          label: 'rt',
-                                          value: 'rt'
-                                        },
-                                        {
-                                          label: 'ruby',
-                                          value: 'ruby'
-                                        },
-                                        {
-                                          label: 's',
-                                          value: 's'
-                                        },
-                                        {
-                                          label: 'samp',
-                                          value: 'samp'
-                                        },
-                                        {
-                                          label: 'script',
-                                          value: 'script'
-                                        },
-                                        {
-                                          label: 'section',
-                                          value: 'section'
-                                        },
-                                        {
-                                          label: 'slot',
-                                          value: 'slot'
-                                        },
-                                        {
-                                          label: 'source',
-                                          value: 'source'
-                                        },
-                                        {
-                                          label: 'sub',
-                                          value: 'sub'
-                                        },
-                                        {
-                                          label: 'summary',
-                                          value: 'summary'
-                                        },
-                                        {
-                                          label: 'sup',
-                                          value: 'sup'
-                                        },
-                                        {
-                                          label: 'table',
-                                          value: 'table'
-                                        },
-                                        {
-                                          label: 'tbody',
-                                          value: 'tbody'
-                                        },
-                                        {
-                                          label: 'td',
-                                          value: 'td'
-                                        },
-                                        {
-                                          label: 'template',
-                                          value: 'template'
-                                        },
-                                        {
-                                          label: 'textarea',
-                                          value: 'textarea'
-                                        },
-                                        {
-                                          label: 'tfoot',
-                                          value: 'tfoot'
-                                        },
-                                        {
-                                          label: 'th',
-                                          value: 'th'
-                                        },
-                                        {
-                                          label: 'thead',
-                                          value: 'thead'
-                                        },
-                                        {
-                                          label: 'time',
-                                          value: 'time'
-                                        },
-                                        {
-                                          label: 'tr',
-                                          value: 'tr'
-                                        },
-                                        {
-                                          label: 'track',
-                                          value: 'track'
-                                        },
-                                        {
-                                          label: 'u',
-                                          value: 'u'
-                                        },
-                                        {
-                                          label: 'ul',
-                                          value: 'ul'
-                                        },
-                                        {
-                                          label: 'var',
-                                          value: 'var'
-                                        },
-                                        {
-                                          label: 'video',
-                                          value: 'video'
-                                        },
-                                        {
-                                          label: 'wbr',
-                                          value: 'wbr'
-                                        },
-                                        {
-                                          label: 'big',
-                                          value: 'big'
-                                        },
-                                        {
-                                          label: 'keygen',
-                                          value: 'keygen'
-                                        },
-                                        {
-                                          label: 'menuitem',
-                                          value: 'menuitem'
-                                        },
-                                        {
-                                          label: 'webview',
-                                          value: 'webview'
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            title: {
-                              label: {
-                                type: 'i18n',
-                                'en-US': 'cell',
-                                'zh-CN': 'cell'
-                              }
-                            },
-                            name: 'cell',
-                            setter: {
-                              componentName: 'MixedSetter',
-                              props: {
-                                setters: [
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        extraSetter: {
-                                          componentName: 'MixedSetter',
-                                          props: {}
-                                        }
-                                      }
-                                    }
-                                  },
-                                  {
-                                    componentName: 'SelectSetter',
-                                    props: {
-                                      dataSource: [
-                                        {
-                                          label: 'object',
-                                          value: 'object'
-                                        },
-                                        {
-                                          label: 'button',
-                                          value: 'button'
-                                        },
-                                        {
-                                          label: 'style',
-                                          value: 'style'
-                                        },
-                                        {
-                                          label: 'form',
-                                          value: 'form'
-                                        },
-                                        {
-                                          label: 'link',
-                                          value: 'link'
-                                        },
-                                        {
-                                          label: 'small',
-                                          value: 'small'
-                                        },
-                                        {
-                                          label: 'title',
-                                          value: 'title'
-                                        },
-                                        {
-                                          label: 'a',
-                                          value: 'a'
-                                        },
-                                        {
-                                          label: 'code',
-                                          value: 'code'
-                                        },
-                                        {
-                                          label: 'mark',
-                                          value: 'mark'
-                                        },
-                                        {
-                                          label: 'strong',
-                                          value: 'strong'
-                                        },
-                                        {
-                                          label: 'div',
-                                          value: 'div'
-                                        },
-                                        {
-                                          label: 'span',
-                                          value: 'span'
-                                        },
-                                        {
-                                          label: 'h1',
-                                          value: 'h1'
-                                        },
-                                        {
-                                          label: 'h2',
-                                          value: 'h2'
-                                        },
-                                        {
-                                          label: 'h3',
-                                          value: 'h3'
-                                        },
-                                        {
-                                          label: 'h4',
-                                          value: 'h4'
-                                        },
-                                        {
-                                          label: 'h5',
-                                          value: 'h5'
-                                        },
-                                        {
-                                          label: 'menu',
-                                          value: 'menu'
-                                        },
-                                        {
-                                          label: 'label',
-                                          value: 'label'
-                                        },
-                                        {
-                                          label: 'input',
-                                          value: 'input'
-                                        },
-                                        {
-                                          label: 'progress',
-                                          value: 'progress'
-                                        },
-                                        {
-                                          label: 'select',
-                                          value: 'select'
-                                        },
-                                        {
-                                          label: 'abbr',
-                                          value: 'abbr'
-                                        },
-                                        {
-                                          label: 'address',
-                                          value: 'address'
-                                        },
-                                        {
-                                          label: 'area',
-                                          value: 'area'
-                                        },
-                                        {
-                                          label: 'article',
-                                          value: 'article'
-                                        },
-                                        {
-                                          label: 'aside',
-                                          value: 'aside'
-                                        },
-                                        {
-                                          label: 'audio',
-                                          value: 'audio'
-                                        },
-                                        {
-                                          label: 'b',
-                                          value: 'b'
-                                        },
-                                        {
-                                          label: 'base',
-                                          value: 'base'
-                                        },
-                                        {
-                                          label: 'bdi',
-                                          value: 'bdi'
-                                        },
-                                        {
-                                          label: 'bdo',
-                                          value: 'bdo'
-                                        },
-                                        {
-                                          label: 'blockquote',
-                                          value: 'blockquote'
-                                        },
-                                        {
-                                          label: 'body',
-                                          value: 'body'
-                                        },
-                                        {
-                                          label: 'br',
-                                          value: 'br'
-                                        },
-                                        {
-                                          label: 'canvas',
-                                          value: 'canvas'
-                                        },
-                                        {
-                                          label: 'caption',
-                                          value: 'caption'
-                                        },
-                                        {
-                                          label: 'cite',
-                                          value: 'cite'
-                                        },
-                                        {
-                                          label: 'col',
-                                          value: 'col'
-                                        },
-                                        {
-                                          label: 'colgroup',
-                                          value: 'colgroup'
-                                        },
-                                        {
-                                          label: 'data',
-                                          value: 'data'
-                                        },
-                                        {
-                                          label: 'datalist',
-                                          value: 'datalist'
-                                        },
-                                        {
-                                          label: 'dd',
-                                          value: 'dd'
-                                        },
-                                        {
-                                          label: 'del',
-                                          value: 'del'
-                                        },
-                                        {
-                                          label: 'details',
-                                          value: 'details'
-                                        },
-                                        {
-                                          label: 'dfn',
-                                          value: 'dfn'
-                                        },
-                                        {
-                                          label: 'dialog',
-                                          value: 'dialog'
-                                        },
-                                        {
-                                          label: 'dl',
-                                          value: 'dl'
-                                        },
-                                        {
-                                          label: 'dt',
-                                          value: 'dt'
-                                        },
-                                        {
-                                          label: 'em',
-                                          value: 'em'
-                                        },
-                                        {
-                                          label: 'embed',
-                                          value: 'embed'
-                                        },
-                                        {
-                                          label: 'fieldset',
-                                          value: 'fieldset'
-                                        },
-                                        {
-                                          label: 'figcaption',
-                                          value: 'figcaption'
-                                        },
-                                        {
-                                          label: 'figure',
-                                          value: 'figure'
-                                        },
-                                        {
-                                          label: 'footer',
-                                          value: 'footer'
-                                        },
-                                        {
-                                          label: 'h6',
-                                          value: 'h6'
-                                        },
-                                        {
-                                          label: 'head',
-                                          value: 'head'
-                                        },
-                                        {
-                                          label: 'header',
-                                          value: 'header'
-                                        },
-                                        {
-                                          label: 'hgroup',
-                                          value: 'hgroup'
-                                        },
-                                        {
-                                          label: 'hr',
-                                          value: 'hr'
-                                        },
-                                        {
-                                          label: 'html',
-                                          value: 'html'
-                                        },
-                                        {
-                                          label: 'i',
-                                          value: 'i'
-                                        },
-                                        {
-                                          label: 'iframe',
-                                          value: 'iframe'
-                                        },
-                                        {
-                                          label: 'img',
-                                          value: 'img'
-                                        },
-                                        {
-                                          label: 'ins',
-                                          value: 'ins'
-                                        },
-                                        {
-                                          label: 'kbd',
-                                          value: 'kbd'
-                                        },
-                                        {
-                                          label: 'legend',
-                                          value: 'legend'
-                                        },
-                                        {
-                                          label: 'li',
-                                          value: 'li'
-                                        },
-                                        {
-                                          label: 'main',
-                                          value: 'main'
-                                        },
-                                        {
-                                          label: 'map',
-                                          value: 'map'
-                                        },
-                                        {
-                                          label: 'meta',
-                                          value: 'meta'
-                                        },
-                                        {
-                                          label: 'meter',
-                                          value: 'meter'
-                                        },
-                                        {
-                                          label: 'nav',
-                                          value: 'nav'
-                                        },
-                                        {
-                                          label: 'noscript',
-                                          value: 'noscript'
-                                        },
-                                        {
-                                          label: 'ol',
-                                          value: 'ol'
-                                        },
-                                        {
-                                          label: 'optgroup',
-                                          value: 'optgroup'
-                                        },
-                                        {
-                                          label: 'option',
-                                          value: 'option'
-                                        },
-                                        {
-                                          label: 'output',
-                                          value: 'output'
-                                        },
-                                        {
-                                          label: 'p',
-                                          value: 'p'
-                                        },
-                                        {
-                                          label: 'param',
-                                          value: 'param'
-                                        },
-                                        {
-                                          label: 'picture',
-                                          value: 'picture'
-                                        },
-                                        {
-                                          label: 'pre',
-                                          value: 'pre'
-                                        },
-                                        {
-                                          label: 'q',
-                                          value: 'q'
-                                        },
-                                        {
-                                          label: 'rp',
-                                          value: 'rp'
-                                        },
-                                        {
-                                          label: 'rt',
-                                          value: 'rt'
-                                        },
-                                        {
-                                          label: 'ruby',
-                                          value: 'ruby'
-                                        },
-                                        {
-                                          label: 's',
-                                          value: 's'
-                                        },
-                                        {
-                                          label: 'samp',
-                                          value: 'samp'
-                                        },
-                                        {
-                                          label: 'script',
-                                          value: 'script'
-                                        },
-                                        {
-                                          label: 'section',
-                                          value: 'section'
-                                        },
-                                        {
-                                          label: 'slot',
-                                          value: 'slot'
-                                        },
-                                        {
-                                          label: 'source',
-                                          value: 'source'
-                                        },
-                                        {
-                                          label: 'sub',
-                                          value: 'sub'
-                                        },
-                                        {
-                                          label: 'summary',
-                                          value: 'summary'
-                                        },
-                                        {
-                                          label: 'sup',
-                                          value: 'sup'
-                                        },
-                                        {
-                                          label: 'table',
-                                          value: 'table'
-                                        },
-                                        {
-                                          label: 'tbody',
-                                          value: 'tbody'
-                                        },
-                                        {
-                                          label: 'td',
-                                          value: 'td'
-                                        },
-                                        {
-                                          label: 'template',
-                                          value: 'template'
-                                        },
-                                        {
-                                          label: 'textarea',
-                                          value: 'textarea'
-                                        },
-                                        {
-                                          label: 'tfoot',
-                                          value: 'tfoot'
-                                        },
-                                        {
-                                          label: 'th',
-                                          value: 'th'
-                                        },
-                                        {
-                                          label: 'thead',
-                                          value: 'thead'
-                                        },
-                                        {
-                                          label: 'time',
-                                          value: 'time'
-                                        },
-                                        {
-                                          label: 'tr',
-                                          value: 'tr'
-                                        },
-                                        {
-                                          label: 'track',
-                                          value: 'track'
-                                        },
-                                        {
-                                          label: 'u',
-                                          value: 'u'
-                                        },
-                                        {
-                                          label: 'ul',
-                                          value: 'ul'
-                                        },
-                                        {
-                                          label: 'var',
-                                          value: 'var'
-                                        },
-                                        {
-                                          label: 'video',
-                                          value: 'video'
-                                        },
-                                        {
-                                          label: 'wbr',
-                                          value: 'wbr'
-                                        },
-                                        {
-                                          label: 'big',
-                                          value: 'big'
-                                        },
-                                        {
-                                          label: 'keygen',
-                                          value: 'keygen'
-                                        },
-                                        {
-                                          label: 'menuitem',
-                                          value: 'menuitem'
-                                        },
-                                        {
-                                          label: 'webview',
-                                          value: 'webview'
-                                        }
-                                      ],
-                                      options: [
-                                        {
-                                          label: 'object',
-                                          value: 'object'
-                                        },
-                                        {
-                                          label: 'button',
-                                          value: 'button'
-                                        },
-                                        {
-                                          label: 'style',
-                                          value: 'style'
-                                        },
-                                        {
-                                          label: 'form',
-                                          value: 'form'
-                                        },
-                                        {
-                                          label: 'link',
-                                          value: 'link'
-                                        },
-                                        {
-                                          label: 'small',
-                                          value: 'small'
-                                        },
-                                        {
-                                          label: 'title',
-                                          value: 'title'
-                                        },
-                                        {
-                                          label: 'a',
-                                          value: 'a'
-                                        },
-                                        {
-                                          label: 'code',
-                                          value: 'code'
-                                        },
-                                        {
-                                          label: 'mark',
-                                          value: 'mark'
-                                        },
-                                        {
-                                          label: 'strong',
-                                          value: 'strong'
-                                        },
-                                        {
-                                          label: 'div',
-                                          value: 'div'
-                                        },
-                                        {
-                                          label: 'span',
-                                          value: 'span'
-                                        },
-                                        {
-                                          label: 'h1',
-                                          value: 'h1'
-                                        },
-                                        {
-                                          label: 'h2',
-                                          value: 'h2'
-                                        },
-                                        {
-                                          label: 'h3',
-                                          value: 'h3'
-                                        },
-                                        {
-                                          label: 'h4',
-                                          value: 'h4'
-                                        },
-                                        {
-                                          label: 'h5',
-                                          value: 'h5'
-                                        },
-                                        {
-                                          label: 'menu',
-                                          value: 'menu'
-                                        },
-                                        {
-                                          label: 'label',
-                                          value: 'label'
-                                        },
-                                        {
-                                          label: 'input',
-                                          value: 'input'
-                                        },
-                                        {
-                                          label: 'progress',
-                                          value: 'progress'
-                                        },
-                                        {
-                                          label: 'select',
-                                          value: 'select'
-                                        },
-                                        {
-                                          label: 'abbr',
-                                          value: 'abbr'
-                                        },
-                                        {
-                                          label: 'address',
-                                          value: 'address'
-                                        },
-                                        {
-                                          label: 'area',
-                                          value: 'area'
-                                        },
-                                        {
-                                          label: 'article',
-                                          value: 'article'
-                                        },
-                                        {
-                                          label: 'aside',
-                                          value: 'aside'
-                                        },
-                                        {
-                                          label: 'audio',
-                                          value: 'audio'
-                                        },
-                                        {
-                                          label: 'b',
-                                          value: 'b'
-                                        },
-                                        {
-                                          label: 'base',
-                                          value: 'base'
-                                        },
-                                        {
-                                          label: 'bdi',
-                                          value: 'bdi'
-                                        },
-                                        {
-                                          label: 'bdo',
-                                          value: 'bdo'
-                                        },
-                                        {
-                                          label: 'blockquote',
-                                          value: 'blockquote'
-                                        },
-                                        {
-                                          label: 'body',
-                                          value: 'body'
-                                        },
-                                        {
-                                          label: 'br',
-                                          value: 'br'
-                                        },
-                                        {
-                                          label: 'canvas',
-                                          value: 'canvas'
-                                        },
-                                        {
-                                          label: 'caption',
-                                          value: 'caption'
-                                        },
-                                        {
-                                          label: 'cite',
-                                          value: 'cite'
-                                        },
-                                        {
-                                          label: 'col',
-                                          value: 'col'
-                                        },
-                                        {
-                                          label: 'colgroup',
-                                          value: 'colgroup'
-                                        },
-                                        {
-                                          label: 'data',
-                                          value: 'data'
-                                        },
-                                        {
-                                          label: 'datalist',
-                                          value: 'datalist'
-                                        },
-                                        {
-                                          label: 'dd',
-                                          value: 'dd'
-                                        },
-                                        {
-                                          label: 'del',
-                                          value: 'del'
-                                        },
-                                        {
-                                          label: 'details',
-                                          value: 'details'
-                                        },
-                                        {
-                                          label: 'dfn',
-                                          value: 'dfn'
-                                        },
-                                        {
-                                          label: 'dialog',
-                                          value: 'dialog'
-                                        },
-                                        {
-                                          label: 'dl',
-                                          value: 'dl'
-                                        },
-                                        {
-                                          label: 'dt',
-                                          value: 'dt'
-                                        },
-                                        {
-                                          label: 'em',
-                                          value: 'em'
-                                        },
-                                        {
-                                          label: 'embed',
-                                          value: 'embed'
-                                        },
-                                        {
-                                          label: 'fieldset',
-                                          value: 'fieldset'
-                                        },
-                                        {
-                                          label: 'figcaption',
-                                          value: 'figcaption'
-                                        },
-                                        {
-                                          label: 'figure',
-                                          value: 'figure'
-                                        },
-                                        {
-                                          label: 'footer',
-                                          value: 'footer'
-                                        },
-                                        {
-                                          label: 'h6',
-                                          value: 'h6'
-                                        },
-                                        {
-                                          label: 'head',
-                                          value: 'head'
-                                        },
-                                        {
-                                          label: 'header',
-                                          value: 'header'
-                                        },
-                                        {
-                                          label: 'hgroup',
-                                          value: 'hgroup'
-                                        },
-                                        {
-                                          label: 'hr',
-                                          value: 'hr'
-                                        },
-                                        {
-                                          label: 'html',
-                                          value: 'html'
-                                        },
-                                        {
-                                          label: 'i',
-                                          value: 'i'
-                                        },
-                                        {
-                                          label: 'iframe',
-                                          value: 'iframe'
-                                        },
-                                        {
-                                          label: 'img',
-                                          value: 'img'
-                                        },
-                                        {
-                                          label: 'ins',
-                                          value: 'ins'
-                                        },
-                                        {
-                                          label: 'kbd',
-                                          value: 'kbd'
-                                        },
-                                        {
-                                          label: 'legend',
-                                          value: 'legend'
-                                        },
-                                        {
-                                          label: 'li',
-                                          value: 'li'
-                                        },
-                                        {
-                                          label: 'main',
-                                          value: 'main'
-                                        },
-                                        {
-                                          label: 'map',
-                                          value: 'map'
-                                        },
-                                        {
-                                          label: 'meta',
-                                          value: 'meta'
-                                        },
-                                        {
-                                          label: 'meter',
-                                          value: 'meter'
-                                        },
-                                        {
-                                          label: 'nav',
-                                          value: 'nav'
-                                        },
-                                        {
-                                          label: 'noscript',
-                                          value: 'noscript'
-                                        },
-                                        {
-                                          label: 'ol',
-                                          value: 'ol'
-                                        },
-                                        {
-                                          label: 'optgroup',
-                                          value: 'optgroup'
-                                        },
-                                        {
-                                          label: 'option',
-                                          value: 'option'
-                                        },
-                                        {
-                                          label: 'output',
-                                          value: 'output'
-                                        },
-                                        {
-                                          label: 'p',
-                                          value: 'p'
-                                        },
-                                        {
-                                          label: 'param',
-                                          value: 'param'
-                                        },
-                                        {
-                                          label: 'picture',
-                                          value: 'picture'
-                                        },
-                                        {
-                                          label: 'pre',
-                                          value: 'pre'
-                                        },
-                                        {
-                                          label: 'q',
-                                          value: 'q'
-                                        },
-                                        {
-                                          label: 'rp',
-                                          value: 'rp'
-                                        },
-                                        {
-                                          label: 'rt',
-                                          value: 'rt'
-                                        },
-                                        {
-                                          label: 'ruby',
-                                          value: 'ruby'
-                                        },
-                                        {
-                                          label: 's',
-                                          value: 's'
-                                        },
-                                        {
-                                          label: 'samp',
-                                          value: 'samp'
-                                        },
-                                        {
-                                          label: 'script',
-                                          value: 'script'
-                                        },
-                                        {
-                                          label: 'section',
-                                          value: 'section'
-                                        },
-                                        {
-                                          label: 'slot',
-                                          value: 'slot'
-                                        },
-                                        {
-                                          label: 'source',
-                                          value: 'source'
-                                        },
-                                        {
-                                          label: 'sub',
-                                          value: 'sub'
-                                        },
-                                        {
-                                          label: 'summary',
-                                          value: 'summary'
-                                        },
-                                        {
-                                          label: 'sup',
-                                          value: 'sup'
-                                        },
-                                        {
-                                          label: 'table',
-                                          value: 'table'
-                                        },
-                                        {
-                                          label: 'tbody',
-                                          value: 'tbody'
-                                        },
-                                        {
-                                          label: 'td',
-                                          value: 'td'
-                                        },
-                                        {
-                                          label: 'template',
-                                          value: 'template'
-                                        },
-                                        {
-                                          label: 'textarea',
-                                          value: 'textarea'
-                                        },
-                                        {
-                                          label: 'tfoot',
-                                          value: 'tfoot'
-                                        },
-                                        {
-                                          label: 'th',
-                                          value: 'th'
-                                        },
-                                        {
-                                          label: 'thead',
-                                          value: 'thead'
-                                        },
-                                        {
-                                          label: 'time',
-                                          value: 'time'
-                                        },
-                                        {
-                                          label: 'tr',
-                                          value: 'tr'
-                                        },
-                                        {
-                                          label: 'track',
-                                          value: 'track'
-                                        },
-                                        {
-                                          label: 'u',
-                                          value: 'u'
-                                        },
-                                        {
-                                          label: 'ul',
-                                          value: 'ul'
-                                        },
-                                        {
-                                          label: 'var',
-                                          value: 'var'
-                                        },
-                                        {
-                                          label: 'video',
-                                          value: 'video'
-                                        },
-                                        {
-                                          label: 'wbr',
-                                          value: 'wbr'
-                                        },
-                                        {
-                                          label: 'big',
-                                          value: 'big'
-                                        },
-                                        {
-                                          label: 'keygen',
-                                          value: 'keygen'
-                                        },
-                                        {
-                                          label: 'menuitem',
-                                          value: 'menuitem'
-                                        },
-                                        {
-                                          label: 'webview',
-                                          value: 'webview'
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'body',
-                      'zh-CN': 'body'
-                    }
-                  },
-                  name: 'body',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: [
-                        'FunctionSetter',
-                        {
-                          componentName: 'ObjectSetter',
-                          condition: () => false,
-                          props: {
-                            config: {
-                              items: [
-                                {
-                                  title: {
-                                    label: {
-                                      type: 'i18n',
-                                      'en-US': 'wrapper',
-                                      'zh-CN': 'wrapper'
-                                    }
-                                  },
-                                  name: 'wrapper',
-                                  setter: {
-                                    componentName: 'MixedSetter',
-                                    props: {
-                                      setters: [
-                                        {
-                                          componentName: 'ObjectSetter',
-                                          condition: () => false,
-                                          props: {
-                                            config: {
-                                              extraSetter: {
-                                                componentName: 'MixedSetter',
-                                                props: {}
-                                              }
-                                            }
-                                          }
-                                        },
-                                        {
-                                          componentName: 'SelectSetter',
-                                          props: {
-                                            dataSource: [
-                                              {
-                                                label: 'object',
-                                                value: 'object'
-                                              },
-                                              {
-                                                label: 'button',
-                                                value: 'button'
-                                              },
-                                              {
-                                                label: 'style',
-                                                value: 'style'
-                                              },
-                                              {
-                                                label: 'form',
-                                                value: 'form'
-                                              },
-                                              {
-                                                label: 'link',
-                                                value: 'link'
-                                              },
-                                              {
-                                                label: 'small',
-                                                value: 'small'
-                                              },
-                                              {
-                                                label: 'title',
-                                                value: 'title'
-                                              },
-                                              {
-                                                label: 'a',
-                                                value: 'a'
-                                              },
-                                              {
-                                                label: 'code',
-                                                value: 'code'
-                                              },
-                                              {
-                                                label: 'mark',
-                                                value: 'mark'
-                                              },
-                                              {
-                                                label: 'strong',
-                                                value: 'strong'
-                                              },
-                                              {
-                                                label: 'div',
-                                                value: 'div'
-                                              },
-                                              {
-                                                label: 'span',
-                                                value: 'span'
-                                              },
-                                              {
-                                                label: 'h1',
-                                                value: 'h1'
-                                              },
-                                              {
-                                                label: 'h2',
-                                                value: 'h2'
-                                              },
-                                              {
-                                                label: 'h3',
-                                                value: 'h3'
-                                              },
-                                              {
-                                                label: 'h4',
-                                                value: 'h4'
-                                              },
-                                              {
-                                                label: 'h5',
-                                                value: 'h5'
-                                              },
-                                              {
-                                                label: 'menu',
-                                                value: 'menu'
-                                              },
-                                              {
-                                                label: 'label',
-                                                value: 'label'
-                                              },
-                                              {
-                                                label: 'input',
-                                                value: 'input'
-                                              },
-                                              {
-                                                label: 'progress',
-                                                value: 'progress'
-                                              },
-                                              {
-                                                label: 'select',
-                                                value: 'select'
-                                              },
-                                              {
-                                                label: 'abbr',
-                                                value: 'abbr'
-                                              },
-                                              {
-                                                label: 'address',
-                                                value: 'address'
-                                              },
-                                              {
-                                                label: 'area',
-                                                value: 'area'
-                                              },
-                                              {
-                                                label: 'article',
-                                                value: 'article'
-                                              },
-                                              {
-                                                label: 'aside',
-                                                value: 'aside'
-                                              },
-                                              {
-                                                label: 'audio',
-                                                value: 'audio'
-                                              },
-                                              {
-                                                label: 'b',
-                                                value: 'b'
-                                              },
-                                              {
-                                                label: 'base',
-                                                value: 'base'
-                                              },
-                                              {
-                                                label: 'bdi',
-                                                value: 'bdi'
-                                              },
-                                              {
-                                                label: 'bdo',
-                                                value: 'bdo'
-                                              },
-                                              {
-                                                label: 'blockquote',
-                                                value: 'blockquote'
-                                              },
-                                              {
-                                                label: 'body',
-                                                value: 'body'
-                                              },
-                                              {
-                                                label: 'br',
-                                                value: 'br'
-                                              },
-                                              {
-                                                label: 'canvas',
-                                                value: 'canvas'
-                                              },
-                                              {
-                                                label: 'caption',
-                                                value: 'caption'
-                                              },
-                                              {
-                                                label: 'cite',
-                                                value: 'cite'
-                                              },
-                                              {
-                                                label: 'col',
-                                                value: 'col'
-                                              },
-                                              {
-                                                label: 'colgroup',
-                                                value: 'colgroup'
-                                              },
-                                              {
-                                                label: 'data',
-                                                value: 'data'
-                                              },
-                                              {
-                                                label: 'datalist',
-                                                value: 'datalist'
-                                              },
-                                              {
-                                                label: 'dd',
-                                                value: 'dd'
-                                              },
-                                              {
-                                                label: 'del',
-                                                value: 'del'
-                                              },
-                                              {
-                                                label: 'details',
-                                                value: 'details'
-                                              },
-                                              {
-                                                label: 'dfn',
-                                                value: 'dfn'
-                                              },
-                                              {
-                                                label: 'dialog',
-                                                value: 'dialog'
-                                              },
-                                              {
-                                                label: 'dl',
-                                                value: 'dl'
-                                              },
-                                              {
-                                                label: 'dt',
-                                                value: 'dt'
-                                              },
-                                              {
-                                                label: 'em',
-                                                value: 'em'
-                                              },
-                                              {
-                                                label: 'embed',
-                                                value: 'embed'
-                                              },
-                                              {
-                                                label: 'fieldset',
-                                                value: 'fieldset'
-                                              },
-                                              {
-                                                label: 'figcaption',
-                                                value: 'figcaption'
-                                              },
-                                              {
-                                                label: 'figure',
-                                                value: 'figure'
-                                              },
-                                              {
-                                                label: 'footer',
-                                                value: 'footer'
-                                              },
-                                              {
-                                                label: 'h6',
-                                                value: 'h6'
-                                              },
-                                              {
-                                                label: 'head',
-                                                value: 'head'
-                                              },
-                                              {
-                                                label: 'header',
-                                                value: 'header'
-                                              },
-                                              {
-                                                label: 'hgroup',
-                                                value: 'hgroup'
-                                              },
-                                              {
-                                                label: 'hr',
-                                                value: 'hr'
-                                              },
-                                              {
-                                                label: 'html',
-                                                value: 'html'
-                                              },
-                                              {
-                                                label: 'i',
-                                                value: 'i'
-                                              },
-                                              {
-                                                label: 'iframe',
-                                                value: 'iframe'
-                                              },
-                                              {
-                                                label: 'img',
-                                                value: 'img'
-                                              },
-                                              {
-                                                label: 'ins',
-                                                value: 'ins'
-                                              },
-                                              {
-                                                label: 'kbd',
-                                                value: 'kbd'
-                                              },
-                                              {
-                                                label: 'legend',
-                                                value: 'legend'
-                                              },
-                                              {
-                                                label: 'li',
-                                                value: 'li'
-                                              },
-                                              {
-                                                label: 'main',
-                                                value: 'main'
-                                              },
-                                              {
-                                                label: 'map',
-                                                value: 'map'
-                                              },
-                                              {
-                                                label: 'meta',
-                                                value: 'meta'
-                                              },
-                                              {
-                                                label: 'meter',
-                                                value: 'meter'
-                                              },
-                                              {
-                                                label: 'nav',
-                                                value: 'nav'
-                                              },
-                                              {
-                                                label: 'noscript',
-                                                value: 'noscript'
-                                              },
-                                              {
-                                                label: 'ol',
-                                                value: 'ol'
-                                              },
-                                              {
-                                                label: 'optgroup',
-                                                value: 'optgroup'
-                                              },
-                                              {
-                                                label: 'option',
-                                                value: 'option'
-                                              },
-                                              {
-                                                label: 'output',
-                                                value: 'output'
-                                              },
-                                              {
-                                                label: 'p',
-                                                value: 'p'
-                                              },
-                                              {
-                                                label: 'param',
-                                                value: 'param'
-                                              },
-                                              {
-                                                label: 'picture',
-                                                value: 'picture'
-                                              },
-                                              {
-                                                label: 'pre',
-                                                value: 'pre'
-                                              },
-                                              {
-                                                label: 'q',
-                                                value: 'q'
-                                              },
-                                              {
-                                                label: 'rp',
-                                                value: 'rp'
-                                              },
-                                              {
-                                                label: 'rt',
-                                                value: 'rt'
-                                              },
-                                              {
-                                                label: 'ruby',
-                                                value: 'ruby'
-                                              },
-                                              {
-                                                label: 's',
-                                                value: 's'
-                                              },
-                                              {
-                                                label: 'samp',
-                                                value: 'samp'
-                                              },
-                                              {
-                                                label: 'script',
-                                                value: 'script'
-                                              },
-                                              {
-                                                label: 'section',
-                                                value: 'section'
-                                              },
-                                              {
-                                                label: 'slot',
-                                                value: 'slot'
-                                              },
-                                              {
-                                                label: 'source',
-                                                value: 'source'
-                                              },
-                                              {
-                                                label: 'sub',
-                                                value: 'sub'
-                                              },
-                                              {
-                                                label: 'summary',
-                                                value: 'summary'
-                                              },
-                                              {
-                                                label: 'sup',
-                                                value: 'sup'
-                                              },
-                                              {
-                                                label: 'table',
-                                                value: 'table'
-                                              },
-                                              {
-                                                label: 'tbody',
-                                                value: 'tbody'
-                                              },
-                                              {
-                                                label: 'td',
-                                                value: 'td'
-                                              },
-                                              {
-                                                label: 'template',
-                                                value: 'template'
-                                              },
-                                              {
-                                                label: 'textarea',
-                                                value: 'textarea'
-                                              },
-                                              {
-                                                label: 'tfoot',
-                                                value: 'tfoot'
-                                              },
-                                              {
-                                                label: 'th',
-                                                value: 'th'
-                                              },
-                                              {
-                                                label: 'thead',
-                                                value: 'thead'
-                                              },
-                                              {
-                                                label: 'time',
-                                                value: 'time'
-                                              },
-                                              {
-                                                label: 'tr',
-                                                value: 'tr'
-                                              },
-                                              {
-                                                label: 'track',
-                                                value: 'track'
-                                              },
-                                              {
-                                                label: 'u',
-                                                value: 'u'
-                                              },
-                                              {
-                                                label: 'ul',
-                                                value: 'ul'
-                                              },
-                                              {
-                                                label: 'var',
-                                                value: 'var'
-                                              },
-                                              {
-                                                label: 'video',
-                                                value: 'video'
-                                              },
-                                              {
-                                                label: 'wbr',
-                                                value: 'wbr'
-                                              },
-                                              {
-                                                label: 'big',
-                                                value: 'big'
-                                              },
-                                              {
-                                                label: 'keygen',
-                                                value: 'keygen'
-                                              },
-                                              {
-                                                label: 'menuitem',
-                                                value: 'menuitem'
-                                              },
-                                              {
-                                                label: 'webview',
-                                                value: 'webview'
-                                              }
-                                            ],
-                                            options: [
-                                              {
-                                                label: 'object',
-                                                value: 'object'
-                                              },
-                                              {
-                                                label: 'button',
-                                                value: 'button'
-                                              },
-                                              {
-                                                label: 'style',
-                                                value: 'style'
-                                              },
-                                              {
-                                                label: 'form',
-                                                value: 'form'
-                                              },
-                                              {
-                                                label: 'link',
-                                                value: 'link'
-                                              },
-                                              {
-                                                label: 'small',
-                                                value: 'small'
-                                              },
-                                              {
-                                                label: 'title',
-                                                value: 'title'
-                                              },
-                                              {
-                                                label: 'a',
-                                                value: 'a'
-                                              },
-                                              {
-                                                label: 'code',
-                                                value: 'code'
-                                              },
-                                              {
-                                                label: 'mark',
-                                                value: 'mark'
-                                              },
-                                              {
-                                                label: 'strong',
-                                                value: 'strong'
-                                              },
-                                              {
-                                                label: 'div',
-                                                value: 'div'
-                                              },
-                                              {
-                                                label: 'span',
-                                                value: 'span'
-                                              },
-                                              {
-                                                label: 'h1',
-                                                value: 'h1'
-                                              },
-                                              {
-                                                label: 'h2',
-                                                value: 'h2'
-                                              },
-                                              {
-                                                label: 'h3',
-                                                value: 'h3'
-                                              },
-                                              {
-                                                label: 'h4',
-                                                value: 'h4'
-                                              },
-                                              {
-                                                label: 'h5',
-                                                value: 'h5'
-                                              },
-                                              {
-                                                label: 'menu',
-                                                value: 'menu'
-                                              },
-                                              {
-                                                label: 'label',
-                                                value: 'label'
-                                              },
-                                              {
-                                                label: 'input',
-                                                value: 'input'
-                                              },
-                                              {
-                                                label: 'progress',
-                                                value: 'progress'
-                                              },
-                                              {
-                                                label: 'select',
-                                                value: 'select'
-                                              },
-                                              {
-                                                label: 'abbr',
-                                                value: 'abbr'
-                                              },
-                                              {
-                                                label: 'address',
-                                                value: 'address'
-                                              },
-                                              {
-                                                label: 'area',
-                                                value: 'area'
-                                              },
-                                              {
-                                                label: 'article',
-                                                value: 'article'
-                                              },
-                                              {
-                                                label: 'aside',
-                                                value: 'aside'
-                                              },
-                                              {
-                                                label: 'audio',
-                                                value: 'audio'
-                                              },
-                                              {
-                                                label: 'b',
-                                                value: 'b'
-                                              },
-                                              {
-                                                label: 'base',
-                                                value: 'base'
-                                              },
-                                              {
-                                                label: 'bdi',
-                                                value: 'bdi'
-                                              },
-                                              {
-                                                label: 'bdo',
-                                                value: 'bdo'
-                                              },
-                                              {
-                                                label: 'blockquote',
-                                                value: 'blockquote'
-                                              },
-                                              {
-                                                label: 'body',
-                                                value: 'body'
-                                              },
-                                              {
-                                                label: 'br',
-                                                value: 'br'
-                                              },
-                                              {
-                                                label: 'canvas',
-                                                value: 'canvas'
-                                              },
-                                              {
-                                                label: 'caption',
-                                                value: 'caption'
-                                              },
-                                              {
-                                                label: 'cite',
-                                                value: 'cite'
-                                              },
-                                              {
-                                                label: 'col',
-                                                value: 'col'
-                                              },
-                                              {
-                                                label: 'colgroup',
-                                                value: 'colgroup'
-                                              },
-                                              {
-                                                label: 'data',
-                                                value: 'data'
-                                              },
-                                              {
-                                                label: 'datalist',
-                                                value: 'datalist'
-                                              },
-                                              {
-                                                label: 'dd',
-                                                value: 'dd'
-                                              },
-                                              {
-                                                label: 'del',
-                                                value: 'del'
-                                              },
-                                              {
-                                                label: 'details',
-                                                value: 'details'
-                                              },
-                                              {
-                                                label: 'dfn',
-                                                value: 'dfn'
-                                              },
-                                              {
-                                                label: 'dialog',
-                                                value: 'dialog'
-                                              },
-                                              {
-                                                label: 'dl',
-                                                value: 'dl'
-                                              },
-                                              {
-                                                label: 'dt',
-                                                value: 'dt'
-                                              },
-                                              {
-                                                label: 'em',
-                                                value: 'em'
-                                              },
-                                              {
-                                                label: 'embed',
-                                                value: 'embed'
-                                              },
-                                              {
-                                                label: 'fieldset',
-                                                value: 'fieldset'
-                                              },
-                                              {
-                                                label: 'figcaption',
-                                                value: 'figcaption'
-                                              },
-                                              {
-                                                label: 'figure',
-                                                value: 'figure'
-                                              },
-                                              {
-                                                label: 'footer',
-                                                value: 'footer'
-                                              },
-                                              {
-                                                label: 'h6',
-                                                value: 'h6'
-                                              },
-                                              {
-                                                label: 'head',
-                                                value: 'head'
-                                              },
-                                              {
-                                                label: 'header',
-                                                value: 'header'
-                                              },
-                                              {
-                                                label: 'hgroup',
-                                                value: 'hgroup'
-                                              },
-                                              {
-                                                label: 'hr',
-                                                value: 'hr'
-                                              },
-                                              {
-                                                label: 'html',
-                                                value: 'html'
-                                              },
-                                              {
-                                                label: 'i',
-                                                value: 'i'
-                                              },
-                                              {
-                                                label: 'iframe',
-                                                value: 'iframe'
-                                              },
-                                              {
-                                                label: 'img',
-                                                value: 'img'
-                                              },
-                                              {
-                                                label: 'ins',
-                                                value: 'ins'
-                                              },
-                                              {
-                                                label: 'kbd',
-                                                value: 'kbd'
-                                              },
-                                              {
-                                                label: 'legend',
-                                                value: 'legend'
-                                              },
-                                              {
-                                                label: 'li',
-                                                value: 'li'
-                                              },
-                                              {
-                                                label: 'main',
-                                                value: 'main'
-                                              },
-                                              {
-                                                label: 'map',
-                                                value: 'map'
-                                              },
-                                              {
-                                                label: 'meta',
-                                                value: 'meta'
-                                              },
-                                              {
-                                                label: 'meter',
-                                                value: 'meter'
-                                              },
-                                              {
-                                                label: 'nav',
-                                                value: 'nav'
-                                              },
-                                              {
-                                                label: 'noscript',
-                                                value: 'noscript'
-                                              },
-                                              {
-                                                label: 'ol',
-                                                value: 'ol'
-                                              },
-                                              {
-                                                label: 'optgroup',
-                                                value: 'optgroup'
-                                              },
-                                              {
-                                                label: 'option',
-                                                value: 'option'
-                                              },
-                                              {
-                                                label: 'output',
-                                                value: 'output'
-                                              },
-                                              {
-                                                label: 'p',
-                                                value: 'p'
-                                              },
-                                              {
-                                                label: 'param',
-                                                value: 'param'
-                                              },
-                                              {
-                                                label: 'picture',
-                                                value: 'picture'
-                                              },
-                                              {
-                                                label: 'pre',
-                                                value: 'pre'
-                                              },
-                                              {
-                                                label: 'q',
-                                                value: 'q'
-                                              },
-                                              {
-                                                label: 'rp',
-                                                value: 'rp'
-                                              },
-                                              {
-                                                label: 'rt',
-                                                value: 'rt'
-                                              },
-                                              {
-                                                label: 'ruby',
-                                                value: 'ruby'
-                                              },
-                                              {
-                                                label: 's',
-                                                value: 's'
-                                              },
-                                              {
-                                                label: 'samp',
-                                                value: 'samp'
-                                              },
-                                              {
-                                                label: 'script',
-                                                value: 'script'
-                                              },
-                                              {
-                                                label: 'section',
-                                                value: 'section'
-                                              },
-                                              {
-                                                label: 'slot',
-                                                value: 'slot'
-                                              },
-                                              {
-                                                label: 'source',
-                                                value: 'source'
-                                              },
-                                              {
-                                                label: 'sub',
-                                                value: 'sub'
-                                              },
-                                              {
-                                                label: 'summary',
-                                                value: 'summary'
-                                              },
-                                              {
-                                                label: 'sup',
-                                                value: 'sup'
-                                              },
-                                              {
-                                                label: 'table',
-                                                value: 'table'
-                                              },
-                                              {
-                                                label: 'tbody',
-                                                value: 'tbody'
-                                              },
-                                              {
-                                                label: 'td',
-                                                value: 'td'
-                                              },
-                                              {
-                                                label: 'template',
-                                                value: 'template'
-                                              },
-                                              {
-                                                label: 'textarea',
-                                                value: 'textarea'
-                                              },
-                                              {
-                                                label: 'tfoot',
-                                                value: 'tfoot'
-                                              },
-                                              {
-                                                label: 'th',
-                                                value: 'th'
-                                              },
-                                              {
-                                                label: 'thead',
-                                                value: 'thead'
-                                              },
-                                              {
-                                                label: 'time',
-                                                value: 'time'
-                                              },
-                                              {
-                                                label: 'tr',
-                                                value: 'tr'
-                                              },
-                                              {
-                                                label: 'track',
-                                                value: 'track'
-                                              },
-                                              {
-                                                label: 'u',
-                                                value: 'u'
-                                              },
-                                              {
-                                                label: 'ul',
-                                                value: 'ul'
-                                              },
-                                              {
-                                                label: 'var',
-                                                value: 'var'
-                                              },
-                                              {
-                                                label: 'video',
-                                                value: 'video'
-                                              },
-                                              {
-                                                label: 'wbr',
-                                                value: 'wbr'
-                                              },
-                                              {
-                                                label: 'big',
-                                                value: 'big'
-                                              },
-                                              {
-                                                label: 'keygen',
-                                                value: 'keygen'
-                                              },
-                                              {
-                                                label: 'menuitem',
-                                                value: 'menuitem'
-                                              },
-                                              {
-                                                label: 'webview',
-                                                value: 'webview'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                },
-                                {
-                                  title: {
-                                    label: {
-                                      type: 'i18n',
-                                      'en-US': 'row',
-                                      'zh-CN': 'row'
-                                    }
-                                  },
-                                  name: 'row',
-                                  setter: {
-                                    componentName: 'MixedSetter',
-                                    props: {
-                                      setters: [
-                                        {
-                                          componentName: 'ObjectSetter',
-                                          condition: () => false,
-                                          props: {
-                                            config: {
-                                              extraSetter: {
-                                                componentName: 'MixedSetter',
-                                                props: {}
-                                              }
-                                            }
-                                          }
-                                        },
-                                        {
-                                          componentName: 'SelectSetter',
-                                          props: {
-                                            dataSource: [
-                                              {
-                                                label: 'object',
-                                                value: 'object'
-                                              },
-                                              {
-                                                label: 'button',
-                                                value: 'button'
-                                              },
-                                              {
-                                                label: 'style',
-                                                value: 'style'
-                                              },
-                                              {
-                                                label: 'form',
-                                                value: 'form'
-                                              },
-                                              {
-                                                label: 'link',
-                                                value: 'link'
-                                              },
-                                              {
-                                                label: 'small',
-                                                value: 'small'
-                                              },
-                                              {
-                                                label: 'title',
-                                                value: 'title'
-                                              },
-                                              {
-                                                label: 'a',
-                                                value: 'a'
-                                              },
-                                              {
-                                                label: 'code',
-                                                value: 'code'
-                                              },
-                                              {
-                                                label: 'mark',
-                                                value: 'mark'
-                                              },
-                                              {
-                                                label: 'strong',
-                                                value: 'strong'
-                                              },
-                                              {
-                                                label: 'div',
-                                                value: 'div'
-                                              },
-                                              {
-                                                label: 'span',
-                                                value: 'span'
-                                              },
-                                              {
-                                                label: 'h1',
-                                                value: 'h1'
-                                              },
-                                              {
-                                                label: 'h2',
-                                                value: 'h2'
-                                              },
-                                              {
-                                                label: 'h3',
-                                                value: 'h3'
-                                              },
-                                              {
-                                                label: 'h4',
-                                                value: 'h4'
-                                              },
-                                              {
-                                                label: 'h5',
-                                                value: 'h5'
-                                              },
-                                              {
-                                                label: 'menu',
-                                                value: 'menu'
-                                              },
-                                              {
-                                                label: 'label',
-                                                value: 'label'
-                                              },
-                                              {
-                                                label: 'input',
-                                                value: 'input'
-                                              },
-                                              {
-                                                label: 'progress',
-                                                value: 'progress'
-                                              },
-                                              {
-                                                label: 'select',
-                                                value: 'select'
-                                              },
-                                              {
-                                                label: 'abbr',
-                                                value: 'abbr'
-                                              },
-                                              {
-                                                label: 'address',
-                                                value: 'address'
-                                              },
-                                              {
-                                                label: 'area',
-                                                value: 'area'
-                                              },
-                                              {
-                                                label: 'article',
-                                                value: 'article'
-                                              },
-                                              {
-                                                label: 'aside',
-                                                value: 'aside'
-                                              },
-                                              {
-                                                label: 'audio',
-                                                value: 'audio'
-                                              },
-                                              {
-                                                label: 'b',
-                                                value: 'b'
-                                              },
-                                              {
-                                                label: 'base',
-                                                value: 'base'
-                                              },
-                                              {
-                                                label: 'bdi',
-                                                value: 'bdi'
-                                              },
-                                              {
-                                                label: 'bdo',
-                                                value: 'bdo'
-                                              },
-                                              {
-                                                label: 'blockquote',
-                                                value: 'blockquote'
-                                              },
-                                              {
-                                                label: 'body',
-                                                value: 'body'
-                                              },
-                                              {
-                                                label: 'br',
-                                                value: 'br'
-                                              },
-                                              {
-                                                label: 'canvas',
-                                                value: 'canvas'
-                                              },
-                                              {
-                                                label: 'caption',
-                                                value: 'caption'
-                                              },
-                                              {
-                                                label: 'cite',
-                                                value: 'cite'
-                                              },
-                                              {
-                                                label: 'col',
-                                                value: 'col'
-                                              },
-                                              {
-                                                label: 'colgroup',
-                                                value: 'colgroup'
-                                              },
-                                              {
-                                                label: 'data',
-                                                value: 'data'
-                                              },
-                                              {
-                                                label: 'datalist',
-                                                value: 'datalist'
-                                              },
-                                              {
-                                                label: 'dd',
-                                                value: 'dd'
-                                              },
-                                              {
-                                                label: 'del',
-                                                value: 'del'
-                                              },
-                                              {
-                                                label: 'details',
-                                                value: 'details'
-                                              },
-                                              {
-                                                label: 'dfn',
-                                                value: 'dfn'
-                                              },
-                                              {
-                                                label: 'dialog',
-                                                value: 'dialog'
-                                              },
-                                              {
-                                                label: 'dl',
-                                                value: 'dl'
-                                              },
-                                              {
-                                                label: 'dt',
-                                                value: 'dt'
-                                              },
-                                              {
-                                                label: 'em',
-                                                value: 'em'
-                                              },
-                                              {
-                                                label: 'embed',
-                                                value: 'embed'
-                                              },
-                                              {
-                                                label: 'fieldset',
-                                                value: 'fieldset'
-                                              },
-                                              {
-                                                label: 'figcaption',
-                                                value: 'figcaption'
-                                              },
-                                              {
-                                                label: 'figure',
-                                                value: 'figure'
-                                              },
-                                              {
-                                                label: 'footer',
-                                                value: 'footer'
-                                              },
-                                              {
-                                                label: 'h6',
-                                                value: 'h6'
-                                              },
-                                              {
-                                                label: 'head',
-                                                value: 'head'
-                                              },
-                                              {
-                                                label: 'header',
-                                                value: 'header'
-                                              },
-                                              {
-                                                label: 'hgroup',
-                                                value: 'hgroup'
-                                              },
-                                              {
-                                                label: 'hr',
-                                                value: 'hr'
-                                              },
-                                              {
-                                                label: 'html',
-                                                value: 'html'
-                                              },
-                                              {
-                                                label: 'i',
-                                                value: 'i'
-                                              },
-                                              {
-                                                label: 'iframe',
-                                                value: 'iframe'
-                                              },
-                                              {
-                                                label: 'img',
-                                                value: 'img'
-                                              },
-                                              {
-                                                label: 'ins',
-                                                value: 'ins'
-                                              },
-                                              {
-                                                label: 'kbd',
-                                                value: 'kbd'
-                                              },
-                                              {
-                                                label: 'legend',
-                                                value: 'legend'
-                                              },
-                                              {
-                                                label: 'li',
-                                                value: 'li'
-                                              },
-                                              {
-                                                label: 'main',
-                                                value: 'main'
-                                              },
-                                              {
-                                                label: 'map',
-                                                value: 'map'
-                                              },
-                                              {
-                                                label: 'meta',
-                                                value: 'meta'
-                                              },
-                                              {
-                                                label: 'meter',
-                                                value: 'meter'
-                                              },
-                                              {
-                                                label: 'nav',
-                                                value: 'nav'
-                                              },
-                                              {
-                                                label: 'noscript',
-                                                value: 'noscript'
-                                              },
-                                              {
-                                                label: 'ol',
-                                                value: 'ol'
-                                              },
-                                              {
-                                                label: 'optgroup',
-                                                value: 'optgroup'
-                                              },
-                                              {
-                                                label: 'option',
-                                                value: 'option'
-                                              },
-                                              {
-                                                label: 'output',
-                                                value: 'output'
-                                              },
-                                              {
-                                                label: 'p',
-                                                value: 'p'
-                                              },
-                                              {
-                                                label: 'param',
-                                                value: 'param'
-                                              },
-                                              {
-                                                label: 'picture',
-                                                value: 'picture'
-                                              },
-                                              {
-                                                label: 'pre',
-                                                value: 'pre'
-                                              },
-                                              {
-                                                label: 'q',
-                                                value: 'q'
-                                              },
-                                              {
-                                                label: 'rp',
-                                                value: 'rp'
-                                              },
-                                              {
-                                                label: 'rt',
-                                                value: 'rt'
-                                              },
-                                              {
-                                                label: 'ruby',
-                                                value: 'ruby'
-                                              },
-                                              {
-                                                label: 's',
-                                                value: 's'
-                                              },
-                                              {
-                                                label: 'samp',
-                                                value: 'samp'
-                                              },
-                                              {
-                                                label: 'script',
-                                                value: 'script'
-                                              },
-                                              {
-                                                label: 'section',
-                                                value: 'section'
-                                              },
-                                              {
-                                                label: 'slot',
-                                                value: 'slot'
-                                              },
-                                              {
-                                                label: 'source',
-                                                value: 'source'
-                                              },
-                                              {
-                                                label: 'sub',
-                                                value: 'sub'
-                                              },
-                                              {
-                                                label: 'summary',
-                                                value: 'summary'
-                                              },
-                                              {
-                                                label: 'sup',
-                                                value: 'sup'
-                                              },
-                                              {
-                                                label: 'table',
-                                                value: 'table'
-                                              },
-                                              {
-                                                label: 'tbody',
-                                                value: 'tbody'
-                                              },
-                                              {
-                                                label: 'td',
-                                                value: 'td'
-                                              },
-                                              {
-                                                label: 'template',
-                                                value: 'template'
-                                              },
-                                              {
-                                                label: 'textarea',
-                                                value: 'textarea'
-                                              },
-                                              {
-                                                label: 'tfoot',
-                                                value: 'tfoot'
-                                              },
-                                              {
-                                                label: 'th',
-                                                value: 'th'
-                                              },
-                                              {
-                                                label: 'thead',
-                                                value: 'thead'
-                                              },
-                                              {
-                                                label: 'time',
-                                                value: 'time'
-                                              },
-                                              {
-                                                label: 'tr',
-                                                value: 'tr'
-                                              },
-                                              {
-                                                label: 'track',
-                                                value: 'track'
-                                              },
-                                              {
-                                                label: 'u',
-                                                value: 'u'
-                                              },
-                                              {
-                                                label: 'ul',
-                                                value: 'ul'
-                                              },
-                                              {
-                                                label: 'var',
-                                                value: 'var'
-                                              },
-                                              {
-                                                label: 'video',
-                                                value: 'video'
-                                              },
-                                              {
-                                                label: 'wbr',
-                                                value: 'wbr'
-                                              },
-                                              {
-                                                label: 'big',
-                                                value: 'big'
-                                              },
-                                              {
-                                                label: 'keygen',
-                                                value: 'keygen'
-                                              },
-                                              {
-                                                label: 'menuitem',
-                                                value: 'menuitem'
-                                              },
-                                              {
-                                                label: 'webview',
-                                                value: 'webview'
-                                              }
-                                            ],
-                                            options: [
-                                              {
-                                                label: 'object',
-                                                value: 'object'
-                                              },
-                                              {
-                                                label: 'button',
-                                                value: 'button'
-                                              },
-                                              {
-                                                label: 'style',
-                                                value: 'style'
-                                              },
-                                              {
-                                                label: 'form',
-                                                value: 'form'
-                                              },
-                                              {
-                                                label: 'link',
-                                                value: 'link'
-                                              },
-                                              {
-                                                label: 'small',
-                                                value: 'small'
-                                              },
-                                              {
-                                                label: 'title',
-                                                value: 'title'
-                                              },
-                                              {
-                                                label: 'a',
-                                                value: 'a'
-                                              },
-                                              {
-                                                label: 'code',
-                                                value: 'code'
-                                              },
-                                              {
-                                                label: 'mark',
-                                                value: 'mark'
-                                              },
-                                              {
-                                                label: 'strong',
-                                                value: 'strong'
-                                              },
-                                              {
-                                                label: 'div',
-                                                value: 'div'
-                                              },
-                                              {
-                                                label: 'span',
-                                                value: 'span'
-                                              },
-                                              {
-                                                label: 'h1',
-                                                value: 'h1'
-                                              },
-                                              {
-                                                label: 'h2',
-                                                value: 'h2'
-                                              },
-                                              {
-                                                label: 'h3',
-                                                value: 'h3'
-                                              },
-                                              {
-                                                label: 'h4',
-                                                value: 'h4'
-                                              },
-                                              {
-                                                label: 'h5',
-                                                value: 'h5'
-                                              },
-                                              {
-                                                label: 'menu',
-                                                value: 'menu'
-                                              },
-                                              {
-                                                label: 'label',
-                                                value: 'label'
-                                              },
-                                              {
-                                                label: 'input',
-                                                value: 'input'
-                                              },
-                                              {
-                                                label: 'progress',
-                                                value: 'progress'
-                                              },
-                                              {
-                                                label: 'select',
-                                                value: 'select'
-                                              },
-                                              {
-                                                label: 'abbr',
-                                                value: 'abbr'
-                                              },
-                                              {
-                                                label: 'address',
-                                                value: 'address'
-                                              },
-                                              {
-                                                label: 'area',
-                                                value: 'area'
-                                              },
-                                              {
-                                                label: 'article',
-                                                value: 'article'
-                                              },
-                                              {
-                                                label: 'aside',
-                                                value: 'aside'
-                                              },
-                                              {
-                                                label: 'audio',
-                                                value: 'audio'
-                                              },
-                                              {
-                                                label: 'b',
-                                                value: 'b'
-                                              },
-                                              {
-                                                label: 'base',
-                                                value: 'base'
-                                              },
-                                              {
-                                                label: 'bdi',
-                                                value: 'bdi'
-                                              },
-                                              {
-                                                label: 'bdo',
-                                                value: 'bdo'
-                                              },
-                                              {
-                                                label: 'blockquote',
-                                                value: 'blockquote'
-                                              },
-                                              {
-                                                label: 'body',
-                                                value: 'body'
-                                              },
-                                              {
-                                                label: 'br',
-                                                value: 'br'
-                                              },
-                                              {
-                                                label: 'canvas',
-                                                value: 'canvas'
-                                              },
-                                              {
-                                                label: 'caption',
-                                                value: 'caption'
-                                              },
-                                              {
-                                                label: 'cite',
-                                                value: 'cite'
-                                              },
-                                              {
-                                                label: 'col',
-                                                value: 'col'
-                                              },
-                                              {
-                                                label: 'colgroup',
-                                                value: 'colgroup'
-                                              },
-                                              {
-                                                label: 'data',
-                                                value: 'data'
-                                              },
-                                              {
-                                                label: 'datalist',
-                                                value: 'datalist'
-                                              },
-                                              {
-                                                label: 'dd',
-                                                value: 'dd'
-                                              },
-                                              {
-                                                label: 'del',
-                                                value: 'del'
-                                              },
-                                              {
-                                                label: 'details',
-                                                value: 'details'
-                                              },
-                                              {
-                                                label: 'dfn',
-                                                value: 'dfn'
-                                              },
-                                              {
-                                                label: 'dialog',
-                                                value: 'dialog'
-                                              },
-                                              {
-                                                label: 'dl',
-                                                value: 'dl'
-                                              },
-                                              {
-                                                label: 'dt',
-                                                value: 'dt'
-                                              },
-                                              {
-                                                label: 'em',
-                                                value: 'em'
-                                              },
-                                              {
-                                                label: 'embed',
-                                                value: 'embed'
-                                              },
-                                              {
-                                                label: 'fieldset',
-                                                value: 'fieldset'
-                                              },
-                                              {
-                                                label: 'figcaption',
-                                                value: 'figcaption'
-                                              },
-                                              {
-                                                label: 'figure',
-                                                value: 'figure'
-                                              },
-                                              {
-                                                label: 'footer',
-                                                value: 'footer'
-                                              },
-                                              {
-                                                label: 'h6',
-                                                value: 'h6'
-                                              },
-                                              {
-                                                label: 'head',
-                                                value: 'head'
-                                              },
-                                              {
-                                                label: 'header',
-                                                value: 'header'
-                                              },
-                                              {
-                                                label: 'hgroup',
-                                                value: 'hgroup'
-                                              },
-                                              {
-                                                label: 'hr',
-                                                value: 'hr'
-                                              },
-                                              {
-                                                label: 'html',
-                                                value: 'html'
-                                              },
-                                              {
-                                                label: 'i',
-                                                value: 'i'
-                                              },
-                                              {
-                                                label: 'iframe',
-                                                value: 'iframe'
-                                              },
-                                              {
-                                                label: 'img',
-                                                value: 'img'
-                                              },
-                                              {
-                                                label: 'ins',
-                                                value: 'ins'
-                                              },
-                                              {
-                                                label: 'kbd',
-                                                value: 'kbd'
-                                              },
-                                              {
-                                                label: 'legend',
-                                                value: 'legend'
-                                              },
-                                              {
-                                                label: 'li',
-                                                value: 'li'
-                                              },
-                                              {
-                                                label: 'main',
-                                                value: 'main'
-                                              },
-                                              {
-                                                label: 'map',
-                                                value: 'map'
-                                              },
-                                              {
-                                                label: 'meta',
-                                                value: 'meta'
-                                              },
-                                              {
-                                                label: 'meter',
-                                                value: 'meter'
-                                              },
-                                              {
-                                                label: 'nav',
-                                                value: 'nav'
-                                              },
-                                              {
-                                                label: 'noscript',
-                                                value: 'noscript'
-                                              },
-                                              {
-                                                label: 'ol',
-                                                value: 'ol'
-                                              },
-                                              {
-                                                label: 'optgroup',
-                                                value: 'optgroup'
-                                              },
-                                              {
-                                                label: 'option',
-                                                value: 'option'
-                                              },
-                                              {
-                                                label: 'output',
-                                                value: 'output'
-                                              },
-                                              {
-                                                label: 'p',
-                                                value: 'p'
-                                              },
-                                              {
-                                                label: 'param',
-                                                value: 'param'
-                                              },
-                                              {
-                                                label: 'picture',
-                                                value: 'picture'
-                                              },
-                                              {
-                                                label: 'pre',
-                                                value: 'pre'
-                                              },
-                                              {
-                                                label: 'q',
-                                                value: 'q'
-                                              },
-                                              {
-                                                label: 'rp',
-                                                value: 'rp'
-                                              },
-                                              {
-                                                label: 'rt',
-                                                value: 'rt'
-                                              },
-                                              {
-                                                label: 'ruby',
-                                                value: 'ruby'
-                                              },
-                                              {
-                                                label: 's',
-                                                value: 's'
-                                              },
-                                              {
-                                                label: 'samp',
-                                                value: 'samp'
-                                              },
-                                              {
-                                                label: 'script',
-                                                value: 'script'
-                                              },
-                                              {
-                                                label: 'section',
-                                                value: 'section'
-                                              },
-                                              {
-                                                label: 'slot',
-                                                value: 'slot'
-                                              },
-                                              {
-                                                label: 'source',
-                                                value: 'source'
-                                              },
-                                              {
-                                                label: 'sub',
-                                                value: 'sub'
-                                              },
-                                              {
-                                                label: 'summary',
-                                                value: 'summary'
-                                              },
-                                              {
-                                                label: 'sup',
-                                                value: 'sup'
-                                              },
-                                              {
-                                                label: 'table',
-                                                value: 'table'
-                                              },
-                                              {
-                                                label: 'tbody',
-                                                value: 'tbody'
-                                              },
-                                              {
-                                                label: 'td',
-                                                value: 'td'
-                                              },
-                                              {
-                                                label: 'template',
-                                                value: 'template'
-                                              },
-                                              {
-                                                label: 'textarea',
-                                                value: 'textarea'
-                                              },
-                                              {
-                                                label: 'tfoot',
-                                                value: 'tfoot'
-                                              },
-                                              {
-                                                label: 'th',
-                                                value: 'th'
-                                              },
-                                              {
-                                                label: 'thead',
-                                                value: 'thead'
-                                              },
-                                              {
-                                                label: 'time',
-                                                value: 'time'
-                                              },
-                                              {
-                                                label: 'tr',
-                                                value: 'tr'
-                                              },
-                                              {
-                                                label: 'track',
-                                                value: 'track'
-                                              },
-                                              {
-                                                label: 'u',
-                                                value: 'u'
-                                              },
-                                              {
-                                                label: 'ul',
-                                                value: 'ul'
-                                              },
-                                              {
-                                                label: 'var',
-                                                value: 'var'
-                                              },
-                                              {
-                                                label: 'video',
-                                                value: 'video'
-                                              },
-                                              {
-                                                label: 'wbr',
-                                                value: 'wbr'
-                                              },
-                                              {
-                                                label: 'big',
-                                                value: 'big'
-                                              },
-                                              {
-                                                label: 'keygen',
-                                                value: 'keygen'
-                                              },
-                                              {
-                                                label: 'menuitem',
-                                                value: 'menuitem'
-                                              },
-                                              {
-                                                label: 'webview',
-                                                value: 'webview'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                },
-                                {
-                                  title: {
-                                    label: {
-                                      type: 'i18n',
-                                      'en-US': 'cell',
-                                      'zh-CN': 'cell'
-                                    }
-                                  },
-                                  name: 'cell',
-                                  setter: {
-                                    componentName: 'MixedSetter',
-                                    props: {
-                                      setters: [
-                                        {
-                                          componentName: 'ObjectSetter',
-                                          condition: () => false,
-                                          props: {
-                                            config: {
-                                              extraSetter: {
-                                                componentName: 'MixedSetter',
-                                                props: {}
-                                              }
-                                            }
-                                          }
-                                        },
-                                        {
-                                          componentName: 'SelectSetter',
-                                          props: {
-                                            dataSource: [
-                                              {
-                                                label: 'object',
-                                                value: 'object'
-                                              },
-                                              {
-                                                label: 'button',
-                                                value: 'button'
-                                              },
-                                              {
-                                                label: 'style',
-                                                value: 'style'
-                                              },
-                                              {
-                                                label: 'form',
-                                                value: 'form'
-                                              },
-                                              {
-                                                label: 'link',
-                                                value: 'link'
-                                              },
-                                              {
-                                                label: 'small',
-                                                value: 'small'
-                                              },
-                                              {
-                                                label: 'title',
-                                                value: 'title'
-                                              },
-                                              {
-                                                label: 'a',
-                                                value: 'a'
-                                              },
-                                              {
-                                                label: 'code',
-                                                value: 'code'
-                                              },
-                                              {
-                                                label: 'mark',
-                                                value: 'mark'
-                                              },
-                                              {
-                                                label: 'strong',
-                                                value: 'strong'
-                                              },
-                                              {
-                                                label: 'div',
-                                                value: 'div'
-                                              },
-                                              {
-                                                label: 'span',
-                                                value: 'span'
-                                              },
-                                              {
-                                                label: 'h1',
-                                                value: 'h1'
-                                              },
-                                              {
-                                                label: 'h2',
-                                                value: 'h2'
-                                              },
-                                              {
-                                                label: 'h3',
-                                                value: 'h3'
-                                              },
-                                              {
-                                                label: 'h4',
-                                                value: 'h4'
-                                              },
-                                              {
-                                                label: 'h5',
-                                                value: 'h5'
-                                              },
-                                              {
-                                                label: 'menu',
-                                                value: 'menu'
-                                              },
-                                              {
-                                                label: 'label',
-                                                value: 'label'
-                                              },
-                                              {
-                                                label: 'input',
-                                                value: 'input'
-                                              },
-                                              {
-                                                label: 'progress',
-                                                value: 'progress'
-                                              },
-                                              {
-                                                label: 'select',
-                                                value: 'select'
-                                              },
-                                              {
-                                                label: 'abbr',
-                                                value: 'abbr'
-                                              },
-                                              {
-                                                label: 'address',
-                                                value: 'address'
-                                              },
-                                              {
-                                                label: 'area',
-                                                value: 'area'
-                                              },
-                                              {
-                                                label: 'article',
-                                                value: 'article'
-                                              },
-                                              {
-                                                label: 'aside',
-                                                value: 'aside'
-                                              },
-                                              {
-                                                label: 'audio',
-                                                value: 'audio'
-                                              },
-                                              {
-                                                label: 'b',
-                                                value: 'b'
-                                              },
-                                              {
-                                                label: 'base',
-                                                value: 'base'
-                                              },
-                                              {
-                                                label: 'bdi',
-                                                value: 'bdi'
-                                              },
-                                              {
-                                                label: 'bdo',
-                                                value: 'bdo'
-                                              },
-                                              {
-                                                label: 'blockquote',
-                                                value: 'blockquote'
-                                              },
-                                              {
-                                                label: 'body',
-                                                value: 'body'
-                                              },
-                                              {
-                                                label: 'br',
-                                                value: 'br'
-                                              },
-                                              {
-                                                label: 'canvas',
-                                                value: 'canvas'
-                                              },
-                                              {
-                                                label: 'caption',
-                                                value: 'caption'
-                                              },
-                                              {
-                                                label: 'cite',
-                                                value: 'cite'
-                                              },
-                                              {
-                                                label: 'col',
-                                                value: 'col'
-                                              },
-                                              {
-                                                label: 'colgroup',
-                                                value: 'colgroup'
-                                              },
-                                              {
-                                                label: 'data',
-                                                value: 'data'
-                                              },
-                                              {
-                                                label: 'datalist',
-                                                value: 'datalist'
-                                              },
-                                              {
-                                                label: 'dd',
-                                                value: 'dd'
-                                              },
-                                              {
-                                                label: 'del',
-                                                value: 'del'
-                                              },
-                                              {
-                                                label: 'details',
-                                                value: 'details'
-                                              },
-                                              {
-                                                label: 'dfn',
-                                                value: 'dfn'
-                                              },
-                                              {
-                                                label: 'dialog',
-                                                value: 'dialog'
-                                              },
-                                              {
-                                                label: 'dl',
-                                                value: 'dl'
-                                              },
-                                              {
-                                                label: 'dt',
-                                                value: 'dt'
-                                              },
-                                              {
-                                                label: 'em',
-                                                value: 'em'
-                                              },
-                                              {
-                                                label: 'embed',
-                                                value: 'embed'
-                                              },
-                                              {
-                                                label: 'fieldset',
-                                                value: 'fieldset'
-                                              },
-                                              {
-                                                label: 'figcaption',
-                                                value: 'figcaption'
-                                              },
-                                              {
-                                                label: 'figure',
-                                                value: 'figure'
-                                              },
-                                              {
-                                                label: 'footer',
-                                                value: 'footer'
-                                              },
-                                              {
-                                                label: 'h6',
-                                                value: 'h6'
-                                              },
-                                              {
-                                                label: 'head',
-                                                value: 'head'
-                                              },
-                                              {
-                                                label: 'header',
-                                                value: 'header'
-                                              },
-                                              {
-                                                label: 'hgroup',
-                                                value: 'hgroup'
-                                              },
-                                              {
-                                                label: 'hr',
-                                                value: 'hr'
-                                              },
-                                              {
-                                                label: 'html',
-                                                value: 'html'
-                                              },
-                                              {
-                                                label: 'i',
-                                                value: 'i'
-                                              },
-                                              {
-                                                label: 'iframe',
-                                                value: 'iframe'
-                                              },
-                                              {
-                                                label: 'img',
-                                                value: 'img'
-                                              },
-                                              {
-                                                label: 'ins',
-                                                value: 'ins'
-                                              },
-                                              {
-                                                label: 'kbd',
-                                                value: 'kbd'
-                                              },
-                                              {
-                                                label: 'legend',
-                                                value: 'legend'
-                                              },
-                                              {
-                                                label: 'li',
-                                                value: 'li'
-                                              },
-                                              {
-                                                label: 'main',
-                                                value: 'main'
-                                              },
-                                              {
-                                                label: 'map',
-                                                value: 'map'
-                                              },
-                                              {
-                                                label: 'meta',
-                                                value: 'meta'
-                                              },
-                                              {
-                                                label: 'meter',
-                                                value: 'meter'
-                                              },
-                                              {
-                                                label: 'nav',
-                                                value: 'nav'
-                                              },
-                                              {
-                                                label: 'noscript',
-                                                value: 'noscript'
-                                              },
-                                              {
-                                                label: 'ol',
-                                                value: 'ol'
-                                              },
-                                              {
-                                                label: 'optgroup',
-                                                value: 'optgroup'
-                                              },
-                                              {
-                                                label: 'option',
-                                                value: 'option'
-                                              },
-                                              {
-                                                label: 'output',
-                                                value: 'output'
-                                              },
-                                              {
-                                                label: 'p',
-                                                value: 'p'
-                                              },
-                                              {
-                                                label: 'param',
-                                                value: 'param'
-                                              },
-                                              {
-                                                label: 'picture',
-                                                value: 'picture'
-                                              },
-                                              {
-                                                label: 'pre',
-                                                value: 'pre'
-                                              },
-                                              {
-                                                label: 'q',
-                                                value: 'q'
-                                              },
-                                              {
-                                                label: 'rp',
-                                                value: 'rp'
-                                              },
-                                              {
-                                                label: 'rt',
-                                                value: 'rt'
-                                              },
-                                              {
-                                                label: 'ruby',
-                                                value: 'ruby'
-                                              },
-                                              {
-                                                label: 's',
-                                                value: 's'
-                                              },
-                                              {
-                                                label: 'samp',
-                                                value: 'samp'
-                                              },
-                                              {
-                                                label: 'script',
-                                                value: 'script'
-                                              },
-                                              {
-                                                label: 'section',
-                                                value: 'section'
-                                              },
-                                              {
-                                                label: 'slot',
-                                                value: 'slot'
-                                              },
-                                              {
-                                                label: 'source',
-                                                value: 'source'
-                                              },
-                                              {
-                                                label: 'sub',
-                                                value: 'sub'
-                                              },
-                                              {
-                                                label: 'summary',
-                                                value: 'summary'
-                                              },
-                                              {
-                                                label: 'sup',
-                                                value: 'sup'
-                                              },
-                                              {
-                                                label: 'table',
-                                                value: 'table'
-                                              },
-                                              {
-                                                label: 'tbody',
-                                                value: 'tbody'
-                                              },
-                                              {
-                                                label: 'td',
-                                                value: 'td'
-                                              },
-                                              {
-                                                label: 'template',
-                                                value: 'template'
-                                              },
-                                              {
-                                                label: 'textarea',
-                                                value: 'textarea'
-                                              },
-                                              {
-                                                label: 'tfoot',
-                                                value: 'tfoot'
-                                              },
-                                              {
-                                                label: 'th',
-                                                value: 'th'
-                                              },
-                                              {
-                                                label: 'thead',
-                                                value: 'thead'
-                                              },
-                                              {
-                                                label: 'time',
-                                                value: 'time'
-                                              },
-                                              {
-                                                label: 'tr',
-                                                value: 'tr'
-                                              },
-                                              {
-                                                label: 'track',
-                                                value: 'track'
-                                              },
-                                              {
-                                                label: 'u',
-                                                value: 'u'
-                                              },
-                                              {
-                                                label: 'ul',
-                                                value: 'ul'
-                                              },
-                                              {
-                                                label: 'var',
-                                                value: 'var'
-                                              },
-                                              {
-                                                label: 'video',
-                                                value: 'video'
-                                              },
-                                              {
-                                                label: 'wbr',
-                                                value: 'wbr'
-                                              },
-                                              {
-                                                label: 'big',
-                                                value: 'big'
-                                              },
-                                              {
-                                                label: 'keygen',
-                                                value: 'keygen'
-                                              },
-                                              {
-                                                label: 'menuitem',
-                                                value: 'menuitem'
-                                              },
-                                              {
-                                                label: 'webview',
-                                                value: 'webview'
-                                              }
-                                            ],
-                                            options: [
-                                              {
-                                                label: 'object',
-                                                value: 'object'
-                                              },
-                                              {
-                                                label: 'button',
-                                                value: 'button'
-                                              },
-                                              {
-                                                label: 'style',
-                                                value: 'style'
-                                              },
-                                              {
-                                                label: 'form',
-                                                value: 'form'
-                                              },
-                                              {
-                                                label: 'link',
-                                                value: 'link'
-                                              },
-                                              {
-                                                label: 'small',
-                                                value: 'small'
-                                              },
-                                              {
-                                                label: 'title',
-                                                value: 'title'
-                                              },
-                                              {
-                                                label: 'a',
-                                                value: 'a'
-                                              },
-                                              {
-                                                label: 'code',
-                                                value: 'code'
-                                              },
-                                              {
-                                                label: 'mark',
-                                                value: 'mark'
-                                              },
-                                              {
-                                                label: 'strong',
-                                                value: 'strong'
-                                              },
-                                              {
-                                                label: 'div',
-                                                value: 'div'
-                                              },
-                                              {
-                                                label: 'span',
-                                                value: 'span'
-                                              },
-                                              {
-                                                label: 'h1',
-                                                value: 'h1'
-                                              },
-                                              {
-                                                label: 'h2',
-                                                value: 'h2'
-                                              },
-                                              {
-                                                label: 'h3',
-                                                value: 'h3'
-                                              },
-                                              {
-                                                label: 'h4',
-                                                value: 'h4'
-                                              },
-                                              {
-                                                label: 'h5',
-                                                value: 'h5'
-                                              },
-                                              {
-                                                label: 'menu',
-                                                value: 'menu'
-                                              },
-                                              {
-                                                label: 'label',
-                                                value: 'label'
-                                              },
-                                              {
-                                                label: 'input',
-                                                value: 'input'
-                                              },
-                                              {
-                                                label: 'progress',
-                                                value: 'progress'
-                                              },
-                                              {
-                                                label: 'select',
-                                                value: 'select'
-                                              },
-                                              {
-                                                label: 'abbr',
-                                                value: 'abbr'
-                                              },
-                                              {
-                                                label: 'address',
-                                                value: 'address'
-                                              },
-                                              {
-                                                label: 'area',
-                                                value: 'area'
-                                              },
-                                              {
-                                                label: 'article',
-                                                value: 'article'
-                                              },
-                                              {
-                                                label: 'aside',
-                                                value: 'aside'
-                                              },
-                                              {
-                                                label: 'audio',
-                                                value: 'audio'
-                                              },
-                                              {
-                                                label: 'b',
-                                                value: 'b'
-                                              },
-                                              {
-                                                label: 'base',
-                                                value: 'base'
-                                              },
-                                              {
-                                                label: 'bdi',
-                                                value: 'bdi'
-                                              },
-                                              {
-                                                label: 'bdo',
-                                                value: 'bdo'
-                                              },
-                                              {
-                                                label: 'blockquote',
-                                                value: 'blockquote'
-                                              },
-                                              {
-                                                label: 'body',
-                                                value: 'body'
-                                              },
-                                              {
-                                                label: 'br',
-                                                value: 'br'
-                                              },
-                                              {
-                                                label: 'canvas',
-                                                value: 'canvas'
-                                              },
-                                              {
-                                                label: 'caption',
-                                                value: 'caption'
-                                              },
-                                              {
-                                                label: 'cite',
-                                                value: 'cite'
-                                              },
-                                              {
-                                                label: 'col',
-                                                value: 'col'
-                                              },
-                                              {
-                                                label: 'colgroup',
-                                                value: 'colgroup'
-                                              },
-                                              {
-                                                label: 'data',
-                                                value: 'data'
-                                              },
-                                              {
-                                                label: 'datalist',
-                                                value: 'datalist'
-                                              },
-                                              {
-                                                label: 'dd',
-                                                value: 'dd'
-                                              },
-                                              {
-                                                label: 'del',
-                                                value: 'del'
-                                              },
-                                              {
-                                                label: 'details',
-                                                value: 'details'
-                                              },
-                                              {
-                                                label: 'dfn',
-                                                value: 'dfn'
-                                              },
-                                              {
-                                                label: 'dialog',
-                                                value: 'dialog'
-                                              },
-                                              {
-                                                label: 'dl',
-                                                value: 'dl'
-                                              },
-                                              {
-                                                label: 'dt',
-                                                value: 'dt'
-                                              },
-                                              {
-                                                label: 'em',
-                                                value: 'em'
-                                              },
-                                              {
-                                                label: 'embed',
-                                                value: 'embed'
-                                              },
-                                              {
-                                                label: 'fieldset',
-                                                value: 'fieldset'
-                                              },
-                                              {
-                                                label: 'figcaption',
-                                                value: 'figcaption'
-                                              },
-                                              {
-                                                label: 'figure',
-                                                value: 'figure'
-                                              },
-                                              {
-                                                label: 'footer',
-                                                value: 'footer'
-                                              },
-                                              {
-                                                label: 'h6',
-                                                value: 'h6'
-                                              },
-                                              {
-                                                label: 'head',
-                                                value: 'head'
-                                              },
-                                              {
-                                                label: 'header',
-                                                value: 'header'
-                                              },
-                                              {
-                                                label: 'hgroup',
-                                                value: 'hgroup'
-                                              },
-                                              {
-                                                label: 'hr',
-                                                value: 'hr'
-                                              },
-                                              {
-                                                label: 'html',
-                                                value: 'html'
-                                              },
-                                              {
-                                                label: 'i',
-                                                value: 'i'
-                                              },
-                                              {
-                                                label: 'iframe',
-                                                value: 'iframe'
-                                              },
-                                              {
-                                                label: 'img',
-                                                value: 'img'
-                                              },
-                                              {
-                                                label: 'ins',
-                                                value: 'ins'
-                                              },
-                                              {
-                                                label: 'kbd',
-                                                value: 'kbd'
-                                              },
-                                              {
-                                                label: 'legend',
-                                                value: 'legend'
-                                              },
-                                              {
-                                                label: 'li',
-                                                value: 'li'
-                                              },
-                                              {
-                                                label: 'main',
-                                                value: 'main'
-                                              },
-                                              {
-                                                label: 'map',
-                                                value: 'map'
-                                              },
-                                              {
-                                                label: 'meta',
-                                                value: 'meta'
-                                              },
-                                              {
-                                                label: 'meter',
-                                                value: 'meter'
-                                              },
-                                              {
-                                                label: 'nav',
-                                                value: 'nav'
-                                              },
-                                              {
-                                                label: 'noscript',
-                                                value: 'noscript'
-                                              },
-                                              {
-                                                label: 'ol',
-                                                value: 'ol'
-                                              },
-                                              {
-                                                label: 'optgroup',
-                                                value: 'optgroup'
-                                              },
-                                              {
-                                                label: 'option',
-                                                value: 'option'
-                                              },
-                                              {
-                                                label: 'output',
-                                                value: 'output'
-                                              },
-                                              {
-                                                label: 'p',
-                                                value: 'p'
-                                              },
-                                              {
-                                                label: 'param',
-                                                value: 'param'
-                                              },
-                                              {
-                                                label: 'picture',
-                                                value: 'picture'
-                                              },
-                                              {
-                                                label: 'pre',
-                                                value: 'pre'
-                                              },
-                                              {
-                                                label: 'q',
-                                                value: 'q'
-                                              },
-                                              {
-                                                label: 'rp',
-                                                value: 'rp'
-                                              },
-                                              {
-                                                label: 'rt',
-                                                value: 'rt'
-                                              },
-                                              {
-                                                label: 'ruby',
-                                                value: 'ruby'
-                                              },
-                                              {
-                                                label: 's',
-                                                value: 's'
-                                              },
-                                              {
-                                                label: 'samp',
-                                                value: 'samp'
-                                              },
-                                              {
-                                                label: 'script',
-                                                value: 'script'
-                                              },
-                                              {
-                                                label: 'section',
-                                                value: 'section'
-                                              },
-                                              {
-                                                label: 'slot',
-                                                value: 'slot'
-                                              },
-                                              {
-                                                label: 'source',
-                                                value: 'source'
-                                              },
-                                              {
-                                                label: 'sub',
-                                                value: 'sub'
-                                              },
-                                              {
-                                                label: 'summary',
-                                                value: 'summary'
-                                              },
-                                              {
-                                                label: 'sup',
-                                                value: 'sup'
-                                              },
-                                              {
-                                                label: 'table',
-                                                value: 'table'
-                                              },
-                                              {
-                                                label: 'tbody',
-                                                value: 'tbody'
-                                              },
-                                              {
-                                                label: 'td',
-                                                value: 'td'
-                                              },
-                                              {
-                                                label: 'template',
-                                                value: 'template'
-                                              },
-                                              {
-                                                label: 'textarea',
-                                                value: 'textarea'
-                                              },
-                                              {
-                                                label: 'tfoot',
-                                                value: 'tfoot'
-                                              },
-                                              {
-                                                label: 'th',
-                                                value: 'th'
-                                              },
-                                              {
-                                                label: 'thead',
-                                                value: 'thead'
-                                              },
-                                              {
-                                                label: 'time',
-                                                value: 'time'
-                                              },
-                                              {
-                                                label: 'tr',
-                                                value: 'tr'
-                                              },
-                                              {
-                                                label: 'track',
-                                                value: 'track'
-                                              },
-                                              {
-                                                label: 'u',
-                                                value: 'u'
-                                              },
-                                              {
-                                                label: 'ul',
-                                                value: 'ul'
-                                              },
-                                              {
-                                                label: 'var',
-                                                value: 'var'
-                                              },
-                                              {
-                                                label: 'video',
-                                                value: 'video'
-                                              },
-                                              {
-                                                label: 'wbr',
-                                                value: 'wbr'
-                                              },
-                                              {
-                                                label: 'big',
-                                                value: 'big'
-                                              },
-                                              {
-                                                label: 'keygen',
-                                                value: 'keygen'
-                                              },
-                                              {
-                                                label: 'menuitem',
-                                                value: 'menuitem'
-                                              },
-                                              {
-                                                label: 'webview',
-                                                value: 'webview'
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              ]
-            }
-          }
-        }
+        description: '@todo 待完善自定义元素',
+        name: 'components'
       },
       {
         title: {
@@ -8587,37 +882,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
             'zh-CN': 'dataSource'
           }
         },
-        name: 'dataSource',
-        setter: {
-          componentName: 'ArraySetter',
-          condition: () => false,
-          props: {
-            itemSetter: {
-              componentName: 'ObjectSetter',
-              condition: () => false,
-              props: {
-                config: {
-                  extraSetter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'dropdownPrefixCls',
-            'zh-CN': 'dropdownPrefixCls'
-          }
-        },
-        name: 'dropdownPrefixCls',
-        setter: 'StringSetter'
+        name: 'dataSource'
       },
       {
         title: {
@@ -8626,6 +891,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
             'en-US': 'expandable',
             'zh-CN': 'expandable'
           }
+        },
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         },
         name: 'expandable',
         setter: {
@@ -8638,70 +907,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'RecordType',
-                      'zh-CN': 'RecordType'
+                      'en-US': 'childrenColumnName',
+                      'zh-CN': 'childrenColumnName'
                     }
                   },
-                  name: 'RecordType',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'expandedRowKeys',
-                      'zh-CN': 'expandedRowKeys'
-                    }
-                  },
-                  name: 'expandedRowKeys',
-                  setter: {
-                    componentName: 'ArraySetter',
-                    condition: () => false,
-                    props: {
-                      itemSetter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: ['StringSetter', 'NumberSetter']
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'defaultExpandedRowKeys',
-                      'zh-CN': 'defaultExpandedRowKeys'
-                    }
-                  },
-                  name: 'defaultExpandedRowKeys',
-                  setter: {
-                    componentName: 'ArraySetter',
-                    condition: () => false,
-                    props: {
-                      itemSetter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: ['StringSetter', 'NumberSetter']
-                        }
-                      }
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'expandedRowRender',
-                      'zh-CN': 'expandedRowRender'
-                    }
-                  },
-                  name: 'expandedRowRender',
-                  setter: 'FunctionSetter'
+                  name: 'childrenColumnName',
+                  setter: 'StringSetter'
                 },
                 {
                   title: {
@@ -8718,12 +929,88 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'expandRowByClick',
-                      'zh-CN': 'expandRowByClick'
+                      'en-US': 'columnWidth',
+                      'zh-CN': 'columnWidth'
                     }
                   },
-                  name: 'expandRowByClick',
+                  name: 'columnWidth',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'NumberSetter']
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'defaultExpandAllRows',
+                      'zh-CN': 'defaultExpandAllRows'
+                    }
+                  },
+                  name: 'defaultExpandAllRows',
                   setter: 'BoolSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'defaultExpandedRowKeys',
+                      'zh-CN': 'defaultExpandedRowKeys'
+                    }
+                  },
+                  name: 'defaultExpandedRowKeys',
+                  setter: {
+                    componentName: 'ArraySetter',
+                    props: {
+                      itemSetter: 'StringSetter'
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'expandedRowClassName',
+                      'zh-CN': 'expandedRowClassName'
+                    }
+                  },
+                  name: 'expandedRowClassName',
+                  setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'expandedRowKeys',
+                      'zh-CN': 'expandedRowKeys'
+                    }
+                  },
+                  name: 'expandedRowKeys',
+                  setter: {
+                    componentName: 'ArraySetter',
+                    props: {
+                      itemSetter: 'StringSetter'
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'expandedRowRender',
+                      'zh-CN': 'expandedRowRender'
+                    }
+                  },
+                  name: 'expandedRowRender',
+                  setter: {
+                    componentName: 'SlotSetter',
+                    initialValue: {
+                      type: 'JSSlot',
+                      params: ['record', 'index', 'indent', 'expanded']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -8735,6 +1022,71 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   },
                   name: 'expandIcon',
                   setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'expandRowByClick',
+                      'zh-CN': 'expandRowByClick'
+                    }
+                  },
+                  name: 'expandRowByClick',
+                  setter: 'BoolSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'fixed',
+                      'zh-CN': 'fixed'
+                    }
+                  },
+                  name: 'fixed',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: [
+                        'BoolSetter',
+                        {
+                          componentName: 'RadioGroupSetter',
+                          props: {
+                            dataSource: [
+                              {
+                                label: 'left',
+                                value: 'left'
+                              },
+                              {
+                                label: 'right',
+                                value: 'right'
+                              }
+                            ],
+                            options: [
+                              {
+                                label: 'left',
+                                value: 'left'
+                              },
+                              {
+                                label: 'right',
+                                value: 'right'
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'indentSize',
+                      'zh-CN': 'indentSize'
+                    }
+                  },
+                  name: 'indentSize',
+                  setter: 'NumberSetter'
                 },
                 {
                   title: {
@@ -8762,72 +1114,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'defaultExpandAllRows',
-                      'zh-CN': 'defaultExpandAllRows'
-                    }
-                  },
-                  name: 'defaultExpandAllRows',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'indentSize',
-                      'zh-CN': 'indentSize'
-                    }
-                  },
-                  name: 'indentSize',
-                  setter: 'NumberSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'expandIconColumnIndex',
-                      'zh-CN': 'expandIconColumnIndex'
-                    }
-                  },
-                  name: 'expandIconColumnIndex',
-                  setter: 'NumberSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'showExpandColumn',
-                      'zh-CN': 'showExpandColumn'
-                    }
-                  },
-                  name: 'showExpandColumn',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'expandedRowClassName',
-                      'zh-CN': 'expandedRowClassName'
-                    }
-                  },
-                  name: 'expandedRowClassName',
-                  setter: 'FunctionSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'childrenColumnName',
-                      'zh-CN': 'childrenColumnName'
-                    }
-                  },
-                  name: 'childrenColumnName',
-                  setter: 'StringSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
                       'en-US': 'rowExpandable',
                       'zh-CN': 'rowExpandable'
                     }
@@ -8839,61 +1125,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'columnWidth',
-                      'zh-CN': 'columnWidth'
+                      'en-US': 'showExpandColumn',
+                      'zh-CN': 'showExpandColumn'
                     }
                   },
-                  name: 'columnWidth',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: ['StringSetter', 'NumberSetter']
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'fixed',
-                      'zh-CN': 'fixed'
-                    }
-                  },
-                  name: 'fixed',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: [
-                        'BoolSetter',
-                        {
-                          componentName: 'RadioGroupSetter',
-                          condition: () => false,
-                          props: {
-                            dataSource: [
-                              {
-                                label: 'left',
-                                value: 'left'
-                              },
-                              {
-                                label: 'right',
-                                value: 'right'
-                              }
-                            ],
-                            options: [
-                              {
-                                label: 'left',
-                                value: 'left'
-                              },
-                              {
-                                label: 'right',
-                                value: 'right'
-                              }
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  }
+                  name: 'showExpandColumn',
+                  setter: 'BoolSetter'
                 }
               ]
             }
@@ -8909,18 +1146,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'footer',
-        setter: 'FunctionSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'getContainerWidth',
-            'zh-CN': 'getContainerWidth'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['currentPageData']
           }
-        },
-        name: 'getContainerWidth',
-        setter: 'FunctionSetter'
+        }
       },
       {
         title: {
@@ -8937,22 +1169,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'indentSize',
-            'zh-CN': 'indentSize'
-          }
-        },
-        name: 'indentSize',
-        setter: 'NumberSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'loading',
             'zh-CN': 'loading'
           }
         },
         name: 'loading',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'MixedSetter',
           props: {
@@ -8963,173 +1188,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
                 condition: () => false,
                 props: {
                   config: {
-                    items: [
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'prefixCls',
-                            'zh-CN': 'prefixCls'
-                          }
-                        },
-                        name: 'prefixCls',
-                        setter: 'StringSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'className',
-                            'zh-CN': 'className'
-                          }
-                        },
-                        name: 'className',
-                        setter: 'StringSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'spinning',
-                            'zh-CN': 'spinning'
-                          }
-                        },
-                        name: 'spinning',
-                        setter: 'BoolSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'style',
-                            'zh-CN': 'style'
-                          }
-                        },
-                        name: 'style',
-                        setter: {
-                          componentName: 'ObjectSetter',
-                          condition: () => false,
-                          props: {
-                            config: {
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'size',
-                            'zh-CN': 'size'
-                          }
-                        },
-                        name: 'size',
-                        setter: {
-                          componentName: 'RadioGroupSetter',
-                          condition: () => false,
-                          props: {
-                            dataSource: [
-                              {
-                                label: 'default',
-                                value: 'default'
-                              },
-                              {
-                                label: 'small',
-                                value: 'small'
-                              },
-                              {
-                                label: 'large',
-                                value: 'large'
-                              }
-                            ],
-                            options: [
-                              {
-                                label: 'default',
-                                value: 'default'
-                              },
-                              {
-                                label: 'small',
-                                value: 'small'
-                              },
-                              {
-                                label: 'large',
-                                value: 'large'
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'tip',
-                            'zh-CN': 'tip'
-                          }
-                        },
-                        name: 'tip',
-                        setter: 'SlotSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'delay',
-                            'zh-CN': 'delay'
-                          }
-                        },
-                        name: 'delay',
-                        setter: 'NumberSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'wrapperClassName',
-                            'zh-CN': 'wrapperClassName'
-                          }
-                        },
-                        name: 'wrapperClassName',
-                        setter: 'StringSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'indicator',
-                            'zh-CN': 'indicator'
-                          }
-                        },
-                        name: 'indicator',
-                        setter: {
-                          componentName: 'ObjectSetter',
-                          condition: () => false,
-                          props: {
-                            config: {
-                              extraSetter: {
-                                componentName: 'MixedSetter',
-                                props: {}
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'children',
-                            'zh-CN': 'children'
-                          }
-                        },
-                        name: 'children',
-                        setter: 'SlotSetter'
-                      }
-                    ]
+                    items: SpinMeta.configure!['props']
                   }
                 }
               }
@@ -9146,6 +1205,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'locale',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'ObjectSetter',
           condition: () => false,
@@ -9370,11 +1433,48 @@ const TableMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
+            'en-US': 'onChange',
+            'zh-CN': 'onChange'
+          }
+        },
+        name: 'onChange',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onHeaderRow',
+            'zh-CN': 'onHeaderRow'
+          }
+        },
+        name: 'onHeaderRow',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'onRow',
+            'zh-CN': 'onRow'
+          }
+        },
+        name: 'onRow',
+        setter: 'FunctionSetter'
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
             'en-US': 'pagination',
             'zh-CN': 'pagination'
           }
         },
         name: 'pagination',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'MixedSetter',
           props: {
@@ -9493,12 +1593,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'rowClassName',
-        setter: {
-          componentName: 'MixedSetter',
-          props: {
-            setters: ['StringSetter', 'FunctionSetter']
-          }
-        }
+        setter: 'FunctionSetter'
       },
       {
         title: {
@@ -9512,15 +1607,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
         setter: {
           componentName: 'MixedSetter',
           props: {
-            setters: [
-              'StringSetter',
-              'NumberSetter',
-              {
-                componentName: 'MixedSetter',
-                props: {}
-              },
-              'FunctionSetter'
-            ]
+            setters: ['StringSetter', 'FunctionSetter']
           }
         }
       },
@@ -9533,6 +1620,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'rowSelection',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'ObjectSetter',
           condition: () => false,
@@ -9543,60 +1634,27 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'T',
-                      'zh-CN': 'T'
+                      'en-US': 'checkStrictly',
+                      'zh-CN': 'checkStrictly'
                     }
                   },
-                  name: 'T',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {}
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'preserveSelectedRowKeys',
-                      'zh-CN': 'preserveSelectedRowKeys'
-                    }
-                  },
-                  name: 'preserveSelectedRowKeys',
+                  name: 'checkStrictly',
                   setter: 'BoolSetter'
                 },
                 {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'type',
-                      'zh-CN': 'type'
+                      'en-US': 'columnTitle',
+                      'zh-CN': 'columnTitle'
                     }
                   },
-                  name: 'type',
+                  name: 'columnTitle',
                   setter: {
-                    componentName: 'RadioGroupSetter',
-                    condition: () => false,
-                    props: {
-                      dataSource: [
-                        {
-                          label: 'checkbox',
-                          value: 'checkbox'
-                        },
-                        {
-                          label: 'radio',
-                          value: 'radio'
-                        }
-                      ],
-                      options: [
-                        {
-                          label: 'checkbox',
-                          value: 'checkbox'
-                        },
-                        {
-                          label: 'radio',
-                          value: 'radio'
-                        }
-                      ]
+                    componentName: 'SlotSetter',
+                    initialValue: {
+                      type: 'JSSlot',
+                      params: ['originalNode']
                     }
                   }
                 },
@@ -9604,21 +1662,15 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'selectedRowKeys',
-                      'zh-CN': 'selectedRowKeys'
+                      'en-US': 'columnWidth',
+                      'zh-CN': 'columnWidth'
                     }
                   },
-                  name: 'selectedRowKeys',
+                  name: 'columnWidth',
                   setter: {
-                    componentName: 'ArraySetter',
-                    condition: () => false,
+                    componentName: 'MixedSetter',
                     props: {
-                      itemSetter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: ['StringSetter', 'NumberSetter']
-                        }
-                      }
+                      setters: ['StringSetter', 'NumberSetter']
                     }
                   }
                 },
@@ -9633,14 +1685,8 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   name: 'defaultSelectedRowKeys',
                   setter: {
                     componentName: 'ArraySetter',
-                    condition: () => false,
                     props: {
-                      itemSetter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: ['StringSetter', 'NumberSetter']
-                        }
-                      }
+                      itemSetter: 'StringSetter'
                     }
                   }
                 },
@@ -9648,12 +1694,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'onChange',
-                      'zh-CN': 'onChange'
+                      'en-US': 'fixed',
+                      'zh-CN': 'fixed'
                     }
                   },
-                  name: 'onChange',
-                  setter: 'FunctionSetter'
+                  name: 'fixed',
+                  setter: 'BoolSetter'
                 },
                 {
                   title: {
@@ -9670,22 +1716,44 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'onSelect',
-                      'zh-CN': 'onSelect'
+                      'en-US': 'hideSelectAll',
+                      'zh-CN': 'hideSelectAll'
                     }
                   },
-                  name: 'onSelect',
+                  name: 'hideSelectAll',
+                  setter: 'BoolSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'onCell',
+                      'zh-CN': 'onCell'
+                    }
+                  },
+                  name: 'onCell',
                   setter: 'FunctionSetter'
                 },
                 {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'onSelectMultiple',
-                      'zh-CN': 'onSelectMultiple'
+                      'en-US': 'onChange',
+                      'zh-CN': 'onChange'
                     }
                   },
-                  name: 'onSelectMultiple',
+                  name: 'onChange',
+                  setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'onSelect',
+                      'zh-CN': 'onSelect'
+                    }
+                  },
+                  name: 'onSelect',
                   setter: 'FunctionSetter'
                 },
                 {
@@ -9714,12 +1782,67 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
+                      'en-US': 'onSelectMultiple',
+                      'zh-CN': 'onSelectMultiple'
+                    }
+                  },
+                  name: 'onSelectMultiple',
+                  setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
                       'en-US': 'onSelectNone',
                       'zh-CN': 'onSelectNone'
                     }
                   },
                   name: 'onSelectNone',
                   setter: 'FunctionSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'preserveSelectedRowKeys',
+                      'zh-CN': 'preserveSelectedRowKeys'
+                    }
+                  },
+                  name: 'preserveSelectedRowKeys',
+                  setter: 'BoolSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'renderCell',
+                      'zh-CN': 'renderCell'
+                    }
+                  },
+                  name: 'renderCell',
+                  setter: {
+                    componentName: 'SlotSetter',
+                    initialValue: {
+                      type: 'JSSlot',
+                      params: ['checked', 'record', 'index', 'originNode']
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'selectedRowKeys',
+                      'zh-CN': 'selectedRowKeys'
+                    }
+                  },
+                  name: 'selectedRowKeys',
+                  setter: {
+                    componentName: 'ArraySetter',
+                    props: {
+                      itemSetter: 'StringSetter'
+                    }
+                  }
                 },
                 {
                   title: {
@@ -9737,90 +1860,47 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         'BoolSetter',
                         {
                           componentName: 'ArraySetter',
-                          condition: () => false,
                           props: {
                             itemSetter: {
-                              componentName: 'MixedSetter',
+                              componentName: 'ObjectSetter',
                               props: {
-                                setters: [
-                                  {
-                                    componentName: 'ObjectSetter',
-                                    condition: () => false,
-                                    props: {
-                                      config: {
-                                        items: [
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'key',
-                                                'zh-CN': 'key'
-                                              }
-                                            },
-                                            name: 'key',
-                                            setter: 'StringSetter'
-                                          },
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'text',
-                                                'zh-CN': 'text'
-                                              }
-                                            },
-                                            name: 'text',
-                                            setter: 'SlotSetter'
-                                          },
-                                          {
-                                            title: {
-                                              label: {
-                                                type: 'i18n',
-                                                'en-US': 'onSelect',
-                                                'zh-CN': 'onSelect'
-                                              }
-                                            },
-                                            name: 'onSelect',
-                                            setter: 'FunctionSetter'
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  },
-                                  {
-                                    componentName: 'RadioGroupSetter',
-                                    condition: () => false,
-                                    props: {
-                                      dataSource: [
-                                        {
-                                          label: 'SELECT_ALL',
-                                          value: 'SELECT_ALL'
-                                        },
-                                        {
-                                          label: 'SELECT_INVERT',
-                                          value: 'SELECT_INVERT'
-                                        },
-                                        {
-                                          label: 'SELECT_NONE',
-                                          value: 'SELECT_NONE'
+                                config: {
+                                  items: [
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'key',
+                                          'zh-CN': 'key'
                                         }
-                                      ],
-                                      options: [
-                                        {
-                                          label: 'SELECT_ALL',
-                                          value: 'SELECT_ALL'
-                                        },
-                                        {
-                                          label: 'SELECT_INVERT',
-                                          value: 'SELECT_INVERT'
-                                        },
-                                        {
-                                          label: 'SELECT_NONE',
-                                          value: 'SELECT_NONE'
+                                      },
+                                      name: 'key',
+                                      setter: 'StringSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'onSelect',
+                                          'zh-CN': 'onSelect'
                                         }
-                                      ]
+                                      },
+                                      name: 'onSelect',
+                                      setter: 'FunctionSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'text',
+                                          'zh-CN': 'text'
+                                        }
+                                      },
+                                      name: 'text',
+                                      setter: 'SlotSetter'
                                     }
-                                  }
-                                ]
+                                  ]
+                                }
                               }
                             }
                           }
@@ -9833,116 +1913,36 @@ const TableMeta: IPublicTypeComponentMetadata = {
                   title: {
                     label: {
                       type: 'i18n',
-                      'en-US': 'hideSelectAll',
-                      'zh-CN': 'hideSelectAll'
+                      'en-US': 'type',
+                      'zh-CN': 'type'
                     }
                   },
-                  name: 'hideSelectAll',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'fixed',
-                      'zh-CN': 'fixed'
-                    }
-                  },
-                  name: 'fixed',
+                  name: 'type',
                   setter: {
-                    componentName: 'MixedSetter',
+                    componentName: 'RadioGroupSetter',
                     props: {
-                      setters: [
-                        'BoolSetter',
+                      dataSource: [
                         {
-                          componentName: 'RadioGroupSetter',
-                          condition: () => false,
-                          props: {
-                            dataSource: [
-                              {
-                                label: 'left',
-                                value: 'left'
-                              },
-                              {
-                                label: 'right',
-                                value: 'right'
-                              }
-                            ],
-                            options: [
-                              {
-                                label: 'left',
-                                value: 'left'
-                              },
-                              {
-                                label: 'right',
-                                value: 'right'
-                              }
-                            ]
-                          }
+                          label: 'checkbox',
+                          value: 'checkbox'
+                        },
+                        {
+                          label: 'radio',
+                          value: 'radio'
+                        }
+                      ],
+                      options: [
+                        {
+                          label: 'checkbox',
+                          value: 'checkbox'
+                        },
+                        {
+                          label: 'radio',
+                          value: 'radio'
                         }
                       ]
                     }
                   }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'columnWidth',
-                      'zh-CN': 'columnWidth'
-                    }
-                  },
-                  name: 'columnWidth',
-                  setter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: ['StringSetter', 'NumberSetter']
-                    }
-                  }
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'columnTitle',
-                      'zh-CN': 'columnTitle'
-                    }
-                  },
-                  name: 'columnTitle',
-                  setter: 'SlotSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'checkStrictly',
-                      'zh-CN': 'checkStrictly'
-                    }
-                  },
-                  name: 'checkStrictly',
-                  setter: 'BoolSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'renderCell',
-                      'zh-CN': 'renderCell'
-                    }
-                  },
-                  name: 'renderCell',
-                  setter: 'FunctionSetter'
-                },
-                {
-                  title: {
-                    label: {
-                      type: 'i18n',
-                      'en-US': 'onCell',
-                      'zh-CN': 'onCell'
-                    }
-                  },
-                  name: 'onCell',
-                  setter: 'FunctionSetter'
                 }
               ]
             }
@@ -9958,15 +1958,60 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'scroll',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'ObjectSetter',
           condition: () => false,
           props: {
             config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
+              items: [
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'scrollToFirstRowOnChange',
+                      'zh-CN': 'scrollToFirstRowOnChange'
+                    }
+                  },
+                  name: 'scrollToFirstRowOnChange',
+                  setter: 'BoolSetter'
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'x',
+                      'zh-CN': 'x'
+                    }
+                  },
+                  name: 'x',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['BoolSetter', 'StringSetter', 'NumberSetter']
+                    }
+                  }
+                },
+                {
+                  title: {
+                    label: {
+                      type: 'i18n',
+                      'en-US': 'y',
+                      'zh-CN': 'y'
+                    }
+                  },
+                  name: 'y',
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'NumberSetter']
+                    }
+                  }
+                }
+              ]
             }
           }
         }
@@ -9991,6 +2036,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'showSorterTooltip',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
+        },
         setter: {
           componentName: 'MixedSetter',
           props: {
@@ -9998,153 +2047,9 @@ const TableMeta: IPublicTypeComponentMetadata = {
               'BoolSetter',
               {
                 componentName: 'ObjectSetter',
-                condition: () => false,
                 props: {
                   config: {
-                    items: [
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'title',
-                            'zh-CN': 'title'
-                          }
-                        },
-                        name: 'title',
-                        setter: {
-                          componentName: 'MixedSetter',
-                          props: {
-                            setters: [
-                              'StringSetter',
-                              'NumberSetter',
-                              'BoolSetter',
-                              {
-                                componentName: 'ObjectSetter',
-                                condition: () => false,
-                                props: {
-                                  config: {
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                }
-                              },
-                              'FunctionSetter'
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'overlay',
-                            'zh-CN': 'overlay'
-                          }
-                        },
-                        name: 'overlay',
-                        setter: {
-                          componentName: 'MixedSetter',
-                          props: {
-                            setters: [
-                              'StringSetter',
-                              'NumberSetter',
-                              'BoolSetter',
-                              {
-                                componentName: 'ObjectSetter',
-                                condition: () => false,
-                                props: {
-                                  config: {
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                }
-                              },
-                              'FunctionSetter'
-                            ]
-                          }
-                        }
-                      }
-                    ]
-                  }
-                }
-              },
-              {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    items: [
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'title',
-                            'zh-CN': 'title'
-                          }
-                        },
-                        name: 'title',
-                        setter: {
-                          componentName: 'MixedSetter',
-                          props: {
-                            setters: [
-                              'StringSetter',
-                              'NumberSetter',
-                              'BoolSetter',
-                              {
-                                componentName: 'ObjectSetter',
-                                condition: () => false,
-                                props: {
-                                  config: {
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                }
-                              },
-                              'FunctionSetter'
-                            ]
-                          }
-                        }
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'overlay',
-                            'zh-CN': 'overlay'
-                          }
-                        },
-                        name: 'overlay',
-                        setter: {
-                          componentName: 'MixedSetter',
-                          props: {
-                            setters: [
-                              'StringSetter',
-                              'NumberSetter',
-                              'BoolSetter',
-                              {
-                                componentName: 'ObjectSetter',
-                                condition: () => false,
-                                props: {
-                                  config: {
-                                    extraSetter: {
-                                      componentName: 'MixedSetter',
-                                      props: {}
-                                    }
-                                  }
-                                }
-                              },
-                              'FunctionSetter'
-                            ]
-                          }
-                        }
-                      }
-                    ]
+                    items: TooltipMeta.configure!['props']
                   }
                 }
               }
@@ -10273,34 +2178,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         title: {
                           label: {
                             type: 'i18n',
-                            'en-US': 'offsetSummary',
-                            'zh-CN': 'offsetSummary'
-                          }
-                        },
-                        name: 'offsetSummary',
-                        setter: 'NumberSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
                             'en-US': 'offsetScroll',
                             'zh-CN': 'offsetScroll'
                           }
                         },
                         name: 'offsetScroll',
                         setter: 'NumberSetter'
-                      },
-                      {
-                        title: {
-                          label: {
-                            type: 'i18n',
-                            'en-US': 'getContainer',
-                            'zh-CN': 'getContainer'
-                          }
-                        },
-                        name: 'getContainer',
-                        setter: 'FunctionSetter'
                       }
                     ]
                   }
@@ -10319,7 +2202,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'summary',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['currentData']
+          }
+        }
       },
       {
         title: {
@@ -10361,23 +2250,18 @@ const TableMeta: IPublicTypeComponentMetadata = {
         title: {
           label: {
             type: 'i18n',
-            'en-US': 'tailor',
-            'zh-CN': 'tailor'
-          }
-        },
-        name: 'tailor',
-        setter: 'BoolSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
             'en-US': 'title',
             'zh-CN': 'title'
           }
         },
         name: 'title',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['currentPageData']
+          }
+        }
       },
       {
         title: {
@@ -10393,21 +2277,7 @@ const TableMeta: IPublicTypeComponentMetadata = {
     ],
     supports: {
       className: true,
-      style: true,
-      events: [
-        {
-          name: 'onChange'
-        },
-        {
-          name: 'onExpand'
-        },
-        {
-          name: 'onRow'
-        },
-        {
-          name: 'onHeaderRow'
-        }
-      ]
+      style: true
     },
     component: {
       isContainer: true

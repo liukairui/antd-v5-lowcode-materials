@@ -164,9 +164,7 @@ export { DatePicker, DateRangePicker };
 import _Form, { FormInstance } from 'antd/es/form';
 class Form extends Component<CP<typeof _Form>> {
   ref = createRef<FormInstance>();
-  render() {
-    return <_Form ref={this.ref} {...this.props} />;
-  }
+  render = () => <_Form ref={this.ref} {...this.props} />;
 }
 const FormErrorList: FC<CP<typeof _Form.ErrorList>> = (props) => <_Form.ErrorList {...props} />;
 const FormItem: FC<CP<typeof _Form.Item>> = (props) => <_Form.Item {...props} />;
@@ -382,8 +380,12 @@ export { Statistic, StatisticCountdown };
 /**
  * Table 表格
  */
-import _Table from 'antd/es/table';
-const Table: FC<CP<typeof _Table>> = (props) => <_Table {...props} />;
+import _Table, { TableRef } from 'antd/es/table';
+class Table extends Component<CP<typeof _Table>> {
+  ref = createRef<TableRef>();
+  render = () => <_Table ref={this.ref} {...this.props} />;
+}
+
 export { Table };
 
 /**
