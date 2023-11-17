@@ -26,7 +26,12 @@ const AlertMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'action',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -48,7 +53,12 @@ const AlertMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'closeIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -59,7 +69,12 @@ const AlertMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'description',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -70,7 +85,12 @@ const AlertMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'icon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -81,7 +101,12 @@ const AlertMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'message',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

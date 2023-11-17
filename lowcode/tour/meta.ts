@@ -131,7 +131,12 @@ const TourMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'closeIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -605,7 +610,12 @@ const TourMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'cover',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {
@@ -631,7 +641,12 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'children',
-                                setter: 'SlotSetter'
+                                setter: {
+                                  componentName: 'MixedSetter',
+                                  props: {
+                                    setters: ['StringSetter', 'SlotSetter']
+                                  }
+                                }
                               },
                               {
                                 title: {
@@ -706,7 +721,12 @@ const TourMeta: IPublicTypeComponentMetadata = {
                                   }
                                 },
                                 name: 'children',
-                                setter: 'SlotSetter'
+                                setter: {
+                                  componentName: 'MixedSetter',
+                                  props: {
+                                    setters: ['StringSetter', 'SlotSetter']
+                                  }
+                                }
                               },
                               {
                                 title: {

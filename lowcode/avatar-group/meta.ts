@@ -117,17 +117,10 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'maxStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -181,18 +174,6 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
             setters: [
               'NumberSetter',
               {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              {
                 componentName: 'RadioGroupSetter',
                 condition: () => false,
                 props: {
@@ -224,6 +205,82 @@ const AvatarGroupMeta: IPublicTypeComponentMetadata = {
                       value: 'large'
                     }
                   ]
+                }
+              },
+              {
+                componentName: 'ObjectSetter',
+                condition: () => false,
+                props: {
+                  config: {
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xs',
+                            'zh-CN': 'xs'
+                          }
+                        },
+                        name: 'xs',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'sm',
+                            'zh-CN': 'sm'
+                          }
+                        },
+                        name: 'sm',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'md',
+                            'zh-CN': 'md'
+                          }
+                        },
+                        name: 'md',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'lg',
+                            'zh-CN': 'lg'
+                          }
+                        },
+                        name: 'lg',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xl',
+                            'zh-CN': 'xl'
+                          }
+                        },
+                        name: 'xl',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xxl',
+                            'zh-CN': 'xxl'
+                          }
+                        },
+                        name: 'xxl',
+                        setter: 'NumberSetter'
+                      }
+                    ]
+                  }
                 }
               }
             ]

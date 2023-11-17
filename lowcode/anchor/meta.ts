@@ -188,7 +188,12 @@ const AnchorMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'title',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     }
                   ]
                 }

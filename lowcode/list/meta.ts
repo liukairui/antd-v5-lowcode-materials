@@ -65,7 +65,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'extra',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -76,7 +81,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'footer',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -195,7 +205,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'header',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -242,7 +257,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'loadMore',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -372,7 +392,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tip',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {
@@ -427,7 +452,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'children',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -461,7 +491,12 @@ const ListMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'emptyText',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 }
               ]
             }

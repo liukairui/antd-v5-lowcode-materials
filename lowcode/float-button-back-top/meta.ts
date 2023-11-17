@@ -46,7 +46,12 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'description',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -79,7 +84,12 @@ const FloatButtonBackTopMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'icon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

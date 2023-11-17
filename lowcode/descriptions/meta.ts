@@ -58,10 +58,74 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                 condition: () => false,
                 props: {
                   config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
+                    items: [
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xs',
+                            'zh-CN': 'xs'
+                          }
+                        },
+                        name: 'xs',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'sm',
+                            'zh-CN': 'sm'
+                          }
+                        },
+                        name: 'sm',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'md',
+                            'zh-CN': 'md'
+                          }
+                        },
+                        name: 'md',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'lg',
+                            'zh-CN': 'lg'
+                          }
+                        },
+                        name: 'lg',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xl',
+                            'zh-CN': 'xl'
+                          }
+                        },
+                        name: 'xl',
+                        setter: 'NumberSetter'
+                      },
+                      {
+                        title: {
+                          label: {
+                            type: 'i18n',
+                            'en-US': 'xxl',
+                            'zh-CN': 'xxl'
+                          }
+                        },
+                        name: 'xxl',
+                        setter: 'NumberSetter'
+                      }
+                    ]
                   }
                 }
               }
@@ -78,17 +142,10 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'contentStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -100,7 +157,12 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'extra',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -125,6 +187,70 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                       title: {
                         label: {
                           type: 'i18n',
+                          'en-US': 'children',
+                          'zh-CN': 'children'
+                        }
+                      },
+                      name: 'children',
+                      isRequired: true,
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'contentStyle',
+                          'zh-CN': 'contentStyle'
+                        }
+                      },
+                      name: 'contentStyle',
+                      setter: 'StyleSetter',
+                      extraProps: {
+                        display: 'accordion',
+                        defaultCollapsed: true
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'label',
+                          'zh-CN': 'label'
+                        }
+                      },
+                      name: 'label',
+                      isRequired: true,
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'labelStyle',
+                          'zh-CN': 'labelStyle'
+                        }
+                      },
+                      name: 'labelStyle',
+                      setter: 'StyleSetter',
+                      extraProps: {
+                        display: 'accordion',
+                        defaultCollapsed: true
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
                           'en-US': 'span',
                           'zh-CN': 'span'
                         }
@@ -140,10 +266,74 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
                               condition: () => false,
                               props: {
                                 config: {
-                                  extraSetter: {
-                                    componentName: 'MixedSetter',
-                                    props: {}
-                                  }
+                                  items: [
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'xs',
+                                          'zh-CN': 'xs'
+                                        }
+                                      },
+                                      name: 'xs',
+                                      setter: 'NumberSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'sm',
+                                          'zh-CN': 'sm'
+                                        }
+                                      },
+                                      name: 'sm',
+                                      setter: 'NumberSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'md',
+                                          'zh-CN': 'md'
+                                        }
+                                      },
+                                      name: 'md',
+                                      setter: 'NumberSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'lg',
+                                          'zh-CN': 'lg'
+                                        }
+                                      },
+                                      name: 'lg',
+                                      setter: 'NumberSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'xl',
+                                          'zh-CN': 'xl'
+                                        }
+                                      },
+                                      name: 'xl',
+                                      setter: 'NumberSetter'
+                                    },
+                                    {
+                                      title: {
+                                        label: {
+                                          type: 'i18n',
+                                          'en-US': 'xxl',
+                                          'zh-CN': 'xxl'
+                                        }
+                                      },
+                                      name: 'xxl',
+                                      setter: 'NumberSetter'
+                                    }
+                                  ]
                                 }
                               }
                             }
@@ -167,17 +357,10 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'labelStyle',
-        setter: {
-          componentName: 'ObjectSetter',
-          condition: () => false,
-          props: {
-            config: {
-              extraSetter: {
-                componentName: 'MixedSetter',
-                props: {}
-              }
-            }
-          }
+        setter: 'StyleSetter',
+        extraProps: {
+          display: 'accordion',
+          defaultCollapsed: true
         }
       },
       {
@@ -269,7 +452,12 @@ const DescriptionsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'title',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       }
     ],
     supports: {

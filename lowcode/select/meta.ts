@@ -46,7 +46,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'clearIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -372,7 +377,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'menuItemSelectedIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -419,7 +429,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'notFoundContent',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -614,7 +629,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {
@@ -648,7 +668,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'placeholder',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -737,7 +762,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'removeIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -850,7 +880,12 @@ const SelectMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'suffixIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

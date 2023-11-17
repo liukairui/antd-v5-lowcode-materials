@@ -26,7 +26,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'addonAfter',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -37,7 +42,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'addonBefore',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -90,7 +100,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'upIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {
@@ -101,7 +116,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'downIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -262,7 +282,12 @@ const InputNumberMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'prefix',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

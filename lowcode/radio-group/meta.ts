@@ -171,7 +171,12 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {

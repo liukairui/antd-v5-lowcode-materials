@@ -383,7 +383,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'arrowContent',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -596,7 +601,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'cancelText',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -748,7 +758,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'icon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -1275,7 +1290,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'okText',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -1664,7 +1684,12 @@ const PopconfirmMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'content',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }

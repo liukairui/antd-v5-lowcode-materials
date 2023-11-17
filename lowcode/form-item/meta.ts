@@ -56,7 +56,12 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'extra',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -128,7 +133,12 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'help',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -172,7 +182,12 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'label',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -357,7 +372,12 @@ const FormItemMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'icon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       ...TooltipMeta.configure!['props']
                     ]

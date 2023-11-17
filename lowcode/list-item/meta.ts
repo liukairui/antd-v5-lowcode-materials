@@ -30,7 +30,12 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: 'SlotSetter'
+            itemsetter: {
+              componentName: 'MixedSetter',
+              props: {
+                setters: ['StringSetter', 'SlotSetter']
+              }
+            }
           }
         }
       },
@@ -65,7 +70,12 @@ const ListItemMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'extra',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       }
     ],
     supports: {

@@ -79,7 +79,12 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'icon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {
@@ -90,7 +95,12 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tooltips',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {
@@ -210,7 +220,12 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'icon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {
@@ -221,7 +236,12 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'tooltip',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {
@@ -379,7 +399,12 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'enterIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -451,7 +476,12 @@ const TypographyParagraphMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'symbol',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       },
                       {
                         title: {

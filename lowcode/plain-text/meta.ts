@@ -26,7 +26,7 @@ const PlainTextMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'content',
-        setter: 'StringSetter'
+        setter: 'TextAreaSetter'
       },
       {
         title: {

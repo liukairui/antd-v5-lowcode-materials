@@ -26,7 +26,12 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'description',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -37,7 +42,12 @@ const AlertErrorBoundaryMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'message',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       }
     ],
     supports: {

@@ -67,8 +67,8 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'key',
-                      setter: 'StringSetter',
-                      isRequired: true
+                      isRequired: true,
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -79,8 +79,8 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'title',
-                      setter: 'StringSetter',
-                      isRequired: true
+                      isRequired: true,
+                      setter: 'StringSetter'
                     }
                   ]
                 }
@@ -205,7 +205,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'notFoundContent',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 }
               ]
             }
@@ -437,7 +442,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'selectionsIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -527,7 +537,12 @@ const TransferMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: 'SlotSetter'
+            itemsetter: {
+              componentName: 'MixedSetter',
+              props: {
+                setters: ['StringSetter', 'SlotSetter']
+              }
+            }
           }
         }
       }

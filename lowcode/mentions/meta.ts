@@ -155,7 +155,12 @@ const MentionsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'notFoundContent',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -285,8 +290,8 @@ const MentionsMeta: IPublicTypeComponentMetadata = {
                       },
                       description: '@todo 应为 SlotSetter，但无法在画布上显示出插槽',
                       name: 'label',
-                      setter: 'StringSetter',
-                      isRequired: true
+                      isRequired: true,
+                      setter: 'StringSetter'
                     },
                     {
                       title: {
@@ -312,8 +317,8 @@ const MentionsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'value',
-                      setter: 'StringSetter',
-                      isRequired: true
+                      isRequired: true,
+                      setter: 'StringSetter'
                     }
                   ]
                 }

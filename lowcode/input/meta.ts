@@ -26,7 +26,12 @@ const InputMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'addonAfter',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -37,7 +42,12 @@ const InputMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'addonBefore',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -68,7 +78,12 @@ const InputMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'clearIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -153,7 +168,12 @@ const InputMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'prefix',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -283,7 +303,12 @@ const InputMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'suffix',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

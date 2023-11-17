@@ -50,6 +50,114 @@ const TableMeta: IPublicTypeComponentMetadata = {
                 config: {
                   items: [
                     {
+                      title: '『 常用属性 』',
+                      type: 'group',
+                      display: 'block',
+                      items: []
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'dataIndex',
+                          'zh-CN': 'dataIndex'
+                        }
+                      },
+                      name: 'dataIndex',
+                      isRequired: true,
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'StringSetter',
+                            {
+                              componentName: 'ArraySetter',
+                              condition: () => false,
+                              props: {
+                                itemSetter: 'StringSetter'
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'title',
+                          'zh-CN': 'title'
+                        }
+                      },
+                      name: 'title',
+                      isRequired: true,
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'StringSetter',
+                            {
+                              componentName: 'SlotSetter',
+                              initialValue: {
+                                type: 'JSSlot',
+                                params: ['props']
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'render',
+                          'zh-CN': 'render'
+                        }
+                      },
+                      name: 'render',
+                      setter: {
+                        componentName: 'SlotSetter',
+                        initialValue: {
+                          type: 'JSSlot',
+                          params: ['text', 'record', 'index']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'key',
+                          'zh-CN': 'key'
+                        }
+                      },
+                      name: 'key',
+                      setter: 'StringSetter'
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'width',
+                          'zh-CN': 'width'
+                        }
+                      },
+                      name: 'width',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'NumberSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: '『 全部属性 』',
+                      type: 'group',
+                      display: 'block',
+                      items: []
+                    },
+                    {
                       title: {
                         label: {
                           type: 'i18n',
@@ -102,31 +210,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
                       },
                       name: 'colSpan',
                       setter: 'NumberSetter'
-                    },
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'dataIndex',
-                          'zh-CN': 'dataIndex'
-                        }
-                      },
-                      name: 'dataIndex',
-                      setter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: [
-                            'StringSetter',
-                            {
-                              componentName: 'ArraySetter',
-                              condition: () => false,
-                              props: {
-                                itemSetter: 'StringSetter'
-                              }
-                            }
-                          ]
-                        }
-                      }
                     },
                     {
                       title: {
@@ -374,13 +457,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       }
                                     },
                                     name: 'text',
+                                    isRequired: true,
                                     setter: {
                                       componentName: 'MixedSetter',
                                       props: {
                                         setters: ['StringSetter', 'SlotSetter']
                                       }
-                                    },
-                                    isRequired: true
+                                    }
                                   },
                                   {
                                     title: {
@@ -391,8 +474,8 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                       }
                                     },
                                     name: 'value',
-                                    setter: 'StringSetter',
-                                    isRequired: true
+                                    isRequired: true,
+                                    setter: 'StringSetter'
                                   },
                                   {
                                     title: {
@@ -420,13 +503,13 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'text',
+                                                  isRequired: true,
                                                   setter: {
                                                     componentName: 'MixedSetter',
                                                     props: {
                                                       setters: ['StringSetter', 'SlotSetter']
                                                     }
-                                                  },
-                                                  isRequired: true
+                                                  }
                                                 },
                                                 {
                                                   title: {
@@ -437,8 +520,8 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                                     }
                                                   },
                                                   name: 'value',
-                                                  setter: 'StringSetter',
-                                                  isRequired: true
+                                                  isRequired: true,
+                                                  setter: 'StringSetter'
                                                 }
                                               ]
                                             }
@@ -513,23 +596,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
                       },
                       name: 'onHeaderCell',
                       setter: 'FunctionSetter'
-                    },
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'render',
-                          'zh-CN': 'render'
-                        }
-                      },
-                      name: 'render',
-                      setter: {
-                        componentName: 'SlotSetter',
-                        initialValue: {
-                          type: 'JSSlot',
-                          params: ['text', 'record', 'index']
-                        }
-                      }
                     },
                     {
                       title: {
@@ -814,47 +880,6 @@ const TableMeta: IPublicTypeComponentMetadata = {
                           ]
                         }
                       }
-                    },
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'title',
-                          'zh-CN': 'title'
-                        }
-                      },
-                      name: 'title',
-                      setter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: [
-                            'StringSetter',
-                            {
-                              componentName: 'SlotSetter',
-                              initialValue: {
-                                type: 'JSSlot',
-                                params: ['props']
-                              }
-                            }
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      title: {
-                        label: {
-                          type: 'i18n',
-                          'en-US': 'width',
-                          'zh-CN': 'width'
-                        }
-                      },
-                      name: 'width',
-                      setter: {
-                        componentName: 'MixedSetter',
-                        props: {
-                          setters: ['StringSetter', 'NumberSetter']
-                        }
-                      }
                     }
                   ]
                 }
@@ -923,7 +948,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'columnTitle',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1235,7 +1265,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterConfirm',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1246,7 +1281,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterReset',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1257,7 +1297,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterEmptyText',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1268,7 +1313,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'filterCheckall',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1323,7 +1373,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectAll',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1334,7 +1389,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectNone',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1345,7 +1405,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectInvert',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1356,7 +1421,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'selectionAll',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -1897,7 +1967,12 @@ const TableMeta: IPublicTypeComponentMetadata = {
                                         }
                                       },
                                       name: 'text',
-                                      setter: 'SlotSetter'
+                                      setter: {
+                                        componentName: 'MixedSetter',
+                                        props: {
+                                          setters: ['StringSetter', 'SlotSetter']
+                                        }
+                                      }
                                     }
                                   ]
                                 }

@@ -37,7 +37,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'addIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -619,7 +624,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     }
                   ]
                 }
@@ -690,7 +700,12 @@ const TabsMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'moreIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

@@ -46,7 +46,12 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'clearIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -196,7 +201,12 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'expandIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -478,7 +488,12 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'label',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -637,7 +652,12 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'removeIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -883,7 +903,12 @@ const CascaderMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'suffixIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

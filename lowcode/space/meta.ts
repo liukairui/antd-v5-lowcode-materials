@@ -214,7 +214,12 @@ const SpaceMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'split',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

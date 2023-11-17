@@ -100,8 +100,13 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter',
-                      isRequired: true
+                      isRequired: true,
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {
@@ -112,13 +117,13 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'value',
+                      isRequired: true,
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
                           setters: ['StringSetter', 'NumberSetter']
                         }
-                      },
-                      isRequired: true
+                      }
                     },
                     {
                       title: {

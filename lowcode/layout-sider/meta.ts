@@ -206,7 +206,12 @@ const LayoutSiderMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'trigger',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

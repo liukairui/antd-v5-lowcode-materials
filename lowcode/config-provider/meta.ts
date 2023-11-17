@@ -1833,7 +1833,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterConfirm',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1844,7 +1849,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterReset',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1855,7 +1865,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterEmptyText',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1866,7 +1881,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'filterCheckall',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1921,7 +1941,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectAll',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1932,7 +1957,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectNone',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1943,7 +1973,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectInvert',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -1954,7 +1989,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               }
                             },
                             name: 'selectionAll',
-                            setter: 'SlotSetter'
+                            setter: {
+                              componentName: 'MixedSetter',
+                              props: {
+                                setters: ['StringSetter', 'SlotSetter']
+                              }
+                            }
                           },
                           {
                             title: {
@@ -2203,7 +2243,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                               componentName: 'ArraySetter',
                               condition: () => false,
                               props: {
-                                itemSetter: 'SlotSetter'
+                                itemsetter: {
+                                  componentName: 'MixedSetter',
+                                  props: {
+                                    setters: ['StringSetter', 'SlotSetter']
+                                  }
+                                }
                               }
                             }
                           },
@@ -2239,7 +2284,12 @@ const ConfigProviderMeta: IPublicTypeComponentMetadata = {
                                     componentName: 'ArraySetter',
                                     condition: () => false,
                                     props: {
-                                      itemSetter: 'SlotSetter'
+                                      itemsetter: {
+                                        componentName: 'MixedSetter',
+                                        props: {
+                                          setters: ['StringSetter', 'SlotSetter']
+                                        }
+                                      }
                                     }
                                   }
                                 ]

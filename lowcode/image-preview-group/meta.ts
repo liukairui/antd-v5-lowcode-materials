@@ -52,7 +52,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rotateLeft',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -63,7 +68,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'rotateRight',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -74,7 +84,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'zoomIn',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -85,7 +100,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'zoomOut',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -96,7 +116,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'close',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -107,7 +132,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'left',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -118,7 +148,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'right',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -129,7 +164,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'flipX',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 },
                 {
                   title: {
@@ -140,7 +180,12 @@ const ImagePreviewGroupMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'flipY',
-                  setter: 'SlotSetter'
+                  setter: {
+                    componentName: 'MixedSetter',
+                    props: {
+                      setters: ['StringSetter', 'SlotSetter']
+                    }
+                  }
                 }
               ]
             }

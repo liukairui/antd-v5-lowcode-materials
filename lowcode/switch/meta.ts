@@ -48,7 +48,12 @@ const SwitchMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'checkedChildren',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -150,7 +155,12 @@ const SwitchMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'unCheckedChildren',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       }
     ],
     supports: {

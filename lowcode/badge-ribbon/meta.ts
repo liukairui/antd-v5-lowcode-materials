@@ -28,7 +28,124 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
         name: 'color',
         setter: {
           componentName: 'MixedSetter',
-          props: {}
+          props: {
+            setters: [
+              {
+                componentName: 'SelectSetter',
+                props: {
+                  dataSource: [
+                    {
+                      label: 'blue',
+                      value: 'blue'
+                    },
+                    {
+                      label: 'purple',
+                      value: 'purple'
+                    },
+                    {
+                      label: 'cyan',
+                      value: 'cyan'
+                    },
+                    {
+                      label: 'green',
+                      value: 'green'
+                    },
+                    {
+                      label: 'magenta',
+                      value: 'magenta'
+                    },
+                    {
+                      label: 'pink',
+                      value: 'pink'
+                    },
+                    {
+                      label: 'red',
+                      value: 'red'
+                    },
+                    {
+                      label: 'orange',
+                      value: 'orange'
+                    },
+                    {
+                      label: 'yellow',
+                      value: 'yellow'
+                    },
+                    {
+                      label: 'volcano',
+                      value: 'volcano'
+                    },
+                    {
+                      label: 'geekblue',
+                      value: 'geekblue'
+                    },
+                    {
+                      label: 'lime',
+                      value: 'lime'
+                    },
+                    {
+                      label: 'gold',
+                      value: 'gold'
+                    }
+                  ],
+                  options: [
+                    {
+                      label: 'blue',
+                      value: 'blue'
+                    },
+                    {
+                      label: 'purple',
+                      value: 'purple'
+                    },
+                    {
+                      label: 'cyan',
+                      value: 'cyan'
+                    },
+                    {
+                      label: 'green',
+                      value: 'green'
+                    },
+                    {
+                      label: 'magenta',
+                      value: 'magenta'
+                    },
+                    {
+                      label: 'pink',
+                      value: 'pink'
+                    },
+                    {
+                      label: 'red',
+                      value: 'red'
+                    },
+                    {
+                      label: 'orange',
+                      value: 'orange'
+                    },
+                    {
+                      label: 'yellow',
+                      value: 'yellow'
+                    },
+                    {
+                      label: 'volcano',
+                      value: 'volcano'
+                    },
+                    {
+                      label: 'geekblue',
+                      value: 'geekblue'
+                    },
+                    {
+                      label: 'lime',
+                      value: 'lime'
+                    },
+                    {
+                      label: 'gold',
+                      value: 'gold'
+                    }
+                  ]
+                }
+              },
+              'StringSetter'
+            ]
+          }
         }
       },
       {
@@ -46,22 +163,22 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
           props: {
             dataSource: [
               {
-                label: 'end',
-                value: 'end'
-              },
-              {
                 label: 'start',
                 value: 'start'
+              },
+              {
+                label: 'end',
+                value: 'end'
               }
             ],
             options: [
               {
-                label: 'end',
-                value: 'end'
-              },
-              {
                 label: 'start',
                 value: 'start'
+              },
+              {
+                label: 'end',
+                value: 'end'
               }
             ]
           }
@@ -76,7 +193,12 @@ const BadgeRibbonMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'text',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       }
     ],
     supports: {

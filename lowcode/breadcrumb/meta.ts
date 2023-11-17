@@ -128,7 +128,12 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'title',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     }
                   ]
                 }
@@ -159,7 +164,12 @@ const BreadcrumbMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'separator',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       }
     ],
     supports: {

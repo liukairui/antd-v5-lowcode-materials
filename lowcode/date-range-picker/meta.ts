@@ -46,7 +46,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'clearIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -218,7 +223,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'nextIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -491,7 +501,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'prevIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -519,7 +534,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'separator',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -622,7 +642,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'suffixIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -633,7 +658,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'superNextIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -644,7 +674,12 @@ const DateRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'superPrevIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

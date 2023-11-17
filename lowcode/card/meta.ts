@@ -31,7 +31,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
           componentName: 'ArraySetter',
           condition: () => false,
           props: {
-            itemSetter: 'SlotSetter'
+            itemsetter: {
+              componentName: 'MixedSetter',
+              props: {
+                setters: ['StringSetter', 'SlotSetter']
+              }
+            }
           }
         }
       },
@@ -81,7 +86,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'cover',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -103,7 +113,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'extra',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -198,7 +213,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'tabBarExtraContent',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -228,7 +248,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'children',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {
@@ -299,7 +324,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     }
                   ]
                 }
@@ -340,7 +370,12 @@ const CardMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'title',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

@@ -42,17 +42,11 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           props: {
             setters: [
               'StringSetter',
-              'NumberSetter',
               {
                 componentName: 'ArraySetter',
                 condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: ['StringSetter', 'NumberSetter']
-                    }
-                  }
+                  itemSetter: 'StringSetter'
                 }
               }
             ]
@@ -128,17 +122,11 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           props: {
             setters: [
               'StringSetter',
-              'NumberSetter',
               {
                 componentName: 'ArraySetter',
                 condition: () => false,
                 props: {
-                  itemSetter: {
-                    componentName: 'MixedSetter',
-                    props: {
-                      setters: ['StringSetter', 'NumberSetter']
-                    }
-                  }
+                  itemSetter: 'StringSetter'
                 }
               }
             ]
@@ -165,7 +153,13 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'expandIcon',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'SlotSetter',
+          initialValue: {
+            type: 'JSSlot',
+            params: ['panelProps']
+          }
+        }
       },
       {
         title: {
@@ -181,38 +175,22 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
           props: {
             dataSource: [
               {
-                label: 'left',
-                value: 'left'
-              },
-              {
-                label: 'right',
-                value: 'right'
+                label: 'start',
+                value: 'start'
               },
               {
                 label: 'end',
                 value: 'end'
-              },
-              {
-                label: 'start',
-                value: 'start'
               }
             ],
             options: [
               {
-                label: 'left',
-                value: 'left'
-              },
-              {
-                label: 'right',
-                value: 'right'
+                label: 'start',
+                value: 'start'
               },
               {
                 label: 'end',
                 value: 'end'
-              },
-              {
-                label: 'start',
-                value: 'start'
               }
             ]
           }
@@ -252,15 +230,16 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                       title: {
                         label: {
                           type: 'i18n',
-                          'en-US': 'key',
-                          'zh-CN': 'key'
+                          'en-US': 'children',
+                          'zh-CN': 'children'
                         }
                       },
-                      name: 'key',
+                      name: 'children',
+                      isRequired: true,
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
-                          setters: ['StringSetter', 'NumberSetter']
+                          setters: ['StringSetter', 'SlotSetter']
                         }
                       }
                     },
@@ -273,7 +252,24 @@ const CollapseMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter'
+                      isRequired: true,
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'key',
+                          'zh-CN': 'key'
+                        }
+                      },
+                      name: 'key',
+                      setter: 'StringSetter'
                     }
                   ]
                 }

@@ -46,7 +46,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'clearIcon',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }
@@ -262,7 +267,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'nextIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -468,7 +478,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'prevIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -507,7 +522,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'separator',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
 
       {
@@ -599,7 +619,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'suffixIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -610,7 +635,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'superNextIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -621,7 +651,12 @@ const TimeRangePickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'superPrevIcon',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

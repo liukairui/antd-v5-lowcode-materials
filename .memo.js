@@ -52,22 +52,21 @@ const 融合 = {
     ]
   }
 };
-
-const 融合2 = {
+const 融合2 = `
+setter: {
   componentName: 'MixedSetter',
   props: {
     setters: ['StringSetter', 'SlotSetter']
   }
-};
-
-const 样式 = {
-  setter: 'StyleSetter',
-  extraProps: {
-    display: 'accordion',
-    defaultCollapsed: true
-  }
-};
-
+}
+`;
+const 样式 = `
+setter: 'StyleSetter',
+extraProps: {
+  display: 'accordion',
+  defaultCollapsed: true
+}
+`;
 const 调用其他组件Props = `
   setter: {
     componentName: 'ObjectSetter',
@@ -79,10 +78,23 @@ const 调用其他组件Props = `
     }
   }
 `;
-
 const 折叠显示 = `
 extraProps: {
   display: 'accordion',
   defaultCollapsed: true
+},
+`;
+const 属性分隔 = `
+{
+  title: '『 常用属性 』',
+  type: 'group',
+  display: 'block',
+  items: []
+},
+{
+  title: '『 全部属性 』',
+  type: 'group',
+  display: 'block',
+  items: []
 },
 `;

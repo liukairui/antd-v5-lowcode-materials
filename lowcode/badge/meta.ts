@@ -73,18 +73,6 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
           props: {
             setters: [
               {
-                componentName: 'ObjectSetter',
-                condition: () => false,
-                props: {
-                  config: {
-                    extraSetter: {
-                      componentName: 'MixedSetter',
-                      props: {}
-                    }
-                  }
-                }
-              },
-              {
                 componentName: 'SelectSetter',
                 props: {
                   dataSource: [
@@ -196,7 +184,8 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                     }
                   ]
                 }
-              }
+              },
+              'StringSetter'
             ]
           }
         }
@@ -210,7 +199,12 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'count',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -233,8 +227,11 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
         },
         name: 'offset',
         setter: {
-          componentName: 'MixedSetter',
-          props: {}
+          componentName: 'ArraySetter',
+          condition: () => false,
+          props: {
+            itemSetter: 'StringSetter'
+          }
         }
       },
       {
@@ -247,17 +244,6 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
         },
         name: 'overflowCount',
         setter: 'NumberSetter'
-      },
-      {
-        title: {
-          label: {
-            type: 'i18n',
-            'en-US': 'scrollNumberPrefixCls',
-            'zh-CN': 'scrollNumberPrefixCls'
-          }
-        },
-        name: 'scrollNumberPrefixCls',
-        setter: 'StringSetter'
       },
       {
         title: {
@@ -324,6 +310,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                 value: 'default'
               },
               {
+                label: 'processing',
+                value: 'processing'
+              },
+              {
                 label: 'success',
                 value: 'success'
               },
@@ -334,10 +324,6 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
               {
                 label: 'error',
                 value: 'error'
-              },
-              {
-                label: 'processing',
-                value: 'processing'
               }
             ],
             options: [
@@ -346,6 +332,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                 value: 'default'
               },
               {
+                label: 'processing',
+                value: 'processing'
+              },
+              {
                 label: 'success',
                 value: 'success'
               },
@@ -356,10 +346,6 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
               {
                 label: 'error',
                 value: 'error'
-              },
-              {
-                label: 'processing',
-                value: 'processing'
               }
             ]
           }
@@ -389,17 +375,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'root',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
+                  setter: 'StyleSetter',
+                  extraProps: {
+                    display: 'accordion',
+                    defaultCollapsed: true
                   }
                 },
                 {
@@ -411,17 +390,10 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
                     }
                   },
                   name: 'indicator',
-                  setter: {
-                    componentName: 'ObjectSetter',
-                    condition: () => false,
-                    props: {
-                      config: {
-                        extraSetter: {
-                          componentName: 'MixedSetter',
-                          props: {}
-                        }
-                      }
-                    }
+                  setter: 'StyleSetter',
+                  extraProps: {
+                    display: 'accordion',
+                    defaultCollapsed: true
                   }
                 }
               ]
@@ -438,7 +410,12 @@ const BadgeMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'text',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {

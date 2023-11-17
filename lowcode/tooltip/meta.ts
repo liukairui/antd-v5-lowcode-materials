@@ -383,7 +383,12 @@ const TooltipMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'arrowContent',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -1337,7 +1342,12 @@ const TooltipMeta: IPublicTypeComponentMetadata = {
                           }
                         },
                         name: 'content',
-                        setter: 'SlotSetter'
+                        setter: {
+                          componentName: 'MixedSetter',
+                          props: {
+                            setters: ['StringSetter', 'SlotSetter']
+                          }
+                        }
                       }
                     ]
                   }

@@ -153,7 +153,12 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'dot',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {
@@ -208,7 +213,12 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     },
                     {
                       title: {
@@ -219,7 +229,12 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'children',
-                      setter: 'SlotSetter'
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: ['StringSetter', 'SlotSetter']
+                        }
+                      }
                     }
                   ]
                 }
@@ -281,7 +296,12 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'pending',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
@@ -292,7 +312,12 @@ const TimelineMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'pendingDot',
-        setter: 'SlotSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'SlotSetter']
+          }
+        }
       },
       {
         title: {
