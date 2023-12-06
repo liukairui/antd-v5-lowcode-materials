@@ -522,11 +522,13 @@ export { Affix };
 import _App from 'antd/es/app';
 import _Message from 'antd/es/message';
 import _Notification from 'antd/es/notification';
+
 const App: FC<CP<typeof _App> & { this: any }> = (props) => {
   const [message, messageContextHolder] = _Message.useMessage(props.message);
   const [modal, modalContextHolder] = _Modal.useModal();
   const [notification, notificationContextHolder] = _Notification.useNotification(props.notification);
-  props.this.cmd = { message, modal, notification };
+  const { appHelper } = props.this.context;
+  appHelper.utils = { ...appHelper.utils, message, modal, notification };
   return (
     <Fragment>
       {messageContextHolder}
