@@ -148,6 +148,10 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
             itemSetter: {
               componentName: 'ObjectSetter',
               condition: () => false,
+              initialValue: {
+                label: '选项',
+                value: '选项值'
+              },
               props: {
                 config: {
                   items: [
@@ -171,6 +175,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
+                      isRequired: true,
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
@@ -187,6 +192,7 @@ const RadioGroupMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'value',
+                      isRequired: true,
                       setter: {
                         componentName: 'MixedSetter',
                         props: {

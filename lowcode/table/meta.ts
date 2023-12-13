@@ -1,6 +1,7 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
 import SpinMeta from '../spin/meta';
 import TooltipMeta from '../tooltip/meta';
+import PaginationMeta from '../pagination/meta';
 
 const TableMeta: IPublicTypeComponentMetadata = {
   componentName: 'Table',
@@ -46,6 +47,10 @@ const TableMeta: IPublicTypeComponentMetadata = {
             itemSetter: {
               componentName: 'ObjectSetter',
               condition: () => false,
+              initialValue: {
+                title: '列标题',
+                dataIndex: '列字段'
+              },
               props: {
                 config: {
                   items: [
@@ -550,6 +555,49 @@ const TableMeta: IPublicTypeComponentMetadata = {
                         componentName: 'MixedSetter',
                         props: {
                           setters: ['BoolSetter', 'FunctionSetter']
+                        }
+                      }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'fixed',
+                          'zh-CN': 'fixed'
+                        }
+                      },
+                      name: 'fixed',
+                      setter: {
+                        componentName: 'MixedSetter',
+                        props: {
+                          setters: [
+                            'BoolSetter',
+                            {
+                              componentName: 'RadioGroupSetter',
+                              props: {
+                                dataSource: [
+                                  {
+                                    label: 'left',
+                                    value: 'left'
+                                  },
+                                  {
+                                    label: 'right',
+                                    value: 'right'
+                                  }
+                                ],
+                                options: [
+                                  {
+                                    label: 'left',
+                                    value: 'left'
+                                  },
+                                  {
+                                    label: 'right',
+                                    value: 'right'
+                                  }
+                                ]
+                              }
+                            }
+                          ]
                         }
                       }
                     },
@@ -1627,7 +1675,8 @@ const TableMeta: IPublicTypeComponentMetadata = {
                             }
                           }
                         }
-                      }
+                      },
+                      ...PaginationMeta.configure!['props']
                     ]
                   }
                 }

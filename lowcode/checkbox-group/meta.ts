@@ -88,6 +88,10 @@ const CheckboxGroupMeta: IPublicTypeComponentMetadata = {
             itemSetter: {
               componentName: 'ObjectSetter',
               condition: () => false,
+              initialValue: {
+                label: '选项',
+                value: '选项值'
+              },
               props: {
                 config: {
                   items: [

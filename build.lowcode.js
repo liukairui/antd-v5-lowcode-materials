@@ -10,19 +10,7 @@ module.exports = {
       {
         library,
         engineScope: '@alilc',
-        builtinAssets: [
-          {
-            packages: [
-              {
-                package: 'dayjs',
-                version: '2.24.0',
-                urls: ['https://cdn.net.gtjaqh.com/qlc/deps/dayjs.min.js'],
-                library: 'dayjs'
-              }
-            ],
-            components: []
-          }
-        ]
+        builtinAssets: []
       }
     ],
     [

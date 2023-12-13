@@ -617,6 +617,10 @@ const SelectMeta: IPublicTypeComponentMetadata = {
             itemSetter: {
               componentName: 'ObjectSetter',
               condition: () => false,
+              initialValue: {
+                label: '选项',
+                value: '选项值'
+              },
               props: {
                 config: {
                   items: [
@@ -629,6 +633,7 @@ const SelectMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'label',
+                      isRequired: true,
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
@@ -645,12 +650,24 @@ const SelectMeta: IPublicTypeComponentMetadata = {
                         }
                       },
                       name: 'value',
+                      isRequired: true,
                       setter: {
                         componentName: 'MixedSetter',
                         props: {
                           setters: ['StringSetter', 'NumberSetter']
                         }
                       }
+                    },
+                    {
+                      title: {
+                        label: {
+                          type: 'i18n',
+                          'en-US': 'disabled',
+                          'zh-CN': 'disabled'
+                        }
+                      },
+                      name: 'disabled',
+                      setter: 'BoolSetter'
                     }
                   ]
                 }
