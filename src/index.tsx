@@ -70,7 +70,7 @@ import zhCN from 'antd/locale/zh_CN';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import lodash from 'lodash';
-import { ComponentProps as CP, Component, FC, Fragment, createElement, createRef, useEffect, useState } from 'react';
+import { ComponentProps as CP, Component, FC, createElement, createRef, useEffect, useState } from 'react';
 
 dayjs.locale('zh-cn');
 window['dayjs'] = dayjs;
@@ -403,12 +403,12 @@ const App: FC<CP<typeof _App> & { this: any }> = (props) => {
   const { appHelper } = props.this.context;
   appHelper.utils = { ...appHelper.utils, message, modal, notification };
   return (
-    <Fragment>
+    <ConfigProvider>
       {messageContextHolder}
       {modalContextHolder}
       {notificationContextHolder}
       <_App children={props.children} />
-    </Fragment>
+    </ConfigProvider>
   );
 };
 export { App };

@@ -1,6 +1,6 @@
 {
   "name": "antd-v5-lowcode-materials",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Low-code Materials based on antd v5",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -87,10 +87,10 @@
   },
   "componentConfig": {
     "isComponentLibrary": true,
-    "materialSchema": "https://unpkg.com/antd-v5-lowcode-materials@0.0.10/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/antd-v5-lowcode-materials@0.0.11/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
   },
-  "homepage": "https://unpkg.com/antd-v5-lowcode-materials@0.0.10/build/index.html"
+  "homepage": "https://unpkg.com/antd-v5-lowcode-materials@0.0.11/build/index.html"
 }
