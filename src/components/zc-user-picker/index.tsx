@@ -1,7 +1,7 @@
 import { CloseCircleOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Card, Empty, Flex, Form, Input, List, Modal, Select, Tree } from 'antd/es';
-import { DataNode } from 'antd/es/tree';
-import { FC, Fragment, Key, createElement, useEffect, useMemo, useState } from 'react';
+import { DataNode, TreeProps } from 'antd/es/tree';
+import { FC, Fragment, createElement, useEffect, useMemo, useState } from 'react';
 import { IZcFieldProps } from 'src/types';
 
 type IKey = string;
@@ -21,11 +21,13 @@ interface IZcUserPickerProps extends IZcFieldProps {
 
 const UserPicker: FC<IUserPickerProps> = (props) => {
   const { departments, disabled = false, multiple = true, onChange, value } = props;
-  const [autoExpandParent, setAutoExpandParent] = useState<boolean>(true);
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [keyword, setKeyword] = useState('');
+
+  /* 是否在搜索 */
+  const isSearching = () => keyword !== '';
 
   /* 获取所有员工（递归） */
   const getMembers = (departments: IDepartment[]): IEmployee[] => {
@@ -37,39 +39,23 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     return departments.flatMap((department) => [department.depid, ...getDepartmentKeys(department.nodes ?? [])]);
   };
 
-  /* 获取所有父节点的 key（递归） */
-  const findParentKeys = (tree: DataNode[], targetKey: Key): Key[] | null => {
-    const search = (nodes: DataNode[], key: Key, parents: Key[]): Key[] | null => {
-      for (const node of nodes) {
-        if (node.key === key) {
-          return [...parents, node.key];
-        }
-        if (node.children) {
-          const result = search(node.children, key, [...parents, node.key]);
-          if (result) return result;
-        }
-      }
-      return null;
-    };
-    return search(tree, targetKey, []);
-  };
-
   /* 生成树结构（递归） */
   const generateTree = (departments: IDepartment[]): DataNode[] => {
-    return departments.map((department) => {
-      const nodeChildren = department.nodes ? generateTree(department.nodes) : [];
+    return departments.map((d) => {
+      const nodeChildren = d.nodes ? generateTree(d.nodes) : [];
       const memberChildren =
-        department.memList?.map((member) => {
+        d.memList?.map((member) => {
           return {
             title: `${member.empname}（${member.empno}）`,
             key: member.empno
           };
         }) ?? [];
+      const children = [...nodeChildren, ...memberChildren];
       return {
-        checkable: multiple ? true : !('memList' in department),
-        children: [...nodeChildren, ...memberChildren],
-        key: department.depid,
-        title: department.name
+        checkable: multiple ? children.length > 0 : !('memList' in d),
+        children,
+        key: d.depid,
+        title: d.name
       };
     });
   };
@@ -97,15 +83,50 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     return filterNodes(tree);
   };
 
+  /* 获取树结构中所有节点 */
+  const flattenTree = (nodes: DataNode[]): DataNode[] => {
+    let result: DataNode[] = [];
+    nodes.forEach((node) => {
+      result.push(node);
+      if (node.children && node.children.length > 0) {
+        result = result.concat(flattenTree(node.children));
+      }
+    });
+    return result;
+  };
+
+  const onCheck: TreeProps['onCheck'] = (checked: IKey[], info) => {
+    let newKeys: string[] = [];
+    if (multiple) {
+      if (isSearching()) {
+        const operatedKeys = flattenTree([info.node])
+          .filter((n) => n.children == null)
+          .map((n) => n.key);
+        if (info.checked) {
+          /* 选中 */
+          newKeys = [...new Set([...checkedKeys, ...operatedKeys])];
+        } else {
+          /* 取消选中 */
+          newKeys = checkedKeys.filter((key) => !operatedKeys.includes(key));
+        }
+      } else {
+        newKeys = checked.filter((key) => !departmentsKeys.includes(key));
+      }
+    } else {
+      newKeys = checked.length > 0 ? [checked[checked.length - 1]] : [];
+    }
+    setCheckedKeys(newKeys);
+  };
+
   /* 树数据 */
   const treeData: DataNode[] = useMemo(() => {
     const data = generateTree(departments);
-    if (keyword == null || keyword === '') {
-      if (departments.length > 0) setExpandedKeys([departments[0].depid]);
-      return data;
-    } else {
+    if (isSearching()) {
       setExpandedKeys(getDepartmentKeys(departments));
       return filterTreeDataByKeyword(data, keyword);
+    } else {
+      if (departments.length > 0) setExpandedKeys([departments[0].depid]);
+      return data;
     }
   }, [departments, keyword]);
 
@@ -119,15 +140,10 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     return getMembers(departments);
   }, [departments]);
 
-  /* 已选中的员工的 key */
-  const checkedUsersKeys: IKey[] = useMemo(() => {
-    return checkedKeys.filter((key) => !departmentsKeys.includes(key));
-  }, [checkedKeys]);
-
   /* 已选中的员工 */
   const checkedUsers: IEmployee[] = useMemo(() => {
-    return users.filter((user) => checkedUsersKeys.includes(user.empno));
-  }, [checkedUsersKeys]);
+    return users.filter((user) => checkedKeys.includes(user.empno));
+  }, [checkedKeys]);
 
   return (
     <Fragment>
@@ -148,7 +164,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
       <Modal
         open={showModal}
         onOk={() => {
-          onChange(checkedUsersKeys);
+          onChange(checkedKeys);
           setShowModal(false);
         }}
         onCancel={() => setShowModal(false)}
@@ -169,21 +185,15 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
               </Flex>
               <Flex flex={1} style={{ padding: '8px 0', borderTop: '1px solid #f0f0f0', overflow: 'auto' }}>
                 <Tree
-                  autoExpandParent={autoExpandParent}
                   checkable
                   checkedKeys={checkedKeys}
                   disabled={disabled}
                   expandedKeys={expandedKeys}
                   selectable={false}
                   treeData={treeData}
-                  onCheck={(checked: IKey[]) => {
-                    /* 单选模式下取末项 */
-                    const checkedKeys = multiple ? checked : checked.length > 0 ? [checked[checked.length - 1]] : checked;
-                    setCheckedKeys(checkedKeys);
-                  }}
-                  onExpand={(expandedKeysValue: IKey[]) => {
-                    setExpandedKeys(expandedKeysValue);
-                    setAutoExpandParent(false);
+                  onCheck={onCheck}
+                  onExpand={(keys: IKey[]) => {
+                    setExpandedKeys(keys);
                   }}
                 />
               </Flex>
@@ -211,8 +221,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
                           type="text"
                           icon={<CloseCircleOutlined />}
                           onClick={() => {
-                            const removeKeys = findParentKeys(treeData, item.empno);
-                            setCheckedKeys(checkedKeys.filter((k) => !removeKeys.includes(k)));
+                            setCheckedKeys(checkedKeys.filter((k) => k !== item.empno));
                           }}
                         />
                       )
