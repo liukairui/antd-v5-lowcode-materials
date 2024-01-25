@@ -1,6 +1,6 @@
 {
   "name": "antd-v5-lowcode-materials",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Low-code Materials based on antd v5",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -56,6 +56,7 @@
     "@alifd/build-plugin-lowcode": "^0.4.7",
     "@alifd/theme-2": "^0.4.4",
     "@alilc/build-plugin-alt": "^1.3.4",
+    "@alilc/lowcode-types": "^1.3.1",
     "@types/lodash": "^4.14.202",
     "@types/react": "^16.14.56",
     "@types/react-dom": "^16.9.24",
@@ -72,6 +73,7 @@
     "@ant-design/icons": "^5.2.6",
     "@babel/runtime": "^7.23.8",
     "antd": "^5.13.2",
+    "axios": "^1.6.5",
     "dayjs": "^1.11.10",
     "lodash": "^4.17.21",
     "moment": "^2.30.1",
@@ -87,10 +89,10 @@
   },
   "componentConfig": {
     "isComponentLibrary": true,
-    "materialSchema": "https://unpkg.com/antd-v5-lowcode-materials@0.0.14/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/antd-v5-lowcode-materials@0.0.15/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
   },
-  "homepage": "https://unpkg.com/antd-v5-lowcode-materials@0.0.11/build/index.html"
+  "homepage": "https://unpkg.com/antd-v5-lowcode-materials@0.0.15/build/index.html"
 }

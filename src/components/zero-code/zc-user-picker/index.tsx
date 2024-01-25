@@ -1,8 +1,11 @@
 import { CloseCircleOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Card, Empty, Flex, Form, Input, List, Modal, Select, Tree } from 'antd/es';
 import { DataNode, TreeProps } from 'antd/es/tree';
+import axios, { AxiosError, AxiosInstance } from 'axios';
+import { isFunction, isString } from 'lodash';
 import { FC, Fragment, createElement, useEffect, useMemo, useState } from 'react';
 import { IZcFieldProps } from 'src/types';
+import { handleFormItemProps } from '../utils';
 
 type IKey = string;
 
@@ -15,7 +18,7 @@ interface IUserPickerProps {
 }
 
 interface IZcUserPickerProps extends IZcFieldProps {
-  dataSource?: Function;
+  dataSource?: Function | string;
   multiple?: boolean;
 }
 
@@ -26,20 +29,35 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [keyword, setKeyword] = useState('');
 
-  /* 是否在搜索 */
+  /**
+   * 判断搜索
+   * @returns 是否搜索中
+   */
   const isSearching = () => keyword !== '';
 
-  /* 获取所有员工（递归） */
-  const getMembers = (departments: IDepartment[]): IEmployee[] => {
+  /**
+   * 获取所有员工（递归）
+   * @param departments 部门列表
+   * @returns 用户列表
+   */
+  const getMembers = (departments: IDepartment[]): IMember[] => {
     return departments.flatMap((department) => [...department.memList, ...getMembers(department.nodes ?? [])]);
   };
 
-  /* 获取所有部门的 key（递归） */
+  /**
+   * 获取所有部门的 key（递归）
+   * @param departments 部门列表
+   * @returns 部门 key 列表
+   */
   const getDepartmentKeys = (departments: IDepartment[]): IKey[] => {
     return departments.flatMap((department) => [department.depid, ...getDepartmentKeys(department.nodes ?? [])]);
   };
 
-  /* 生成树结构（递归） */
+  /**
+   * 生成树结构（递归）
+   * @param departments 部门列表（源数据）
+   * @returns 树数据
+   */
   const generateTree = (departments: IDepartment[]): DataNode[] => {
     return departments.map((d) => {
       const nodeChildren = d.nodes ? generateTree(d.nodes) : [];
@@ -60,7 +78,12 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     });
   };
 
-  /* 筛选树结构（递归） */
+  /**
+   * 筛选树结构（递归）
+   * @param tree 树结构
+   * @param keyword 搜索关键字
+   * @returns
+   */
   const filterTreeDataByKeyword = (tree: DataNode[], keyword: string): DataNode[] => {
     const filterNodes = (nodes: DataNode[]): DataNode[] => {
       return nodes.reduce((filtered: DataNode[], node) => {
@@ -83,7 +106,11 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     return filterNodes(tree);
   };
 
-  /* 获取树结构中所有节点 */
+  /**
+   * 获取树结构中所有节点
+   * @param nodes 树结构
+   * @returns 节点列表
+   */
   const flattenTree = (nodes: DataNode[]): DataNode[] => {
     let result: DataNode[] = [];
     nodes.forEach((node) => {
@@ -95,9 +122,19 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     return result;
   };
 
+  /**
+   * 处理选中事件
+   * @param checked 已选的 key 列表
+   * @param info 选中操作的更多信息
+   */
   const onCheck: TreeProps['onCheck'] = (checked: IKey[], info) => {
     let newKeys: string[] = [];
     if (multiple) {
+      /**
+       * 判断是否在搜索
+       * 若否，则筛选出用户后直接赋值
+       * 若是，则是对已选用户进行增减操作，根据操作类型分别处理
+       */
       if (isSearching()) {
         const operatedKeys = flattenTree([info.node])
           .filter((n) => n.children == null)
@@ -136,12 +173,12 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
   }, [departments]);
 
   /* 所有员工 */
-  const users: IEmployee[] = useMemo(() => {
+  const users: IMember[] = useMemo(() => {
     return getMembers(departments);
   }, [departments]);
 
   /* 已选中的员工 */
-  const checkedUsers: IEmployee[] = useMemo(() => {
+  const checkedUsers: IMember[] = useMemo(() => {
     return users.filter((user) => checkedKeys.includes(user.empno));
   }, [checkedKeys]);
 
@@ -248,11 +285,32 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
 };
 
 const ZcUserPicker: FC<IZcUserPickerProps> = (props) => {
-  const { dataSource, multiple, disabled, label, name, required } = props;
+  const { that, dataSource, multiple, disabled } = props;
   const [departments, setDepartments] = useState<IDepartment[]>([]);
 
   const getDepartments = async () => {
-    setDepartments(dataSource ? await dataSource?.() : []);
+    let result: IDepartment[] = [];
+    if (isFunction(dataSource)) {
+      result = await dataSource();
+    } else if (isString(dataSource)) {
+      const http: AxiosInstance = that?.['utils']?.axios;
+      if (http) {
+        result = (await http.post(dataSource))?.data ?? [];
+      } else {
+        await axios
+          .create()
+          .post(dataSource)
+          .then(({ data: res }) => {
+            if (res.code === 0) {
+              result = res.data;
+            } else console.error(res);
+          })
+          .catch((e: AxiosError) => {
+            console.error('用户选择器查询出错', e.response.data);
+          });
+      }
+    }
+    setDepartments(result);
   };
 
   useEffect(() => {
@@ -260,7 +318,7 @@ const ZcUserPicker: FC<IZcUserPickerProps> = (props) => {
   }, [dataSource]);
 
   return (
-    <Form.Item {...{ label, name, rules: [{ required }] }}>
+    <Form.Item {...handleFormItemProps(props)}>
       <UserPicker departments={departments} disabled={disabled} multiple={multiple} />
     </Form.Item>
   );

@@ -3,14 +3,14 @@ interface IDepartment {
   haveMember: boolean;
   level: number;
   memberNum: number;
-  memList: IEmployee[];
+  memList: IMember[];
   name: string;
   nodes: IDepartment[];
   seqno: number;
   status: string;
 }
 
-interface IEmployee {
+interface IMember {
   avatar: string;
   chain: string;
   depid: string;

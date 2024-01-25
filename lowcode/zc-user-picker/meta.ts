@@ -1,5 +1,5 @@
 import { IPublicTypeComponentMetadata, IPublicTypeSnippet } from '@alilc/lowcode-types';
-import { zcFieldProps } from '../zc-field-props';
+import { fieldPropsMeta } from '../../src/components/zero-code/utils';
 
 const ZcUserPickerMeta: IPublicTypeComponentMetadata = {
   componentName: 'ZcUserPicker',
@@ -18,13 +18,29 @@ const ZcUserPickerMeta: IPublicTypeComponentMetadata = {
   },
   configure: {
     props: [
-      ...zcFieldProps,
+      ...fieldPropsMeta,
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': '禁用'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'disabled',
+            'zh-CN': 'disabled'
+          }
+        },
+        name: 'disabled',
+        setter: 'BoolSetter'
+      },
       {
         title: {
           label: {
             type: 'i18n',
             'en-US': 'multiple',
-            'zh-CN': 'multiple'
+            'zh-CN': '多选'
           },
           tip: {
             type: 'i18n',
@@ -40,7 +56,7 @@ const ZcUserPickerMeta: IPublicTypeComponentMetadata = {
           label: {
             type: 'i18n',
             'en-US': 'dataSource',
-            'zh-CN': 'dataSource'
+            'zh-CN': '数据源 / 数据源接口'
           },
           tip: {
             type: 'i18n',
@@ -49,7 +65,12 @@ const ZcUserPickerMeta: IPublicTypeComponentMetadata = {
           }
         },
         name: 'dataSource',
-        setter: 'FunctionSetter'
+        setter: {
+          componentName: 'MixedSetter',
+          props: {
+            setters: ['StringSetter', 'FunctionSetter']
+          }
+        }
       }
     ],
     supports: {
@@ -68,12 +89,12 @@ const snippets: IPublicTypeSnippet[] = [
     schema: {
       componentName: 'ZcUserPicker',
       props: {
-        dataSource: {
-          type: 'JSExpression',
-          value: "async () => (await this.utils.axios.post('/do/2492.70')).data"
-        },
         label: '用户',
-        name: 'user'
+        name: 'user_picker',
+        required: true,
+        disabled: false,
+        multiple: true,
+        dataSource: '/do/2492.70'
       }
     }
   }

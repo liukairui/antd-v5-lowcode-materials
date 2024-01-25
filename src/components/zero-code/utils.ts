@@ -1,6 +1,29 @@
 import { IPublicTypeFieldConfig } from '@alilc/lowcode-types';
+import { FormItemProps } from 'antd';
+import { IZcFieldProps } from 'src/types';
 
-const zcFieldProps: IPublicTypeFieldConfig[] = [
+const handleFormItemProps = (props: IZcFieldProps): FormItemProps => {
+  return {
+    name: props.name,
+    label: props.label,
+    rules: [{ required: props.required }],
+    messageVariables: { name: props.label }
+  };
+};
+
+const fieldPropsMeta: IPublicTypeFieldConfig[] = [
+  {
+    title: 'that',
+    name: 'that',
+    condition: () => false,
+    setter: {
+      componentName: 'VariableSetter',
+      initialValue: {
+        type: 'JSExpression',
+        value: 'this'
+      }
+    }
+  },
   {
     title: {
       label: {
@@ -33,7 +56,6 @@ const zcFieldProps: IPublicTypeFieldConfig[] = [
     name: 'name',
     setter: 'StringSetter'
   },
-
   {
     title: {
       label: {
@@ -49,23 +71,7 @@ const zcFieldProps: IPublicTypeFieldConfig[] = [
     },
     name: 'required',
     setter: 'BoolSetter'
-  },
-  {
-    title: {
-      label: {
-        type: 'i18n',
-        'en-US': 'disabled',
-        'zh-CN': '禁用'
-      },
-      tip: {
-        type: 'i18n',
-        'en-US': 'disabled',
-        'zh-CN': 'disabled'
-      }
-    },
-    name: 'disabled',
-    setter: 'BoolSetter'
   }
 ];
 
-export { zcFieldProps };
+export { fieldPropsMeta, handleFormItemProps };

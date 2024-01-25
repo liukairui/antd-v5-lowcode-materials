@@ -71,7 +71,7 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import lodash from 'lodash';
 import { ComponentProps as CP, Component, FC, createElement, createRef, useEffect, useState } from 'react';
-import { ZcUserPicker } from './components/zc-user-picker';
+import { ZcUserPicker } from './components/zero-code/zc-user-picker';
 
 dayjs.locale('zh-cn');
 window['dayjs'] = dayjs;
@@ -320,7 +320,7 @@ class Table extends Component<CP<typeof _Table>> {
 const TableSummary: FC<CP<typeof _Table.Summary>> = (props) => <_Table.Summary {...props} />;
 const TableSummaryRow: FC<CP<typeof _Table.Summary.Row>> = (props) => <_Table.Summary.Row {...props} />;
 const TableSummaryCell: FC<CP<typeof _Table.Summary.Cell>> = (props) => <_Table.Summary.Cell {...props} />;
-export { Table, TableSummary, TableSummaryRow, TableSummaryCell };
+export { Table, TableSummary, TableSummaryCell, TableSummaryRow };
 
 /* Tabs 标签页 */
 const Tabs: FC<CP<typeof _Tabs>> = (props) => <_Tabs {...props} />;
