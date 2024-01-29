@@ -13,17 +13,19 @@ interface IUserPickerProps {
   departments: IDepartment[];
   disabled?: boolean;
   multiple?: boolean;
-  onChange?: (value: IKey[] | null) => void;
   value?: IKey[] | null;
+  valueFieldName?: string;
+  onChange?: (value: IKey[] | null) => void;
 }
 
 interface IZcUserPickerProps extends IZcFieldProps {
   dataSource?: Function | string;
   multiple?: boolean;
+  valueFieldName?: string;
 }
 
 const UserPicker: FC<IUserPickerProps> = (props) => {
-  const { departments, disabled = false, multiple = true, onChange, value } = props;
+  const { departments, disabled = false, multiple = true, valueFieldName = 'empno', value, onChange } = props;
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -41,7 +43,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
    * @returns 用户列表
    */
   const getMembers = (departments: IDepartment[]): IMember[] => {
-    return departments.flatMap((department) => [...department.memList, ...getMembers(department.nodes ?? [])]);
+    return departments.flatMap((department) => [...(department.members ?? []), ...getMembers(department.nodes ?? [])]);
   };
 
   /**
@@ -50,7 +52,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
    * @returns 部门 key 列表
    */
   const getDepartmentKeys = (departments: IDepartment[]): IKey[] => {
-    return departments.flatMap((department) => [department.depid, ...getDepartmentKeys(department.nodes ?? [])]);
+    return departments.flatMap((department) => [department.deptcode, ...getDepartmentKeys(department.nodes ?? [])]);
   };
 
   /**
@@ -60,19 +62,19 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
    */
   const generateTree = (departments: IDepartment[]): DataNode[] => {
     return departments.map((d) => {
-      const nodeChildren = d.nodes ? generateTree(d.nodes) : [];
-      const memberChildren =
-        d.memList?.map((member) => {
-          return {
-            title: `${member.empname}（${member.empno}）`,
-            key: member.empno
-          };
-        }) ?? [];
-      const children = [...nodeChildren, ...memberChildren];
+      const children = [
+        ...(d.nodes ? generateTree(d.nodes) : []),
+        ...(d.members?.map((m) => ({
+          title: `${m.name}（${m.empno}）`,
+          key: m[valueFieldName]
+        })) ?? [])
+      ];
+      /* 当多选且有子节点，或者单选且没有子节点时，节点可勾选 */
+      const checkable = multiple ? children.length > 0 : children.length === 0;
       return {
-        checkable: multiple ? children.length > 0 : !('memList' in d),
+        checkable,
         children,
-        key: d.depid,
+        key: d.deptcode,
         title: d.name
       };
     });
@@ -161,10 +163,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
     if (isSearching()) {
       setExpandedKeys(getDepartmentKeys(departments));
       return filterTreeDataByKeyword(data, keyword);
-    } else {
-      if (departments.length > 0) setExpandedKeys([departments[0].depid]);
-      return data;
-    }
+    } else return data;
   }, [departments, keyword]);
 
   /* 所有部门的 key */
@@ -179,7 +178,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
 
   /* 已选中的员工 */
   const checkedUsers: IMember[] = useMemo(() => {
-    return users.filter((user) => checkedKeys.includes(user.empno));
+    return users.filter((user) => checkedKeys.includes(user[valueFieldName]));
   }, [checkedKeys]);
 
   return (
@@ -195,7 +194,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
           setShowModal(true);
         }}
         onDeselect={(v) => onChange(value.filter((item) => item !== v))}
-        options={users.map((user) => ({ label: `${user.empname}（${user.empno}）`, value: user.empno }))}
+        options={users.map((user) => ({ label: `${user.name}（${user[valueFieldName]}）`, value: user[valueFieldName] }))}
         value={value}
       />
       <Modal
@@ -250,7 +249,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
                 style={{ height: '100%' }}
                 renderItem={(item) => (
                   <List.Item
-                    children={`${item.empname}（${item.empno}）`}
+                    children={`${item.name}（${item.empno}）`}
                     style={{ height: 41, padding: '4px 8px 4px 16px' }}
                     extra={
                       disabled ? null : (
@@ -258,7 +257,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
                           type="text"
                           icon={<CloseCircleOutlined />}
                           onClick={() => {
-                            setCheckedKeys(checkedKeys.filter((k) => k !== item.empno));
+                            setCheckedKeys(checkedKeys.filter((k) => k !== item[valueFieldName]));
                           }}
                         />
                       )
@@ -285,7 +284,7 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
 };
 
 const ZcUserPicker: FC<IZcUserPickerProps> = (props) => {
-  const { that, dataSource, multiple, disabled } = props;
+  const { that, dataSource, multiple, disabled, valueFieldName } = props;
   const [departments, setDepartments] = useState<IDepartment[]>([]);
 
   const getDepartments = async () => {
@@ -319,7 +318,7 @@ const ZcUserPicker: FC<IZcUserPickerProps> = (props) => {
 
   return (
     <Form.Item {...handleFormItemProps(props)}>
-      <UserPicker departments={departments} disabled={disabled} multiple={multiple} />
+      <UserPicker {...{ departments, disabled, multiple, valueFieldName }} />
     </Form.Item>
   );
 };

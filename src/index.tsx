@@ -410,7 +410,7 @@ const App: FC<CP<typeof _App> & { this: any }> = (props) => {
       {messageContextHolder}
       {modalContextHolder}
       {notificationContextHolder}
-      <_App children={props.children} />
+      <_App children={props.children} style={props.style} />
     </ConfigProvider>
   );
 };

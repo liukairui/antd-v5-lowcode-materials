@@ -71,6 +71,22 @@ const ZcUserPickerMeta: IPublicTypeComponentMetadata = {
             setters: ['StringSetter', 'FunctionSetter']
           }
         }
+      },
+      {
+        title: {
+          label: {
+            type: 'i18n',
+            'en-US': 'valueFieldName',
+            'zh-CN': '取值字段'
+          },
+          tip: {
+            type: 'i18n',
+            'en-US': 'valueFieldName',
+            'zh-CN': 'valueFieldName'
+          }
+        },
+        name: 'valueFieldName',
+        setter: 'StringSetter'
       }
     ],
     supports: {
@@ -94,7 +110,7 @@ const snippets: IPublicTypeSnippet[] = [
         required: true,
         disabled: false,
         multiple: true,
-        dataSource: '/do/2492.70'
+        dataSource: '/uc/uc.companyTree.get.do'
       }
     }
   }
