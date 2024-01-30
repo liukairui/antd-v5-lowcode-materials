@@ -19,7 +19,7 @@ module.exports = {
         type: 'component',
         inject: true,
         library,
-        openUrl: 'https://qiuer.net/qlc/?debug&device=desktop'
+        openUrl: 'https://qiuer.net/qlc/?device=desktop&debug'
       }
     ]
   ]

@@ -3,7 +3,7 @@ import { Button, Card, Empty, Flex, Form, Input, List, Modal, Select, Tree } fro
 import { DataNode, TreeProps } from 'antd/es/tree';
 import axios, { AxiosError, AxiosInstance } from 'axios';
 import { isFunction, isString } from 'lodash';
-import { FC, Fragment, createElement, useEffect, useMemo, useState } from 'react';
+import React, { FC, Fragment, useEffect, useMemo, useState } from 'react';
 import { IZcFieldProps } from 'src/types';
 import { handleFormItemProps } from '../utils';
 
@@ -25,7 +25,14 @@ interface IZcUserPickerProps extends IZcFieldProps {
 }
 
 const UserPicker: FC<IUserPickerProps> = (props) => {
-  const { departments, disabled = false, multiple = true, valueFieldName = 'empno', value, onChange } = props;
+  const {
+    departments,
+    disabled = false,
+    multiple = true,
+    valueFieldName = 'empno',
+    value,
+    onChange
+  } = props;
   const [checkedKeys, setCheckedKeys] = useState([]);
   const [expandedKeys, setExpandedKeys] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -43,7 +50,10 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
    * @returns 用户列表
    */
   const getMembers = (departments: IDepartment[]): IMember[] => {
-    return departments.flatMap((department) => [...(department.members ?? []), ...getMembers(department.nodes ?? [])]);
+    return departments.flatMap((department) => [
+      ...(department.members ?? []),
+      ...getMembers(department.nodes ?? [])
+    ]);
   };
 
   /**
@@ -52,7 +62,10 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
    * @returns 部门 key 列表
    */
   const getDepartmentKeys = (departments: IDepartment[]): IKey[] => {
-    return departments.flatMap((department) => [department.deptcode, ...getDepartmentKeys(department.nodes ?? [])]);
+    return departments.flatMap((department) => [
+      department.deptcode,
+      ...getDepartmentKeys(department.nodes ?? [])
+    ]);
   };
 
   /**
@@ -89,7 +102,8 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
   const filterTreeDataByKeyword = (tree: DataNode[], keyword: string): DataNode[] => {
     const filterNodes = (nodes: DataNode[]): DataNode[] => {
       return nodes.reduce((filtered: DataNode[], node) => {
-        const matchSelf = (node.title as IKey).includes(keyword) || (node.key as IKey).includes(keyword);
+        const matchSelf =
+          (node.title as IKey).includes(keyword) || (node.key as IKey).includes(keyword);
         let matchChildren = false;
         let children: DataNode[] | undefined = undefined;
         if (node.children && node.children.length > 0) {
@@ -194,7 +208,10 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
           setShowModal(true);
         }}
         onDeselect={(v) => onChange(value.filter((item) => item !== v))}
-        options={users.map((user) => ({ label: `${user.name}（${user[valueFieldName]}）`, value: user[valueFieldName] }))}
+        options={users.map((user) => ({
+          label: `${user.name}（${user[valueFieldName]}）`,
+          value: user[valueFieldName]
+        }))}
         value={value}
       />
       <Modal
@@ -212,14 +229,32 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
           <Card
             size="small"
             title={multiple ? '多选' : '单选'}
-            bodyStyle={{ height: 'calc(100% - 38px)', padding: 0, marginTop: 1, overflow: 'auto' }}
+            bodyStyle={{
+              height: 'calc(100% - 38px)',
+              padding: 0,
+              marginTop: 1,
+              overflow: 'auto'
+            }}
             style={{ width: '50%', height: '100%', overflow: 'hidden' }}
           >
             <Flex vertical style={{ height: '100%' }}>
               <Flex style={{ padding: 8 }}>
-                <Input allowClear placeholder="筛选" prefix={<SearchOutlined />} onChange={(e) => setKeyword(e.target.value)} value={keyword} />
+                <Input
+                  allowClear
+                  placeholder="筛选"
+                  prefix={<SearchOutlined />}
+                  onChange={(e) => setKeyword(e.target.value)}
+                  value={keyword}
+                />
               </Flex>
-              <Flex flex={1} style={{ padding: '8px 0', borderTop: '1px solid #f0f0f0', overflow: 'auto' }}>
+              <Flex
+                flex={1}
+                style={{
+                  padding: '8px 0',
+                  borderTop: '1px solid #f0f0f0',
+                  overflow: 'auto'
+                }}
+              >
                 <Tree
                   checkable
                   checkedKeys={checkedKeys}
@@ -238,8 +273,22 @@ const UserPicker: FC<IUserPickerProps> = (props) => {
           <Card
             size="small"
             title={`已选 ${checkedUsers.length} 人`}
-            extra={disabled ? null : <Button type="link" children="清空" style={{ padding: 0 }} onClick={() => setCheckedKeys([])} />}
-            bodyStyle={{ height: 'calc(100% - 38px)', padding: 0, marginTop: 1, overflow: 'auto' }}
+            extra={
+              disabled ? null : (
+                <Button
+                  type="link"
+                  children="清空"
+                  style={{ padding: 0 }}
+                  onClick={() => setCheckedKeys([])}
+                />
+              )
+            }
+            bodyStyle={{
+              height: 'calc(100% - 38px)',
+              padding: 0,
+              marginTop: 1,
+              overflow: 'auto'
+            }}
             style={{ width: '50%', height: '100%', overflow: 'hidden' }}
           >
             {checkedUsers.length > 0 ? (

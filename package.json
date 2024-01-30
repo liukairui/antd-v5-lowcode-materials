@@ -1,6 +1,6 @@
 {
   "name": "antd-v5-lowcode-materials",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Low-code Materials based on antd v5",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,7 +27,6 @@
   ],
   "scripts": {
     "dev": "build-scripts start --config ./build.lowcode.js",
-    "sort": "node ./scripts/sort.js && pnpm prettier",
     "prettier": "prettier . --write --log-level error",
     "start": "npm run dumi",
     "build": "build-scripts build",
@@ -45,7 +44,7 @@
   "keywords": [
     "antd"
   ],
-  "author": "Kyrix",
+  "author": "kyrix",
   "license": "MIT",
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue}": "f2elint exec eslint",
@@ -89,7 +88,7 @@
   },
   "componentConfig": {
     "isComponentLibrary": true,
-    "materialSchema": "https://unpkg.com/antd-v5-lowcode-materials@0.0.15/build/lowcode/assets-prod.json"
+    "materialSchema": "https://unpkg.com/antd-v5-lowcode-materials@0.0.16/build/lowcode/assets-prod.json"
   },
   "lcMeta": {
     "type": "component"
